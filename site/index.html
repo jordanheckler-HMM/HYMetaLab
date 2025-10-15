@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HYMetaLab — Reality Loop Dashboard</title>
+<style>
+:root{--bg:#fafafa;--fg:#1a1a1a;--border:#e0e0e0;--accent:#0066cc;--card:#ffffff}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--fg:#f0f0f0;--border:#333;--accent:#4d9fff;--card:#252525}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
+header{background:var(--card);border-bottom:2px solid var(--border);padding:32px 24px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+header main{max-width:1100px;margin:0 auto}
+h1{margin:0 0 12px;font-size:36px;font-weight:700;letter-spacing:-0.5px}
+.tagline{font-size:18px;color:#666;margin:0 0 24px}
+.nav{display:flex;gap:12px;flex-wrap:wrap}
+a.btn{display:inline-block;padding:12px 20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;transition:all .2s;box-shadow:0 2px 4px rgba(0,102,204,.2)}
+a.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,102,204,.3)}
+a.btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+main{max-width:1100px;margin:0 auto;padding:48px 24px}
+.hero{text-align:center;padding:60px 0}
+.hero h2{font-size:28px;margin:0 0 16px;font-weight:600}
+.hero p{font-size:18px;color:#666;max-width:700px;margin:0 auto 32px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:48px 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.feature h3{margin:0 0 12px;font-size:20px;font-weight:600}
+.feature p{margin:0;color:#666;line-height:1.6}
+.badge{display:inline-block;padding:4px 10px;background:#00aa00;color:#fff;border-radius:20px;font-size:13px;font-weight:600;margin-left:8px}
+footer{text-align:center;padding:48px 24px;border-top:1px solid var(--border);color:#666}
+code{background:rgba(0,0,0,.05);padding:2px 6px;border-radius:4px;font-size:14px;font-family:'SF Mono',Monaco,monospace}
+</style>
+</head>
+<body>
+<header>
+<main>
+<h1>🧠 HYMetaLab — Reality Loop</h1>
+<p class="tagline">Self-auditing research: Data → Meaning → Ethics → Dashboard → Checksum.</p>
+<div class="nav">
+<a class="btn" href="dashboard.html">📊 Dashboard</a>
+<a class="btn" href="validation.html">✅ Validation</a>
+<a class="btn" href="replication.html">📦 Replication</a>
+<a class="btn secondary" href="https://doi.org/10.5281/zenodo.17299062" target="_blank">🔗 Zenodo DOI</a>
+</div>
+</main>
+</header>
+<main>
+<div class="hero">
+<h2>Open-Source Data Integration with Full Validation</h2>
+<p>A complete research pipeline featuring Guardian v4 ethics validation, TruthLens truth indexing, and MeaningForge semantic analysis. All outputs are checksummed and reproducible.</p>
+</div>
+
+<div class="features">
+<div class="feature">
+<h3>🎯 Guardian v4</h3>
+<p>Active Ethics Co-Pilot scoring research outputs on objectivity, transparency, and sentiment neutrality. Current score: <strong>87.0/100</strong> <span class="badge">PASS</span></p>
+</div>
+
+<div class="feature">
+<h3>🔍 TruthLens</h3>
+<p>Truth Index computation based on claim clarity, citation density, and causal language analysis. Score: <strong>1.000/1.000</strong> <span class="badge">PERFECT</span></p>
+</div>
+
+<div class="feature">
+<h3>💡 MeaningForge</h3>
+<p>Semantic validation measuring conceptual consistency, hypothesis clarity, and framework alignment. Score: <strong>1.000/1.000</strong> <span class="badge">PERFECT</span></p>
+</div>
+
+<div class="feature">
+<h3>📊 Collective Coherence Index</h3>
+<p>Simulation-bounded internal coherence metric (CCI). All claims are appropriately hedged and scoped per OpenLaws §3.4.</p>
+</div>
+
+<div class="feature">
+<h3>🔒 Cryptographic Seals</h3>
+<p>All datasets, outputs, and documents are SHA256-sealed with full integrity verification and audit trails.</p>
+</div>
+
+<div class="feature">
+<h3>📦 Full Replication</h3>
+<p>Complete replication package (384 KB) with 5 datasets, validation reports, analysis scripts, and reproduction guide.</p>
+</div>
+</div>
+
+<div style="text-align:center;margin:60px 0">
+<h2>Epistemic Boundary (OpenLaws §3.4)</h2>
+<p style="max-width:700px;margin:0 auto;font-style:italic;color:#666">
+Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws. All results are hypothesis-generating and require external validation.
+</p>
+</div>
+</main>
+<footer>
+<p><strong>"Integrity → Resilience → Meaning"</strong><br>
+HYMetaLab / Heck Yeah Simulation Research Initiative<br>
+<code>terminology_alignment_v1</code> • 2025-10-15</p>
+</footer>
+</body>
+</html>

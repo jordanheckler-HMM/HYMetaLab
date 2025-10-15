@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Replication Package — HYMetaLab</title>
+<style>
+:root{--bg:#fafafa;--fg:#1a1a1a;--border:#e0e0e0;--card:#ffffff}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--fg:#f0f0f0;--border:#333;--card:#252525}}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;padding:24px}
+main{max-width:960px;margin:0 auto}
+h1{font-size:32px;margin:0 0 32px;font-weight:700}
+a{color:#0066cc;text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{background:var(--card);border:2px solid var(--border);border-radius:12px;padding:48px;text-align:center;margin:32px 0;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.hero h2{margin:0 0 16px;font-size:28px}
+.download-btn{display:inline-block;margin:16px 8px;padding:16px 32px;background:#0066cc;color:#fff;text-decoration:none;border-radius:8px;font-weight:600;font-size:18px;box-shadow:0 4px 12px rgba(0,102,204,.3)}
+.download-btn:hover{background:#0055aa;transform:translateY(-2px)}
+.download-btn.secondary{background:transparent;color:#0066cc;border:2px solid #0066cc}
+.section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px;margin:32px 0;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.section h2{margin-top:0;color:#0066cc}
+code{background:rgba(0,0,0,.05);padding:2px 6px;border-radius:4px;font-size:14px;font-family:'SF Mono',Monaco,monospace}
+pre{background:rgba(0,0,0,.05);padding:16px;border-radius:8px;overflow-x:auto;border:1px solid var(--border)}
+.badge{display:inline-block;padding:4px 12px;background:#00aa00;color:#fff;border-radius:20px;font-size:13px;font-weight:600;margin-left:8px}
+ul{line-height:1.8}
+</style>
+</head>
+<body>
+<main>
+<h1>📦 Replication Package</h1>
+<p><a href="index.html">← Back to Home</a> | <a href="dashboard.html">Dashboard</a></p>
+
+<div class="hero">
+<h2>Complete Phase 4 Replication Package</h2>
+<p style="color:#666;margin:0 0 24px">384 KB • SHA256-sealed • Full reproduction guide included</p>
+<a class="download-btn" href="replication/reality_loop_packet.zip" download>⬇️ Download ZIP</a>
+<a class="download-btn secondary" href="replication/reality_loop_packet.zip.sha256" download>🔒 SHA256 File</a>
+<div style="margin-top:16px">
+<span class="badge">VERIFIED</span>
+<span class="badge">REPRODUCIBLE</span>
+<span class="badge">CC-BY-4.0</span>
+</div>
+</div>
+
+<div class="section">
+<h2>📋 Package Contents</h2>
+<ul>
+<li><strong>Data Files (5 CSVs):</strong> social_capital_scores, wellbeing_indicators, trust_networks, collaboration_patterns, education_outcomes</li>
+<li><strong>Configuration Files (3):</strong> datasets_manifest.yml, preregister.yml, mapping.yml</li>
+<li><strong>Synthesis Outputs (8):</strong> origin_output.json, synthesis_narrative.md, validation reports, hashes.txt</li>
+<li><strong>Analysis Scripts (7):</strong> truthlens_core.py, meaningforge_cli.py, originchain.py, guardian_v4.py, etl_open.py, and more</li>
+<li><strong>Documentation:</strong> Complete REPRODUCTION.md guide</li>
+</ul>
+<p><strong>Total Files:</strong> 24 | <strong>Guardian v4:</strong> 87.0/100 (PASS) | <strong>TruthLens:</strong> 1.000 | <strong>MeaningForge:</strong> 1.000</p>
+</div>
+
+<div class="section">
+<h2>🔒 Integrity Verification</h2>
+<p>Verify the package hasn't been tampered with:</p>
+<pre><code># macOS/Linux
+shasum -a 256 -c reality_loop_packet.zip.sha256
+
+# Expected output:
+reality_loop_packet.zip: OK</code></pre>
+<p>If you see "OK", you've verified the exact artifact we published. ✅</p>
+</div>
+
+<div class="section">
+<h2>🚀 Quick Start</h2>
+<ol style="line-height:1.8">
+<li>Download and verify the ZIP using the commands above</li>
+<li>Extract: <code>unzip reality_loop_packet.zip</code></li>
+<li>Read <code>REPRODUCTION.md</code> for complete setup instructions</li>
+<li>Install dependencies and run validation pipeline</li>
+<li>Compare your outputs to the included checksums</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>📚 Citation</h2>
+<p>If you use this replication package, please cite:</p>
+<pre><code>HYMetaLab. (2025). Phase 4 Open-Source Data Integration - Replication Package.
+Zenodo. https://doi.org/10.5281/zenodo.17299062</code></pre>
+<p><strong>License:</strong> CC-BY-4.0 (Creative Commons Attribution 4.0)</p>
+</div>
+
+<div class="section">
+<h2>⚠️ Epistemic Boundary (OpenLaws §3.4)</h2>
+<p style="font-style:italic;color:#666">
+Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws. All results are hypothesis-generating and require external empirical validation before generalization.
+</p>
+</div>
+</main>
+</body>
+</html>

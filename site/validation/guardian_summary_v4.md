@@ -1,0 +1,52 @@
+# Guardian v4 Corpus Analysis Report
+**Date**: 2025-10-15T11:31:11.054238
+
+## 🔴 Overall Assessment
+
+**Documents Analyzed**: 601  
+**Mean Guardian Score**: **62.5/100**  
+**Passing Rate**: **7.5%** (45/601)
+
+**Score Range**: 34.9 - 87.0
+
+---
+
+## 📊 Risk Distribution
+
+- **CRITICAL**: 15 (2.5%)
+- **HIGH**: 541 (90.0%)
+- **MEDIUM**: 45 (7.5%)
+
+---
+
+## 📋 Document Details
+
+### ✅ Top 10 Documents
+
+- `synthesis_narrative.md`: 87.0/100
+- `RESEARCH_DISCLAIMER.md`: 83.7/100
+- `NEXT_STEP_EXECUTION_COMPLETE.md`: 79.1/100
+- `NEXT_STEPS.md`: 78.4/100
+- `NEXTGEN_STACK_QUICKSTART.md`: 76.9/100
+- `GUARDIAN_V3_EXECUTIVE_SUMMARY.md`: 76.6/100
+- `SESSION_GUARDIAN_V3_IMPLEMENTATION.md`: 76.2/100
+- `README.md`: 76.0/100
+- `FINAL_SESSION_SUMMARY.md`: 75.5/100
+- `GUARDIAN_V3_QUICK_REFERENCE.md`: 75.4/100
+
+### ⚠️ Bottom 10 Documents
+
+- `FINAL_ULTIMATE_SUMMARY.md`: 47.8/100
+- `FINAL_ULTIMATE_SUMMARY.md`: 47.8/100
+- `COMPREHENSIVE_VALIDATION_ANALYSIS.md`: 47.7/100
+- `ULTIMATE_AIRTIGHT_FRAMEWORK.md`: 45.7/100
+- `SCIENTIFIC_BREAKTHROUGH_REPORT.md`: 43.6/100
+- `SCIENTIFIC_BREAKTHROUGH_REPORT.md`: 43.6/100
+- `SCIENTIFIC_BREAKTHROUGH_REPORT.md`: 43.6/100
+- `FINAL_WORLD_UNDERSTANDING_SUMMARY.md`: 42.9/100
+- `NEXT_SOLUTIONS_ANALYSIS.md`: 35.3/100
+- `WORLD_UNDERSTANDING_FRAMEWORK.md`: 34.9/100
+
+---
+
+**Classification**: NEEDS REVIEW
