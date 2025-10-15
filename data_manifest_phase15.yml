@@ -1,0 +1,54 @@
+# Phase-15 Data Manifest
+# HYMetaLab — Data Integrity
+# Updated: 2025-10-15
+
+phase: 15
+phase_name: "η(ε) Coupling Exploration"
+status: "hypothesis-generation"
+
+# Hypothesis-Band Classification
+phase15_eta_band: "hypothesis"
+eta_sign_note: "η(ε) values represent coupling magnitude (not direction); hypothesis-level until multi-seed validation (N≥10)."
+
+# Dataset Metadata
+datasets:
+  - name: "phase15_eta_epsilon_coupling"
+    type: "simulation"
+    format: "csv"
+    location: "discovery_results/phase15/"
+    
+parameters:
+  epsilon_range: [0.0005, 0.0015]
+  eta_exploration: true
+  seeds_run: 4  # Below N≥10 threshold for validation
+  classification: "hypothesis-generation"
+  
+validation:
+  guardian_score: null  # Pending validation
+  truthlens: null
+  meaningforge: null
+  bootstrap_ci: false  # Insufficient seeds for robust CI
+  
+notes:
+  - "η(ε) values represent coupling magnitude (not direction)"
+  - "Hypothesis-level classification until N≥10 seeds validated"
+  - "Sign convention: magnitude only, not directional force"
+  - "Requires multi-seed validation for VALIDATED status"
+  
+epistemic_boundary: true
+openlaws_section: "§3.4"
+
+# Data Integrity
+integrity:
+  sha256_verified: false
+  preregistered: false
+  reproducible: "pending multi-seed validation"
+  
+# CCI Reference
+cci_label: "Collective Coherence Index"
+cci_scope: "Simulation-bounded, internal coherence metric"
+
+---
+# Lab Tech: Data Integrity
+# Date: 2025-10-15
+# Status: Hypothesis-band labeled
