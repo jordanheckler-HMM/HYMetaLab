@@ -1,0 +1,528 @@
+{
+  "evidence_graph": {
+    "nodes": {
+      "claims": [
+        {
+          "id": "claim_6",
+          "text": "000** (perfect determinism) | \u2705 EXCEED |\n| **All Tests** | Pass | **15/15 passed** | \u2705 PASS |\n\n**Overall**: **3/3 CRITERIA MET** \u2705\n\n---\n\n## \ud83d\udcca Test Results\n\n### Core Module Tests\n```\nTest 1 (High-quali",
+          "sentence_index": 6,
+          "length": 222,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_22",
+          "text": "000000 \u2705\n   Deterministic: \u2705\n```\n\n### Pytest Suite Results\n```\n============================= test session starts ==============================\ncollected 15 items\n\ntests/test_truthlens_v1",
+          "sentence_index": 22,
+          "length": 187,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_24",
+          "text": "[100%]\n\n============================== 15 passed in 0",
+          "sentence_index": 24,
+          "length": 53,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_25",
+          "text": "11s ==============================\n```\n\n**Test Categories**:\n- \u2705 Reproducibility: 3/3 tests passed\n- \u2705 Non-NaN: 3/3 tests passed\n- \u2705 Monotonicity: 3/3 tests passed\n- \u2705 Boundaries: 3/3 tests passed\n- \u2705",
+          "sentence_index": 25,
+          "length": 345,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_35",
+          "text": "85)\n   - Variance guards (<2%)\n\n\u2705 **tools/truthlens_cli",
+          "sentence_index": 35,
+          "length": 55,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_39",
+          "text": "35)**\n```\nMeasures: Specific, testable, quantified claims\nPositive indicators: measured, observed, found, mean, p<, n=, CI\nNegative indicators: vague, unclear, ambiguous, maybe\n\nScore = 0",
+          "sentence_index": 39,
+          "length": 187,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_44",
+          "text": "40)**\n```\nMeasures: Evidence backing through references\nPatterns: Author (Year), DOI, URLs, Figure/Table refs, years\n\nScore = sqrt(citation_count) / sqrt(10) + diversity_bonus\nDiversity bonus = (uniqu",
+          "sentence_index": 44,
+          "length": 226,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_47",
+          "text": "25)**\n```\nMeasures: Mechanistic reasoning\nTokens: because, therefore, thus, causes, leads to, if-then\n\nScore = 0",
+          "sentence_index": 47,
+          "length": 112,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_56",
+          "text": "60: NEEDS_IMPROVEMENT\n```\n\n---\n\n## \ud83e\uddea Validation Results\n\n### Determinism Verification\n```\nSame text, 5 runs:\n  Runs: [0",
+          "sentence_index": 56,
+          "length": 119,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_63",
+          "text": "000% variance)\n```\n\n### Non-NaN Verification\n```\nEmpty text:       Ti = 0",
+          "sentence_index": 63,
+          "length": 73,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_64",
+          "text": "000 (not NaN) \u2705\nSpecial chars:    Ti = valid (not NaN) \u2705\nAll test texts:   No NaN values \u2705\n\n\u2705 100% NaN-free operation\n```\n\n### Monotonicity Verification\n```\nAdding citations:\n  0 citations: Ti = 0",
+          "sentence_index": 64,
+          "length": 196,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_71",
+          "text": "000 variance | \u2705 Perfect |\n| Monotonicity | All components | \u2705 Verified |\n| Bounds | [0, 1] always | \u2705 Guaranteed |\n| Non-NaN | 100% valid | \u2705 Guaranteed |\n\n---\n\n## \ud83c\udfaf Example Ti Calculations\n\n### High",
+          "sentence_index": 71,
+          "length": 225,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_2",
+              "citation_text": "2005",
+              "citation_type": "year_only",
+              "distance": 438
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "1996",
+              "citation_type": "year_only",
+              "distance": 466
+            }
+          ]
+        },
+        {
+          "id": "claim_72",
+          "text": "730)\n```\nText: \"We measured CCI across 200 agents (mean=0",
+          "sentence_index": 72,
+          "length": 57,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_2",
+              "citation_text": "2005",
+              "citation_type": "year_only",
+              "distance": 212
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "1996",
+              "citation_type": "year_only",
+              "distance": 240
+            }
+          ]
+        },
+        {
+          "id": "claim_73",
+          "text": "75, 95% CI [0",
+          "sentence_index": 73,
+          "length": 13,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_2",
+              "citation_text": "2005",
+              "citation_type": "year_only",
+              "distance": 154
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "1996",
+              "citation_type": "year_only",
+              "distance": 182
+            }
+          ]
+        },
+        {
+          "id": "claim_76",
+          "text": "The results demonstrated that openness increases cooperation (p<0",
+          "sentence_index": 76,
+          "length": 65,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_2",
+              "citation_text": "2005",
+              "citation_type": "year_only",
+              "distance": 121
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "1996",
+              "citation_type": "year_only",
+              "distance": 149
+            }
+          ]
+        },
+        {
+          "id": "claim_80",
+          "text": "The causal mechanism involves shared intentionality, which therefore\n       leads to enhanced coordination",
+          "sentence_index": 80,
+          "length": 106,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_2",
+              "citation_text": "2005",
+              "citation_type": "year_only",
+              "distance": 42
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "1996",
+              "citation_type": "year_only",
+              "distance": 14
+            }
+          ]
+        },
+        {
+          "id": "claim_113",
+          "text": "60)\n```\n\n### Adding Citations (Monotonicity Demo)\n```\nBase text: \"Cooperation enhances resilience",
+          "sentence_index": 113,
+          "length": 97,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_4",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 141
+            },
+            {
+              "citation_id": "cit_0",
+              "citation_text": "doi.org/...",
+              "citation_type": "doi",
+              "distance": 176
+            }
+          ]
+        },
+        {
+          "id": "claim_121",
+          "text": "040) \u2705\n\nMonotonic increase verified \u2705\n```\n\n---\n\n## \ud83d\ude80 Usage Guide\n\n### Analyze Single Document\n\n```bash\n# Basic usage\npython3 tools/truthlens_cli",
+          "sentence_index": 121,
+          "length": 144,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_4",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 68
+            },
+            {
+              "citation_id": "cit_0",
+              "citation_text": "doi.org/...",
+              "citation_type": "doi",
+              "distance": 33
+            }
+          ]
+        },
+        {
+          "id": "claim_128",
+          "text": "md --output results/ti_report",
+          "sentence_index": 128,
+          "length": 29,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_4",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 414
+            },
+            {
+              "citation_id": "cit_0",
+              "citation_text": "doi.org/...",
+              "citation_type": "doi",
+              "distance": 379
+            }
+          ]
+        },
+        {
+          "id": "claim_137",
+          "text": "py test\n```\n\n### Interpret Results\n\n```json\n{\n  \"truth_index\": 0",
+          "sentence_index": 137,
+          "length": 64,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_142",
+          "text": "730 means document shows acceptable truthfulness potential\n- Strong clarity (1",
+          "sentence_index": 142,
+          "length": 78,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_143",
+          "text": "0) with good evidence (0",
+          "sentence_index": 143,
+          "length": 24,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_148",
+          "text": "000% variance | 0",
+          "sentence_index": 148,
+          "length": 17,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_149",
+          "text": "000% variance | Both perfect |\n| **Speed** | 1ms - 5s | ~10ms | Similar |\n| **Tests** | 14+ tests | 15 tests | Comprehensive |\n| **Output** | guardian_report_v4",
+          "sentence_index": 149,
+          "length": 160,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_151",
+          "text": "json | Different schemas |\n\n**Relationship**:\n- Guardian focuses on **ethical compliance** (language, sentiment, safety)\n- TruthLens focuses on **truth potential** (evidence, clarity, causality)\n- **C",
+          "sentence_index": 151,
+          "length": 284,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_152",
+          "text": "Ti is Potential, Not Truth\n**Current**: Ti measures truthfulness potential (evidence, clarity)  \n**Limitation**: High Ti doesn't guarantee factual accuracy  \n**Mitigation**: Ti is one signal among man",
+          "sentence_index": 152,
+          "length": 256,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_156",
+          "text": "No Claim-Evidence Linking\n**Current**: Counts citations globally  \n**Limitation**: Doesn't verify claims are actually supported  \n**Mitigation**: Guardian v6 has this feature  \n**Future**: Integrate w",
+          "sentence_index": 156,
+          "length": 232,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_169",
+          "text": "[ ] Integration with Guardian evidence linker\n7",
+          "sentence_index": 169,
+          "length": 47,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_175",
+          "text": "[ ] Real-time Ti monitoring\n\n---\n\n## \u2705 Acceptance Criteria: Final Check\n\n| Criterion | Target | Achieved | Evidence | Status |\n|-----------|--------|----------|----------|--------|\n| **Ti distribution",
+          "sentence_index": 175,
+          "length": 212,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_179",
+          "text": "000** | Perfect determinism | \u2705 EXCEED |\n| **Non-NaN** | 100% | **100%** | All tests pass | \u2705 PASS |\n| **Monotonicity** | Verified | \u2705 | Adding citations increases Ti | \u2705 PASS |\n\n**Overall**: **4/4 AC",
+          "sentence_index": 179,
+          "length": 375,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_187",
+          "text": "000% variance across all test scenarios \u2705\n\n### Component Formulas\n\n**Claim Clarity**:\n```\nBase = 0",
+          "sentence_index": 187,
+          "length": 98,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_189",
+          "text": "05 (measured, observed, stats)\n- Negative density \u00d7 0",
+          "sentence_index": 189,
+          "length": 53,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_202",
+          "text": "json\n```\n\n---\n\n## \u2705 Final System Status\n\n**TruthLens v1**: \u2705 DEPLOYED (Truth Index calculator)\n\n**Test Coverage**: 100% (15/15 tests passed)  \n**Documentation**: Complete (this guide)  \n**Determinism*",
+          "sentence_index": 202,
+          "length": 215,
+          "has_evidence": false,
+          "evidence_refs": []
+        },
+        {
+          "id": "claim_203",
+          "text": "000% variance)  \n**Production-Ready**: \u2705 Yes\n\n**Integration**: Complementary to Guardian ecosystem\n\n**Overall**: \u2705 **OPERATIONAL TRUTH INDEX SYSTEM**\n\n---\n\n*Integrity \u2192 Resilience \u2192 Meaning*\n\n**TruthL",
+          "sentence_index": 203,
+          "length": 300,
+          "has_evidence": false,
+          "evidence_refs": []
+        }
+      ],
+      "citations": [
+        {
+          "id": "cit_1",
+          "type": "year_only",
+          "text": "2025",
+          "position": 131
+        },
+        {
+          "id": "cit_2",
+          "type": "year_only",
+          "text": "2005",
+          "position": 5537
+        },
+        {
+          "id": "cit_3",
+          "type": "year_only",
+          "text": "1996",
+          "position": 5565
+        },
+        {
+          "id": "cit_4",
+          "type": "year_only",
+          "text": "2020",
+          "position": 6514
+        },
+        {
+          "id": "cit_0",
+          "type": "doi",
+          "text": "doi.org/...",
+          "position": 6549
+        }
+      ]
+    },
+    "edges": [
+      {
+        "from": "claim_71",
+        "to": "cit_2",
+        "distance": 438,
+        "type": "supports"
+      },
+      {
+        "from": "claim_71",
+        "to": "cit_3",
+        "distance": 466,
+        "type": "supports"
+      },
+      {
+        "from": "claim_72",
+        "to": "cit_2",
+        "distance": 212,
+        "type": "supports"
+      },
+      {
+        "from": "claim_72",
+        "to": "cit_3",
+        "distance": 240,
+        "type": "supports"
+      },
+      {
+        "from": "claim_73",
+        "to": "cit_2",
+        "distance": 154,
+        "type": "supports"
+      },
+      {
+        "from": "claim_73",
+        "to": "cit_3",
+        "distance": 182,
+        "type": "supports"
+      },
+      {
+        "from": "claim_76",
+        "to": "cit_2",
+        "distance": 121,
+        "type": "supports"
+      },
+      {
+        "from": "claim_76",
+        "to": "cit_3",
+        "distance": 149,
+        "type": "supports"
+      },
+      {
+        "from": "claim_80",
+        "to": "cit_2",
+        "distance": 42,
+        "type": "supports"
+      },
+      {
+        "from": "claim_80",
+        "to": "cit_3",
+        "distance": 14,
+        "type": "supports"
+      },
+      {
+        "from": "claim_113",
+        "to": "cit_4",
+        "distance": 141,
+        "type": "supports"
+      },
+      {
+        "from": "claim_113",
+        "to": "cit_0",
+        "distance": 176,
+        "type": "supports"
+      },
+      {
+        "from": "claim_121",
+        "to": "cit_4",
+        "distance": 68,
+        "type": "supports"
+      },
+      {
+        "from": "claim_121",
+        "to": "cit_0",
+        "distance": 33,
+        "type": "supports"
+      },
+      {
+        "from": "claim_128",
+        "to": "cit_4",
+        "distance": 414,
+        "type": "supports"
+      },
+      {
+        "from": "claim_128",
+        "to": "cit_0",
+        "distance": 379,
+        "type": "supports"
+      }
+    ]
+  },
+  "metrics": {
+    "evidence_density": 0.23529411764705882,
+    "total_claims": 34,
+    "claims_with_evidence": 8,
+    "claims_without_evidence": 26,
+    "total_citations": 5,
+    "unique_citations_used": 4,
+    "citation_utilization": 0.8,
+    "total_links": 16,
+    "avg_citations_per_claim": 2.0,
+    "coverage_ratio": 1.6,
+    "passes_threshold": false
+  },
+  "version": "3.0-evidence-graph"
+}

@@ -1,0 +1,81 @@
+# OriginChain v4 Adaptivity - Adaptive Matrix Configuration
+#
+# Configuration for adaptive parameter learning and optimization
+#
+version: "4.0-adaptivity"
+
+# Learning settings
+learning_rate: 0.1              # How fast to update toward better parameters
+exploration_noise: 0.05         # Noise level for parameter exploration
+num_episodes: 20                # Number of training episodes
+steps_per_episode: 50           # Evolution steps per episode
+
+# Reward weights (sum to 1.0)
+reward_weights:
+  final_coherence: 0.5         # Weight for final coherence value
+  mean_coherence: 0.3          # Weight for average coherence over trajectory
+  coherence_growth: 0.2        # Weight for total coherence growth
+
+# Parameter bounds for optimization
+# Format: [min, max]
+parameter_bounds:
+  coherence_growth_rate: [0.05, 0.3]    # Growth rate range
+  energy_decay_rate: [0.01, 0.1]        # Decay rate range
+  entropy_increase_rate: [0.01, 0.1]    # Entropy increase range
+  feedback_strength: [0.1, 0.5]         # Feedback loop strength range
+  noise_level: [0.001, 0.05]            # Noise level range
+
+# Baseline (v2 fixed parameters)
+baseline_parameters:
+  coherence_growth_rate: 0.1
+  energy_decay_rate: 0.05
+  entropy_increase_rate: 0.03
+  feedback_strength: 0.2
+  noise_level: 0.01
+
+# Adaptivity targets
+targets:
+  min_improvement: 25.0         # Minimum improvement vs baseline (%)
+  target_improvement: 30.0      # Target improvement (%)
+  optimal_improvement: 50.0     # Optimal improvement (%)
+
+# Training scenarios
+scenarios:
+  - name: "high_emergence"
+    emergence_quotient: 0.8
+    complexity: 0.7
+    novelty: 0.8
+    interconnectedness: 0.9
+  
+  - name: "moderate_emergence"
+    emergence_quotient: 0.5
+    complexity: 0.5
+    novelty: 0.4
+    interconnectedness: 0.6
+  
+  - name: "low_emergence"
+    emergence_quotient: 0.2
+    complexity: 0.3
+    novelty: 0.1
+    interconnectedness: 0.2
+
+# Optimization strategy
+optimization:
+  method: "evolution_strategies"  # ES/CMA-ES simplified
+  population_size: 1              # Single candidate (online learning)
+  gradient_free: true             # No gradients needed
+  deterministic: true             # Reproducible results
+
+# Performance monitoring
+monitoring:
+  track_improvement: true
+  save_history: true
+  compare_baseline: true
+  num_comparison_trials: 10
+
+# Validation settings
+validation:
+  min_improvement_threshold: 25.0  # ≥25% requirement
+  convergence_tolerance: 0.01      # Stop if improvement stagnates
+  max_episodes_no_improvement: 5   # Early stopping
+

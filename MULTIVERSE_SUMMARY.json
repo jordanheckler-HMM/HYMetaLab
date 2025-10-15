@@ -1,0 +1,51 @@
+{
+  "CMB_SCARS": {
+    "ring_score": 1.268240872233058,
+    "hemi_asym": 0.05049275739641076,
+    "p_ring": 0.4146341463414634,
+    "p_hemi": 0.024390243902439025
+  },
+  "INFLATION_CHECK": {
+    "anisotropy": 0.8306868824379546,
+    "spectral_index": 0.9554900428810633,
+    "bayes_factor_infl_vs_noninfl": 1000000.0
+  },
+  "BH_SELECTION": {
+    "corr_bh_vs_cci": 0.6247975553492388,
+    "corr_bh_vs_survival": 0.3956298251613017,
+    "best_params": {
+      "G": 1.1,
+      "kappa": 1.2,
+      "bfrac": 0.9
+    },
+    "best_bh_yield": 1.1729290741160183
+  },
+  "FINE_TUNING_SWEEP": {
+    "N": 500,
+    "survivor_fraction": 0.0,
+    "n_survivors": 0,
+    "median_cci": 0.731033096732028,
+    "median_survival": 0.5111716854978736,
+    "median_collapse": 0.5847109616843204
+  },
+  "MANY_WORLDS_PROXY": {
+    "mean_observers_branch_heavy": 56.71527089633231,
+    "mean_observers_collapse_heavy": 0.01405396841320733,
+    "std_observers_branch_heavy": 1.164862328420509,
+    "std_observers_collapse_heavy": 0.016826949068124236
+  },
+  "MATH_INFO_ENSEMBLE": {
+    "best_L": 2.1431655676536217,
+    "best_R": 1.249995807408569,
+    "best_persistence": 0.9367537496866264,
+    "best_cci": 0.9944698397341525,
+    "optimal_L_range": [
+      1.617797186650742,
+      2.4530882158685725
+    ],
+    "optimal_R_range": [
+      0.8669585959779803,
+      1.249995807408569
+    ]
+  }
+}

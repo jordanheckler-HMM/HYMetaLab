@@ -1,0 +1,81 @@
+study_id: phase31_distributed_neurocoherence
+version: "1.0"
+description: "Mini-sweep hotfix to ensure numeric outputs & CI generation."
+
+preregistered:
+  constants:
+    lambda_star: 0.90
+    k_star: 1.80
+    beta_over_alpha: 6.5
+  hypotheses:
+    - H1: CCI_collective - mean(CCI_individuals) >= 0.08 (95% CI > 0)
+    - H2: synchrony_gain >= 0.12 (95% CI > 0)
+    - H3: eta_collective <= mean(eta_individuals) - 0.015 (95% CI < 0)
+
+sweep:
+  # Mini grid (fast): 2 N-levels x 2 kappa x 1 epsilon x 1 sigma x 3 seeds = 12 runs
+  N: [3, 5]
+  kappa: [0.10, 0.20]
+  epsilon: [0.004]
+  sigma_noise: [0.02]
+  epochs: 900
+  seeds: 3
+
+protocol:
+  phases:
+    - name: baseline_individual
+      duration: 200
+      logging: dense
+    - name: join_and_sync
+      duration: 560
+      logging: thin5
+      micro_shock:
+        at_epoch: 700
+        top_noise_pct: 0.70
+        noise_delta: +0.30
+    - name: recovery
+      duration: 140
+      logging: dense
+
+adapter:
+  path: adapters/phase31_adapter.py
+  function: run_phase31
+
+integrity:
+  code_freeze: false
+  prereg_hash: auto
+  bootstrap_resamples: 1000
+  blinded_labels: true
+  null_test:
+    shuffle_edges: true
+    preserve_marginals: true
+
+exports:
+  out_dir: discovery_results/phase31_distributed_neurocoherence
+  csv:
+    - runs_summary.csv
+    - trajectories_long.csv
+    - synchrony_long.csv
+    - shock_events.csv
+  json:
+    - summary_bootstrap.json
+  figures:
+    - cci_collective_vs_individual.png
+    - synchrony_grid.png
+    - eta_compare.png
+    - recovery_bars.png
+    - scaling_surface_dCCI_N_kappa.png
+  report: report/phase31_results.md
+study:
+  id: openlaws_demo
+  title: Open Laws demo study
+
+prereg:
+  constants: {}
+
+integrity:
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+  require_prereg: true
+  require_ci: true

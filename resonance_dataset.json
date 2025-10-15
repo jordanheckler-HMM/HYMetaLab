@@ -1,0 +1,180 @@
+{
+  "version": "2.0-resonance",
+  "polarity_bands": {
+    "high_positive": {
+      "keywords": [
+        "joy",
+        "love",
+        "hope",
+        "inspire",
+        "celebrate",
+        "thrive",
+        "flourish",
+        "delight",
+        "wonder",
+        "awe",
+        "grace",
+        "beauty"
+      ],
+      "valence": 0.9,
+      "weight": 1.0
+    },
+    "positive": {
+      "keywords": [
+        "good",
+        "better",
+        "improve",
+        "enhance",
+        "positive",
+        "benefit",
+        "valuable",
+        "meaningful",
+        "worthwhile",
+        "constructive",
+        "helpful"
+      ],
+      "valence": 0.7,
+      "weight": 0.8
+    },
+    "neutral_warm": {
+      "keywords": [
+        "experience",
+        "explore",
+        "discover",
+        "learn",
+        "understand",
+        "realize",
+        "recognize",
+        "perceive",
+        "sense",
+        "feel"
+      ],
+      "valence": 0.5,
+      "weight": 0.6
+    },
+    "contemplative": {
+      "keywords": [
+        "reflect",
+        "consider",
+        "ponder",
+        "contemplate",
+        "meditate",
+        "introspect",
+        "examine",
+        "question",
+        "wonder",
+        "think"
+      ],
+      "valence": 0.5,
+      "weight": 0.7
+    },
+    "struggle": {
+      "keywords": [
+        "challenge",
+        "difficult",
+        "struggle",
+        "overcome",
+        "persevere",
+        "endure",
+        "resilient",
+        "adapt",
+        "cope",
+        "face"
+      ],
+      "valence": 0.4,
+      "weight": 0.8
+    },
+    "negative": {
+      "keywords": [
+        "loss",
+        "pain",
+        "hurt",
+        "suffer",
+        "grief",
+        "sorrow",
+        "difficult",
+        "hard",
+        "challenge",
+        "obstacle"
+      ],
+      "valence": 0.3,
+      "weight": 0.7
+    }
+  },
+  "motif_patterns": {
+    "journey": [
+      "journey",
+      "path",
+      "way",
+      "road",
+      "travel",
+      "voyage",
+      "quest"
+    ],
+    "connection": [
+      "connect",
+      "bond",
+      "relate",
+      "link",
+      "tie",
+      "bridge",
+      "unite"
+    ],
+    "growth": [
+      "grow",
+      "develop",
+      "evolve",
+      "mature",
+      "expand",
+      "flourish"
+    ],
+    "belonging": [
+      "belong",
+      "home",
+      "family",
+      "community",
+      "together",
+      "we",
+      "our"
+    ],
+    "meaning": [
+      "meaning",
+      "purpose",
+      "significance",
+      "value",
+      "worth",
+      "matter"
+    ],
+    "identity": [
+      "identity",
+      "self",
+      "who",
+      "I am",
+      "become",
+      "being"
+    ],
+    "transformation": [
+      "transform",
+      "change",
+      "shift",
+      "breakthrough",
+      "awakening"
+    ],
+    "wisdom": [
+      "wisdom",
+      "insight",
+      "understanding",
+      "truth",
+      "realization",
+      "clarity"
+    ]
+  },
+  "cadence_cues": {
+    "repetition": "\\b(\\w+)\\b.*\\b\\1\\b",
+    "parallel_structure": "(we \\w+.*we \\w+)|(the \\w+.*the \\w+)",
+    "rhythmic_questions": "\\?.*\\?",
+    "short_sentences": "[.!?]\\s+[A-Z][^.!?]{5,30}[.!?]",
+    "long_flowing": "[,;].*[,;].*[,;]",
+    "emphatic": "[!]|[A-Z]{2,}|\\*\\*.*\\*\\*"
+  }
+}

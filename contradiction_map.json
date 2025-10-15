@@ -1,0 +1,146 @@
+{
+  "file": "sample_causal_text.md",
+  "parse_result": {
+    "causal_pairs": [
+      {
+        "cause": "research findings\n\nopenness",
+        "effect": "cooperation in social networks",
+        "relation": "positive_effect",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "# Sample Document with Causal Claims\n\n## Research Findings\n\nOpenness increases cooperation in social",
+        "sentence_index": 0
+      },
+      {
+        "cause": "cooperation increases",
+        "effect": "resilience improves significantly",
+        "relation": "when_then",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "When cooperation increases then resilience improves significantly",
+        "sentence_index": 2
+      },
+      {
+        "cause": "when cooperation increases then resilience",
+        "effect": "significantly",
+        "relation": "positive_effect",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "When cooperation increases then resilience improves significantly",
+        "sentence_index": 2
+      },
+      {
+        "cause": "competition",
+        "effect": "rivalry in resource",
+        "relation": "leads_to",
+        "polarity": "neutral",
+        "negated": false,
+        "original_text": "However, competition leads to rivalry in resource-constrained environments",
+        "sentence_index": 3
+      },
+      {
+        "cause": "the data shows that rivalry",
+        "effect": "trust between participants",
+        "relation": "negative_effect",
+        "polarity": "negative",
+        "negated": false,
+        "original_text": "The data shows that rivalry undermines trust between participants",
+        "sentence_index": 4
+      },
+      {
+        "cause": "clear communication reduces ambiguity",
+        "effect": "mechanisms\n\nshared meaning enhances coordination",
+        "relation": "because",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "## Mechanisms\n\nShared meaning enhances coordination because clear communication reduces ambiguity",
+        "sentence_index": 5
+      },
+      {
+        "cause": "mechanisms\n\nshared meaning",
+        "effect": "coordination because clear communication reduces",
+        "relation": "positive_effect",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "## Mechanisms\n\nShared meaning enhances coordination because clear communication reduces ambiguity",
+        "sentence_index": 5
+      },
+      {
+        "cause": "enhances coordination because clear communication",
+        "effect": "ambiguity",
+        "relation": "negative_effect",
+        "polarity": "negative",
+        "negated": false,
+        "original_text": "## Mechanisms\n\nShared meaning enhances coordination because clear communication reduces ambiguity",
+        "sentence_index": 5
+      },
+      {
+        "cause": "communication reduces ambiguity",
+        "effect": "decision quality improves",
+        "relation": "if_then",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "If communication reduces ambiguity then decision quality improves",
+        "sentence_index": 6
+      },
+      {
+        "cause": "if communication",
+        "effect": "ambiguity then decision quality improves",
+        "relation": "negative_effect",
+        "polarity": "negative",
+        "negated": false,
+        "original_text": "If communication reduces ambiguity then decision quality improves",
+        "sentence_index": 6
+      },
+      {
+        "cause": "trust",
+        "effect": "stronger bonds in communities",
+        "relation": "causes",
+        "polarity": "neutral",
+        "negated": false,
+        "original_text": "Trust causes stronger bonds in communities",
+        "sentence_index": 7
+      },
+      {
+        "cause": "these bonds",
+        "effect": "social cohesion over time",
+        "relation": "positive_effect",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "These bonds strengthen social cohesion over time",
+        "sentence_index": 8
+      },
+      {
+        "cause": "some researchers argue that openness",
+        "effect": "cooperation under competitive conditions",
+        "relation": "negative_effect",
+        "polarity": "negative",
+        "negated": false,
+        "original_text": "## Contradictory Claims Section\n\nSome researchers argue that openness decreases cooperation under co",
+        "sentence_index": 9
+      },
+      {
+        "cause": "competition",
+        "effect": "performance in certain contexts",
+        "relation": "positive_effect",
+        "polarity": "positive",
+        "negated": false,
+        "original_text": "Competition enhances performance in certain contexts, suggesting a more nuanced relationship",
+        "sentence_index": 11
+      },
+      {
+        "cause": "trust does not",
+        "effect": "stronger bonds when organizational culture",
+        "relation": "causes",
+        "polarity": "neutral",
+        "negated": true,
+        "original_text": "Trust does not cause stronger bonds when organizational culture is toxic",
+        "sentence_index": 12
+      }
+    ],
+    "causal_pair_count": 15,
+    "sentences_analyzed": 13
+  },
+  "contradictions": [],
+  "continuity_score_v2": 1.0
+}

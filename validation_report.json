@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-10-14T22:03:40.807501",
+  "version": "5.0-repro-standard",
+  "test_documents": [
+    "test_corpus_v4/science_1.md",
+    "test_corpus_v4/metaphysical_1.md",
+    "test_corpus_v4/social_3.md",
+    "test_corpus_v4/social_2.md",
+    "test_corpus_v4/social_1.md"
+  ],
+  "reproducibility": {
+    "num_runs": 3,
+    "mean_std_dev": 2.2204460492503132e-17,
+    "max_std_dev": 1.1102230246251565e-16,
+    "reproducibility_pct": 99.99999999999977,
+    "passes": true,
+    "threshold": "<0.01 std dev (\u226599% reproducibility)"
+  },
+  "performance": {
+    "num_documents": 5,
+    "mean_runtime": 0.00019779205322265626,
+    "median_runtime": 0.0001888275146484375,
+    "passes": true,
+    "threshold": "<1.0s per document"
+  },
+  "overall": {
+    "passes_all": true,
+    "passes_reproducibility": true,
+    "passes_performance": true
+  }
+}

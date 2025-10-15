@@ -1,0 +1,131 @@
+# TruthLens v4 Domain Adapter Configuration
+version: "4.0-domain-adapter"
+name: "Truth Index v4 with Domain Adaptation"
+description: "Cross-domain truth alignment with ±5% variance target"
+
+# Inherit base configuration from v1
+base_config: "truth_index_v1.yml"
+
+seed: 42  # Deterministic seed for reproducibility
+
+# Base weights (before domain adaptation)
+weights:
+  claim_clarity: 0.35
+  citation_presence: 0.40
+  causal_tokens: 0.25
+
+# Domain-specific scaling curves (calibrated for ±5% variance)
+domain_scales:
+  science:
+    citation_weight: 1.15     # Higher expectations for citations in hard sciences
+    clarity_weight: 1.0       # Standard clarity requirements
+    causal_weight: 0.95       # Less emphasis on causal language (data speaks)
+    baseline_shift: -0.02     # Slightly stricter threshold (calibrated)
+    description: "Hard sciences: physics, chemistry, biology, neuroscience"
+  
+  social:
+    citation_weight: 1.0      # Balanced citation expectations
+    clarity_weight: 1.05      # Slightly higher clarity weight (mixed methods)
+    causal_weight: 1.0        # Standard causal reasoning weight
+    baseline_shift: 0.0       # No adjustment (reference domain)
+    description: "Social sciences: psychology, sociology, anthropology, economics"
+  
+  metaphysical:
+    citation_weight: 0.85     # Lower citation rate (more conceptual)
+    clarity_weight: 1.15      # Higher emphasis on argument clarity
+    causal_weight: 1.05       # Higher weight on logical/causal reasoning
+    baseline_shift: 0.02      # Slightly more lenient threshold (calibrated)
+    description: "Philosophy, metaphysics, ontology, conceptual analysis"
+
+# Domain classification keywords
+domain_keywords:
+  science:
+    - experiment
+    - hypothesis
+    - methodology
+    - statistical
+    - measured
+    - laboratory
+    - control
+    - variable
+    - sample
+    - protocol
+    - empirical
+    - observation
+    - replication
+    - quantitative
+    - data
+    - physics
+    - chemistry
+    - biology
+    - neuroscience
+    - genetics
+  
+  social:
+    - society
+    - culture
+    - behavior
+    - population
+    - survey
+    - interview
+    - ethnography
+    - qualitative
+    - participant
+    - social
+    - psychology
+    - sociology
+    - anthropology
+    - economics
+    - political
+    - participants
+    - respondents
+    - cohort
+    - demographic
+    - community
+  
+  metaphysical:
+    - ontology
+    - existence
+    - reality
+    - consciousness
+    - being
+    - metaphysics
+    - philosophical
+    - conceptual
+    - abstract
+    - theoretical
+    - essence
+    - nature
+    - fundamental
+    - principle
+    - logic
+    - argument
+    - reasoning
+    - proposition
+    - axiom
+    - thought
+
+# Thresholds (same as v1)
+thresholds:
+  min_acceptable: 0.60
+  good: 0.75
+  excellent: 0.85
+
+# Cross-domain variance guardrails
+variance_guardrails:
+  target_variance: 0.05           # ±5% maximum variance
+  min_samples_per_domain: 3       # Minimum documents per domain for calibration
+  calibration_mode: true          # Enable calibration tracking
+
+# CI guards (inherited from v1)
+ci_guards:
+  min_docs: 50
+  max_std_dev: 0.02
+
+# Domain adaptation mode
+domain_adaptation:
+  enabled: true
+  auto_detect: true               # Automatically detect document domain
+  fallback_domain: "social"       # Default domain if detection fails
+  confidence_threshold: 0.05      # Minimum confidence for domain detection
+

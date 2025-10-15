@@ -1,0 +1,34 @@
+{
+  "run_stamp": "20251003_161524",
+  "config": {
+    "SHOCKS": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "NOISE_LEVELS": [
+      0.02,
+      0.08
+    ],
+    "COUPLING": [
+      0.65,
+      0.75
+    ],
+    "COORD_LEVELS": [
+      0.55,
+      0.7
+    ],
+    "TIME_BUDGET_MIN": 10
+  },
+  "universe_indices": {
+    "CCI_universe_est": 0.87,
+    "Survival_universe_est": 0.59,
+    "CollapseRisk_universe_est": 0.246
+  },
+  "sample_count": 8,
+  "notes": {
+    "cci_definition": "CCI \u2248 (Calibration \u00d7 Coherence \u00d7 Emergence) / Noise, normalized",
+    "collapse_law": "Collapse ~ (GoalInequality \u00d7 Complexity) / Coordination",
+    "survival_law": "Survival = f(Shock, Coherence, Avg CCI)"
+  }
+}

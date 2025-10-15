@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-10-03_21-28-09",
+  "config": {
+    "epochs_phase1": 600,
+    "epochs_phase2": 3000,
+    "agents_phase1": 64,
+    "agents_phase2": 48,
+    "log_every_phase1": 1,
+    "log_every_phase2": 10,
+    "seeds_grid": 1,
+    "seeds_final": 2,
+    "collapse_rules": {
+      "risk_min": 0.45,
+      "survival_max": 0.4,
+      "cci_floor": 0.45
+    },
+    "fast_mode": true,
+    "time_budget_sec": 900
+  },
+  "phase_summary": {
+    "phase1_conditions": 18,
+    "phase2_promotions": 18,
+    "finalists": 2
+  },
+  "results": {
+    "F1_EH_early_periodic": {
+      "n_runs": 2,
+      "final_CCI_mean": 0.2592,
+      "final_CCI_ci95": [
+        0.255,
+        0.2634
+      ],
+      "stability_CCI_mean": 0.2858,
+      "stability_CCI_ci95": [
+        0.2856,
+        0.286
+      ],
+      "stability_hazard_mean": 1.2789,
+      "stability_hazard_ci95": [
+        1.2781,
+        1.2796
+      ],
+      "hazard_peak_mean": 1.367,
+      "lifespan_mean": 2999.0,
+      "collapse_rate": 0.0,
+      "max_epochs_reached": 2999,
+      "family": "F1",
+      "intervention": "EH_early_periodic",
+      "coordination_strength": 0.6,
+      "goal_inequality": 0.15
+    },
+    "F1_EH_adapt_periodic": {
+      "n_runs": 2,
+      "final_CCI_mean": 0.2604,
+      "final_CCI_ci95": [
+        0.2585,
+        0.2623
+      ],
+      "stability_CCI_mean": 0.2843,
+      "stability_CCI_ci95": [
+        0.2838,
+        0.2848
+      ],
+      "stability_hazard_mean": 1.2829,
+      "stability_hazard_ci95": [
+        1.2828,
+        1.2831
+      ],
+      "hazard_peak_mean": 1.3722,
+      "lifespan_mean": 2999.0,
+      "collapse_rate": 0.0,
+      "max_epochs_reached": 2999,
+      "family": "F1",
+      "intervention": "EH_adapt_periodic",
+      "coordination_strength": 0.6,
+      "goal_inequality": 0.15
+    }
+  },
+  "winners": {
+    "production_safe_winner": "None",
+    "best_available": "F1_EH_early_periodic",
+    "criteria": "highest stability_CCI_mean (NOT PRODUCTION-SAFE)",
+    "is_production_safe": false,
+    "limiting_metrics": [
+      "lifespan (2999 < 3000)",
+      "stability_hazard (1.279 > 0.20)",
+      "stability_CCI (0.286 < 0.50)"
+    ]
+  },
+  "recommendations": [
+    "Extend time horizon to 5000+ epochs to validate long-term stability",
+    "Test stronger hygiene interventions (higher frequency or intensity)",
+    "Combine multiple expansion modes (early + adaptive) for sustained performance"
+  ]
+}

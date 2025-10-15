@@ -1,0 +1,105 @@
+# OriginChain v1 Genesis - Emergence Index Configuration
+#
+# Defines weights, thresholds, and indicators for Emergence Quotient (EQ) calculation
+#
+version: "1.0-genesis"
+seed: 42  # Deterministic seeding for reproducibility
+
+# Component weights (sum to 1.0)
+weights:
+  complexity: 0.35      # Structural richness and layered understanding
+  novelty: 0.30         # New patterns, ideas, and perspectives
+  interconnectedness: 0.35  # Relational density and network effects
+
+# EQ thresholds
+thresholds:
+  min_acceptable: 0.70  # Baseline requirement
+  good: 0.80            # Good emergence potential
+  excellent: 0.90       # Excellent emergence potential
+
+# Complexity indicators (structural richness)
+complexity_keywords:
+  - complex
+  - nuanced
+  - multifaceted
+  - layered
+  - sophisticated
+  - intricate
+  - elaborate
+  - nested
+  - hierarchical
+  - structured
+  - dimensional
+  - multidimensional
+  - facet
+  - aspect
+  - dimension
+  - level
+  - layer
+  - depth
+  - spectrum
+  - gradient
+
+# Novelty indicators (new patterns/ideas)
+novelty_keywords:
+  - new
+  - novel
+  - unprecedented
+  - innovative
+  - original
+  - creative
+  - unique
+  - fresh
+  - emerging
+  - nascent
+  - pioneer
+  - breakthrough
+  - revolutionary
+  - cutting-edge
+  - frontier
+  - unexplored
+  - untapped
+  - uncharted
+  - discovery
+  - invention
+
+# Interconnectedness indicators (relational density)
+interconnection_keywords:
+  - connect
+  - link
+  - relate
+  - network
+  - web
+  - mesh
+  - interplay
+  - interaction
+  - interdependent
+  - interconnect
+  - feedback
+  - loop
+  - cycle
+  - reciprocal
+  - mutual
+  - system
+  - ecosystem
+  - synergy
+  - emergence
+  - holistic
+
+# Emergence patterns (regex)
+emergence_patterns:
+  - "\\bemerge[sd]?\\b"
+  - "\\bevol(ve|ution)\\b"
+  - "\\bunfold[s]?\\b"
+  - "\\bself-\\w+"
+  - "\\bauto-\\w+"
+  - "\\bco-\\w+"
+  - "\\b(bottom-up|top-down)\\b"
+  - "\\bfeedback loop\\b"
+
+# Validation criteria
+validation:
+  min_variance: 0.02    # Maximum acceptable variance across runs
+  min_eq: 0.70          # Minimum acceptable baseline EQ
+  test_runs: 10         # Number of test runs for variance check
+

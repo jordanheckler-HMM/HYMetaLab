@@ -1,0 +1,83 @@
+# MeaningForge v1 Genesis Configuration
+version: "1.0-genesis"
+name: "Meaning Quotient v1"
+description: "Core Meaning Quotient formula based on relevance, resonance, and transformative potential."
+
+seed: 42  # Deterministic seed for reproducibility
+
+# Component weights (must sum to ~1.0)
+weights:
+  relevance: 0.35                    # Practical applicability and contextual value
+  resonance: 0.30                    # Human connection and emotional depth
+  transformative_potential: 0.35     # Capacity to shift perspective/behavior
+
+# Thresholds for grading
+thresholds:
+  min_acceptable: 0.60     # Baseline for meaningful content
+  good: 0.75               # Strong meaning potential
+  excellent: 0.85          # Exceptional meaning depth
+
+# CI guards for reproducibility
+ci_guards:
+  min_docs: 50             # Minimum documents for corpus analysis
+  max_std_dev: 0.02        # Maximum standard deviation for reproducibility
+
+# Component descriptions
+components:
+  relevance:
+    description: "Practical applicability and real-world value"
+    indicators:
+      - practical
+      - application
+      - use
+      - implement
+      - example
+      - concrete
+      - specific
+      - actionable
+      - real-world
+      - context
+    
+  resonance:
+    description: "Human connection and emotional/experiential depth"
+    indicators:
+      - experience
+      - feel
+      - relate
+      - connect
+      - resonate
+      - meaningful
+      - significant
+      - purpose
+      - identity
+      - shared
+      - human
+      - personal
+    
+  transformative_potential:
+    description: "Capacity to shift perspective, behavior, or understanding"
+    indicators:
+      - transform
+      - change
+      - shift
+      - insight
+      - breakthrough
+      - discovery
+      - paradigm
+      - perspective
+      - awareness
+      - evolve
+      - grow
+
+# Validation settings
+validation:
+  reproducibility_target: 0.99       # 99% reproducibility (std < 0.01)
+  runtime_target: 1.0                # <1s per document
+  baseline_mq: 0.60                  # Minimum acceptable MQ
+
+# Output formats
+output:
+  decimal_places: 3
+  include_components: true
+  include_metadata: true
+

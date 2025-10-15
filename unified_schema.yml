@@ -1,0 +1,7 @@
+# Unified schema for Aletheia data layer
+fields:
+  guardian_alignment: {type: float, description: "Guardian alignment score [0,1]"}
+  truthlens_Ti: {type: float, description: "TruthLens internal truth index [0,1]"}
+  meaningforge_MQ: {type: float, description: "MeaningForge meaning quality [0,1]"}
+  originchain_EQ: {type: float, description: "OriginChain equilibrium quality [0,1]"}
+tolerance: 0.05

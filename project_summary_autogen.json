@@ -1,0 +1,15 @@
+{
+  "rows": [
+    {
+      "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/phase13/data/runs_summary.csv",
+      "mean_CCI": null,
+      "mean_survival": null,
+      "mean_hazard": null,
+      "mean_collapse": null,
+      "preregistered_flag": true,
+      "cci_ci_present": true,
+      "survival_ci_present": true,
+      "category": "under_review"
+    }
+  ]
+}

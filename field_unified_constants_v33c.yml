@@ -1,0 +1,16 @@
+# Field Unified Constants v33c
+# CRA Terminology Alignment (2025-10-15)
+
+cci_label: "Collective Coherence Index"
+cci_scope: "Simulation-bounded, internal coherence metric"
+
+# Universal Resilience Law
+epsilon_range: [0.0005, 0.0015]
+rho_star: 0.0828
+rho_star_ci: 0.017
+lambda_star: 0.9
+beta_alpha_scaling: 2.3
+
+# Classification thresholds
+cci_validated: 0.75
+cci_hypothesis_gen: 0.50

@@ -1,0 +1,22 @@
+# Oversight guidelines for Post-Aletheia transition
+review_board:
+  chair: "<name>"
+  members:
+    - "<member1>"
+    - "<member2>"
+  contact: "<email@example.org>"
+
+checkpoints:
+  - name: "Pre-deployment audit"
+    required: true
+    artifacts:
+      - "outputs/aletheia/ucs_manifest.yml"
+      - "outputs/aletheia/equilibrium_map.json"
+      - "outputs/aletheia/total_coherence.json"
+  - name: "Sandbox corrections review"
+    required: true
+    max_cycles: 3
+
+alerting:
+  psi_eq_delta_threshold: 0.1
+  stability_threshold_pct: 85

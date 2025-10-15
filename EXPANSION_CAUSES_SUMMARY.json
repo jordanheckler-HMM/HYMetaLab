@@ -1,0 +1,25 @@
+{
+  "run_stamp": "20251003_185707",
+  "design": {
+    "epochs_per_run": 6,
+    "pop": 32,
+    "shocks": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "levers": [
+      "constructive_shocks",
+      "coord_training",
+      "costly_signal",
+      "energy_influx",
+      "ineq_control"
+    ]
+  },
+  "notes": "ATEs are average differences vs control across all epochs and combos containing each lever.",
+  "key_findings": {
+    "strongest_expansion_lever": "energy_influx",
+    "strongest_survival_lever": "coord_training",
+    "strongest_collapse_reducer": "ineq_control"
+  }
+}

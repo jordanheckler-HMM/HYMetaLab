@@ -1,0 +1,60 @@
+# TruthLens v1 Configuration
+# Truth Index (Ti) - Reproducible truthfulness measurement
+
+version: "1.0"
+name: "TruthLens Truth Index v1"
+description: "Baseline Ti measurement with deterministic seed and variance guards"
+
+# Deterministic seed for reproducibility
+seed: 42
+
+# Component weights (must sum to 1.0)
+weights:
+  claim_clarity: 0.35       # Clear, testable, quantified claims
+  citation_presence: 0.40   # Evidence backing (highest weight)
+  causal_tokens: 0.25       # Mechanistic reasoning
+
+# Thresholds
+thresholds:
+  min_acceptable: 0.60      # Minimum for research quality
+  target: 0.75              # Good research standard
+  excellent: 0.85           # Publication-ready
+
+# Quality guards
+guards:
+  variance_threshold: 0.02  # Max stddev across runs (<2%)
+  min_docs_for_ci: 50       # Minimum docs for CI calculation
+  ci_level: 0.95            # 95% confidence intervals
+
+# Feature parameters
+features:
+  claim_clarity:
+    baseline: 0.50          # Neutral starting point
+    density_multiplier: 0.05
+    penalty_multiplier: 0.10
+    
+  citation_presence:
+    log_base: 21            # log(1 + count) / log(21)
+    diversity_bonus: 0.20
+    
+  causal_tokens:
+    baseline: 0.30
+    density_multiplier: 0.10
+
+# Validation criteria
+validation:
+  corpus_mean_ti: 0.60      # Target mean Ti on corpus
+  max_nan_rate: 0.0         # No NaN values allowed
+  monotonicity_test: true   # More citations → higher Ti
+
+# Metadata
+changelog:
+  - version: "1.0"
+    date: "2025-10-14"
+    changes:
+      - "Initial TruthLens v1 Genesis implementation"
+      - "Deterministic seed (TRUTHLENS_SEED=42)"
+      - "Three-component Ti: clarity + citations + causality"
+      - "Variance guard: <2% across 5 runs"
+      - "Target: baseline Ti ≥0.6"
+

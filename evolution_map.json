@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-10-14T22:59:59.205811",
+  "version": "1.0-genesis",
+  "analysis": {
+    "total_documents": 3,
+    "mean_eq": 0.9999999999999999,
+    "min_eq": 0.9999999999999999,
+    "max_eq": 0.9999999999999999,
+    "passes_threshold": 3,
+    "fails_threshold": 0
+  },
+  "documents": [
+    {
+      "file": "test_emergence_corpus/emergence_principles.md",
+      "emergence_quotient": 0.9999999999999999,
+      "grade": "EXCELLENT",
+      "passes_threshold": true,
+      "components": {
+        "complexity": 1.0,
+        "novelty": 1.0,
+        "interconnectedness": 1.0
+      }
+    },
+    {
+      "file": "test_emergence_corpus/systems_thinking.md",
+      "emergence_quotient": 0.9999999999999999,
+      "grade": "EXCELLENT",
+      "passes_threshold": true,
+      "components": {
+        "complexity": 1.0,
+        "novelty": 1.0,
+        "interconnectedness": 1.0
+      }
+    },
+    {
+      "file": "test_emergence_corpus/network_dynamics.md",
+      "emergence_quotient": 0.9999999999999999,
+      "grade": "EXCELLENT",
+      "passes_threshold": true,
+      "components": {
+        "complexity": 1.0,
+        "novelty": 1.0,
+        "interconnectedness": 1.0
+      }
+    }
+  ]
+}

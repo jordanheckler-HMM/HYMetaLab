@@ -1,0 +1,321 @@
+{
+  "timestamp": "2025-10-14T23:18:34.094170",
+  "version": "4.0-adaptivity",
+  "baseline": {
+    "reward": 0.007859767872527783,
+    "final_coherence": 0.0,
+    "mean_coherence": 0.022456479635793666,
+    "coherence_growth": -0.25
+  },
+  "best_parameters": {
+    "coherence_growth_rate": 0.05,
+    "energy_decay_rate": 0.01,
+    "entropy_increase_rate": 0.01,
+    "feedback_strength": 0.2967844662108669,
+    "noise_level": 0.002260167889073071
+  },
+  "best_reward": 0.8810287194216876,
+  "improvement_percentage": 11109.347829484175,
+  "training_history": [
+    {
+      "episode": 0,
+      "parameters": {
+        "coherence_growth_rate": 0.13973713224089862,
+        "energy_decay_rate": 0.038938855906305234,
+        "entropy_increase_rate": 0.0818150830480554,
+        "feedback_strength": 0.321842388512642,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.03666646602801092,
+      "coherence_growth": -0.25,
+      "total_reward": 0.012833263109803822,
+      "improvement": 63.27788960103871
+    },
+    {
+      "episode": 1,
+      "parameters": {
+        "coherence_growth_rate": 0.12655256386371028,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.17548311037485065,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.2034376565588341,
+      "mean_coherence": 0.05428689667603535,
+      "coherence_growth": -0.04656234344116589,
+      "total_reward": 0.10037547646014602,
+      "improvement": 1177.079400919562
+    },
+    {
+      "episode": 2,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.1,
+        "entropy_increase_rate": 0.1,
+        "feedback_strength": 0.1,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.011091724037405623,
+      "coherence_growth": -0.25,
+      "total_reward": 0.0038821034130919678,
+      "improvement": -50.60791265018055
+    },
+    {
+      "episode": 3,
+      "parameters": {
+        "coherence_growth_rate": 0.11115935076823606,
+        "energy_decay_rate": 0.06341544024186599,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.19551329868852851,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.03979304052177281,
+      "coherence_growth": -0.25,
+      "total_reward": 0.013927564182620481,
+      "improvement": 77.20070628677782
+    },
+    {
+      "episode": 4,
+      "parameters": {
+        "coherence_growth_rate": 0.15583943612991252,
+        "energy_decay_rate": 0.1,
+        "entropy_increase_rate": 0.09935844420872202,
+        "feedback_strength": 0.1479191025158733,
+        "noise_level": 0.04781675842952535
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.010689546045196284,
+      "coherence_growth": -0.25,
+      "total_reward": 0.003741341115818699,
+      "improvement": -52.39883446309154
+    },
+    {
+      "episode": 5,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.1,
+        "entropy_increase_rate": 0.1,
+        "feedback_strength": 0.26309031519023707,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.01591832512808288,
+      "coherence_growth": -0.25,
+      "total_reward": 0.005571413794829008,
+      "improvement": -29.114779403311008
+    },
+    {
+      "episode": 6,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.2967844662108669,
+        "noise_level": 0.002260167889073071
+      },
+      "final_coherence": 1.0,
+      "mean_coherence": 0.8386534840619646,
+      "coherence_growth": 0.75,
+      "total_reward": 0.8810287194216876,
+      "improvement": 11109.347829484175
+    },
+    {
+      "episode": 7,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.08327712798639969,
+        "feedback_strength": 0.3704065843986283,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.0279707830866966,
+      "coherence_growth": -0.25,
+      "total_reward": 0.009789774080343809,
+      "improvement": 24.55551155094503
+    },
+    {
+      "episode": 8,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.035223040230949215,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.10742999654335242,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.015628568535757385,
+      "coherence_growth": -0.25,
+      "total_reward": 0.005469998987515085,
+      "improvement": -30.40508223360703
+    },
+    {
+      "episode": 9,
+      "parameters": {
+        "coherence_growth_rate": 0.07695170973133987,
+        "energy_decay_rate": 0.04667149227382791,
+        "entropy_increase_rate": 0.1,
+        "feedback_strength": 0.11572523766970949,
+        "noise_level": 0.020958280768045928
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.012537248747640471,
+      "coherence_growth": -0.25,
+      "total_reward": 0.004388037061674165,
+      "improvement": -44.17090768021719
+    },
+    {
+      "episode": 10,
+      "parameters": {
+        "coherence_growth_rate": 0.14175003084836343,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.04929906172102983,
+        "feedback_strength": 0.16027984081564228,
+        "noise_level": 0.014351178153514414
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.016753602924041194,
+      "coherence_growth": -0.25,
+      "total_reward": 0.005863761023414417,
+      "improvement": -25.395239165904638
+    },
+    {
+      "episode": 11,
+      "parameters": {
+        "coherence_growth_rate": 0.11666115294728067,
+        "energy_decay_rate": 0.1,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.17398146151337465,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.030375369985518097,
+      "mean_coherence": 0.013729028767618216,
+      "coherence_growth": -0.2196246300144819,
+      "total_reward": 0.016955308062873615,
+      "improvement": 115.72275845623177
+    },
+    {
+      "episode": 12,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.036350565666199625,
+        "feedback_strength": 0.1162655880578335,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.007290556610344653,
+      "coherence_growth": -0.25,
+      "total_reward": 0.0025516948136206285,
+      "improvement": -67.53473060521854
+    },
+    {
+      "episode": 13,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.02955853392718532,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.24560874258361468,
+        "noise_level": 0.033759864417010226
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.01693407130175408,
+      "coherence_growth": -0.25,
+      "total_reward": 0.0059269249556139275,
+      "improvement": -24.591603063364172
+    },
+    {
+      "episode": 14,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.08519390108140826,
+        "entropy_increase_rate": 0.1,
+        "feedback_strength": 0.18362221686543495,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.013396001195834863,
+      "coherence_growth": -0.25,
+      "total_reward": 0.004688600418542202,
+      "improvement": -40.346833461453116
+    },
+    {
+      "episode": 15,
+      "parameters": {
+        "coherence_growth_rate": 0.08970779101147805,
+        "energy_decay_rate": 0.02164956030344386,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.1610429572466402,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.07100539913699698,
+      "mean_coherence": 0.021651374999619548,
+      "coherence_growth": -0.178994600863003,
+      "total_reward": 0.035980140904665635,
+      "improvement": 357.77612632081525
+    },
+    {
+      "episode": 16,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.01,
+        "feedback_strength": 0.2239950546242315,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.025646640146280535,
+      "coherence_growth": -0.25,
+      "total_reward": 0.008976324051198187,
+      "improvement": 14.205968888382811
+    },
+    {
+      "episode": 17,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.08275864808639305,
+        "entropy_increase_rate": 0.06369613419341363,
+        "feedback_strength": 0.1,
+        "noise_level": 0.05
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.008945508721088844,
+      "coherence_growth": -0.25,
+      "total_reward": 0.0031309280523810954,
+      "improvement": -60.16513333269528
+    },
+    {
+      "episode": 18,
+      "parameters": {
+        "coherence_growth_rate": 0.05,
+        "energy_decay_rate": 0.01,
+        "entropy_increase_rate": 0.1,
+        "feedback_strength": 0.12525851857018871,
+        "noise_level": 0.001
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.011789367944232439,
+      "coherence_growth": -0.25,
+      "total_reward": 0.004126278780481354,
+      "improvement": -47.50126406526686
+    },
+    {
+      "episode": 19,
+      "parameters": {
+        "coherence_growth_rate": 0.06567231947444555,
+        "energy_decay_rate": 0.07285129224067333,
+        "entropy_increase_rate": 0.02996451411831275,
+        "feedback_strength": 0.30948626282529296,
+        "noise_level": 0.029232832823639594
+      },
+      "final_coherence": 0.0,
+      "mean_coherence": 0.030360730631165185,
+      "coherence_growth": -0.25,
+      "total_reward": 0.010626255720907814,
+      "improvement": 35.19808591357673
+    }
+  ]
+}

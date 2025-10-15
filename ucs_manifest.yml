@@ -1,0 +1,10 @@
+# Unified Coherence System (UCS) manifest template
+# This file is a template and will be populated by `integration_core.py` into
+# `outputs/aletheia/ucs_manifest.yml` during integration checks.
+
+generated_at: "<timestamp>"
+components_present:
+  sensor_network: false
+  total_coherence: false
+  equilibrium_map: false
+checks: {}

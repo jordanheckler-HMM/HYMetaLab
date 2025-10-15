@@ -1,0 +1,9 @@
+# Coherence equation configuration for Aletheia v1 Genesis
+# Weights correspond to component importance in compute_psi_c
+seed: 17
+baseline_threshold: 0.7
+weights:
+  guardian_alignment: 3.0
+  truthlens_Ti: 2.5
+  meaningforge_MQ: 2.0
+  originchain_EQ: 2.5
