@@ -133,11 +133,40 @@ phase4_open_data_replication_20251015_084124.zip: OK
 
 **Creator:** HYMetaLab / Heck Yeah Simulation Research Initiative  
 **License:** CC-BY-4.0 (Creative Commons Attribution 4.0)  
-**Keywords:** open data, reproducibility, ethics validation, truth index, semantic analysis  
+**Keywords:** open data, reproducibility, ethics validation, truth index, semantic analysis, collective coherence index  
 **Related Identifiers:** [Preprint DOI pending]
+
+**Framework:** Quantitative Simulation Framework for Collective Coherence  
+**Metric:** Collective Coherence Index (CCI) — Simulation-bounded, internal coherence metric
 
 **Funding:** Internal Research Initiative  
 **Contributors:** Lab Tech – Archival, Lab Tech – Validation, Lab Tech – Integration
+
+---
+
+## 🔬 Epistemic Boundary (OpenLaws §3.4)
+
+**Critical Scope Limitation:**
+
+This research package documents simulation-bounded behaviors within controlled model scope. All findings, hypotheses, and metrics (including the Collective Coherence Index) are derived from computational simulations and **do not imply universal physical laws**.
+
+**Key Constraints:**
+- ✅ Findings are consistent within simulation parameters
+- ✅ Results are reproducible with documented seeds
+- ✅ Language is appropriately hedged ("suggests", "may", "consistent with")
+- ⚠️ External empirical validation required before generalization
+- ⚠️ Not validated against real-world systems
+- ⚠️ Hypothesis-generating, not theory-confirming
+
+**Interpretation Guidance:**
+When using this package, treat all results as preliminary and hypothesis-generating. The Collective Coherence Index (CCI) measures internal coherence within the simulation framework and should not be interpreted as a universal consciousness metric or physical law.
+
+**Validation Status:**
+- Guardian v4: 87.0/100 (PASS, simulation-scoped claims)
+- TruthLens: 1.000 (claim clarity and citation support)
+- MeaningForge: 1.000 (semantic consistency)
+
+**Compliance:** OpenLaws §3.4 Epistemic Boundary Requirements
 
 ---
 
@@ -213,6 +242,24 @@ Zenodo. https://doi.org/10.5281/zenodo.17299062
 
 ---
 
+## 📋 Terminology & Framework
+
+**Updated Terminology (CRA 2025-10-15):**
+- ✅ **Collective Coherence Index (CCI)** — Internal coherence metric (simulation-scoped)
+- ✅ **Quantitative Simulation Framework for Collective Coherence** — Research framework
+- ✅ **Energy-Information Complementarity** — Theoretical basis
+- ✅ **η→0 (hypothesis)** — Resilience condition (hypothesis-level)
+
+**Legacy Terms (Deprecated):**
+- ❌ Consciousness Calibration Index → Use "Collective Coherence Index"
+- ❌ Mathematical Metaphysics → Use "Quantitative Simulation Framework"
+- ❌ Energy-Information Equivalence → Use "Energy-Information Complementarity"
+- ❌ η→0 (law) → Use "η→0 (hypothesis)"
+
+**Reference:** See `docs/CRA_Terminology_Changelog_20251015.md` for complete rationale.
+
+---
+
 **"Integrity → Resilience → Meaning"**  
 — HYMetaLab Research Charter
 
@@ -223,3 +270,10 @@ Zenodo. https://doi.org/10.5281/zenodo.17299062
 - Research Team (access granted)
 - Public Repository (Zenodo)
 - Archive: `docs/integrity/Zenodo_Publication_Complete.md`
+
+---
+
+**Lab Tech:** Publication  
+**Last Updated:** 2025-10-15  
+**Compliance:** OpenLaws §3.4, CRA Terminology Standards  
+**Status:** ✅ COMPLETE & COMPLIANT

@@ -26,6 +26,7 @@
     "publication": {
       "zenodo_doi": "10.5281/zenodo.17299062",
       "zenodo_url": "https://doi.org/10.5281/zenodo.17299062",
+      "zenodo_description": "Phase 4 Open-Source Data Integration replication package. Includes 5 standardized datasets, validation reports (Guardian v4: 87.0, TruthLens: 1.0, MeaningForge: 1.0), and synthesis outputs. Framework: Quantitative Simulation Framework for Collective Coherence. Metric: Collective Coherence Index (CCI, simulation-bounded). Epistemic Boundary: Findings describe simulation-bounded behaviors and do not imply universal physical laws (OpenLaws §3.4). License: CC-BY-4.0. Full reproduction guide included.",
       "upload_status": "COMPLETE",
       "upload_date": "2025-10-15",
       "preprint_doi": null,
@@ -110,5 +111,8 @@
   "zenodo_concept_doi": "10.5281/zenodo.17299062",
   "zenodo_version_doi": "",
   "zenodo_status": "in_review",
-  "cci_label": "Collective Coherence Index"
+  "cci_label": "Collective Coherence Index",
+  "epistemic_boundary": true,
+  "epistemic_boundary_statement": "Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws",
+  "openlaws_section": "§3.4"
 }
