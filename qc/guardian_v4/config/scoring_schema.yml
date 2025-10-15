@@ -1,0 +1,324 @@
+# Guardian v4 Scoring Schema
+# HYMetaLab Ethical Alignment System
+# Version: 4.0-alpha
+# Date: 2025-10-14
+
+version: "4.0"
+name: "Guardian v4 Ethical Alignment Framework"
+
+# ============================================================================
+# CORE METRICS
+# ============================================================================
+
+metrics:
+  objectivity_score:
+    description: "Measures factual balance and avoidance of subjective claims"
+    range: [0.0, 1.0]
+    target: 0.80
+    weight: 0.25
+    calculation: "NLP-based: neutral language ratio / total language"
+    components:
+      - hedge_term_density: 0.3
+      - overclaim_penalty: 0.4
+      - source_citation_bonus: 0.3
+    
+  transparency_index_v2:
+    description: "Citation compliance, metadata completeness, and data availability"
+    range: [0.0, 1.0]
+    target: 0.90
+    weight: 0.30
+    calculation: "Weighted average of citation, metadata, and reproducibility"
+    components:
+      - citation_density: 0.4
+      - metadata_completeness: 0.3
+      - data_availability: 0.3
+    
+  language_safety_score:
+    description: "Prevents coercive, overstated, or harmful phrasing"
+    range: [0.0, 1.0]
+    target: 0.85
+    weight: 0.25
+    calculation: "1.0 - (violation_density * severity_multiplier)"
+    components:
+      - coercive_language: 0.3
+      - overstatement: 0.4
+      - harmful_framing: 0.3
+    
+  sentiment_neutrality:
+    description: "Emotional tone balance (prefer neutral scientific tone)"
+    range: [-1.0, 1.0]
+    target_range: [-0.1, 0.1]
+    weight: 0.20
+    calculation: "NLP sentiment classification: -1 (negative) to +1 (positive)"
+    optimal: 0.0  # Neutral
+
+# ============================================================================
+# COMPOSITE SCORE
+# ============================================================================
+
+guardian_alignment_score:
+  description: "Overall ethical alignment metric"
+  range: [0, 100]
+  target: 90
+  calculation: |
+    score = 100 * (
+      0.25 * objectivity_score +
+      0.30 * transparency_index_v2 +
+      0.25 * language_safety_score +
+      0.20 * (0.5 + 0.5 * (1 - abs(sentiment_neutrality)))
+    )
+  
+  classification:
+    excellent: [90, 100]
+    good: [70, 90]
+    moderate: [50, 70]
+    poor: [0, 50]
+
+# ============================================================================
+# RISK LEVELS
+# ============================================================================
+
+ethical_risk_levels:
+  low:
+    range: [90, 100]
+    color: "green"
+    action: "Auto-approve"
+    
+  medium:
+    range: [70, 90]
+    color: "yellow"
+    action: "Human review recommended"
+    
+  high:
+    range: [50, 70]
+    color: "orange"
+    action: "Mandatory review + revision"
+    
+  critical:
+    range: [0, 50]
+    color: "red"
+    action: "Block deployment"
+
+# ============================================================================
+# LANGUAGE PATTERNS
+# ============================================================================
+
+patterns:
+  hedge_terms:
+    - suggests
+    - indicates
+    - appears to
+    - may
+    - might
+    - could
+    - preliminary
+    - tentative
+    - potential
+    - within simulation
+    - hypothesis-generating
+    
+  overclaim_terms:
+    - proves
+    - definitively
+    - conclusively
+    - universal law
+    - guarantees
+    - always
+    - never
+    - absolute
+    - certain
+    - undeniable
+    
+  coercive_language:
+    - must
+    - should
+    - required
+    - mandatory
+    - forced
+    - compelled
+    
+  neutral_alternatives:
+    proves: "suggests"
+    definitively: "preliminarily"
+    conclusively: "tentatively"
+    universal law: "observed regularity"
+    guarantees: "is expected to"
+    always: "typically"
+    never: "rarely"
+    absolute: "high-confidence"
+
+# ============================================================================
+# TRANSPARENCY REQUIREMENTS
+# ============================================================================
+
+transparency_requirements:
+  citations:
+    minimum_per_document: 2
+    minimum_per_1000_words: 1
+    preferred_formats:
+      - DOI
+      - URL
+      - BibTeX
+      
+  metadata:
+    required_fields:
+      - study_id
+      - date
+      - classification
+      - seeds
+      - preregistration_status
+      
+  data_availability:
+    required_statements:
+      - data_location
+      - reproduction_instructions
+      - code_availability
+
+# ============================================================================
+# CI/CD INTEGRATION
+# ============================================================================
+
+ci_cd_gates:
+  commit_validation:
+    enabled: true
+    minimum_score: 70
+    block_on_critical: true
+    
+  pre_merge_validation:
+    enabled: true
+    minimum_score: 80
+    require_human_review: true
+    
+  deployment_validation:
+    enabled: true
+    minimum_score: 90
+    require_all_metrics_pass: true
+
+# ============================================================================
+# ALERT CONFIGURATION
+# ============================================================================
+
+alerts:
+  slack:
+    enabled: true
+    webhook_url: "${SLACK_WEBHOOK_URL}"
+    triggers:
+      - score_below_70
+      - critical_risk_detected
+      - new_violation_pattern
+      
+  discord:
+    enabled: false
+    webhook_url: "${DISCORD_WEBHOOK_URL}"
+    
+  email:
+    enabled: false
+    recipients:
+      - "lab-manager@hymetalab.org"
+
+# ============================================================================
+# VALIDATION RULES
+# ============================================================================
+
+validation_rules:
+  - name: "Simulation Context Required"
+    pattern: "simulation|hypothesis-generating|computational model"
+    severity: "high"
+    message: "Research outputs must explicitly state simulation context"
+    
+  - name: "Bootstrap CI Required"
+    pattern: "\\[.*,.*\\]|95% CI|confidence interval"
+    severity: "medium"
+    message: "Effect sizes should include bootstrap confidence intervals"
+    
+  - name: "Classification Status Required"
+    pattern: "VALIDATED|UNDER_REVIEW|HYPOTHESIS-GEN"
+    severity: "high"
+    message: "Studies must have explicit classification status"
+    
+  - name: "Preregistration Reference"
+    pattern: "preregistered|study.yml|seeds.*\\[.*\\]"
+    severity: "medium"
+    message: "Preregistration details should be cited"
+
+# ============================================================================
+# MODEL CONFIGURATION
+# ============================================================================
+
+nlp_models:
+  objectivity_classifier:
+    type: "transformer"
+    base_model: "distilbert-base-uncased"
+    training_epochs: 3
+    batch_size: 16
+    learning_rate: 2e-5
+    
+  sentiment_analyzer:
+    type: "transformer"
+    base_model: "distilbert-base-uncased-finetuned-sst-2-english"
+    confidence_threshold: 0.8
+    
+  language_safety_detector:
+    type: "rule_based_hybrid"
+    rule_weight: 0.6
+    ml_weight: 0.4
+
+# ============================================================================
+# DASHBOARD CONFIGURATION
+# ============================================================================
+
+dashboard:
+  update_frequency: "30s"
+  traffic_light_thresholds:
+    green: 90
+    yellow: 70
+    red: 50
+  
+  widgets:
+    - type: "gauge"
+      metric: "guardian_alignment_score"
+      title: "Guardian Alignment"
+      
+    - type: "bar_chart"
+      metrics: ["objectivity_score", "transparency_index_v2", "language_safety_score"]
+      title: "Component Metrics"
+      
+    - type: "timeline"
+      metric: "guardian_alignment_score"
+      window: "7d"
+      title: "Alignment Trend"
+
+# ============================================================================
+# EXPORT CONFIGURATION
+# ============================================================================
+
+exports:
+  formats:
+    - json
+    - markdown
+    - csv
+    
+  outputs:
+    - path: "qc/guardian_v4/guardian_report_v4.json"
+      format: "json"
+      
+    - path: "qc/guardian_v4/guardian_summary_v4.md"
+      format: "markdown"
+      
+    - path: "qc/guardian_v4/metrics_timeseries.csv"
+      format: "csv"
+
+# ============================================================================
+# VERSIONING
+# ============================================================================
+
+changelog:
+  - version: "4.0-alpha"
+    date: "2025-10-14"
+    changes:
+      - "Initial Guardian v4 implementation"
+      - "Added NLP-based objectivity scoring"
+      - "Implemented transparency index v2"
+      - "Created risk assessment framework"
+      - "Integrated CI/CD hooks"
+
