@@ -1,11 +1,11 @@
 # Guardian v4 Corpus Analysis Report
-**Date**: 2025-10-15T11:31:11.054238
+**Date**: 2025-10-15T18:57:29.259363
 
 ## 🔴 Overall Assessment
 
-**Documents Analyzed**: 601  
+**Documents Analyzed**: 638  
 **Mean Guardian Score**: **62.5/100**  
-**Passing Rate**: **7.5%** (45/601)
+**Passing Rate**: **8.3%** (53/638)
 
 **Score Range**: 34.9 - 87.0
 
@@ -13,9 +13,9 @@
 
 ## 📊 Risk Distribution
 
-- **CRITICAL**: 15 (2.5%)
-- **HIGH**: 541 (90.0%)
-- **MEDIUM**: 45 (7.5%)
+- **CRITICAL**: 16 (2.5%)
+- **HIGH**: 569 (89.2%)
+- **MEDIUM**: 53 (8.3%)
 
 ---
 
@@ -27,12 +27,12 @@
 - `RESEARCH_DISCLAIMER.md`: 83.7/100
 - `NEXT_STEP_EXECUTION_COMPLETE.md`: 79.1/100
 - `NEXT_STEPS.md`: 78.4/100
+- `Lab_Tech_Archival_Task_Summary.md`: 77.5/100
 - `NEXTGEN_STACK_QUICKSTART.md`: 76.9/100
+- `Makefile_Automation_Guide.md`: 76.7/100
 - `GUARDIAN_V3_EXECUTIVE_SUMMARY.md`: 76.6/100
 - `SESSION_GUARDIAN_V3_IMPLEMENTATION.md`: 76.2/100
 - `README.md`: 76.0/100
-- `FINAL_SESSION_SUMMARY.md`: 75.5/100
-- `GUARDIAN_V3_QUICK_REFERENCE.md`: 75.4/100
 
 ### ⚠️ Bottom 10 Documents
 
