@@ -1,13 +1,13 @@
 {
   "dashboard_version": "2.0",
-  "last_updated": "2025-10-15T11:40:00Z",
+  "last_updated": "2025-10-16T00:05:22Z",
   "lab": "HYMetaLab / Heck Yeah Simulation Research Initiative",
   "phase4_open_data_integration": {
     "status": "COMPLETE",
     "guardian_score": 87.0,
     "validation": {
-      "truthlens": 1.000,
-      "meaningforge": 1.000,
+      "truthlens": 1.0,
+      "meaningforge": 1.0,
       "guardian_v4": 87.0
     },
     "datasets": 5,
@@ -20,13 +20,13 @@
       "generated": "2025-10-15T08:41:24Z",
       "location": "results/publication/",
       "verified": true,
-      "verifier": "Lab Tech – Archival",
+      "verifier": "Lab Tech \u2013 Archival",
       "verification_date": "2025-10-15"
     },
     "publication": {
       "zenodo_doi": "10.5281/zenodo.17299062",
       "zenodo_url": "https://doi.org/10.5281/zenodo.17299062",
-      "zenodo_description": "Phase 4 Open-Source Data Integration replication package. Includes 5 standardized datasets, validation reports (Guardian v4: 87.0, TruthLens: 1.0, MeaningForge: 1.0), and synthesis outputs. Framework: Quantitative Simulation Framework for Collective Coherence. Metric: Collective Coherence Index (CCI, simulation-bounded). Epistemic Boundary: Findings describe simulation-bounded behaviors and do not imply universal physical laws (OpenLaws §3.4). License: CC-BY-4.0. Full reproduction guide included.",
+      "zenodo_description": "Phase 4 Open-Source Data Integration replication package. Includes 5 standardized datasets, validation reports (Guardian v4: 87.0, TruthLens: 1.0, MeaningForge: 1.0), and synthesis outputs. Framework: Quantitative Simulation Framework for Collective Coherence. Metric: Collective Coherence Index (CCI, simulation-bounded). Epistemic Boundary: Findings describe simulation-bounded behaviors and do not imply universal physical laws (OpenLaws \u00a73.4). License: CC-BY-4.0. Full reproduction guide included.",
       "upload_status": "COMPLETE",
       "upload_date": "2025-10-15",
       "preprint_doi": null,
@@ -70,7 +70,23 @@
       "study": "fis_trust_hope_stabilizers",
       "delta_cci": 0.0329,
       "delta_hazard": -0.0132,
-      "status": "VALIDATED"
+      "status": "VALIDATED",
+      "version": "v1.1_rerun",
+      "delta_cci_ci": "[0.0169, 0.0489]",
+      "delta_hazard_ci": "[-0.0232, -0.0032]",
+      "p_value": 0.012,
+      "effect_size": "medium",
+      "classification": "VALIDATED",
+      "date": "2025-10-15T19:05:37Z",
+      "seeds": [
+        11,
+        17,
+        23,
+        29
+      ],
+      "bootstrap_n": 1000,
+      "replication_packet": "realityloop_rerun_v1.1.zip",
+      "sha256": "d007b59f30dbaf3549e32cafef8b61d22c8b7d2ef19919849d013bf108d185fb"
     },
     {
       "study": "fis_ai_safety_toolkit",
@@ -83,7 +99,7 @@
     {
       "priority": "IMMEDIATE",
       "action": "Upload replication package to Zenodo",
-      "assignee": "Lab Tech – Archival",
+      "assignee": "Lab Tech \u2013 Archival",
       "status": "COMPLETE",
       "completed_date": "2025-10-15",
       "doi": "10.5281/zenodo.17299062"
@@ -91,7 +107,7 @@
     {
       "priority": "IMMEDIATE",
       "action": "Paste DOI into dashboard_data.json",
-      "assignee": "Lab Tech – Archival",
+      "assignee": "Lab Tech \u2013 Archival",
       "status": "COMPLETE",
       "completed_date": "2025-10-15"
     },
@@ -104,7 +120,7 @@
     {
       "priority": "HIGH",
       "action": "Guardian corpus sweep after DOI addition",
-      "assignee": "Lab Tech – Validation",
+      "assignee": "Lab Tech \u2013 Validation",
       "status": "PENDING"
     }
   ],
@@ -114,5 +130,5 @@
   "cci_label": "Collective Coherence Index",
   "epistemic_boundary": true,
   "epistemic_boundary_statement": "Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws",
-  "openlaws_section": "§3.4"
+  "openlaws_section": "\u00a73.4"
 }

@@ -130,3 +130,7 @@ git revert qc_alignment_v1
 **Signed:** Lab Tech – Documentation  
 **Date:** 2025-10-15  
 **Status:** ✅ COMPLETE
+
+---
+
+**Epistemic Boundary (OpenLaws §3.4):** Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws.

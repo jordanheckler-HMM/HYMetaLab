@@ -277,3 +277,7 @@ curl -I https://doi.org/10.5281/zenodo.XXXXXXX
 **Certified:** Lab Tech – Publication  
 **Date:** 2025-10-15  
 **Status:** ✅ NORMALIZED — No broken links, proper in_review state
+
+---
+
+**Epistemic Boundary (OpenLaws §3.4):** Findings describe simulation-bounded behaviors within controlled model scope and do not imply universal physical laws.
