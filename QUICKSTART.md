@@ -252,3 +252,22 @@ git commit -m "results: experiment XYZ completed"
 
 *"Integrity → Resilience → Meaning"*  
 *HYMetaLab Lab Techs v2.0*
+
+---
+
+## 🛑 Stop All Services
+
+**Desktop Launcher**: Double-click `HYMetaLab_Stop.command` on your Desktop
+
+Or manually:
+```bash
+# Kill Sentinel API
+pkill -f uvicorn
+
+# Kill Sentinel UI
+pkill -f streamlit
+
+# Or kill all in one command
+pkill -f "uvicorn\|streamlit"
+```
+
