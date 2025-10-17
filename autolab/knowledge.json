@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "ts": "2025-10-17T03:58:03.434077Z",
+      "hypothesis": "baseline: demo-run",
+      "success": true
+    },
+    {
+      "ts": "2025-10-17T03:58:05.190728Z",
+      "hypothesis": "baseline: demo-run",
+      "success": true
+    },
+    {
+      "ts": "2025-10-17T03:58:05.331775Z",
+      "hypothesis": "\u03b7 sweep 0.10\u20130.20, n=40",
+      "success": false
+    },
+    {
+      "ts": "2025-10-17T03:58:05.468192Z",
+      "hypothesis": "baseline: demo-run",
+      "success": true
+    }
+  ],
+  "hypotheses": {
+    "baseline: demo-run": {
+      "score": 0.829,
+      "n": 3
+    },
+    "\u03b7 sweep 0.10\u20130.20, n=40": {
+      "score": 0.35,
+      "n": 1
+    }
+  }
+}
