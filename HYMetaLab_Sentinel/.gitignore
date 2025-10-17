@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.state/
+state/
+dist/
+.dev/
+.cache/
+.streamlit/
+dev/logs/
+dev/tmp/
+*.sqlite
+*.db
+.vscode/
+.idea/
