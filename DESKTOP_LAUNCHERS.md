@@ -80,11 +80,38 @@ BASE_DIR="..."  # Update if repo moves
 
 ---
 
+## ⏹️ HYMetaLab_AutoStop.command
+
+**Purpose**: Stop running AutoLab autopilot processes
+
+**What it does**:
+1. Finds all running `auto_lab.py` processes
+2. Sends graceful interrupt (SIGINT)
+3. Force kills if needed (SIGKILL)
+4. Confirms shutdown
+
+**Usage**:
+- **Double-click** to stop AutoLab runs
+- Graceful shutdown first (allows knowledge save)
+- Force kill as fallback
+- Safe to run anytime
+
+**Features**:
+- ✅ Detects Python 2 or 3
+- ✅ Graceful SIGINT first (Ctrl+C equivalent)
+- ✅ Force kill if unresponsive
+- ✅ Shows PIDs being stopped
+
+**Perfect for**: Stopping long autonomous sessions, emergency halt
+
+---
+
 ## Launcher Comparison
 
 | Launcher | Purpose | Opens Terminal? | Runs What? | Best For |
 |----------|---------|-----------------|------------|----------|
 | **AutoStart** | Autonomous experiments | Yes (1 window) | auto_lab.py | Hands-free experimentation |
+| **AutoStop** | Stop AutoLab | Yes (shows status) | Kill auto_lab.py | Stopping long runs |
 | **Start** | Full infrastructure | Yes (3 windows) | API + UI + Runner | Development & monitoring |
 | **Stop** | Shutdown services | No | Cleanup | Ending sessions |
 
@@ -96,8 +123,17 @@ BASE_DIR="..."  # Update if repo moves
 ```
 1. Double-click HYMetaLab_AutoStart.command
 2. Watch experiments run
-3. Close Terminal when done
+3. Stop early: Double-click HYMetaLab_AutoStop.command
+   OR close Terminal when done
 4. Check autolab/knowledge.json for results
+```
+
+### Long Background Autonomous Session
+```
+1. Double-click HYMetaLab_AutoStart.command (edit CYCLES=50 first)
+2. Let it run in background
+3. Stop when satisfied: Double-click HYMetaLab_AutoStop.command
+4. Review results in autolab/knowledge.json
 ```
 
 ### Development Session
@@ -127,9 +163,10 @@ watch -n 10 'cat autolab/knowledge.json | python3 -m json.tool | tail -30'
 
 All launchers are located at:
 ```
-~/Desktop/HYMetaLab_AutoStart.command   (846 bytes)
-~/Desktop/HYMetaLab_Start.command       (2.0 KB)
-~/Desktop/HYMetaLab_Stop.command        (154 bytes)
+~/Desktop/HYMetaLab_AutoStart.command   (846 bytes)  - Start autopilot
+~/Desktop/HYMetaLab_AutoStop.command    (507 bytes)  - Stop autopilot
+~/Desktop/HYMetaLab_Start.command       (2.0 KB)     - Start infrastructure
+~/Desktop/HYMetaLab_Stop.command        (154 bytes)  - Stop infrastructure
 ```
 
 **Quarantine attributes removed** — No macOS security warnings!
