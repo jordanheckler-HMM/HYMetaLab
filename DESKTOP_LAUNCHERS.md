@@ -119,7 +119,7 @@ BASE_DIR="..."  # Update if repo moves
 **Usage**:
 - **Double-click** to start continuous learning
 - Runs forever (until you stop it)
-- Stop with: `HYMetaLab_AutoStop.command` or Ctrl+C
+- Stop with: `HYMetaLab_AutoLoop_Stop.command` (recommended)
 
 **Customization**:
 ```bash
@@ -138,16 +138,44 @@ SLEEP_SEC=10   # Seconds between batches
 
 ---
 
+## 🛑 HYMetaLab_AutoLoop_Stop.command
+
+**Purpose**: Stop continuous AutoLoop processes (dedicated)
+
+**What it does**:
+1. Finds all running `auto_lab.py` processes
+2. Sends graceful interrupt (SIGINT)
+3. Force kills if needed (SIGKILL)
+4. Also stops the shell loop itself
+5. Confirms complete shutdown
+
+**Usage**:
+- **Double-click** to stop AutoLoop runs
+- Stops both Python processes AND shell loop
+- More thorough than generic AutoStop
+- Safe to run anytime
+
+**Features**:
+- ✅ Stops auto_lab.py processes
+- ✅ Stops AutoLoop shell scripts
+- ✅ Graceful SIGINT first
+- ✅ Force kill as fallback
+- ✅ Cleans up Terminal loops
+
+**Perfect for**: Stopping overnight AutoLoop runs, complete cleanup
+
+---
+
 ## Launcher Comparison
 
 | Launcher | Purpose | Opens Terminal? | Runs What? | Best For |
 |----------|---------|-----------------|------------|----------|
 | **AutoLoop_Start** | Continuous learning | Yes (1 window) | auto_lab.py (infinite) | Overnight/long-term runs |
-| **AutoStop** | Stop AutoLab | Yes (shows status) | Kill auto_lab.py | Stopping any AutoLab run |
+| **AutoLoop_Stop** | Stop AutoLoop | Yes (shows status) | Kill auto_lab.py + loop | Stopping AutoLoop specifically |
+| **AutoStart** | Single batch | Yes (1 window) | auto_lab.py (N cycles) | Quick experimentation |
+| **AutoStop** | Stop any AutoLab | Yes (shows status) | Kill auto_lab.py | Stopping AutoStart or manual runs |
 | **Start** | Full infrastructure | Yes (3 windows) | API + UI + Runner | Development & monitoring |
 | **Stop** | Shutdown services | No | Cleanup | Ending sessions |
-
-**Note**: Single-run launcher removed (use AutoLoop with CYCLES=N and then stop)
 
 ---
 
@@ -197,10 +225,12 @@ watch -n 10 'cat autolab/knowledge.json | python3 -m json.tool | tail -30'
 
 All launchers are located at:
 ```
-~/Desktop/HYMetaLab_AutoStart.command   (846 bytes)  - Start autopilot
-~/Desktop/HYMetaLab_AutoStop.command    (507 bytes)  - Stop autopilot
-~/Desktop/HYMetaLab_Start.command       (2.0 KB)     - Start infrastructure
-~/Desktop/HYMetaLab_Stop.command        (154 bytes)  - Stop infrastructure
+~/Desktop/HYMetaLab_AutoLoop_Start.command  (861 bytes)  - Start continuous learning
+~/Desktop/HYMetaLab_AutoLoop_Stop.command   (712 bytes)  - Stop continuous learning
+~/Desktop/HYMetaLab_AutoStart.command       (891 bytes)  - Start single batch
+~/Desktop/HYMetaLab_AutoStop.command        (525 bytes)  - Stop single batch
+~/Desktop/HYMetaLab_Start.command           (2.0 KB)     - Start infrastructure
+~/Desktop/HYMetaLab_Stop.command            (154 bytes)  - Stop infrastructure
 ```
 
 **Quarantine attributes removed** — No macOS security warnings!

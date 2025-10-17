@@ -30,3 +30,4 @@ Entries appended by lab_techs_runner.py
 [2025-10-17T04:01:08Z] CREATE macOS AutoStart launcher - one-click autopilot for autonomous experimentation
 [2025-10-17T04:03:48Z] CREATE HYMetaLab_AutoStop launcher - graceful shutdown for autonomous runs
 [2025-10-17T04:20:32Z] CREATE HYMetaLab_AutoLoop_Start - continuous autonomous learning launcher
+[2025-10-17T04:22:21Z] CREATE HYMetaLab_AutoLoop_Stop - dedicated stop for continuous AutoLoop
