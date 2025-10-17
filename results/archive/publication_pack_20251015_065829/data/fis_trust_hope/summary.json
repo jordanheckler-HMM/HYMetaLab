@@ -1,0 +1,35 @@
+{
+  "hypothesis_test": {
+    "mean_CCI_gain": 0.03292053923779702,
+    "mean_hazard_delta": -0.013217536494535664,
+    "metrics_met": [
+      {
+        "name": "mean_CCI_gain",
+        "rule": ">= 0.03",
+        "value": 0.03292053923779702,
+        "passed": true
+      },
+      {
+        "name": "mean_hazard_delta",
+        "rule": "<= -0.01",
+        "value": -0.013217536494535664,
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "descriptive_stats": {
+    "CCI": {
+      "mean": 0.5267894750112765,
+      "std": 0.0167206459996614
+    },
+    "hazard": {
+      "mean": 0.25678246350546435,
+      "std": 0.00534886937714094
+    },
+    "survival": {
+      "mean": 0.8177700032256373,
+      "std": 0.01517945025475355
+    }
+  }
+}

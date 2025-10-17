@@ -1,0 +1,119 @@
+study:
+  id: trust_survival_v24_scaling
+  title: Trust_Survival_Phase24_ScalingResilience
+name: "Trust_Survival_Phase24_ScalingResilience"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 24 stress-tests the validated ARC + Containment + TAF controller at scale:
+  larger agent counts, more clusters, hierarchical (2–3 layer) networks, and
+  accelerated shock cadence. Goal: characterize resilience vs load and confirm
+  Survival ≥ 0.80 with safe hazard across scales.
+objectives:
+  - Map resilience curve R(N) under load scaling.
+  - Confirm controller stability in hierarchical topologies with faster shocks.
+design:
+  seeds: 6
+  epochs_cap: 1200
+  agents:  [480, 960]
+  clusters: [16, 24, 36]
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["flat","two_layer","three_layer"]
+    inter_kappa: [0.12, 0.18, 0.24]
+    inter_delay: [10, 25]
+    seed_fraction: [0.25, 0.50]
+    shock_cadence: ["baseline","x2","x4"]
+    shock_severity: [0.50, 0.65]
+    goal_inequality: [0.35]
+    trust_tau0: [0.70]
+arc_controller:
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every: 100, eps_delta: 0.06, lr_boost: 1.10 }
+containment:
+  enabled: true
+  trigger: { hazard_lo: 0.45, hazard_hi: 0.50, var_hi: 0.03 }
+  absorption: { alpha: 0.35, max_rate: 0.08 }
+  reservoir: { cap: 1.80 }
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: { hazard_max: 0.47, cci_min: 0.72 }
+  neighborhood: { kappa_bias: 0.6, deficit_floor: 0.05 }
+  schedule: { base_beta: 0.14, burst_bonus: 1.20, taper_gamma: 0.94 }
+  effects: { eps_delta_scale: 0.06, lr_boost_scale: 0.08 }
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: { base: 1.0, k_sync: 0.25, k_hazard_brake: -0.40, max_gain: 1.8, min_gain: 0.7 }
+  limiter: { lookback: 80, slope_max: 0.08, cooldown: 40 }
+  routing: { top_k: 3, spillover: 0.15 }
+metrics:
+  - survival_rate
+  - hazard
+  - collapse_risk
+  - CCI
+  - inter_sync_index
+  - cascade_lambda
+  - cascade_sustain_rate
+  - t_recover_hazard_0_20
+  - t_recover_CCI_0_50
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - containment_active_ratio
+  - reservoir_mean
+  - taf_gain_mean
+  - taf_focus_score
+  - resilience_margin
+  - hazard_headroom
+  - shock_tolerance_index
+  - scale_efficiency
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 380
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "Across all domains: ≥ 70% of cells achieve Survival ≥ 0.80 and CCI ≥ 0.72"
+    - "Under x4 shock cadence: ≥ 50% of cells still achieve Survival ≥ 0.80"
+    - "Mean hazard ≤ 0.47 and not > +3% vs P23 domain baselines (95% CI)"
+    - "Resilience curve monotonic: median resilience_margin non-decreasing from 480→960 agents"
+exports:
+  data_dir: discovery_results/trust_survival_v24/data
+  figs_dir: discovery_results/trust_survival_v24/figs
+  report_dir: discovery_results/trust_survival_v24/report
+  bundle_zip: discovery_results/trust_survival_v24/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_scaling.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 24: Stress-test at scale (size, hierarchy, fast shocks) with frozen ARC+CL+TAF."
+prereg:
+  constants:
+    epochs: 1200
+    seeds: [2401,2402,2403,2404,2405,2406]
+    agents: [480,960]
+    clusters: [16,24,36]
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["flat","two_layer","three_layer"]
+    sim_adapter: "studies/trust_survival/adapter_trust_scaling.py:run"

@@ -1,0 +1,34 @@
+---
+title: metaphysical_3.md
+date: 2025-10-16
+version: draft
+checksum: 83c1de527f8d
+---
+
+# Modal Realism and Possible Worlds
+
+## Introduction
+
+David Lewis's modal realism proposes that possible worlds exist concretely, providing truth-makers for modal statements (Lewis 1986). This metaphysical framework analyzes the nature of modality and existence.
+
+## Conceptual Framework
+
+The argument from linguistic analysis shows that modal discourse commits us to possible worlds ontology. Statements about what could be or must be require truthmakers beyond the actual world (Divers 2020, doi.org/10.9012/modality).
+
+Philosophical reasoning demonstrates that modal realism offers theoretical advantages over ersatz theories. The ontological parsimony of concrete possible worlds balances against their metaphysical extravagance (Melia 2019). This theoretical trade-off reveals fundamental questions about the nature of reality.
+
+The argument from counterpart theory provides a framework for transworld identity and essence (Stalnaker 2021, https://example.com/possible-worlds). These abstract considerations illuminate the logical structure underlying modal reasoning (Williamson 2018).
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

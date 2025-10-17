@@ -1,0 +1,1580 @@
+{
+  "evidence_graph": {
+    "nodes": {
+      "claims": [
+        {
+          "id": "claim_0",
+          "text": "# Cooperation Dynamics in Social Networks\n\n## Abstract\n\nThis study shows that openness significantly increases cooperation in social networks (Smith et al",
+          "sentence_index": 0,
+          "length": 154,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 142
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 156
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 314
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 327
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 416
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 422
+            }
+          ]
+        },
+        {
+          "id": "claim_2",
+          "text": "We found a strong correlation between openness and cooperation (r=0",
+          "sentence_index": 2,
+          "length": 67,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 21
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 7
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 151
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 164
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 253
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 259
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 361
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 380
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 489
+            }
+          ]
+        },
+        {
+          "id": "claim_4",
+          "text": "001, n=200)",
+          "sentence_index": 4,
+          "length": 11,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 97
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 83
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 75
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 88
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 177
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 183
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 285
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 304
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 413
+            }
+          ]
+        },
+        {
+          "id": "claim_5",
+          "text": "## Methods\n\nThe data demonstrates clear patterns as shown in Figure 1 and Table 2",
+          "sentence_index": 5,
+          "length": 81,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 111
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 97
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 61
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 74
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 163
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 169
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 271
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 290
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 399
+            }
+          ]
+        },
+        {
+          "id": "claim_6",
+          "text": "Previous work suggests similar results in organizational contexts (Jones et al",
+          "sentence_index": 6,
+          "length": 78,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 194
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 180
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 22
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 9
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 80
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 86
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 188
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 207
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 316
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 421
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 427
+            }
+          ]
+        },
+        {
+          "id": "claim_10",
+          "text": "## Results\n\nResults indicate that shared meaning enhances coordination (Garcia & Martinez 2023)",
+          "sentence_index": 10,
+          "length": 95,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 311
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 297
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 139
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 126
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 37
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 31
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 71
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 90
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 199
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 304
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 310
+            },
+            {
+              "citation_id": "cit_2",
+              "citation_text": "(Brown 2018)",
+              "citation_type": "author_year",
+              "distance": 402
+            },
+            {
+              "citation_id": "cit_14",
+              "citation_text": "2018",
+              "citation_type": "year_only",
+              "distance": 409
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "(Wilson 2022)",
+              "citation_type": "author_year",
+              "distance": 499
+            }
+          ]
+        },
+        {
+          "id": "claim_11",
+          "text": "Analysis reveals significant effects across multiple domains (F(2,197)=45",
+          "sentence_index": 11,
+          "length": 73,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_0",
+              "citation_text": "(Smith et al. 2020)",
+              "citation_type": "author_year",
+              "distance": 408
+            },
+            {
+              "citation_id": "cit_10",
+              "citation_text": "2020",
+              "citation_type": "year_only",
+              "distance": 394
+            },
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 236
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 223
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 134
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 128
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 26
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 7
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 102
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 207
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 213
+            },
+            {
+              "citation_id": "cit_2",
+              "citation_text": "(Brown 2018)",
+              "citation_type": "author_year",
+              "distance": 305
+            },
+            {
+              "citation_id": "cit_14",
+              "citation_text": "2018",
+              "citation_type": "year_only",
+              "distance": 312
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "(Wilson 2022)",
+              "citation_type": "author_year",
+              "distance": 402
+            },
+            {
+              "citation_id": "cit_15",
+              "citation_text": "2022",
+              "citation_type": "year_only",
+              "distance": 410
+            },
+            {
+              "citation_id": "cit_8",
+              "citation_text": "Figure 3",
+              "citation_type": "figure_ref",
+              "distance": 493
+            }
+          ]
+        },
+        {
+          "id": "claim_15",
+          "text": "Evidence from field studies suggests strong support for this hypothesis (Lee 2021, arxiv",
+          "sentence_index": 15,
+          "length": 88,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 366
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 353
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 264
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 258
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 156
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 137
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 28
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 77
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 83
+            },
+            {
+              "citation_id": "cit_2",
+              "citation_text": "(Brown 2018)",
+              "citation_type": "author_year",
+              "distance": 175
+            },
+            {
+              "citation_id": "cit_14",
+              "citation_text": "2018",
+              "citation_type": "year_only",
+              "distance": 182
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "(Wilson 2022)",
+              "citation_type": "author_year",
+              "distance": 272
+            },
+            {
+              "citation_id": "cit_15",
+              "citation_text": "2022",
+              "citation_type": "year_only",
+              "distance": 280
+            },
+            {
+              "citation_id": "cit_8",
+              "citation_text": "Figure 3",
+              "citation_type": "figure_ref",
+              "distance": 363
+            }
+          ]
+        },
+        {
+          "id": "claim_18",
+          "text": "The findings demonstrate robustness across different populations (Brown 2018)",
+          "sentence_index": 18,
+          "length": 77,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_7",
+              "citation_text": "Figure 1",
+              "citation_type": "figure_ref",
+              "distance": 476
+            },
+            {
+              "citation_id": "cit_9",
+              "citation_text": "Table 2",
+              "citation_type": "table_ref",
+              "distance": 463
+            },
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 374
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 368
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 266
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 247
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 138
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 33
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 27
+            },
+            {
+              "citation_id": "cit_2",
+              "citation_text": "(Brown 2018)",
+              "citation_type": "author_year",
+              "distance": 65
+            },
+            {
+              "citation_id": "cit_14",
+              "citation_text": "2018",
+              "citation_type": "year_only",
+              "distance": 72
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "(Wilson 2022)",
+              "citation_type": "author_year",
+              "distance": 162
+            },
+            {
+              "citation_id": "cit_15",
+              "citation_text": "2022",
+              "citation_type": "year_only",
+              "distance": 170
+            },
+            {
+              "citation_id": "cit_8",
+              "citation_text": "Figure 3",
+              "citation_type": "figure_ref",
+              "distance": 253
+            }
+          ]
+        },
+        {
+          "id": "claim_19",
+          "text": "## Discussion\n\nResearch shows that resilience improves when cooperation increases (Wilson 2022)",
+          "sentence_index": 19,
+          "length": 95,
+          "has_evidence": true,
+          "evidence_refs": [
+            {
+              "citation_id": "cit_11",
+              "citation_text": "2019",
+              "citation_type": "year_only",
+              "distance": 454
+            },
+            {
+              "citation_id": "cit_4",
+              "citation_text": "doi.org/10.1234/cooperation",
+              "citation_type": "doi",
+              "distance": 448
+            },
+            {
+              "citation_id": "cit_1",
+              "citation_text": "(Garcia & Martinez 2023)",
+              "citation_type": "author_year",
+              "distance": 346
+            },
+            {
+              "citation_id": "cit_12",
+              "citation_text": "2023",
+              "citation_type": "year_only",
+              "distance": 327
+            },
+            {
+              "citation_id": "cit_5",
+              "citation_text": "https://example.com/study.",
+              "citation_type": "url",
+              "distance": 218
+            },
+            {
+              "citation_id": "cit_13",
+              "citation_text": "2021",
+              "citation_type": "year_only",
+              "distance": 113
+            },
+            {
+              "citation_id": "cit_6",
+              "citation_text": "arxiv.org/abs/2103.12345",
+              "citation_type": "arxiv",
+              "distance": 107
+            },
+            {
+              "citation_id": "cit_2",
+              "citation_text": "(Brown 2018)",
+              "citation_type": "author_year",
+              "distance": 15
+            },
+            {
+              "citation_id": "cit_14",
+              "citation_text": "2018",
+              "citation_type": "year_only",
+              "distance": 8
+            },
+            {
+              "citation_id": "cit_3",
+              "citation_text": "(Wilson 2022)",
+              "citation_type": "author_year",
+              "distance": 82
+            },
+            {
+              "citation_id": "cit_15",
+              "citation_text": "2022",
+              "citation_type": "year_only",
+              "distance": 90
+            },
+            {
+              "citation_id": "cit_8",
+              "citation_text": "Figure 3",
+              "citation_type": "figure_ref",
+              "distance": 173
+            }
+          ]
+        }
+      ],
+      "citations": [
+        {
+          "id": "cit_0",
+          "type": "author_year",
+          "text": "(Smith et al. 2020)",
+          "position": 142
+        },
+        {
+          "id": "cit_10",
+          "type": "year_only",
+          "text": "2020",
+          "position": 156
+        },
+        {
+          "id": "cit_7",
+          "type": "figure_ref",
+          "text": "Figure 1",
+          "position": 314
+        },
+        {
+          "id": "cit_9",
+          "type": "table_ref",
+          "text": "Table 2",
+          "position": 327
+        },
+        {
+          "id": "cit_11",
+          "type": "year_only",
+          "text": "2019",
+          "position": 416
+        },
+        {
+          "id": "cit_4",
+          "type": "doi",
+          "text": "doi.org/10.1234/cooperation",
+          "position": 422
+        },
+        {
+          "id": "cit_1",
+          "type": "author_year",
+          "text": "(Garcia & Martinez 2023)",
+          "position": 524
+        },
+        {
+          "id": "cit_12",
+          "type": "year_only",
+          "text": "2023",
+          "position": 543
+        },
+        {
+          "id": "cit_5",
+          "type": "url",
+          "text": "https://example.com/study.",
+          "position": 652
+        },
+        {
+          "id": "cit_13",
+          "type": "year_only",
+          "text": "2021",
+          "position": 757
+        },
+        {
+          "id": "cit_6",
+          "type": "arxiv",
+          "text": "arxiv.org/abs/2103.12345",
+          "position": 763
+        },
+        {
+          "id": "cit_2",
+          "type": "author_year",
+          "text": "(Brown 2018)",
+          "position": 855
+        },
+        {
+          "id": "cit_14",
+          "type": "year_only",
+          "text": "2018",
+          "position": 862
+        },
+        {
+          "id": "cit_3",
+          "type": "author_year",
+          "text": "(Wilson 2022)",
+          "position": 952
+        },
+        {
+          "id": "cit_15",
+          "type": "year_only",
+          "text": "2022",
+          "position": 960
+        },
+        {
+          "id": "cit_8",
+          "type": "figure_ref",
+          "text": "Figure 3",
+          "position": 1043
+        }
+      ]
+    },
+    "edges": [
+      {
+        "from": "claim_0",
+        "to": "cit_0",
+        "distance": 142,
+        "type": "supports"
+      },
+      {
+        "from": "claim_0",
+        "to": "cit_10",
+        "distance": 156,
+        "type": "supports"
+      },
+      {
+        "from": "claim_0",
+        "to": "cit_7",
+        "distance": 314,
+        "type": "supports"
+      },
+      {
+        "from": "claim_0",
+        "to": "cit_9",
+        "distance": 327,
+        "type": "supports"
+      },
+      {
+        "from": "claim_0",
+        "to": "cit_11",
+        "distance": 416,
+        "type": "supports"
+      },
+      {
+        "from": "claim_0",
+        "to": "cit_4",
+        "distance": 422,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_0",
+        "distance": 21,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_10",
+        "distance": 7,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_7",
+        "distance": 151,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_9",
+        "distance": 164,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_11",
+        "distance": 253,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_4",
+        "distance": 259,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_1",
+        "distance": 361,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_12",
+        "distance": 380,
+        "type": "supports"
+      },
+      {
+        "from": "claim_2",
+        "to": "cit_5",
+        "distance": 489,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_0",
+        "distance": 97,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_10",
+        "distance": 83,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_7",
+        "distance": 75,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_9",
+        "distance": 88,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_11",
+        "distance": 177,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_4",
+        "distance": 183,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_1",
+        "distance": 285,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_12",
+        "distance": 304,
+        "type": "supports"
+      },
+      {
+        "from": "claim_4",
+        "to": "cit_5",
+        "distance": 413,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_0",
+        "distance": 111,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_10",
+        "distance": 97,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_7",
+        "distance": 61,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_9",
+        "distance": 74,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_11",
+        "distance": 163,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_4",
+        "distance": 169,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_1",
+        "distance": 271,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_12",
+        "distance": 290,
+        "type": "supports"
+      },
+      {
+        "from": "claim_5",
+        "to": "cit_5",
+        "distance": 399,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_0",
+        "distance": 194,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_10",
+        "distance": 180,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_7",
+        "distance": 22,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_9",
+        "distance": 9,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_11",
+        "distance": 80,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_4",
+        "distance": 86,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_1",
+        "distance": 188,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_12",
+        "distance": 207,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_5",
+        "distance": 316,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_13",
+        "distance": 421,
+        "type": "supports"
+      },
+      {
+        "from": "claim_6",
+        "to": "cit_6",
+        "distance": 427,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_0",
+        "distance": 311,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_10",
+        "distance": 297,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_7",
+        "distance": 139,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_9",
+        "distance": 126,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_11",
+        "distance": 37,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_4",
+        "distance": 31,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_1",
+        "distance": 71,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_12",
+        "distance": 90,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_5",
+        "distance": 199,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_13",
+        "distance": 304,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_6",
+        "distance": 310,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_2",
+        "distance": 402,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_14",
+        "distance": 409,
+        "type": "supports"
+      },
+      {
+        "from": "claim_10",
+        "to": "cit_3",
+        "distance": 499,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_0",
+        "distance": 408,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_10",
+        "distance": 394,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_7",
+        "distance": 236,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_9",
+        "distance": 223,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_11",
+        "distance": 134,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_4",
+        "distance": 128,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_1",
+        "distance": 26,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_12",
+        "distance": 7,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_5",
+        "distance": 102,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_13",
+        "distance": 207,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_6",
+        "distance": 213,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_2",
+        "distance": 305,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_14",
+        "distance": 312,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_3",
+        "distance": 402,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_15",
+        "distance": 410,
+        "type": "supports"
+      },
+      {
+        "from": "claim_11",
+        "to": "cit_8",
+        "distance": 493,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_7",
+        "distance": 366,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_9",
+        "distance": 353,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_11",
+        "distance": 264,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_4",
+        "distance": 258,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_1",
+        "distance": 156,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_12",
+        "distance": 137,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_5",
+        "distance": 28,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_13",
+        "distance": 77,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_6",
+        "distance": 83,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_2",
+        "distance": 175,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_14",
+        "distance": 182,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_3",
+        "distance": 272,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_15",
+        "distance": 280,
+        "type": "supports"
+      },
+      {
+        "from": "claim_15",
+        "to": "cit_8",
+        "distance": 363,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_7",
+        "distance": 476,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_9",
+        "distance": 463,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_11",
+        "distance": 374,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_4",
+        "distance": 368,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_1",
+        "distance": 266,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_12",
+        "distance": 247,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_5",
+        "distance": 138,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_13",
+        "distance": 33,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_6",
+        "distance": 27,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_2",
+        "distance": 65,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_14",
+        "distance": 72,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_3",
+        "distance": 162,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_15",
+        "distance": 170,
+        "type": "supports"
+      },
+      {
+        "from": "claim_18",
+        "to": "cit_8",
+        "distance": 253,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_11",
+        "distance": 454,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_4",
+        "distance": 448,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_1",
+        "distance": 346,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_12",
+        "distance": 327,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_5",
+        "distance": 218,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_13",
+        "distance": 113,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_6",
+        "distance": 107,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_2",
+        "distance": 15,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_14",
+        "distance": 8,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_3",
+        "distance": 82,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_15",
+        "distance": 90,
+        "type": "supports"
+      },
+      {
+        "from": "claim_19",
+        "to": "cit_8",
+        "distance": 173,
+        "type": "supports"
+      }
+    ]
+  },
+  "metrics": {
+    "evidence_density": 1.0,
+    "total_claims": 10,
+    "claims_with_evidence": 10,
+    "claims_without_evidence": 0,
+    "total_citations": 16,
+    "unique_citations_used": 16,
+    "citation_utilization": 1.0,
+    "total_links": 114,
+    "avg_citations_per_claim": 11.4,
+    "coverage_ratio": 0.625,
+    "passes_threshold": true
+  },
+  "version": "3.0-evidence-graph"
+}

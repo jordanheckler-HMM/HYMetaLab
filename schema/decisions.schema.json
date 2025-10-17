@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Decision Event",
+  "type": "object",
+  "required": ["tick", "agent_id", "chosen_action", "reported_conf"],
+  "properties": {
+    "tick": {"type": "integer", "minimum": 0},
+    "agent_id": {"type": "string"},
+    "state_hash": {"type": "string"},
+    "workspace_reads": {"type": "integer", "minimum": 0},
+    "workspace_writes": {"type": "integer", "minimum": 0},
+    "lookahead_depth": {"type": "integer", "minimum": 0},
+    "candidates": {
+      "type": "array",
+      "items": {"type": "object", "properties": {"action": {"type": "string"}, "score": {"type": "number"}}, "required": ["action","score"]}
+    },
+    "chosen_action": {"type": "string"},
+    "reported_conf": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "outcome_reward": {"type": "number"},
+    "prediction_model_p": {"type": "number"},
+    "rng_seed_local": {"type": "integer"}
+  },
+  "additionalProperties": true
+}

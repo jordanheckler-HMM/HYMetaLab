@@ -1,0 +1,19 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/templates/RESEARCH_DISCLAIMER.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/templates/RESEARCH_DISCLAIMER.md
+@@ -24,3 +24,16 @@
+ 
+ ---
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,74 @@
+namespace: exp_quickpass
+sim_version: v1.0.0
+defaults:
+  ensemble_seeds: 2
+  horizon_steps: 200
+  per_instance_concurrency: 3
+  max_wall_time_minutes: 90
+  heartbeat_interval_minutes: 2
+  early_stop_threshold: 0.02
+
+experiments:
+  - id: telescope_vs_oracle
+    hypothesis: >
+      Telescope-mode (iterative, fact-check) yields higher shock_tolerance and lower collapse_risk than oracle-mode for equivalent base CCI.
+    factors:
+      base_calibration: [0.75]
+      base_coherence:   [0.75]
+      base_emergence:   [0.70]
+      base_noise:       [0.20]
+      interaction_style: ["telescope","oracle"]
+      shock_severity:   [0.35, 0.50]
+      coordination_strength: [0.40, 0.60]
+      goal_inequality:  [0.50]
+
+  - id: shock_dose_response
+    hypothesis: >
+      There is an optimal constructive shock band; below it growth is slow, above it collapse risk rises.
+    factors:
+      base_calibration: [0.70]
+      base_coherence:   [0.70]
+      base_emergence:   [0.70]
+      base_noise:       [0.20]
+      shock_severity:   [0.20, 0.40, 0.60]
+      coordination_strength: [0.50]
+      goal_inequality:  [0.40]
+
+  - id: noise_manipulation
+    hypothesis: >
+      Lowering noise via practice increases survival_rate and shock_tolerance.
+    factors:
+      base_calibration: [0.70]
+      base_coherence:   [0.70]
+      base_emergence:   [0.70]
+      base_noise:       [0.35, 0.20]
+      practice:         ["none","attention_hygiene"]
+      shock_severity:   [0.40]
+      coordination_strength: [0.50]
+      goal_inequality:  [0.40]
+
+# FAST PREVIEW MODE: Commented out heavy experiments for later scale-up if effects justify
+#  - id: collective_amplification
+#    hypothesis: >
+#      Networked agents (peer feedback) show higher collective_cci_delta than isolated agents.
+#    factors:
+#      base_calibration: [0.65, 0.8]
+#      base_coherence:   [0.65, 0.8]
+#      base_emergence:   [0.6, 0.8]
+#      base_noise:       [0.25, 0.15]
+#      network_mode:     ["isolated","peer_feedback","mentor_hub"]
+#      shock_severity:   [0.3,0.5]
+#      coordination_strength: [0.4,0.7]
+#      goal_inequality:  [0.3,0.5]
+#
+#  - id: meaning_vs_training_branch
+#    hypothesis: >
+#      Severe shocks favor "meaning/religion" branching; chronic stress favors "education/training".
+#    factors:
+#      base_calibration: [0.75, 0.9]
+#      base_coherence:   [0.75, 0.9]
+#      base_emergence:   [0.7, 0.85]
+#      base_noise:       [0.2, 0.1]
+#      shock_profile:    ["chronic_low","acute_high"]
+#      coordination_strength: [0.5, 0.7]
+#      goal_inequality:  [0.3, 0.6]

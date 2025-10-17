@@ -1,0 +1,30 @@
+paths:
+  input_glob: "data/*.csv"
+  outputs_dir: "outputs"
+preprocess:
+  zscore: true
+  resample_to: null
+recurrence:
+  tau_strategy: "percentile"
+  tau_percentile: 10
+  tau_fixed: 0.8
+  norm: "euclidean"
+rqa:
+  min_diag_line: 2
+  min_vert_line: 2
+dtw:
+  mode: "pca1"
+  window: null
+surrogates:
+  n: 100
+  kinds: ["phase","shuffle"]
+granger:
+  max_lag: 12
+  ic: "aic"
+  fdr_alpha: 0.05
+plotting:
+  dpi: 220
+report:
+  title: "Patterns of Consciousness: Recurrence & Causality Tests"
+  author: "Heck Yeah Lab"
+  include_te: true

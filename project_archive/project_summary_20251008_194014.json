@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/phase23_creator_emergence_20251008_194005/data/runs_summary.csv",
+    "mean_CCI": 0.9961496481,
+    "mean_survival": 0.9986615309,
+    "creation_success_frac": 1.0,
+    "validated": true,
+    "reason": "creation_success_frac=1.000 (min 0.6)",
+    "validation_status": "VALIDATED"
+  }
+]

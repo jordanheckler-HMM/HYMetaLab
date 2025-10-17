@@ -1,0 +1,18 @@
+{
+  "study_id": "fis_ai_safety_toolkit",
+  "total_runs": 3,
+  "completed_runs": 3,
+  "seeds": [
+    103
+  ],
+  "parameters": {
+    "epsilon": [
+      0.0005,
+      0.001,
+      0.0015
+    ],
+    "shock": [
+      0.5
+    ]
+  }
+}

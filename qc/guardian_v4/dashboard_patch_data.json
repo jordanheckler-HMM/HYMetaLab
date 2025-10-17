@@ -1,0 +1,42 @@
+{
+  "guardian_v4": {
+    "traffic_light": {
+      "type": "traffic_light",
+      "status": "red",
+      "score": 62.3,
+      "message": "\u274c Needs review - below threshold",
+      "timestamp": "2025-10-15T06:09:03.365374"
+    },
+    "metrics": {
+      "type": "metrics_bar",
+      "data": [
+        {
+          "name": "Objectivity",
+          "value": 0.6,
+          "target": 0.8,
+          "color": "blue"
+        },
+        {
+          "name": "Transparency",
+          "value": 0.14,
+          "target": 0.9,
+          "color": "green"
+        },
+        {
+          "name": "Language Safety",
+          "value": 0.95,
+          "target": 0.85,
+          "color": "orange"
+        },
+        {
+          "name": "Sentiment",
+          "value": 0.06,
+          "target": 0.1,
+          "inverted": true,
+          "color": "purple"
+        }
+      ]
+    },
+    "last_updated": "2025-10-15T06:09:35.156667"
+  }
+}

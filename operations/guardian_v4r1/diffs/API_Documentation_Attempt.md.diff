@@ -1,0 +1,39 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_pytest_fix/API_Documentation_Attempt.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_pytest_fix/API_Documentation_Attempt.md
+@@ -1,3 +1,10 @@
++---
++title: API_Documentation_Attempt.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # API Documentation Generation Attempt
+ 
+ **Date:** 2025-10-16  
+@@ -311,7 +318,7 @@
+ # Check if file exists and imports are correct
+ ```
+ 
+-**Note:** These can be addressed with `--skip-errors`, but fixing them will improve documentation quality.
++**Note:** These can be addressed with `--skip-errors`, but fixing them will may improve documentation quality.
+ 
+ ---
+ 
+@@ -424,3 +431,16 @@
+ 
+ *This attempt is documented for reproducibility. The command is valid and will succeed once disk space is available.*
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,190 @@
+{
+  "study_id": "phase35b_cross_survey_replication",
+  "version": "1.0",
+  "preregistration_date": "2025-10-14",
+  "status": "PREREGISTERED",
+  "classification": "CROSS_SURVEY_REPLICATION",
+  
+  "metadata": {
+    "title": "Cross-Survey Replication of Tri-Flux Coherence Law in Cosmic Structures",
+    "pi": "HYMetaLab Research Initiative",
+    "framework": "OpenLaws Automation v1.0",
+    "institution": "Heck Yeah Simulation Research Lab"
+  },
+  
+  "hypotheses": {
+    "H1": {
+      "statement": "ΔCCI ≥ 0.03 across all datasets",
+      "threshold": 0.03,
+      "ci_requirement": "95% CI lower bound > 0",
+      "falsifier": "ΔCCI < 0 for any dataset"
+    },
+    "H2": {
+      "statement": "Δhazard ≤ −0.01 across all datasets",
+      "threshold": -0.01,
+      "ci_requirement": "95% CI upper bound < 0",
+      "falsifier": "Δhazard > 0 for any dataset"
+    },
+    "H3": {
+      "statement": "Exponent stability: |α−0.4|≤0.1, |β−0.8|≤0.1, |γ−0.1|≤0.05",
+      "alpha_bounds": [0.3, 0.5],
+      "beta_bounds": [0.7, 0.9],
+      "gamma_bounds": [0.05, 0.15],
+      "falsifier": "Exponent variance > 50% of mean"
+    },
+    "H4": {
+      "statement": "Tri-flux RMSE ≤ 0.8 × baseline",
+      "threshold_multiplier": 0.8,
+      "falsifier": "RMSE_triflux > RMSE_baseline"
+    },
+    "H5": {
+      "statement": "Energy-Information elasticity equivalence",
+      "difference_threshold": 0.15,
+      "ci_requirement": "CI includes 0",
+      "falsifier": "|E_ε − E_I| > 0.30"
+    }
+  },
+  
+  "constants": {
+    "seeds": [11, 17, 23, 29],
+    "epsilon_band": [0.0005, 0.0015],
+    "epsilon_nominal": 0.001,
+    "rho_critical": 0.0828,
+    "lambda_star": 0.9,
+    "alpha_prior": 0.4,
+    "beta_prior": 0.8,
+    "gamma_prior": 0.1,
+    "bootstrap_iterations": 2000,
+    "confidence_level": 0.95,
+    "baseline_CCI": 0.54,
+    "baseline_hazard": 0.254
+  },
+  
+  "datasets": {
+    "sdss_dr17": {
+      "survey": "Sloan Digital Sky Survey DR17",
+      "nodes": 50,
+      "energy_proxy": "sSFR",
+      "info_proxy": "∇Z",
+      "conn_proxy": "δ_local"
+    },
+    "jwst_earlyrel": {
+      "survey": "JWST Early Release Observations",
+      "nodes": 50,
+      "energy_proxy": "L_UV",
+      "info_proxy": "Line_complexity",
+      "conn_proxy": "N_500kpc"
+    },
+    "desi_clusters": {
+      "survey": "DESI Cluster Catalog",
+      "nodes": 50,
+      "energy_proxy": "L_X",
+      "info_proxy": "σ_v",
+      "conn_proxy": "λ_richness"
+    },
+    "galex_uv": {
+      "survey": "GALEX UV Survey",
+      "nodes": 60,
+      "energy_proxy": "μ_FUV",
+      "info_proxy": "∇(NUV−FUV)",
+      "conn_proxy": "D_5th⁻¹"
+    }
+  },
+  
+  "protocols": [
+    {
+      "id": "FIT_TRI_FLUX",
+      "description": "Fit tri-flux law across all surveys and size bins",
+      "sweep_variables": ["dataset", "graph_topology", "size_bin"],
+      "metrics": ["delta_cci", "delta_hazard", "tri_flux_value", "rmse_triflux", "rmse_baseline"]
+    },
+    {
+      "id": "ELASTICITY_COMPARE",
+      "description": "Compare Energy and Information elasticities per survey",
+      "sweep_variables": ["dataset", "energy_scale", "info_scale"],
+      "metrics": ["elasticity_energy", "elasticity_info", "elasticity_diff"]
+    },
+    {
+      "id": "EXPONENT_FIT",
+      "description": "Estimate α, β, γ exponents via log-log regression",
+      "sweep_variables": ["dataset"],
+      "metrics": ["alpha", "beta", "gamma", "r2", "CI bounds"]
+    },
+    {
+      "id": "FALSIFIER_SUBSTRATE",
+      "description": "Topology and noise robustness testing",
+      "sweep_variables": ["dataset", "graph_topology", "noise_mult"],
+      "metrics": ["delta_cci", "delta_hazard", "sign_reversal_flag"]
+    }
+  ],
+  
+  "validation_criteria": {
+    "validated": "all([ΔCCI ≥ 0.03 for ≥3/4 datasets, Δhazard ≤ −0.01 for ≥3/4 datasets, exponent_stability for ≥3/4 datasets, no_sign_reversals])",
+    "under_review": "2/4 datasets validate OR effect consistent but below threshold",
+    "hypothesis_only": "≤1/4 datasets validate OR sign reversals observed"
+  },
+  
+  "integrity": {
+    "preregistered": true,
+    "code_freeze": false,
+    "blinded_analysis": false,
+    "deviations_policy": "documented",
+    "open_science_commitment": true
+  },
+  
+  "file_hashes": {
+    "study_yaml": "e8488cc461c465779286d0b81187aded9688ca89027a74f336f1b8e19de00c7e",
+    "adapter_py": "8963ac3ad1821e778297942f03ffced7908152b34667fd0e893ca7ae3300dfff",
+    "dataset_sdss": "0c19799da008b0cf8715b2a49df54217c6ce624715cd9064bd810d1cb4c3ff53",
+    "dataset_jwst": "8a2bca34fb615fcbf87bf69eed84eaa91888f1a77055f5d61777047df9bad55a",
+    "dataset_desi": "714c017cd36304510c985de96a4dfbcf834e35f4281c5c74ea796c1ec57718d8",
+    "dataset_galex": "37a81f12adbbef34ef053d9a786c06301ca8759489206ffa75a6d2bb99a667a0"
+  },
+  
+  "timestamps": {
+    "preregistration": "2025-10-14T00:00:00Z",
+    "infrastructure_ready": "2025-10-14T12:00:00Z",
+    "execution_scheduled": "TBD"
+  },
+  
+  "expected_outputs": {
+    "primary_csv": "runs_summary.csv",
+    "exponent_fits": "exponent_fits.csv",
+    "elasticity_results": "elasticity_results.csv",
+    "falsifier_tests": "falsifier_tests.csv",
+    "summary_json": "summary.json",
+    "bootstrap_ci": "bootstrap_ci.json",
+    "figures": [
+      "cci_by_dataset.png",
+      "hazard_by_dataset.png",
+      "exponent_forest_plot.png",
+      "triflux_fit_quality.png",
+      "elasticity_comparison.png",
+      "cross_survey_variance.png"
+    ]
+  },
+  
+  "citations": {
+    "sdss": "Abdurro'uf et al. (2022). ApJS, 259, 35.",
+    "jwst": "Pontoppidan et al. (2022). ApJL, 936, L14.",
+    "desi": "DESI Collaboration (2023). AJ, 168, 58.",
+    "galex": "Martin et al. (2005). ApJL, 619, L1."
+  },
+  
+  "documentation": {
+    "execution_guide": "docs/phase35b_execution_guide.md",
+    "preregistration": "docs/phase35b_preregistration.md",
+    "dataset_readme": "data/cosmic/README.md",
+    "summary": "PHASE35B_SUMMARY.md"
+  },
+  
+  "ethos": "Integrity → Resilience → Meaning",
+  
+  "seal": {
+    "status": "SEALED",
+    "agent": "HYMetaLab Research Agent",
+    "date": "2025-10-14",
+    "classification": "PREREGISTERED | READY_FOR_EXECUTION"
+  }
+}
+

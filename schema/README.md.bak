@@ -1,0 +1,14 @@
+Schema directory
+----------------
+
+This directory contains JSON Schemas for simulation event logs. Use `sim/io_utils.validate_jsonl_against_schema` to validate JSONL files against these schemas.
+
+Files:
+- `decisions.schema.json` - per-decision logging
+- `integration.schema.json` - workspace integration events
+- `innovations.schema.json` - innovation events
+- `culture.schema.json` - cultural transmission events
+
+Validation workflow:
+1. Run an experiment that writes outputs to `outputs/<run_name>/`.
+2. Use `python3 sim/validate_run.py outputs/<run_name>/` to validate present JSONL files.

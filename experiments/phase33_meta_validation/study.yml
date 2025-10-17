@@ -1,0 +1,57 @@
+study_id: phase33_meta_validation
+title: "Phase 33-A — Meta-Validation (Internal)"
+version: "1.0"
+adapter: "sim/adapters/phase33_meta_adapter.py:run_phase33_meta"
+out_dir: "discovery_results/phase33_meta_internal"
+
+preregistration:
+  hypothesis:
+    - H33-1: "ε_c ~ 0.004 ± 0.001 under minimally-open band"
+    - H33-2: "CxCI > mean(CCI_i) by ≥ 0.10"
+    - H33-3: "η_context decreases after governance on"
+    - H33-4: "E_cons ≥ 0.80 after 5% perturbation"
+  constants:
+    eps_band: [0.003, 0.005]
+    lambda_star: 0.90
+    seeds: [11, 17, 23]
+
+metrics:
+  - CCI_mean
+  - CxCI
+  - epsilon_c
+  - eta_context
+  - E_cons
+
+thresholds:
+  CxCI_minus_meanCCI_min: 0.10
+  E_cons_min: 0.80
+
+run:
+  agents: 60
+  steps: 120
+  dt: 1
+  eps: 0.004
+  noise_base: 0.06
+  governance_on_step: 60
+  perturb_step: 80
+  perturb_strength: 0.05
+
+validation:
+  bootstrap_n: 300
+  ci: 0.95
+
+exports:
+  csv_summary: "runs_summary.csv"
+  csv_timeseries: "timeseries_phase33.csv"
+  figures:
+    - "cxci_over_time.png"
+    - "entropy_over_time.png"
+    - "recovery_curves.png"
+
+report:
+  name: "Phase33_MetaValidation_Summary"
+  include:
+    - "abstract"
+    - "metrics_table"
+    - "figures"
+    - "interpretation"

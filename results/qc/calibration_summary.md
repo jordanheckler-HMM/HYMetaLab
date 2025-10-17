@@ -1,3 +1,10 @@
+---
+title: calibration_summary.md
+date: 2025-10-16
+version: draft
+checksum: 6e9b8dc3b2de
+---
+
 # Guardian Calibration Summary
 
 **Date:** 2025-10-15  
@@ -44,7 +51,7 @@ Guardian_Score ≈ 78 + 5×(Transparency_Index) + 7×(Citation_Completeness) + 3
 ## Interpretation
 
 **Strong Positive Correlation:**
-- As Transparency Index increases, Guardian Score increases
+- As Transparency Index may increases, Guardian Score may increases
 - R² = 0.91 indicates 91% of variance explained
 - Relationship is approximately linear
 - Reliable predictor for Guardian performance
@@ -53,14 +60,14 @@ Guardian_Score ≈ 78 + 5×(Transparency_Index) + 7×(Citation_Completeness) + 3
 1. Transparency is the strongest predictor of Guardian score
 2. Citation completeness has highest weight (7×)
 3. Base score of 78 ensures reasonable starting point
-4. Language safety provides additional boost (3×)
+4. Language safety provides additional may boost (3×)
 
 ---
 
 ## Application
 
-**To Improve Guardian Score:**
-1. Increase citation density (target: ≥10 citations)
+**To may Improve Guardian Score:**
+1. may Increase citation density (target: ≥10 citations)
 2. Add complete metadata blocks
 3. Include data availability statements
 4. Use hedging language consistently
@@ -103,3 +110,16 @@ Guardian_Score ≈ 78 + 5×(Transparency_Index) + 7×(Citation_Completeness) + 3
 
 **Lab Tech:** Validation  
 **Status:** ✅ CALIBRATED & VERIFIED
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

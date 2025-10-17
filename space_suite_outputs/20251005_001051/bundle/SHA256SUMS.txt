@@ -1,0 +1,21 @@
+---
+title: SHA256SUMS.txt
+date: 2025-10-16
+version: draft
+rb303ace378
+---
+
+553011146478d11539afcbe3501960ca73f0fd313e51a73afbef389b50058b70  space_suite_20251005_001051.zip
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

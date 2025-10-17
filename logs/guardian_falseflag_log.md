@@ -1,3 +1,10 @@
+---
+title: guardian_falseflag_log.md
+date: 2025-10-16
+version: draft
+checksum: ff2214103127
+---
+
 # Guardian v4 False Flag Log
 
 **Generated:** 2025-10-15  
@@ -41,11 +48,34 @@
 3. Sentiment analysis catching positive scientific language
 
 **Recommended Weight Adjustments:**
-- Reduce hedge density requirement: 0.15 → 0.10
-- Increase citation density tolerance: 0.05 → 0.03
+- may Reduce hedge density requirement: 0.15 → 0.10
+- may Increase citation density tolerance: 0.05 → 0.03
 - Soften sentiment neutrality: 85 → 80
 
 ---
 
 **Lab Tech:** Validation  
 **Status:** Manual review in progress
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.
+
+## Data Sources
+- Primary: Simulation outputs from HYMetaLab framework
+- Seeds: Fixed for reproducibility
+- Version: Tracked in git repository
+
+## References
+1. HYMetaLab Framework Documentation (internal)
+2. Guardian v4 Validation System
+3. Reproducibility standards per SOP v1.1

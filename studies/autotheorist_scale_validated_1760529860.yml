@@ -1,0 +1,67 @@
+study_id: autotheorist_scale_validated_1760529860
+title: 'Scale Validated Interventions: Multi-Mechanism Integration'
+version: '2.0'
+prereg_date: '2025-10-15'
+preregistered: true
+hypothesis:
+  text: "Combining validated mechanisms (trust+hope+AI safety) will produce synergistic\
+    \ effects exceeding individual gains (best single: \u0394CCI=0.0444)"
+  rationale: Best-performing validated study provides lower bound; integration may
+    amplify effects
+  method: synthesis
+  rank: 1
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 200
+  epochs: 1500
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+sweep:
+  epsilon:
+  - 0.001
+  - 0.0012
+  - 0.0015
+  trust_delta:
+  - 0.07
+  - 0.08
+  - 0.09
+  hope_delta:
+  - 0.05
+  - 0.06
+  - 0.07
+  ai_safety_boost:
+  - 0.02
+  - 0.03
+  - 0.04
+validation:
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.05'
+  - name: mean_hazard_delta
+    rule: <= -0.02
+  bootstrap_ci: 1000
+  confidence: high
+exports:
+  outdir: discovery_results/autotheorist_scale_validated_1760529860/
+  require_columns:
+  - CCI
+  - hazard
+  - survival_rate
+  - collapse_risk
+metadata:
+  generated_by: auto_theorist_enhanced.py
+  generated_at: '2025-10-15T07:04:20.086758'
+  priority: high
+  based_on:
+  - fis_ai_safety_toolkit
+  - fis_trust_hope_stabilizers
+adapter: adapters/universal_resilience_adapter.py

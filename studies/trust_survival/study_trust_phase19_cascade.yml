@@ -1,0 +1,117 @@
+study:
+  id: trust_survival_v19_cascade
+  title: Trust_Survival_Phase19_Cascade
+prereg:
+  constants:
+    epochs: 900
+    seeds: [1901,1902,1903,1904,1905,1906]
+    agents: 240
+    clusters: 12
+    mode: ["ARC","ARC_CASCADE"]
+    supernet_topology: ["chain","smallworld","tree"]
+    inter_kappa: [0.08, 0.15, 0.25]
+    inter_delay: [10, 25]
+    seed_fraction: [0.25, 0.50]
+    trust_tau0: [0.60, 0.70]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_cascade_wrapper.py:run"
+name: "Trust_Survival_Phase19_Cascade"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 19 tests whether ARC-driven coherence (from Phase 18) cascades across
+  multiple subnetworks. We seed a subset of clusters and add delayed coupling
+  between subnetworks to measure cascade depth and sustained survival.
+objectives:
+  - Achieve sustained system-wide Survival ≥ 0.80 with CCI ≥ 0.72.
+  - Quantify cascade depth (λ_cascade) and sustainment rate over 200+ epochs.
+design:
+  seeds: 6
+  epochs_cap: 900
+  agents: 240
+  clusters: 12
+  factors:
+    mode: ["ARC","ARC_CASCADE"]            # Phase 18 best vs cascaded regime
+    supernet_topology: ["chain","smallworld","tree"]
+    inter_kappa: [0.08, 0.15, 0.25]        # inter-subnetwork coupling
+    inter_delay: [10, 25]                  # epochs of coupling delay
+    seed_fraction: [0.25, 0.50]            # fraction of clusters initially seeded
+    trust_tau0: [0.60, 0.70]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+
+  prereg:
+    constants:
+      epochs: 900
+      seeds: [1901,1902,1903,1904,1905,1906]
+      agents: 240
+      clusters: 12
+      mode: ["ARC","ARC_CASCADE"]
+      supernet_topology: ["chain","smallworld","tree"]
+      inter_kappa: [0.08, 0.15, 0.25]
+      inter_delay: [10, 25]
+      seed_fraction: [0.25, 0.50]
+      trust_tau0: [0.60, 0.70]
+      goal_inequality: [0.20, 0.35, 0.50]
+      shock_severity: [0.50]
+      sim_adapter: "studies/trust_survival/adapter_trust_cascade_wrapper.py:run"
+arc_controller:
+  # (reuse Phase 18 ARC with the same or slightly relaxed bounds)
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every: 100, eps_delta: 0.06, lr_boost: 1.10 }
+cascade:
+  seed_clusters_mode: "central"            # "central" | "random" | "periphery"
+  sustain_window: 200                      # epochs to test sustained thresholds
+  measure_every: 10
+  threshold_cci: 0.72
+  threshold_survival: 0.80
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - cascade_lambda                 # 0..1 fraction of clusters over CCI≥thr within 50 epochs
+  - cascade_sustain_rate           # fraction of clusters maintaining dual-threshold during sustain_window
+  - inter_sync_index               # subnetwork-phase coherence
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 300
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC_CASCADE vs ARC: Survival uplift ≥ +0.12 (abs) with 95% CI excluding 0"
+    - "Any ARC_CASCADE cell achieves (CCI ≥ 0.72 AND Survival ≥ 0.80) sustained for ≥ sustain_window"
+    - "cascade_lambda ≥ 0.60 and cascade_sustain_rate ≥ 0.60 (95% CI)"
+    - "Mean hazard in ARC_CASCADE ≤ 0.47 and not > +5% vs ARC at same factors"
+exports:
+  data_dir: discovery_results/trust_survival_v19/data
+  figs_dir: discovery_results/trust_survival_v19/figs
+  report_dir: discovery_results/trust_survival_v19/report
+  bundle_zip: discovery_results/trust_survival_v19/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_cascade.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 19: ARC-driven coherence cascade across linked subnetworks."

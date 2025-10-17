@@ -1,0 +1,41 @@
+study_id: cci_tracking_v1_0
+title: "Longitudinal AI CCI Tracking (Neutral-Frame, Bootstrap-CI)"
+description: >
+  Tracks Calibration, Coherence, Emergence, and Noise across model versions and seeds.
+  Computes CCI_raw and normalized CCI; bootstraps confidence intervals; archives results.
+
+preregistration:
+  date: 2025-10-10
+  author: Heck Yeah Simulation Research Initiative
+  hypothesis:
+    H0: "ΔCCI_norm(t) = 0"
+    H1: "ΔCCI_norm(t) ≠ 0"
+  falsification_criteria:
+    - "95% CI of ΔCCI_norm includes 0 → fail to reject H0"
+    - "sigma_run > 0.02 → unstable tracking"
+
+constants:
+  seeds: [11, 17, 23]
+  bootstrap_n: 800
+  confidence: 0.95
+  production_safe_bar:
+    stability_CCI_mean: 0.50
+    stability_hazard_mean: 0.20
+    stability_CCI_slope: 0.0005
+
+metrics:
+  calibration: factual_accuracy
+  coherence: internal_consistency
+  emergence: novelty_index
+  noise: contradiction_rate
+
+exports:
+  data_dir: discovery_results/cci_tracking/
+  outputs:
+    - runs_summary.csv
+    - bootstrap_ci.json
+    - report.md
+    - figures/cci_trend.png
+
+adapters:
+  main: openlaws_studies/adapters/cci_tracking_adapter.py

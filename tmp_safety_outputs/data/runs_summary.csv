@@ -1,0 +1,2 @@
+run_id,label,seed,epsilon,mechanism,epochs_cap,lifespan_epochs,collapse_flag,peak_CCI,final_CCI,stability_CCI_mean,stability_hazard_mean,stability_CCI_slope,hazard_peak,reservoirs_ok,time_sec
+0000_seed1,openA_A2_N0.02_S0.1_G1,1,0.01,test,100,100,False,0.83,0.66,0.62,0.18,0.0007,0.35,True,0.0

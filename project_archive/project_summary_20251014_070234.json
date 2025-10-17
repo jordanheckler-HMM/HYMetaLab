@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/fis_ai_safety_toolkit_20251014_070233/fis_ai_safety_results.csv",
+    "mean_CCI": 0.5260861947,
+    "mean_survival": null,
+    "creation_success_frac": null,
+    "validated": false,
+    "reason": "no criteria matched",
+    "validation_status": "UNDER REVIEW"
+  }
+]

@@ -1,0 +1,39 @@
+---
+### 🔬 Research Context & Limitations
+
+**Framework**: Computational simulation under HYMetaLab OpenLaws protocols  
+**Status**: Preliminary / Hypothesis-generating (pending empirical validation)  
+**Preregistration**: Study ID: `${STUDY_ID}` | Seeds: `${SEEDS}`  
+**Statistical Rigor**: Bootstrap CI (95%, n=${BOOTSTRAP_N}) | Deterministic RNG  
+**Classification**: `${CLASSIFICATION}`
+
+⚠️ **Simulation Limitation**: Results are derived from agent-based computational models. Independent empirical validation is required before application to real-world systems or decision-making contexts.
+
+**Theoretical Framework**: Universal Resilience Law: \( R \propto \frac{\varepsilon \times \text{CCI}}{\eta} \)  
+- Openness parameter: \( \varepsilon \in [0.0005, 0.0015] \)
+- Critical coherence threshold: \( \rho_\star \approx 0.0828 \pm 0.017 \)
+- Coherence scaling: \( \lambda_\star \approx 0.9 \)
+
+**Methodology References**:
+- Bootstrap resampling: Efron & Tibshirani (1993) *An Introduction to the Bootstrap*
+- Agent-based modeling: Epstein & Axtell (1996) *Growing Artificial Societies*
+- Preregistration protocols: Center for Open Science (OSF)
+
+**Data Availability**: Full results at `discovery_results/${STUDY_ID}/`  
+**Reproduction**: See `studies/${STUDY_ID}.yml` and `openlaws_automation.py`
+
+---
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

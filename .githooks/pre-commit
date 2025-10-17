@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p operations/_auto
+find apps -name "*.py" -type f | xargs shasum -a 256 > operations/_auto/apps_checksums.txt
+find tools -name "*.py" -type f | xargs shasum -a 256 > operations/_auto/tools_checksums.txt
+find qc -name "*.py" -type f | xargs shasum -a 256 > operations/_auto/qc_checksums.txt
+echo "[pre-commit] checksums refreshed in operations/_auto/"

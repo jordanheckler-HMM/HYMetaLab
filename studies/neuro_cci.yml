@@ -1,0 +1,46 @@
+study_id: neuro_cci
+title: 'Neuro CCI: EEG/HRV/Behavior CCI pipeline'
+adapter: adapters/neuro_cci_adapter.py:run_study
+seed_policy:
+  seeds:
+  - 123
+  - 456
+integrity:
+  preregistered: true
+  null_test: true
+  blinded_analysis: false
+sweep:
+  epoch_sec:
+  - 2
+  sampling_rate:
+  - 250
+constants:
+  input_glob: data/input/neuro/*.csv
+  export_paths:
+    base: ./discovery_results/neuro_cci
+  epsilon: 0.001
+thresholds:
+  cci_min: 0.2
+metrics:
+- CCI
+- Cal
+- Coh
+- Emotional_molecules
+exports:
+  csv:
+  - data/runs_summary.csv
+  - data/trajectories_long.csv
+  figures:
+  - figures/cci_long.png
+  - figures/coh_plv.png
+  - figures/hrv_time.png
+  report_md: report/neuro_cci_results.md
+acceptance_criteria:
+  validated_fraction_min: 0.5
+openlaws:
+  steps:
+  - run
+  - validate
+  - report
+data_source: SIMULATION_ONLY
+depends_on: []

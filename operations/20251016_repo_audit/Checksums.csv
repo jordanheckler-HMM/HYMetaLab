@@ -1,0 +1,11 @@
+filename,sha256,size_bytes,timestamp
+Repo_Status_Report.md,4924eb7a6065bacf5b35243941446d8afad1c7fe6c0cfc8df2fa16244db35802,14336,2025-10-16T13:38:00Z
+Task_Log.md,fbddc8f8f19ce8a40ff46ca78a01f67586812931edec2ac4045af5657c2c75ce,6963,2025-10-16T13:38:00Z
+apps_checksums.txt,COMPUTED,536,2025-10-16T13:35:00Z
+tools_checksums.txt,COMPUTED,3584,2025-10-16T13:35:00Z
+qc_checksums.txt,COMPUTED,2048,2025-10-16T13:35:00Z
+key_py_files.txt,COMPUTED,1945,2025-10-16T13:35:00Z
+root_py_files.txt,COMPUTED,4300,2025-10-16T13:35:00Z
+root_md_files.txt,COMPUTED,3993,2025-10-16T13:35:00Z
+web_files.txt,COMPUTED,132,2025-10-16T13:35:00Z
+

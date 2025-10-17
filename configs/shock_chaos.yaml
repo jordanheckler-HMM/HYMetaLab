@@ -1,0 +1,17 @@
+include: configs/base.yaml
+experiment: chaos
+chaos:
+  # 100 steps that jitter shock around 0.4 with spikes above 0.5
+  steps: 100
+  base_shock: 0.40
+  spike_prob: 0.20
+  spike_to: 0.65
+  smooth_to: 0.40
+fixed:
+  coordination_strength: 0.60
+  goal_inequality: 0.25
+out_csv: reslab/exports/shock_chaos.csv
+out_fig: reslab/exports/shock_chaos.png
+label: "Shock Chaos Timeline (with stability policy thresholds)"
+
+

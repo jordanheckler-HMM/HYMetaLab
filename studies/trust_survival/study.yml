@@ -1,0 +1,62 @@
+study:
+  id: trust_survival_v1
+  title: Trust_Survival_MinSweep_v1
+
+# human-readable prereg and hypotheses (kept for provenance)
+meta:
+  name: "Trust_Survival_MinSweep_v1"
+  preregistered: true
+  hypotheses:
+    H1: "Higher trust (coordination strength ↑, defection noise ↓) lowers collapse_risk."
+    H2: "Trust increases survival_rate and shortens shock recovery time."
+    H3: "There exists an optimal trust band; too-low trust collapses, too-high may slightly reduce exploration/CCI growth."
+
+prereg:
+  constants:
+    # numeric sweeps used by the OpenLaws runner
+    epochs: 400
+    seeds: [101, 102]
+    agents: 120
+    trust_tau: [0.20, 0.35, 0.50, 0.65, 0.80]
+    shock_severity: [0.20, 0.50, 0.80]
+    goal_inequality: [0.20, 0.35]
+    sim_adapter: "studies/trust_survival/adapter_wrapper.py:run"
+
+design:
+  epochs_cap: 400
+  agents: 120
+  seeds: [101, 102]
+  factors:
+    trust_tau: [0.20, 0.35, 0.50, 0.65, 0.80]
+    shock_severity: [0.20, 0.50, 0.80]
+    goal_inequality: [0.20, 0.35]
+
+controls:
+  base_coord: 0.50
+  base_noise: 0.10
+  hygiene:
+    ma20_hazard: 0.20
+    trim_pct: 0.30
+    cooldown: 25
+
+integrity:
+  bootstrap_resamples: 100
+  code_freeze: true
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+
+exports:
+  data_dir: discovery_results/trust_survival_v1/data
+  figs_dir: discovery_results/trust_survival_v1/figures
+  report_dir: discovery_results/trust_survival_v1/report
+  bundle_zip: discovery_results/trust_survival_v1/bundle.zip
+
+adapter: "studies/trust_survival/adapter_wrapper.py:run"
+
+notes:
+  links:
+    - "CollapseRisk ∼ (GoalInequality × Complexity)/CoordinationStrength"
+    - "Survival = f(Shock, Coherence, CCI)"

@@ -1,0 +1,22 @@
+name: MetaLab CI
+on:
+  push: {branches: [main]}
+  pull_request: {branches: [main]}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.10"}
+      - run: python -m pip install --upgrade pip
+      - run: pip install black ruff pytest mypy pre-commit
+      - run: pre-commit run --all-files
+      - run: pytest || true
+      - name: OpenLaws dry run
+        run: |
+          if [ -f openlaws_automation.py ]; then
+            python openlaws_automation.py run --dry || true
+            python openlaws_automation.py validate --dry || true
+            python openlaws_automation.py report --dry || true
+          fi

@@ -1,0 +1,64 @@
+study_id: autotheorist_epsilon_nonlinear_1760529860
+title: 'Non-Linear Openness Effects: Threshold Discovery'
+version: '2.0'
+prereg_date: '2025-10-15'
+preregistered: true
+hypothesis:
+  text: "Openness (\u03B5) exhibits threshold effects where benefits accelerate beyond\
+    \ \u03B5\u22480.0015"
+  rationale: Linear tests showed consistent gains; non-linear exploration may reveal
+    optimal operating points
+  method: parameter_expansion
+  rank: 2
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 200
+  epochs: 1500
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+sweep:
+  epsilon:
+  - 0.0008
+  - 0.0012
+  - 0.0015
+  - 0.0018
+  - 0.002
+  - 0.0025
+  rho:
+  - 0.0828
+  noise:
+  - 0.03
+  - 0.05
+  - 0.07
+validation:
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.04'
+  - name: mean_hazard_delta
+    rule: <= -0.015
+  bootstrap_ci: 1000
+  confidence: moderate
+exports:
+  outdir: discovery_results/autotheorist_epsilon_nonlinear_1760529860/
+  require_columns:
+  - CCI
+  - hazard
+  - survival_rate
+  - collapse_risk
+metadata:
+  generated_by: auto_theorist_enhanced.py
+  generated_at: '2025-10-15T07:04:20.088093'
+  priority: high
+  based_on:
+  - fis_ai_safety_toolkit
+  - fis_trust_hope_stabilizers
+adapter: adapters/universal_resilience_adapter.py

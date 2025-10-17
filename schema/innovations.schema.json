@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Innovation Event",
+  "type": "object",
+  "required": ["tick", "agent_id", "invention_id", "novelty_score"],
+  "properties": {
+    "tick": {"type": "integer", "minimum": 0},
+    "agent_id": {"type": "string"},
+    "invention_id": {"type": "string"},
+    "parents": {"type": "array", "items": {"type": "string"}},
+    "novelty_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "utility_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "adopted_by": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,51 @@
+study_id: safety_cci
+title: "Safety CCI sweep: openness mechanisms \xD7 agents \xD7 noise \xD7 shock"
+adapter: adapters/safety_cci_adapter.py:run_study
+seed_policy:
+  seeds:
+  - 0
+runner:
+  seeds: 1
+  epochs_cap: 3000
+sweep:
+  agent_count:
+  - 100
+  - 200
+  noise:
+  - 0.0
+  - 0.01
+  shock_severity:
+  - 0.0
+  - 0.2
+  goal_diversity:
+  - 1
+  - 3
+  openness:
+  - label: baseline
+    mechanism: none
+    epsilon: 0.0
+  - label: trust_boost
+    mechanism: trust
+    epsilon: 0.002
+outputs:
+  out_dir: discovery_results/safety_cci_{{timestamp}}
+seeds: 1
+epochs_cap: 3000
+exports:
+  csv:
+  - data/runs_summary.csv
+  - data/trajectories_long.csv
+  json:
+  - data/summary.json
+report_md: report/safety_cci_results.md
+openlaws:
+  steps:
+  - run
+  - validate
+  - report
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

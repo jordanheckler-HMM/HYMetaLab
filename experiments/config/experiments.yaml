@@ -1,0 +1,70 @@
+namespace: exp_2025Q4
+sim_version: v1.0.0
+defaults:
+  ensemble_seeds: 16
+  horizon_steps: 500
+  per_instance_concurrency: 2
+
+experiments:
+  - id: telescope_vs_oracle
+    hypothesis: >
+      Telescope-mode (iterative, fact-check) yields higher shock_tolerance and lower collapse_risk than oracle-mode for equivalent base CCI.
+    factors:
+      base_calibration: [0.6, 0.75, 0.9]
+      base_coherence:   [0.6, 0.75, 0.9]
+      base_emergence:   [0.5, 0.7, 0.85]
+      base_noise:       [0.3, 0.2, 0.1]
+      interaction_style: ["telescope","oracle"]
+      shock_severity:   [0.35, 0.5]
+      coordination_strength: [0.4, 0.6]
+      goal_inequality:  [0.3, 0.5]
+
+  - id: shock_dose_response
+    hypothesis: >
+      An optimal constructive shock band exists; below it growth is slow, above it collapse risk rises.
+    factors:
+      base_calibration: [0.7]
+      base_coherence:   [0.7]
+      base_emergence:   [0.7]
+      base_noise:       [0.2]
+      shock_severity:   [0.1,0.2,0.3,0.4,0.5,0.6,0.7]
+      coordination_strength: [0.5, 0.7]
+      goal_inequality:  [0.3, 0.5]
+
+  - id: collective_amplification
+    hypothesis: >
+      Networked agents (peer feedback) show higher collective_cci_delta than isolated agents.
+    factors:
+      base_calibration: [0.65, 0.8]
+      base_coherence:   [0.65, 0.8]
+      base_emergence:   [0.6, 0.8]
+      base_noise:       [0.25, 0.15]
+      network_mode:     ["isolated","peer_feedback","mentor_hub"]
+      shock_severity:   [0.3,0.5]
+      coordination_strength: [0.4,0.7]
+      goal_inequality:  [0.3,0.5]
+
+  - id: meaning_vs_training_branch
+    hypothesis: >
+      Severe shocks favor “meaning/religion” branching; chronic stress favors “education/training”.
+    factors:
+      base_calibration: [0.75, 0.9]
+      base_coherence:   [0.75, 0.9]
+      base_emergence:   [0.7, 0.85]
+      base_noise:       [0.2, 0.1]
+      shock_profile:    ["chronic_low","acute_high"]
+      coordination_strength: [0.5, 0.7]
+      goal_inequality:  [0.3, 0.6]
+
+  - id: noise_manipulation
+    hypothesis: >
+      Lowering noise via practice increases survival_rate and shock_tolerance nonlinearly.
+    factors:
+      base_calibration: [0.7]
+      base_coherence:   [0.7]
+      base_emergence:   [0.7]
+      base_noise:       [0.35,0.25,0.15,0.08]
+      practice:         ["none","attention_hygiene","prediction_journal","peer_review"]
+      shock_severity:   [0.4, 0.55]
+      coordination_strength: [0.5]
+      goal_inequality:  [0.4]

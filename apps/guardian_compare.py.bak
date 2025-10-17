@@ -1,0 +1,113 @@
+import streamlit as st
+import sys
+from pathlib import Path
+import pandas as pd
+
+# Add qc to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "qc"))
+
+st.set_page_config(page_title="Guardian Compare", page_icon="⚖️", layout="wide")
+
+st.title("⚖️ Guardian Compare")
+st.markdown("**Side-by-side document comparison with Guardian v4**")
+
+st.sidebar.header("Compare Documents")
+st.sidebar.info("""
+Compare two versions of a document to see how edits impact Guardian scores.
+
+Useful for:
+- A/B testing language
+- Iterative improvement
+- Patch validation
+""")
+
+# Two column input
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Document A (Before)")
+    text_a = st.text_area("Paste text A:", height=300, key="text_a")
+
+with col2:
+    st.subheader("Document B (After)")
+    text_b = st.text_area("Paste text B:", height=300, key="text_b")
+
+if st.button("⚖️ Compare with Guardian", type="primary"):
+    if not text_a or not text_b:
+        st.warning("Please provide both documents to compare.")
+    else:
+        with st.spinner("Running Guardian v4 on both documents..."):
+            try:
+                from guardian_v4.guardian_v4 import GuardianV4
+                
+                guardian = GuardianV4()
+                result_a = guardian.validate_text(text_a)
+                result_b = guardian.validate_text(text_b)
+                
+                # Scores
+                score_a = result_a.get("score", 0)
+                score_b = result_b.get("score", 0)
+                delta = score_b - score_a
+                
+                # Display comparison
+                st.subheader("📊 Score Comparison")
+                
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Document A", f"{score_a:.1f}/100")
+                with col2:
+                    st.metric("Document B", f"{score_b:.1f}/100")
+                with col3:
+                    if delta > 0:
+                        st.metric("Change", f"+{delta:.1f}", delta=f"{delta:.1f}")
+                    else:
+                        st.metric("Change", f"{delta:.1f}", delta=f"{delta:.1f}")
+                
+                # Detailed metrics comparison
+                st.subheader("📈 Detailed Metrics")
+                
+                metrics_df = pd.DataFrame({
+                    'Metric': ['Objectivity', 'Sentiment', 'Transparency'],
+                    'Document A': [
+                        result_a.get('objectivity', 0),
+                        result_a.get('sentiment', 0),
+                        result_a.get('transparency', 0)
+                    ],
+                    'Document B': [
+                        result_b.get('objectivity', 0),
+                        result_b.get('sentiment', 0),
+                        result_b.get('transparency', 0)
+                    ]
+                })
+                metrics_df['Change'] = metrics_df['Document B'] - metrics_df['Document A']
+                
+                st.dataframe(metrics_df, use_container_width=True)
+                
+                # Recommendations
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.subheader("📝 Recommendations A")
+                    if "recommendations" in result_a:
+                        for rec in result_a["recommendations"][:5]:
+                            st.markdown(f"- {rec}")
+                
+                with col2:
+                    st.subheader("📝 Recommendations B")
+                    if "recommendations" in result_b:
+                        for rec in result_b["recommendations"][:5]:
+                            st.markdown(f"- {rec}")
+                
+                # Full reports
+                with st.expander("📊 Full Report A"):
+                    st.json(result_a)
+                
+                with st.expander("📊 Full Report B"):
+                    st.json(result_b)
+                    
+            except Exception as e:
+                st.error(f"Error running Guardian: {e}")
+                st.info("Make sure Guardian v4 is installed in qc/guardian_v4/")
+
+st.markdown("---")
+st.markdown("**Guardian Compare** | HYMetaLab Research Integrity Suite")

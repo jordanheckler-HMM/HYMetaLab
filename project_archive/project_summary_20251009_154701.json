@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/neuro_cci_20251009_154701/data/runs_summary.csv",
+    "mean_CCI": 6.6878164348,
+    "mean_survival": null,
+    "creation_success_frac": null,
+    "validated": false,
+    "reason": "no criteria matched",
+    "validation_status": "UNDER REVIEW"
+  }
+]

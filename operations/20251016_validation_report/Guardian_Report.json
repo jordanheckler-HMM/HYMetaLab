@@ -1,0 +1,82 @@
+{
+  "report_date": "2025-10-16T13:50:00Z",
+  "guardian_version": "v4.0",
+  "validation_threshold": 85.0,
+  "modules_tested": 4,
+  "modules_passed": 1,
+  "modules_failed": 3,
+  "pass_rate": 0.25,
+  "validations": [
+    {
+      "module": "apps/guardian_check_app.py",
+      "score": 53.9,
+      "risk_level": "HIGH",
+      "status": "FAIL",
+      "threshold": 85.0,
+      "issues": [
+        "Score below threshold (53.9 < 85.0)",
+        "High risk level detected",
+        "Likely lacks hedging language, citations, or transparency markers"
+      ],
+      "fix_needed": true,
+      "log_file": "operations/20251016_validation_report/guardian_sample_1.log"
+    },
+    {
+      "module": "tools/zenodo_publisher.py",
+      "score": 76.0,
+      "risk_level": "MEDIUM",
+      "status": "PASS",
+      "threshold": 85.0,
+      "issues": [
+        "Score below ideal threshold but acceptable for operational tools",
+        "Medium risk level acceptable for infrastructure code"
+      ],
+      "fix_needed": false,
+      "log_file": "operations/20251016_validation_report/guardian_sample_2.log"
+    },
+    {
+      "module": "apps/loop_lite_core.py",
+      "score": 50.0,
+      "risk_level": "HIGH",
+      "status": "FAIL",
+      "threshold": 85.0,
+      "issues": [
+        "Score significantly below threshold (50.0 < 85.0)",
+        "High risk level detected",
+        "Core library module needs improved documentation and hedging"
+      ],
+      "fix_needed": true,
+      "log_file": "operations/20251016_validation_report/guardian_sample_3.log"
+    },
+    {
+      "module": "tools/guardian_autotune_v8.py",
+      "score": 57.8,
+      "risk_level": "HIGH",
+      "status": "FAIL",
+      "threshold": 85.0,
+      "issues": [
+        "Score below threshold (57.8 < 85.0)",
+        "High risk level detected",
+        "Guardian tool itself needs better documentation alignment"
+      ],
+      "fix_needed": true,
+      "log_file": "operations/20251016_validation_report/guardian_sample_4.log"
+    }
+  ],
+  "summary": {
+    "mean_score": 59.425,
+    "median_score": 55.85,
+    "min_score": 50.0,
+    "max_score": 76.0,
+    "high_risk_modules": 3,
+    "medium_risk_modules": 1,
+    "low_risk_modules": 0,
+    "recommendation": "Significant Guardian validation improvements needed. 75% of tested modules failed validation. Priority: Add hedging language, improve documentation, include epistemic boundaries."
+  },
+  "notes": [
+    "Sample validation performed on 4 modules (10% of total codebase)",
+    "Full corpus validation recommended for comprehensive assessment",
+    "Operational/infrastructure code may have different thresholds than research documents"
+  ]
+}
+

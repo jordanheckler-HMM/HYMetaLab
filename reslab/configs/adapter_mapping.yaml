@@ -1,0 +1,25 @@
+# Tell the adapter how to call YOUR sim. We try auto-detect; if that fails, fill these in.
+# module: python module path to import (e.g., mysim.core)
+# func: function or class.method to call (e.g., run_sim or Simulator.run)
+# argmap: map our standardized keys -> your sim's parameter names
+module: "reslab.sim_wrapper"        # e.g., "mysim.core"
+func: "run_consciousness_sim"          # e.g., "run_sim"
+argmap:
+  n_agents: "n_agents"
+  ticks: "ticks"
+  shock_level: "shock_level"
+  coordination_strength: "coordination_strength"
+  goal_inequality: "goal_inequality"
+  noise: "noise"
+  memory_cap: "memory_cap"
+  energy_drift: "energy_drift"
+  seed: "seed"
+returns:
+  # Tell us how to read outputs. We expect:
+  # - survived: per-agent bool array OR scalar survival_rate in [0,1]
+  # - calibration/coherence/emergence/noise numbers for CCI (optional; we can skip CCI if missing)
+  survived: "survived"           # if scalar rate: put "survival_rate"
+  calibration: "calibration"
+  coherence: "coherence"
+  emergence: "emergence"
+  noise: "noise"

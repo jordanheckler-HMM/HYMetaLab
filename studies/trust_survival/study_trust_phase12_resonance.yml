@@ -1,0 +1,89 @@
+study:
+  id: trust_survival_v12_resonance
+  title: Trust_Survival_Phase12_Resonance
+name: "Trust_Survival_Phase12_Resonance"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 12 tests resonant openness ε(t) and phase-locked trust learning:
+  ε(t) = ε0 + A * sin(2π * t / T + φ) with guard rails.
+  During high-CCI windows, agents partially synchronize learning (phase-lock);
+  under high hazard they de-synchronize to diversify.
+objectives:
+  - Detect resonance where periodic ε boosts CCI & survival without raising hazard.
+  - Show phase-lock windows shorten recovery times and reduce collapse episodes.
+design:
+  seeds: 5
+  epochs_cap: 700
+  agents: 180
+  clusters: 6
+  factors:
+    mode: ["META","RESONANT_LOCK"]
+    eps0: [0.30, 0.50]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+resonance:
+  amplitude: 0.18
+  period_T: 120
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.85
+  guard_hazard_uplift: 0.05
+phase_lock:
+  cci_lock_threshold: 0.68
+  hazard_unlock_threshold: 0.52
+  ema_window: 40
+  sync_gain: 1.35
+  desync_divergence: 0.75
+  lr_floor: 0.01
+  lr_ceiling: 0.15
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - openness_eps_mean
+  - openness_eps_var
+  - episodes_collapse_per_1k
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 260
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "At least one RESONANT_LOCK cell achieves (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "GLM: survival_rate ~ mode + eps0 + goal_inequality + mode:eps0 shows positive mode effect (p<0.05)"
+    - "Median t_recover_hazard_0_20 improves ≥ 15% in RESONANT_LOCK vs META at g≤0.5 (CI excludes 0)"
+    - "episodes_collapse_per_1k decreases ≥ 20% in RESONANT_LOCK vs META at g=0.8"
+exports:
+  data_dir: discovery_results/trust_survival_v12/data
+  figs_dir: discovery_results/trust_survival_v12/figs
+  report_dir: discovery_results/trust_survival_v12/report
+  bundle_zip: discovery_results/trust_survival_v12/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_resonance.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 12 adds ε(t) sinusoid + phase-locked learning with hazard guard rails."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 700
+    seeds: [1201, 1202, 1203, 1204, 1205]
+    agents: 180
+    clusters: 6
+    mode: ["META","RESONANT_LOCK"]
+    eps0: [0.30, 0.50]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_resonance_wrapper.py:run"

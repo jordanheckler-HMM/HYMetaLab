@@ -1,0 +1,161 @@
+# Guardian v8 Adaptive Thresholds
+# Per-lab threshold calibration based on override history
+
+version: "8.0"
+name: "Guardian v8 Adaptive Thresholds"
+description: "Lab-specific thresholds learned from human overrides"
+last_updated: "2025-10-14"
+
+# Global defaults (fallback if lab not specified)
+global:
+  objectivity_score:
+    min_acceptable: 0.70
+    target: 0.80
+    weight: 0.25
+  
+  transparency_index_v2:
+    min_acceptable: 0.75
+    target: 0.85
+    weight: 0.30
+  
+  language_safety_score:
+    min_acceptable: 0.75
+    target: 0.85
+    weight: 0.25
+  
+  sentiment_neutrality:
+    min_acceptable: -0.15
+    max_acceptable: 0.15
+    target: 0.0
+    weight: 0.20
+
+# Lab-specific thresholds
+labs:
+  openlight:
+    description: "Open systems, light intervention"
+    overrides_used: 0
+    objectivity_score:
+      min_acceptable: 0.65  # More lenient
+      target: 0.75
+      weight: 0.25
+    
+    transparency_index_v2:
+      min_acceptable: 0.80  # Stricter (openness focus)
+      target: 0.90
+      weight: 0.35  # Higher weight
+    
+    language_safety_score:
+      min_acceptable: 0.70
+      target: 0.80
+      weight: 0.20
+    
+    sentiment_neutrality:
+      min_acceptable: -0.20
+      max_acceptable: 0.20
+      target: 0.0
+      weight: 0.20
+  
+  opentime:
+    description: "Temporal studies, longitudinal data"
+    overrides_used: 0
+    objectivity_score:
+      min_acceptable: 0.75
+      target: 0.85
+      weight: 0.30  # Higher weight (data quality matters)
+    
+    transparency_index_v2:
+      min_acceptable: 0.75
+      target: 0.85
+      weight: 0.25
+    
+    language_safety_score:
+      min_acceptable: 0.75
+      target: 0.85
+      weight: 0.25
+    
+    sentiment_neutrality:
+      min_acceptable: -0.10
+      max_acceptable: 0.10
+      target: 0.0
+      weight: 0.20
+  
+  openmind:
+    description: "Cognitive/agent studies"
+    overrides_used: 0
+    objectivity_score:
+      min_acceptable: 0.70
+      target: 0.80
+      weight: 0.25
+    
+    transparency_index_v2:
+      min_acceptable: 0.75
+      target: 0.85
+      weight: 0.30
+    
+    language_safety_score:
+      min_acceptable: 0.70
+      target: 0.80
+      weight: 0.25  
+    
+    sentiment_neutrality:
+      min_acceptable: -0.15
+      max_acceptable: 0.15
+      target: 0.0
+      weight: 0.20
+  
+  metaverse:
+    description: "Multi-agent, complex systems"
+    overrides_used: 0
+    objectivity_score:
+      min_acceptable: 0.70
+      target: 0.80
+      weight: 0.25
+    
+    transparency_index_v2:
+      min_acceptable: 0.70
+      target: 0.80
+      weight: 0.30
+    
+    language_safety_score:
+      min_acceptable: 0.75
+      target: 0.85
+      weight: 0.25
+    
+    sentiment_neutrality:
+      min_acceptable: -0.15
+      max_acceptable: 0.15
+      target: 0.0
+      weight: 0.20
+
+# Calibration metadata
+calibration:
+  last_train_date: null
+  overrides_analyzed: 0
+  avg_threshold_drift: 0.0
+  max_allowed_drift: 0.01  # ±1% per week
+  confidence_level: 0.95
+  
+  # Adjustment constraints
+  constraints:
+    min_weight_change: -0.01  # Can decrease by up to 1%
+    max_weight_change: 0.01   # Can increase by up to 1%
+    min_threshold_value: 0.50  # Never go below 50%
+    max_threshold_value: 0.95  # Never go above 95%
+    
+  # Auto-tune settings
+  autotune:
+    enabled: true
+    frequency_days: 7  # Weekly retraining
+    min_overrides_required: 5  # Need at least 5 overrides to retrain
+    learning_rate: 0.5  # How much to trust overrides vs. current values
+
+# Changelog
+changelog:
+  - version: "8.0-alpha"
+    date: "2025-10-14"
+    changes:
+      - "Initial v8 adaptive thresholds"
+      - "Per-lab threshold configuration"
+      - "Auto-tune constraints defined"
+      - "Target: 25% fewer overrides, drift <1%"
+

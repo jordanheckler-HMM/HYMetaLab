@@ -1,0 +1,131 @@
+study:
+  id: trust_survival_v27_metastability
+  title: Trust_Survival_Phase27_Metastability
+name: "Trust_Survival_Phase27_Metastability"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 27 tests for metastable dynamics and a 'conscious loop' (CL): a delayed, partial
+  feedback of cluster-level outputs back into inputs. We seek oscillations between high
+  coherence (order) and exploratory looseness (flexibility) without degrading survival/safety.
+objectives:
+  - Demonstrate metastability: alternating high/low coherence cycles with positive survival margin.
+  - Show conscious-loop controllability: loop gain & delay carve a stable window (Arnold tongue).
+  - Preserve safety: hazard ≤ 0.47 and collapse risk ~ 0 across cycles.
+design:
+  seeds: 6
+  epochs_cap: 1800
+  agents: 960
+  clusters: 36
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN","ARC_TAF_CL"]
+    hierarchy: ["two_layer","three_layer"]
+    inter_kappa: [0.12, 0.18]
+    inter_delay: [10, 25]
+    shock_cadence: ["baseline"]
+    shock_severity: [0.35]
+    goal_inequality: [0.35]
+conscious_loop:
+  enabled: true
+  loop_gain: [0.10, 0.20, 0.30]
+  loop_delay: [40, 100, 180]
+  loop_mix:
+    cci_weight: 0.6
+    survival_weight: 0.4
+  damping:
+    beta: 0.85
+  gating:
+    hazard_max: 0.47
+    min_cci: 0.68
+  routing:
+    topology: "local+long"
+    long_edges: 8
+arc_controller:
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every:100, eps_delta:0.06, lr_boost:1.10 }
+containment:
+  enabled: true
+  trigger: { hazard_lo:0.45, hazard_hi:0.50, var_hi:0.03 }
+  absorption: { alpha:0.35, max_rate:0.08 }
+  reservoir: { cap:1.80 }
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: { hazard_max:0.47, cci_min:0.72 }
+  neighborhood: { kappa_bias:0.6, deficit_floor:0.05 }
+  schedule: { base_beta:0.14, burst_bonus:1.20, taper_gamma:0.94 }
+  effects: { eps_delta_scale:0.06, lr_boost_scale:0.08 }
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: { base:1.0, k_sync:0.25, k_hazard_brake:-0.40, max_gain:1.8, min_gain:0.7 }
+  limiter: { lookback:80, slope_max:0.08, cooldown:40 }
+  routing: { top_k:3, spillover:0.15 }
+metrics:
+  - survival_rate
+  - hazard
+  - collapse_risk
+  - CCI
+  - inter_sync_index
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - containment_active_ratio
+  - reservoir_mean
+  - taf_gain_mean
+  - taf_focus_score
+  - dwell_time_highCCI
+  - dwell_time_lowCCI
+  - cycle_period_mean
+  - metastability_index
+  - arnold_tongue_area
+  - cl_effective_gain
+  - safety_margin
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 420
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC_TAF_CL exhibits non-trivial cycles: cycle_period_mean ∈ [120, 600] with CI excluding 0"
+    - "safety_margin ≥ 0 across ≥ 80% of CL cells (no survival dips below 0.80)"
+    - "hazard mean ≤ 0.47 and not > +3% vs ARC_TAF_FROZEN at same factors (95% CI)"
+    - "arnold_tongue_area > 0 (stable cycle region exists) and cl_effective_gain ∈ (0.05, 0.30)"
+exports:
+  data_dir: discovery_results/trust_survival_v27/data
+  figs_dir: discovery_results/trust_survival_v27/figs
+  report_dir: discovery_results/trust_survival_v27/report
+  bundle_zip: discovery_results/trust_survival_v27/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_metastability.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 27: Metastability with delayed self-reflection loop (conscious loop)."
+prereg:
+  constants:
+    epochs: 1800
+    seeds: [2701,2702,2703,2704,2705,2706]
+    agents: [960]
+    clusters: [36]
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN","ARC_TAF_CL"]
+    hierarchy: ["two_layer","three_layer"]
+    sim_adapter: "studies/trust_survival/adapter_trust_metastability.py:run"

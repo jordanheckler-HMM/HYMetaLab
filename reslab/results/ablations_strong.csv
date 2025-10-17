@@ -1,0 +1,8 @@
+abl,survival_mean,survival_lo,survival_hi
+coordination_off,0.9984375,0.99609375,1.0
+coordination_max,0.0,0.0,0.0
+memory_cap_1,0.0,0.0,0.0
+noise_0_50,0.0,0.0,0.0
+noise_0_80,0.0,0.0,0.0
+energy_drift_on,0.0,0.0,0.0
+ineq_high_0_60,0.0,0.0,0.0

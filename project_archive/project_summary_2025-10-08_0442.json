@@ -1,0 +1,10 @@
+[
+  {
+    "file": "discovery_results/data/runs_summary.csv",
+    "category": "hypothesis_only",
+    "mean_CCI": null,
+    "mean_survival": null,
+    "mean_collapse": null,
+    "validation_status": "UNDER REVIEW"
+  }
+]

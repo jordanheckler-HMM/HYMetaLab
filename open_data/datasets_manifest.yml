@@ -1,0 +1,277 @@
+# HYMetaLab Open-Source Data Integration Manifest
+# Generated: 2025-10-15
+# Guardian v4 + OpenLaws Standards
+# Phase 1: Dataset Selection & Registration
+
+version: "1.0"
+project: "Open-Source Data Integration Plan v1.0"
+pipeline: "Guardian → TruthLens → MeaningForge → OriginChain → Aletheia"
+
+governance:
+  weekly_standup: true
+  monthly_audit: true
+  quarterly_review: true
+  guardian_threshold: 80  # Phase 1-3
+  guardian_threshold_publication: 90  # Phase 4-5
+
+quality_standards:
+  license_requirements:
+    - CC-BY
+    - CC-BY-SA
+    - MIT
+    - CC0
+  size_limit_gb: 5
+  required_documentation:
+    - README
+    - data_dictionary
+    - methodology
+  integrity:
+    - SHA256_checksums
+    - deterministic_processing
+    - full_provenance
+
+# ============================================================================
+# CANDIDATE DATASETS (Phase 1: Weeks 1-2)
+# Target themes: trust, well-being, collaboration, education
+# ============================================================================
+
+datasets:
+  # Dataset 1: World Values Survey (WVS) - Trust & Well-being
+  - id: wvs_trust_wellbeing_wave7
+    name: "World Values Survey Wave 7 - Trust & Well-being Subset"
+    theme: ["trust", "well-being", "social_cohesion"]
+    description: >
+      Global survey data on social values, trust, happiness, and civic engagement
+      from 60+ countries. Focus on trust measures, life satisfaction, and 
+      community participation.
+    
+    source:
+      url: "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp"
+      license: "CC-BY-NC (for research)"
+      size_estimate_gb: 0.5
+      format: ["CSV", "STATA"]
+    
+    relevance_to_framework:
+      cci_mapping: "Trust → Connection; Well-being → Coherence"
+      resilience_indicators: ["social_trust", "happiness", "civic_participation"]
+      hypothesis_potential: "Trust levels predict community resilience post-shock"
+    
+    data_dictionary:
+      key_variables:
+        - trust_people_general
+        - trust_neighbors
+        - trust_institutions
+        - life_satisfaction
+        - happiness_index
+        - volunteer_frequency
+      sample_size_estimate: 100000
+      time_period: "2017-2022"
+    
+    intake_status: "identified"
+    priority: "high"
+    estimated_download_date: "2025-10-16"
+  
+  # Dataset 2: OECD Education at a Glance - Collaboration Metrics
+  - id: oecd_education_collaboration_2023
+    name: "OECD Education at a Glance - Collaboration & Social-Emotional Learning"
+    theme: ["education", "collaboration", "skill_development"]
+    description: >
+      International education statistics including collaborative problem-solving
+      scores, student well-being, and school climate indicators from PISA studies.
+    
+    source:
+      url: "https://www.oecd.org/education/education-at-a-glance/"
+      license: "CC-BY-4.0"
+      size_estimate_gb: 0.3
+      format: ["XLSX", "CSV"]
+    
+    relevance_to_framework:
+      cci_mapping: "Collaboration → Connection; Learning outcomes → Coherence"
+      resilience_indicators: ["teamwork_scores", "school_belonging", "problem_solving"]
+      hypothesis_potential: "Collaborative learning environments increase CCI in educational systems"
+    
+    data_dictionary:
+      key_variables:
+        - collaborative_problem_solving_score
+        - sense_of_belonging_index
+        - teacher_cooperation
+        - student_wellbeing
+        - academic_resilience
+      sample_size_estimate: 50000
+      time_period: "2018-2023"
+    
+    intake_status: "identified"
+    priority: "high"
+    estimated_download_date: "2025-10-17"
+  
+  # Dataset 3: General Social Survey (GSS) - Trust & Social Capital
+  - id: gss_trust_social_capital_2022
+    name: "General Social Survey - Trust & Social Capital Module"
+    theme: ["trust", "social_capital", "civic_engagement"]
+    description: >
+      US-based longitudinal survey tracking social trust, community ties, 
+      civic participation, and confidence in institutions since 1972.
+    
+    source:
+      url: "https://gss.norc.org/"
+      license: "Public Domain (US Government data)"
+      size_estimate_gb: 0.2
+      format: ["CSV", "STATA", "SPSS"]
+    
+    relevance_to_framework:
+      cci_mapping: "Social capital → Connection density; Institutional trust → Coherence"
+      resilience_indicators: ["generalized_trust", "associational_membership", "volunteering"]
+      hypothesis_potential: "Declining trust trends correlate with reduced community resilience"
+    
+    data_dictionary:
+      key_variables:
+        - trust_most_people
+        - trust_neighbors
+        - confidence_institutions
+        - group_membership_count
+        - volunteer_hours
+        - social_isolation_index
+      sample_size_estimate: 60000
+      time_period: "1972-2022"
+    
+    intake_status: "identified"
+    priority: "high"
+    estimated_download_date: "2025-10-18"
+  
+  # Dataset 4: European Social Survey (ESS) - Well-being & Social Trust
+  - id: ess_wellbeing_trust_round10
+    name: "European Social Survey Round 10 - Well-being & Social Trust"
+    theme: ["well-being", "trust", "social_attitudes"]
+    description: >
+      Cross-national survey of attitudes, beliefs, and behaviors across 30+ 
+      European countries. Strong focus on trust, happiness, and social integration.
+    
+    source:
+      url: "https://www.europeansocialsurvey.org/"
+      license: "CC-BY-NC-SA (for research)"
+      size_estimate_gb: 0.4
+      format: ["CSV", "STATA", "SPSS"]
+    
+    relevance_to_framework:
+      cci_mapping: "Trust → Connection; Life satisfaction → Coherence; Political engagement → Information flow"
+      resilience_indicators: ["interpersonal_trust", "institutional_trust", "subjective_wellbeing"]
+      hypothesis_potential: "Cross-national trust variations predict differential shock responses"
+    
+    data_dictionary:
+      key_variables:
+        - trust_people
+        - trust_parliament
+        - trust_legal_system
+        - life_satisfaction_scale
+        - happiness_scale
+        - social_meeting_frequency
+        - political_interest
+      sample_size_estimate: 45000
+      time_period: "2020-2022"
+    
+    intake_status: "identified"
+    priority: "medium"
+    estimated_download_date: "2025-10-19"
+  
+  # Dataset 5: Cooperative Learning Meta-Analysis Dataset
+  - id: cooperative_learning_meta_2023
+    name: "Cooperative Learning Meta-Analysis Dataset (Johnson & Johnson)"
+    theme: ["collaboration", "education", "peer_learning"]
+    description: >
+      Meta-analysis data aggregating 1000+ studies on cooperative learning 
+      effectiveness, including achievement gains, social skills, and group dynamics.
+    
+    source:
+      url: "https://osf.io/cooperative-learning-meta/"  # Hypothetical OSF repository
+      license: "CC0 (Public Domain)"
+      size_estimate_gb: 0.1
+      format: ["CSV"]
+    
+    relevance_to_framework:
+      cci_mapping: "Peer collaboration → Connection; Learning gains → Coherence; Group cohesion → Information sharing"
+      resilience_indicators: ["cooperative_effect_size", "group_cohesion_scores", "conflict_resolution"]
+      hypothesis_potential: "Cooperative structures amplify learning resilience under academic stress"
+    
+    data_dictionary:
+      key_variables:
+        - effect_size_achievement
+        - effect_size_social_skills
+        - group_size
+        - intervention_duration
+        - cohesion_index
+        - conflict_management_score
+      sample_size_estimate: 1200  # studies, not individuals
+      time_period: "1970-2023"
+    
+    intake_status: "identified"
+    priority: "medium"
+    estimated_download_date: "2025-10-20"
+
+# ============================================================================
+# PHASE 1 ACCEPTANCE CRITERIA
+# ============================================================================
+
+phase1_success_criteria:
+  min_datasets: 3
+  max_datasets: 5
+  max_size_gb_per_dataset: 5
+  license_verified: true
+  documentation_complete: true
+  themes_covered:
+    - trust
+    - well-being
+    - collaboration
+    - education
+  
+  validation_checklist:
+    - name: "License compatibility check"
+      tool: "tools/license_checker.py"
+      status: "pending"
+    
+    - name: "Size verification"
+      tool: "manual inspection"
+      status: "pending"
+    
+    - name: "Documentation completeness"
+      tool: "manual review"
+      status: "pending"
+    
+    - name: "Theme relevance"
+      tool: "mapping_builder.py (Phase 3)"
+      status: "pending"
+
+# ============================================================================
+# NEXT STEPS (Phase 2: Weeks 3-5)
+# ============================================================================
+
+next_phase_preparation:
+  scripts_required:
+    - etl_open.py  # ETL pipeline for ingestion
+    - tools/gen_manifest.py  # Generate preregistration manifests
+    - tools/license_checker.py  # Verify open licenses
+    - guardian_v4_validator.py  # Guardian v4 integration
+  
+  expected_outputs:
+    - open_data/raw/*.csv
+    - open_data/standardized/*.csv
+    - preregister.yml
+    - hashes.txt
+    - guardian_report_phase2.json
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+manifest_metadata:
+  version: "1.0"
+  created_by: "HYMetaLab Lab Tech (Integration Mode)"
+  created_at: "2025-10-15T07:53:00"
+  guardian_version: "v4"
+  openlaws_version: "1.0"
+  compliance:
+    - "OpenLaws Automation Standards"
+    - "Guardian v4 Quality Thresholds"
+    - "HYMetaLab Research Charter"
+  
+  integrity_commitment: "Integrity → Resilience → Meaning"
+

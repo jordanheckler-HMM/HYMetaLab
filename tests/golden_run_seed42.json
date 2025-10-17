@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "inputs": {
+    "trust": 0.7,
+    "hope": 0.8,
+    "meaning": 0.9,
+    "sensitivity": 1.8
+  },
+  "outputs": {
+    "dcci": 0.599723944947587,
+    "dhazard": 0.016776811375597313
+  },
+  "metadata": {
+    "version": "1.0",
+    "module": "apps.loop_lite_core",
+    "function": "compute_once",
+    "description": "Team Cohesion scenario golden reference"
+  }
+}

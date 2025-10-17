@@ -1,0 +1,2 @@
+run_id,params_json
+0000_seed1,"{""agents"": 2, ""noise"": 0.02, ""shock_severity"": 0.1, ""goal_diversity"": 1, ""mechanism"": ""test"", ""epsilon"": 0.01, ""period"": null, ""label"": ""openA_A2_N0.02_S0.1_G1""}"

@@ -1,0 +1,232 @@
+study_id: phase34_empirical_calibration
+version: 1.0
+prereg_date: 2025-10-14
+adapter: adapters.phase34_empirical_calibration:run_adapter
+hypothesis:
+  text: "(1) Tri-Flux Superiority: Combined E-I flux model (tri-flux) fits empirical\
+    \ data  better than E-only or I-only models (RMSE reduction \u226520%).\n(2) Elasticity\
+    \ Equivalence: E-elasticity (\u03B5-responsiveness) and I-elasticity  (meaning/trust\
+    \ interventions) have overlapping 95% CIs when calibrated to real data.\n(3) Scale\
+    \ Constancy: Effects remain consistent across empirical datasets of  different\
+    \ sizes (within \xB11% \u0394CCI tolerance).\n(4) Substrate Robustness: Effect\
+    \ signs (positive \u0394CCI, negative \u0394hazard) preserved  when empirical\
+    \ topologies are perturbed (small-world, scale-free overlays,  increased noise).\n"
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+data:
+  datasets:
+  - id: ds1
+    path: data/empirical/ds1/
+    description: Empirical dataset 1
+    required_files:
+    - edges.csv
+    - nodes.csv
+    optional_files:
+    - events.csv
+  - id: ds2
+    path: data/empirical/ds2/
+    description: Empirical dataset 2
+    required_files:
+    - edges.csv
+    - nodes.csv
+    optional_files:
+    - events.csv
+  - id: ds3
+    path: data/empirical/ds3/
+    description: Empirical dataset 3
+    required_files:
+    - edges.csv
+    - nodes.csv
+    optional_files:
+    - events.csv
+mapping:
+  node_energy_col: energy_proxy
+  node_info_col: info_proxy
+  edge_weight_col: weight
+  shock_file: events.csv
+priors:
+  epsilon_band:
+  - 0.0005
+  - 0.0015
+  rho_critical: 0.0828
+  meaning_delta_range:
+  - 0.02
+  - 0.08
+  trust_delta_range:
+  - 0.02
+  - 0.08
+protocols:
+- id: FIT_TRI_FLUX
+  description: Fit tri-flux model (E+I) to empirical data and compare vs E-only, I-only
+  sweep:
+    dataset:
+    - ds1
+    - ds2
+    - ds3
+    epsilon:
+    - 0.0005
+    - 0.001
+    - 0.0015
+    rho:
+    - 0.06
+    - 0.08
+    - 0.085
+    - 0.09
+    - 0.11
+  fixed:
+    meaning_delta: 0.06
+    trust_delta: 0.06
+- id: ELASTICITY_COMPARE
+  description: Compare E-elasticity vs I-elasticity on empirical substrates
+  fixed:
+    rho: 0.085
+    dataset: ds1
+  sweep_groups:
+  - name: info_interventions
+    sweep:
+      meaning_delta:
+      - 0.02
+      - 0.04
+      - 0.06
+      trust_delta:
+      - 0.02
+      - 0.04
+      - 0.06
+    fixed:
+      epsilon: 0.001
+  - name: energy_interventions
+    sweep:
+      epsilon:
+      - 0.0005
+      - 0.001
+      - 0.0015
+    fixed:
+      meaning_delta: 0.06
+      trust_delta: 0.06
+- id: FALSIFIER_SUBSTRATE
+  description: Test robustness to topology perturbations and noise
+  fixed:
+    dataset: ds1
+    epsilon: 0.001
+    rho: 0.085
+    meaning_delta: 0.06
+    trust_delta: 0.06
+  sweep:
+    topology_override:
+    - small_world
+    - scale_free
+    noise_mult:
+    - 1.0
+    - 1.5
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - risk
+  - survival
+  - seed
+  - epoch
+  - dataset_id
+  - protocol_id
+  figures: true
+  csv: true
+  report: true
+validation:
+  bootstrap_ci: 1200
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  tests:
+  - name: tri_flux_vs_baselines
+    description: Tri-flux model fits better than single-channel models
+    spec: RMSE(tri_flux) <= 0.8 * min(RMSE(E_only), RMSE(I_only))
+    protocol: FIT_TRI_FLUX
+    requires_model_fitting: true
+  - name: elasticity_e_vs_i
+    description: E-elasticity and I-elasticity have overlapping CIs
+    spec: CI_overlap(E_eps, E_info) >= 0.5 OR |E_eps - E_info| <= 0.30
+    protocol: ELASTICITY_COMPARE
+  - name: scale_constancy
+    description: Effects consistent across empirical datasets of different sizes
+    spec: "|\u0394CCI(ds_large) - \u0394CCI(ds_small)| <= 0.01"
+    protocol: FIT_TRI_FLUX
+  - name: falsifier_sign
+    description: Effect signs preserved under topology/noise perturbations
+    spec: "all(sign(\u0394CCI) > 0) AND all(sign(\u0394hazard) < 0)"
+    protocol: FALSIFIER_SUBSTRATE
+  classify:
+    validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01 AND tri_flux_vs_baselines
+      AND scale_constancy AND falsifier_sign
+    provisionally_validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01
+      AND (tri_flux_vs_baselines OR scale_constancy)
+    hypothesis_generating: else
+report:
+  title: "Phase 34 \u2014 Empirical Calibration & Tri-Flux Model Validation"
+  include_figures: true
+  copy_to: results/archive/
+  figures:
+  - tri_flux_fit_comparison.png
+  - elasticity_empirical.png
+  - scale_constancy_empirical.png
+  - falsifier_topology_noise.png
+notes:
+- Empirical calibration assumes data quality and completeness; preprocessing artifacts
+  may affect results
+- Tri-flux model is phenomenological; mechanistic interpretation requires theory development
+- Elasticity comparison requires intensity matching; current design is exploratory
+- Scale constancy tested only across provided datasets; generalization requires broader
+  sampling
+- Topology perturbations (small-world, scale-free) are overlays on empirical structure,
+  not full rewirings
+- Results are specific to empirical datasets provided; cross-domain validation pending
+data_requirements:
+  edges_csv:
+    required_columns:
+    - source
+    - target
+    - weight
+    optional_columns:
+    - timestamp
+    - type
+  nodes_csv:
+    required_columns:
+    - id
+    - energy_proxy
+    - info_proxy
+    optional_columns:
+    - label
+    - community
+  events_csv:
+    required_columns:
+    - timestamp
+    - severity
+    optional_columns:
+    - type
+    - affected_nodes
+preprocessing:
+- Normalize edge weights to [0, 1]
+- "Map node attributes to \u03B5\u2208[0,1] (energy_proxy) and meaningful information\
+  \ metric (info_proxy)"
+- If shock data unavailable, use synthetic shock at epoch 1000 with severity 0.5
+- 'Handle missing data: impute with network-local averages or exclude nodes with >20%
+  missing attributes'
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

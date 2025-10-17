@@ -1,0 +1,206 @@
+study_id: scale_invariance_meta
+version: 1.0
+prereg_date: 2025-10-14
+adapter: adapters.scale_invariance_meta:run_adapter
+hypothesis:
+  text: "(1) Scale Invariance: \u0394CCI and \u0394hazard effects are invariant across\
+    \ agent count N \u2208 [100, 10000]  within \xB10.01 tolerance, provided network\
+    \ density \u03C1 is held constant.\n(2) Elasticity Equivalence: E-elasticity (responsiveness\
+    \ to \u03B5) and I-elasticity (responsiveness  to meaning/trust interventions)\
+    \ have overlapping 95% CIs, suggesting a unified informational substrate.\n(3)\
+    \ Substrate Independence: Effect sign (positive \u0394CCI, negative \u0394hazard)\
+    \ is preserved across  diverse substrates (high noise, heavy-tailed memory, small-world,\
+    \ scale-free topologies).\n(4) Tri-Flux Superiority: Combined E-I model (tri-flux)\
+    \ fits data better than E-only or I-only  models (RMSE reduction \u226520%).\n"
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 1000
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+  memory_tail: normal
+  topology: random_graph
+protocols:
+- id: SCALE_INVARIANCE
+  description: "Test scale invariance across N \u2208 [100, 1000, 10000]"
+  sweep:
+    N:
+    - 100
+    - 1000
+    - 10000
+    rho:
+    - 0.0828
+    - 0.085
+    - 0.0875
+    - 0.09
+    meaning_delta:
+    - 0.04
+    - 0.06
+    - 0.08
+    trust_delta:
+    - 0.04
+    - 0.06
+    - 0.08
+  fixed:
+    epsilon: 0.001
+- id: ELASTICITY_E
+  description: "E-elasticity: responsiveness to openness \u03B5"
+  sweep:
+    epsilon:
+    - 0.0005
+    - 0.001
+    - 0.0015
+  fixed:
+    rho: 0.0875
+    N: 1000
+    meaning_delta: 0.06
+    trust_delta: 0.06
+- id: ELASTICITY_I
+  description: 'I-elasticity: responsiveness to meaning/trust interventions'
+  sweep:
+    meaning_delta:
+    - 0.04
+    - 0.06
+    - 0.08
+    trust_delta:
+    - 0.04
+    - 0.06
+    - 0.08
+  fixed:
+    rho: 0.0875
+    N: 1000
+    epsilon: 0.001
+- id: FALSIFIER_NOISE
+  description: "Falsifier: high intrinsic noise (\u03B7=0.10 vs 0.05)"
+  sweep:
+    rho:
+    - 0.0828
+    - 0.085
+    - 0.0875
+    - 0.09
+  fixed:
+    N: 1000
+    epsilon: 0.001
+    meaning_delta: 0.06
+    trust_delta: 0.06
+    noise: 0.1
+- id: FALSIFIER_MEMORY
+  description: 'Falsifier: heavy-tailed memory vs normal'
+  sweep:
+    rho:
+    - 0.0828
+    - 0.085
+    - 0.0875
+    - 0.09
+  fixed:
+    N: 1000
+    epsilon: 0.001
+    meaning_delta: 0.06
+    trust_delta: 0.06
+    memory_tail: heavy
+- id: FALSIFIER_TOPO_SW
+  description: 'Falsifier: small-world topology'
+  sweep:
+    rho:
+    - 0.0828
+    - 0.085
+    - 0.0875
+    - 0.09
+  fixed:
+    N: 1000
+    epsilon: 0.001
+    meaning_delta: 0.06
+    trust_delta: 0.06
+    topology: small_world
+- id: FALSIFIER_TOPO_SF
+  description: 'Falsifier: scale-free topology'
+  sweep:
+    rho:
+    - 0.0828
+    - 0.085
+    - 0.0875
+    - 0.09
+  fixed:
+    N: 1000
+    epsilon: 0.001
+    meaning_delta: 0.06
+    trust_delta: 0.06
+    topology: scale_free
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - risk
+  - survival
+  - seed
+  - epoch
+  - N
+  - protocol_id
+validation:
+  bootstrap_ci: 1200
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  tests:
+  - name: scale_constancy
+    description: "\u0394CCI invariant across N within \xB10.01"
+    spec: "|\u0394CCI(N=10000) - \u0394CCI(N=100)| <= 0.01"
+    protocol: SCALE_INVARIANCE
+  - name: elasticity_e_vs_i
+    description: E-elasticity and I-elasticity have overlapping 95% CIs
+    spec: CI_overlap(E_eps, E_info) >= 0.5 OR |E_eps - E_info| <= 0.30
+    protocols:
+    - ELASTICITY_E
+    - ELASTICITY_I
+  - name: falsifier_sign_preservation
+    description: Effect sign preserved across substrates
+    spec: "all(sign(\u0394CCI) > 0) AND all(sign(\u0394hazard) < 0) across all falsifier\
+      \ protocols"
+    protocols:
+    - FALSIFIER_NOISE
+    - FALSIFIER_MEMORY
+    - FALSIFIER_TOPO_SW
+    - FALSIFIER_TOPO_SF
+  - name: tri_flux_fit_superiority
+    description: Tri-flux model (E+I) fits better than E-only or I-only
+    spec: RMSE(tri_flux) <= 0.8 * min(RMSE(E_only), RMSE(I_only))
+    requires_model_fitting: true
+  classify:
+    validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01 AND scale_constancy
+      AND falsifier_sign_preservation
+    provisionally_validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01
+      AND (scale_constancy OR falsifier_sign_preservation)
+    hypothesis_generating: else
+report:
+  title: Scale Invariance & Elasticity Meta-Analysis
+  include_figures: true
+  copy_to: results/archive/
+  figures:
+  - scale_invariance_plot.png
+  - elasticity_comparison.png
+  - falsifier_summary.png
+  - tri_flux_fit.png
+notes:
+- "Scale invariance tested only within N \u2208 [100, 10000]; extrapolation to N>10^4\
+  \ requires validation"
+- Elasticity equivalence is simulation-scoped; real-world correspondence requires
+  cross-domain testing
+- Falsifiers test robustness within simulation family; external validity pending
+- Tri-flux model is phenomenological; mechanistic interpretation requires theory development
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

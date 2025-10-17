@@ -1,0 +1,10 @@
+[
+  {
+    "file":"\/Users\/jordanheckler\/conciousness_proxy_sim copy 6\/discovery_results\/scale_invariance_meta_20251014_093549\/scale_invariance_meta_results.csv",
+    "mean_CCI":0.6287185852,
+    "mean_survival":null,
+    "creation_success_frac":null,
+    "validated":true,
+    "reason":"Phase33: \u0394CCI=0.16429, \u0394hazard=-0.05220, 2\/2 metrics met"
+  }
+]

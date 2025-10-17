@@ -1,0 +1,76 @@
+study_id: phase33c_coop_meaning
+version: 1.0
+prereg_date: 2025-10-14
+adapter: adapters.phase33_coop_meaning:run_adapter
+hypothesis:
+  text: "By elevating meaning_\u0394 to [0.06, 0.07, 0.08] and trust_\u0394 to [0.06,\
+    \ 0.07], while maintaining focused \u03B5 \u2248 0.0012 and \u03C1 \u2248 \u03C1\
+    \u2605, we can achieve \u0394CCI \u2265 0.03 while preserving \u0394hazard \u2264\
+    \ \u22120.01.\n"
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 200
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+sweep:
+  epsilon:
+  - 0.0011
+  - 0.0012
+  - 0.0013
+  rho:
+  - 0.0828
+  - 0.085
+  - 0.0875
+  - 0.09
+  trust_delta:
+  - 0.06
+  - 0.07
+  meaning_delta:
+  - 0.06
+  - 0.07
+  - 0.08
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - risk
+  - survival
+  - seed
+  - epoch
+  - survival_rate
+  - collapse_risk
+validation:
+  bootstrap_ci: 1200
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  classify:
+    validated: stability_CCI_mean >= 0.50 and stability_hazard_mean <= 0.20 and stability_CCI_slope
+      >= 0.0005 and mean_CCI_gain >= 0.03
+    under_review: else
+  integrity_artifacts:
+  - summary.json
+  - sha256.txt
+report:
+  title: "Phase 33c \u2014 Cooperative Meaning Fields (threshold push)"
+  include_figures: true
+  copy_to: results/archive/
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []
+preregistered_flag: true

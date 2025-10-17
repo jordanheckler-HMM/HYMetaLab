@@ -1,0 +1,8 @@
+metric,value
+ARI_star_offdiag,0.997698257415267
+pca_var_explained_1,0.6737947234909276
+pca_var_explained_2,0.16762455099078447
+k_clusters,4.0
+agents,240.0
+epochs,5.0
+seeds,3.0

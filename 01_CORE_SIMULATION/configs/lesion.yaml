@@ -1,0 +1,37 @@
+# Lesion configuration - workspace disabled
+ticks: 2000
+n_agents: 80
+seed: 5678
+
+# Workspace costs
+ws_cost: 0.01
+lookahead_cost: 0.02
+
+# Metacognition
+conf_noise_std: 0.08
+metacog_decay: 0.5
+
+# World parameters
+volatility_period: 50
+volatility_strength: 0.2
+observe_radius: 3
+
+# Workspace settings - DISABLED
+workspace_enabled: false
+
+# Grid parameters
+grid_size: 20
+food_regen_prob: 0.1
+
+# Agent parameters
+initial_energy: 50.0
+energy_cost_move: 1.0
+energy_gain_food: 10.0
+
+# Innovation parameters
+innovation_prob: 0.01
+innovation_utility_base: 0.1
+
+# Culture parameters
+culture_transmission_prob: 0.05
+trust_update_rate: 0.1

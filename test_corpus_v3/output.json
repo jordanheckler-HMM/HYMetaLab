@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "truth_index": 0.8046052631578947,
+      "grade": "GOOD",
+      "components": {
+        "claim_clarity": 0.8947368421052632,
+        "citation_presence": 1.0,
+        "causal_tokens": 0.3657894736842105
+      },
+      "weights": {
+        "claim_clarity": 0.35,
+        "citation_presence": 0.4,
+        "causal_tokens": 0.25
+      },
+      "detailed_features": {
+        "clarity": {
+          "clarity_score": 0.8947368421052632,
+          "positive_count": 6,
+          "negative_count": 0,
+          "stats_count": 3,
+          "clarity_density": 7.894736842105263,
+          "clarity_penalty": 0.0
+        },
+        "citations": {
+          "citation_score": 1.0,
+          "citation_count": 19,
+          "citation_types": 7,
+          "diversity_bonus": 0.11666666666666667
+        },
+        "causality": {
+          "causal_score": 0.3657894736842105,
+          "causal_count": 1,
+          "ifthen_count": 0,
+          "causal_density": 0.6578947368421052
+        }
+      },
+      "passes_threshold": true,
+      "seed": 42,
+      "file": "test_corpus_v3/sample_research_1.md",
+      "v3_evidence": {
+        "evidence_density": 1.0,
+        "total_claims": 10,
+        "claims_with_evidence": 10,
+        "total_citations": 16,
+        "total_links": 114,
+        "passes_threshold": true,
+        "graph_file": "sample_research_1_evidence_graph.json"
+      }
+    }
+  ],
+  "aggregate": {
+    "count": 1,
+    "mean_ti": 0.8046052631578947,
+    "min_ti": 0.8046052631578947,
+    "max_ti": 0.8046052631578947,
+    "std_ti": 0.0,
+    "passes_threshold_count": 1,
+    "timestamp": "2025-10-14T21:35:01.208428",
+    "v3_evidence": {
+      "mean_evidence_density": 1.0,
+      "passes_evidence_threshold_count": 1,
+      "total_docs_analyzed": 1
+    }
+  },
+  "config": {
+    "version": "1.0",
+    "seed": 42,
+    "weights": {
+      "claim_clarity": 0.35,
+      "citation_presence": 0.4,
+      "causal_tokens": 0.25
+    },
+    "thresholds": {
+      "min_acceptable": 0.6,
+      "target": 0.75,
+      "excellent": 0.85
+    }
+  },
+  "acceptance": {
+    "meets_mean_threshold": true,
+    "meets_variance_threshold": true,
+    "all_criteria_met": true
+  }
+}

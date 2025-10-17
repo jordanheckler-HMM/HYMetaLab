@@ -1,0 +1,245 @@
+study_id: phase35b_cross_survey_replication
+version: '1.0'
+prereg_date: '2025-10-14'
+title: Cross-Survey Replication of Tri-Flux Coherence Law in Cosmic Structures
+hypothesis:
+  text: "The tri-flux resilience law R \u221D (E^\u03B1 \xD7 I^\u03B2 \xD7 K^\u03B3\
+    ) / N is scale-invariant and replicates across independent cosmic surveys with\
+    \ stable exponents (\u03B1 \u2248 0.4, \u03B2 \u2248 0.8, \u03B3 \u2248 0.1) and\
+    \ universal thresholds (\u03B5 \u2248 10\u207B\xB3, \u03C1\u2605 \u2248 0.08).\n"
+  predictions:
+  - H1: "\u0394CCI \u2265 0.03 across all datasets (95% CI lower bound > 0)"
+  - H2: "\u0394hazard \u2264 \u22120.01 across all datasets (95% CI upper bound <\
+      \ 0)"
+  - H3: "Exponent stability: |\u03B1 - 0.4| \u2264 0.1, |\u03B2 - 0.8| \u2264 0.1,\
+      \ |\u03B3 - 0.1| \u2264 0.05"
+  - H4: "Tri-flux RMSE \u2264 0.8 \xD7 min(RMSE_E_only, RMSE_I_only)"
+  - H5: "Energy-Information elasticity equivalence: |E_\u03B5 - E_I| within \xB10.15"
+  falsifiers:
+  - "Sign reversal in \u0394CCI or \u0394hazard for any dataset"
+  - Exponent variance across surveys > 50% of mean
+  - Tri-flux model performs worse than single-channel models
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  epsilon_band:
+  - 0.0005
+  - 0.0015
+  epsilon_nominal: 0.001
+  rho_critical: 0.0828
+  lambda_star: 0.9
+  alpha_prior: 0.4
+  beta_prior: 0.8
+  gamma_prior: 0.1
+  bootstrap_iterations: 2000
+  confidence_level: 0.95
+  baseline_CCI: 0.54
+  baseline_hazard: 0.254
+  noise_mult_levels:
+  - 1.0
+  - 1.5
+  knn_k: 8
+  min_nodes: 50
+data:
+  datasets:
+  - id: sdss_dr17
+    path: data/cosmic/sdss_dr17/
+    description: Sloan Digital Sky Survey Data Release 17 (galaxy properties)
+    expected_nodes: 1000
+  - id: jwst_earlyrel
+    path: data/cosmic/jwst_earlyrel/
+    description: James Webb Space Telescope Early Release Observations
+    expected_nodes: 500
+  - id: desi_clusters
+    path: data/cosmic/desi_clusters/
+    description: Dark Energy Spectroscopic Instrument cluster catalog
+    expected_nodes: 800
+  - id: galex_uv
+    path: data/cosmic/galex_uv/
+    description: GALEX UV survey (star formation tracers)
+    expected_nodes: 1200
+mapping:
+  node_id_col: node_id
+  node_energy_col: energy_proxy
+  node_info_col: info_proxy
+  node_conn_col: conn_proxy
+protocols:
+- id: FIT_TRI_FLUX
+  description: Fit tri-flux law across all surveys and size bins
+  sweep:
+    dataset:
+    - sdss_dr17
+    - jwst_earlyrel
+    - desi_clusters
+    - galex_uv
+    graph_topology:
+    - knn
+    - mst
+    size_bin:
+    - small
+    - medium
+    - large
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - tri_flux_value
+  - rmse_triflux
+  - rmse_baseline
+- id: ELASTICITY_COMPARE
+  description: Compare Energy and Information elasticities per survey
+  fixed:
+    graph_topology: knn
+    size_bin: medium
+  sweep:
+    dataset:
+    - sdss_dr17
+    - jwst_earlyrel
+    - desi_clusters
+    - galex_uv
+    energy_scale:
+    - 0.75
+    - 1.0
+    - 1.25
+    info_scale:
+    - 0.75
+    - 1.0
+    - 1.25
+  metrics:
+  - elasticity_energy
+  - elasticity_info
+  - elasticity_diff
+- id: EXPONENT_FIT
+  description: "Estimate \u03B1, \u03B2, \u03B3 exponents via log-log regression"
+  sweep:
+    dataset:
+    - sdss_dr17
+    - jwst_earlyrel
+    - desi_clusters
+    - galex_uv
+  outputs:
+  - alpha
+  - beta
+  - gamma
+  - r2
+  - alpha_ci_lo
+  - alpha_ci_hi
+  - beta_ci_lo
+  - beta_ci_hi
+  - gamma_ci_lo
+  - gamma_ci_hi
+- id: FALSIFIER_SUBSTRATE
+  description: Topology and noise robustness testing
+  sweep:
+    dataset:
+    - sdss_dr17
+    - jwst_earlyrel
+    - desi_clusters
+    - galex_uv
+    graph_topology:
+    - knn
+    - mst
+    noise_mult:
+    - 1.0
+    - 1.5
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - sign_reversal_flag
+validation:
+  bootstrap_ci: 2000
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+    description: CCI improvement over baseline
+  - name: mean_hazard_delta
+    rule: <= -0.01
+    description: Hazard reduction from baseline
+  - name: exponent_alpha_stability
+    rule: abs(alpha - 0.4) <= 0.1
+    description: Energy exponent within theoretical bounds
+  - name: exponent_beta_stability
+    rule: abs(beta - 0.8) <= 0.1
+    description: Information exponent within theoretical bounds
+  - name: exponent_gamma_stability
+    rule: abs(gamma - 0.1) <= 0.05
+    description: Connection exponent within theoretical bounds
+  tests:
+  - name: tri_flux_vs_baselines
+    spec: RMSE_triflux <= 0.8 * min(RMSE_E_only, RMSE_I_only)
+    classification: validated
+  - name: elasticity_e_vs_i
+    spec: '|E_eps - E_info| CI width <= 0.30 and includes 0'
+    classification: validated
+  - name: exponent_stability
+    spec: '|alpha-0.4|<=0.1 and |beta-0.8|<=0.1 and |gamma-0.1|<=0.05'
+    classification: validated
+  - name: falsifier_sign
+    spec: "no sign reversal in \u0394CCI or \u0394hazard"
+    classification: validated
+  classify:
+    validated: all([mean_CCI_gain >= 0.03, mean_hazard_delta <= -0.01, exponent_stability,
+      no_sign_reversals])
+    under_review: else
+adapter: adapters.phase35b_cross_survey_replication:run_adapter
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - delta_cci
+  - delta_hazard
+  - alpha
+  - beta
+  - gamma
+  - r2
+  - dataset
+  - graph_topology
+  csv:
+  - runs_summary.csv
+  - exponent_fits.csv
+  - elasticity_results.csv
+  - falsifier_tests.csv
+  json:
+  - summary.json
+  - bootstrap_ci.json
+  - cross_survey_variance.json
+  figures:
+  - cci_by_dataset.png
+  - hazard_by_dataset.png
+  - exponent_forest_plot.png
+  - triflux_fit_quality.png
+  - elasticity_comparison.png
+  - cross_survey_variance.png
+report:
+  title: 'Phase 35b: Cross-Survey Replication of Tri-Flux Coherence Law'
+  include_figures: true
+  copy_to: results/archive/
+  sections:
+  - abstract
+  - hypothesis_summary
+  - methods_data_sources
+  - results_exponent_fits
+  - results_validation_tests
+  - discussion_universality
+  - limitations_uncertainty
+  - conclusion
+integrity:
+  preregistered: true
+  code_freeze: false
+  blinded_analysis: false
+  prereg_hash: auto
+  classification_tags:
+  - PREREGISTERED
+  - CROSS_SURVEY_REPLICATION
+  - TRI_FLUX_LAW
+  - COSMIC_STRUCTURES
+  - PHASE35_FOLLOWUP
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

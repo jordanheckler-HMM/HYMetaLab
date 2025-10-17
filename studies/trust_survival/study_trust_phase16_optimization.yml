@@ -1,0 +1,65 @@
+study:
+  id: trust_survival_v16_optimization
+  title: Trust_Survival_Phase16_Optimization
+name: "Trust_Survival_Phase16_Optimization"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 16 fine-tunes around the Phase 15 high-CCI configuration to maximize survival ≥ 0.80
+  while maintaining hazard ≤ 0.30. Uses adaptive grid search + meta-learning annealing.
+objectives:
+  - Lift survival to validation threshold (0.80) with minimal hazard increase.
+  - Confirm stability of high-trust equilibrium (CCI ≥ 0.72).
+design:
+  seeds: 8
+  epochs_cap: 800
+  agents: 240
+  clusters: 8
+  factors:
+    mode: ["OPT"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+optimizer:
+  anneal_rate: 0.92
+  lr_adapt_gain: 1.10
+  reward_fn: "CCI * (1 - hazard) * survival_rate"
+validation:
+  pass_if:
+    - "Any OPT cell achieves CCI ≥ 0.72 and Survival ≥ 0.80 (95 % CI)"
+    - "Hazard ≤ Phase 15 median"
+exports:
+  data_dir: discovery_results/trust_survival_v16/data
+  figs_dir: discovery_results/trust_survival_v16/figs
+  report_dir: discovery_results/trust_survival_v16/report
+adapter:
+  path: "studies/trust_survival/adapter_trust_collective_resonance.py"
+  entrypoint: "run_study"
+
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 320
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+
+prereg:
+  constants:
+    epochs: 800
+    seeds: [1601,1602,1603,1604,1605,1606,1607,1608]
+    agents: 240
+    clusters: 8
+    sim_adapter: "studies/trust_survival/adapter_trust_collective_resonance_wrapper.py:run"
+    mode: ["OPT"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]

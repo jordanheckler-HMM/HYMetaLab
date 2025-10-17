@@ -1,0 +1,36 @@
+{
+  "consciousness": {
+    "n_agents": 50,
+    "mean_phi": 0.49802844454949247,
+    "max_phi": 0.9488811518333182,
+    "emergence_rate": 0.2,
+    "mean_qualia": 0.46238124014180604,
+    "mean_global_workspace": 0.29703899280914203,
+    "mean_metacognition": 0.4191495591668135
+  },
+  "quantum": {
+    "n_systems": 10,
+    "mean_entanglement": 0.47802489361331946,
+    "mean_coherence": 0.7241950326715006,
+    "ent_coh_correlation": 0.1385091845104671
+  },
+  "biology": {
+    "n_cells": 100,
+    "mean_gene_expression": 3.2170997218565236,
+    "std_gene_expression": 1.6945876376948346,
+    "mean_metabolism": 0.43662619709236133,
+    "mean_resistance": 0.49930924156049933
+  },
+  "meta": {
+    "version": "0.1-research",
+    "timestamp": "2025-10-11T21:39:47.404691",
+    "params": {
+      "n_agents": 50,
+      "n_systems": 10,
+      "n_cells": 100,
+      "n_groups": 5,
+      "n_patterns": 50,
+      "n_timepoints": 20
+    }
+  }
+}

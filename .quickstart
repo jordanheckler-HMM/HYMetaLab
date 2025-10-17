@@ -1,0 +1,42 @@
+#!/bin/bash
+# MetaLab Quick Start
+# Usage: source .quickstart
+
+echo "🔬 MetaLab Quick Start"
+echo "======================"
+echo ""
+
+# Activate environment
+if [ -d ".venv" ]; then
+    source .venv/bin/activate
+    echo "✅ Virtual environment activated"
+else
+    echo "❌ No .venv found - run: python3 -m venv .venv"
+    return 1
+fi
+
+# Show status
+echo ""
+echo "📊 Status:"
+echo "  - Studies: $(find studies -name '*.py' 2>/dev/null | wc -l | tr -d ' ') experiments"
+echo "  - Exploratory: $(find experiments_exploratory -name '*.py' 2>/dev/null | wc -l | tr -d ' ') experiments"
+echo "  - Archived: $(find results/archive -name '*.zip' 2>/dev/null | wc -l | tr -d ' ') runs"
+echo ""
+
+# Quick commands
+echo "⚡ Quick Commands:"
+echo "  black .                     # Format code"
+echo "  ruff check . --fix         # Lint & fix"
+echo "  pytest                     # Run tests"
+echo "  python tools/reorg_repo.py # Archive & organize"
+echo ""
+
+# Help
+echo "📖 Documentation:"
+echo "  BOOTSTRAP_COMPLETE.md      # What we did"
+echo "  METALAB_STATUS.md          # Current status"
+echo "  NEXT_STEPS.md              # What to do next"
+echo ""
+
+echo "🎉 Ready to do science!"
+

@@ -1,0 +1,116 @@
+---
+title: ZENODO_QUICK_REFERENCE.txt
+date: 2025-10-16
+version: draft
+b5827456dd8
+---
+
+═══════════════════════════════════════════════════════════════
+ ZENODO UPLOAD QUICK REFERENCE - Phase 33c (v33c.verified)
+═══════════════════════════════════════════════════════════════
+
+📦 FILES TO UPLOAD:
+  • zenodo_phase33c_fixed.zip (18 KB)
+  • zenodo_phase33c_fixed.zip.sha256 (92 bytes)
+
+🔐 SHA256 CHECKSUMS:
+  Package:    e4e97e63f02edd0c06c43f6c5d2580f1ac8fe50112f3a595ad034f0464ae574c
+  Replication: 14e8c608795d25057114e808dae81f3ef98ec862bee120df466761b8d33ae808
+
+═══════════════════════════════════════════════════════════════
+ ZENODO METADATA (Copy/Paste Ready)
+═══════════════════════════════════════════════════════════════
+
+Title:
+HYMetaLab Phase 33c Replication Packet (v33c.verified)
+
+Description:
+Verified Δhazard clarity and visual alignment update
+
+Upload Type:
+Dataset
+
+License:
+CC-BY 4.0
+
+Keywords:
+HYMetaLab, OpenLaws, Guardian, Resilience Simulation
+
+Version:
+v33c.verified
+
+Related Identifier (Is supplement to):
+10.5281/zenodo.17299062
+
+═══════════════════════════════════════════════════════════════
+ EXTENDED DESCRIPTION (Optional, for details box)
+═══════════════════════════════════════════════════════════════
+
+Complete replication package for Phase 33c study investigating 
+cooperative meaning fields with elevated trust_Δ and meaning_Δ 
+interventions.
+
+This version includes:
+- Fixed risk semantics (positive values = safer)
+- Updated Reality Loop Lite visualization
+- 288 simulation runs (72 configurations × 4 seeds)
+- Guardian v4 validated documentation (75.2/100)
+- End-to-end study workflow guide
+
+Results:
+• ΔCCI gain: 0.0282 (94% of target, 0.03)
+• Δhazard: -0.0232 (232% of target, ≤-0.01)
+• Classification: PARTIAL SUCCESS (strong protective effect)
+
+Package Contents:
+1. out_v33c_fixed.zip - Complete replication packet
+2. out_v33c_fixed.zip.sha256 - Integrity checksum
+3. END_TO_END_STUDY_QUICKSTART.md - Workflow documentation
+
+═══════════════════════════════════════════════════════════════
+ AFTER UPLOAD: Update Dashboard with New DOI
+═══════════════════════════════════════════════════════════════
+
+Step 1: Copy your new DOI from Zenodo
+        (Example: 10.5281/zenodo.XXXXXXX)
+
+Step 2: Run dashboard update
+        cd "/Users/jordanheckler/conciousness_proxy_sim copy 6"
+        python tools/metadashboard.py --refresh
+
+Step 3: Manual update if needed
+        jq '.zenodo_version_doi = "YOUR_NEW_DOI"' dashboard_data.json > tmp.json
+        mv tmp.json dashboard_data.json
+
+Step 4: Verify
+        grep zenodo_version_doi dashboard_data.json
+
+Step 5: Log to integrity ledger
+        echo "- $(date +%Y%m%d_%H%M%S): Phase 33c Zenodo DOI: YOUR_NEW_DOI" >> docs/integrity/Integrity_Ledger.md
+
+═══════════════════════════════════════════════════════════════
+ GIT COMMIT (After Freeing Disk Space)
+═══════════════════════════════════════════════════════════════
+
+git add .
+git commit -m "Phase 33c visualization and doc alignment fix"
+git tag -a v33c.verified -m "Verified Δhazard clarity and UI alignment"
+git push && git push --tags
+
+═══════════════════════════════════════════════════════════════
+ ZENODO URL: https://zenodo.org/deposit/new
+═══════════════════════════════════════════════════════════════
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

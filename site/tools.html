@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guardian Tools — HYMetaLab</title>
+  <style>
+    body{margin:0;font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto;background:#f9fafb}
+    header{background:#111;color:#fff;padding:24px}
+    main{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{text-align:center;padding:48px 24px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:12px;margin-bottom:32px}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:32px 0}
+    .tool-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;transition:transform 0.2s,box-shadow 0.2s}
+    .tool-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,0.1)}
+    .tool-icon{font-size:48px;margin-bottom:16px}
+    .tool-title{font-size:24px;font-weight:700;margin-bottom:12px}
+    .tool-desc{color:#6b7280;margin-bottom:16px}
+    .tool-meta{display:flex;gap:12px;margin-top:16px;font-size:14px}
+    .badge{padding:4px 12px;border-radius:6px;background:#f3f4f6;color:#374151;font-weight:500}
+    .badge.green{background:#d1fae5;color:#065f46}
+    .btn{display:inline-block;padding:12px 24px;background:#667eea;color:#fff;text-decoration:none;border-radius:8px;font-weight:600;transition:background 0.2s}
+    .btn:hover{background:#5568d3}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:32px 0}
+    .stat-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:16px;text-align:center}
+    .stat-value{font-size:32px;font-weight:700;color:#667eea}
+    .stat-label{color:#6b7280;font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <main>
+      <h1>🛡️ Guardian Tools</h1>
+      <p>Research Integrity Suite | HYMetaLab</p>
+    </main>
+  </header>
+  
+  <main>
+    <div class="hero">
+      <h2>Interactive Research Validation Tools</h2>
+      <p style="font-size:18px;opacity:0.9;max-width:600px;margin:16px auto">
+        Real-time ethical alignment checking, hypothesis simulation, and document comparison powered by Guardian v4
+      </p>
+      <a href="../guardian_tools_public_alpha.zip" class="btn" style="margin-top:16px">📥 Download Package (7.8K)</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-value">80.7</div>
+        <div class="stat-label">Guardian Score</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">3</div>
+        <div class="stat-label">Streamlit Apps</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">MIT</div>
+        <div class="stat-label">Open Source</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">v1.0</div>
+        <div class="stat-label">Public Alpha</div>
+      </div>
+    </div>
+
+    <h2>Available Tools</h2>
+    
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon">🛡️</div>
+        <div class="tool-title">Guardian Check</div>
+        <div class="tool-desc">
+          Real-time ethical alignment validation for research documents. 
+          Paste text or upload files to get instant Guardian v4 scoring with actionable recommendations.
+        </div>
+        <div class="tool-meta">
+          <span class="badge green">Interactive</span>
+          <span class="badge">Ethics</span>
+          <span class="badge">Validation</span>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#6b7280">
+          <strong>Command:</strong><br>
+          <code>streamlit run apps/guardian_check_app.py</code>
+        </p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-title">Reality Loop Lite</div>
+        <div class="tool-desc">
+          Interactive simulation of the Universal Resilience Law (R ∝ (ε × CCI) / η).
+          Adjust parameters, visualize dynamics, and export simulation data.
+        </div>
+        <div class="tool-meta">
+          <span class="badge green">Interactive</span>
+          <span class="badge">Simulation</span>
+          <span class="badge">Research</span>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#6b7280">
+          <strong>Command:</strong><br>
+          <code>streamlit run apps/loop_lite_app.py</code>
+        </p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">⚖️</div>
+        <div class="tool-title">Guardian Compare</div>
+        <div class="tool-desc">
+          Side-by-side document comparison with Guardian v4 metrics.
+          Perfect for A/B testing language, iterative improvement, and patch validation.
+        </div>
+        <div class="tool-meta">
+          <span class="badge green">Interactive</span>
+          <span class="badge">Comparison</span>
+          <span class="badge">A/B Test</span>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#6b7280">
+          <strong>Command:</strong><br>
+          <code>streamlit run apps/guardian_compare.py</code>
+        </p>
+      </div>
+    </div>
+
+    <h2>Installation & Setup</h2>
+    <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:24px">
+      <h3>Prerequisites</h3>
+      <pre style="background:#f3f4f6;padding:16px;border-radius:6px;overflow-x:auto">pip install streamlit pandas numpy plotly</pre>
+      
+      <h3>Quick Start</h3>
+      <pre style="background:#f3f4f6;padding:16px;border-radius:6px;overflow-x:auto"># Download and extract
+unzip guardian_tools_public_alpha.zip
+cd apps/
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch any tool
+streamlit run guardian_check_app.py</pre>
+    </div>
+
+    <h2>Package Integrity</h2>
+    <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:24px;font-family:monospace;font-size:14px">
+      <strong>SHA256:</strong> 77a223b98599799b4e7d7c732cf4260c057f860a22b4f1d0ba695a6ed63e8e2e
+      <br><br>
+      <strong>Verify:</strong><br>
+      <code>shasum -a 256 -c guardian_tools_public_alpha.zip.sha256</code>
+    </div>
+
+    <p style="text-align:center;margin-top:48px;color:#6b7280">
+      <a href="index.html" style="color:#667eea">← Back to Dashboard</a> | 
+      <a href="validation.html" style="color:#667eea">Validation Reports</a> | 
+      <a href="replication.html" style="color:#667eea">Replication Package</a>
+    </p>
+  </main>
+
+  <footer style="background:#f3f4f6;padding:24px;text-align:center;margin-top:48px;color:#6b7280">
+    <p><strong>Guardian Tools v1.0</strong> | HYMetaLab Research Integrity Suite</p>
+    <p style="font-size:14px">"Integrity → Resilience → Meaning"</p>
+  </footer>
+</body>
+</html>

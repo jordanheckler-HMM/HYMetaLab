@@ -1,0 +1,19 @@
+{
+  "experimentId": "shock_dose_response",
+  "simVersion": "v1.0.0",
+  "runId": "shock_dose_response_14_14",
+  "seed": 14,
+  "horizonSteps": 500,
+  "agent_profile": {
+    "calibration": 0.7,
+    "coherence": 0.7,
+    "emergence": 0.7,
+    "noise": 0.2
+  },
+  "policy_flags": {},
+  "environment": {
+    "shock_severity": 0.4,
+    "coordination_strength": 0.7,
+    "goal_inequality": 0.3
+  }
+}

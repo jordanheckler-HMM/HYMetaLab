@@ -1,0 +1,22 @@
+study_id: openmind_phase42_alignment_fields
+version: 1.0
+parameters:
+  psi:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  empathy:
+  - 0.1
+  - 0.3
+  - 0.5
+validation:
+  psi_score_min: 0.03
+  dcci_min: 0.03
+  dhazard_max: -0.01
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

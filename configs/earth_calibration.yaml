@@ -1,0 +1,18 @@
+# configs/earth_calibration.yaml
+world_pop: 8100000000
+internet_penetration: 0.67
+ai_capability_index: 0.55
+polarization_index: 0.55
+trust_index: 0.45
+institutional_capacity: 0.55
+energy_per_capita_norm: 0.75
+r_and_d_share: 0.28
+startup_rate_norm: 0.50
+wealth_gini: 0.62
+income_gini: 0.39
+sdg_count_active: 5
+geopolitics_intensity: 0.6
+
+
+
+

@@ -1,0 +1,72 @@
+study_id: phase33b_coop_meaning
+version: 1.0
+prereg_date: 2025-10-13
+adapter: adapters.phase33_coop_meaning:run_adapter
+hypothesis:
+  text: "Finer sampling around the observed ridge (\u03B5\u22480.0012, \u03C1\u2248\
+    0.085\u20130.09) with slightly larger Trust/Meaning deltas will yield \u0394CCI\
+    \ \u2265 0.03 while keeping \u0394hazard \u2264 \u22120.01.\n"
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 200
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+sweep:
+  epsilon:
+  - 0.001
+  - 0.0011
+  - 0.0012
+  - 0.0013
+  - 0.0014
+  rho:
+  - 0.0828
+  - 0.085
+  - 0.0875
+  - 0.09
+  trust_delta:
+  - 0.04
+  - 0.06
+  - 0.07
+  meaning_delta:
+  - 0.03
+  - 0.05
+  - 0.06
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - risk
+  - survival
+  - seed
+  - epoch
+validation:
+  bootstrap_ci: 1000
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  classify:
+    validated: stability_CCI_mean >= 0.50 and stability_hazard_mean <= 0.20 and stability_CCI_slope
+      >= 0.0005 and mean_CCI_gain >= 0.03
+    under_review: else
+report:
+  title: "Phase 33b \u2014 Cooperative Meaning Fields (ridge refinement)"
+  include_figures: true
+  copy_to: results/archive/
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

@@ -1,0 +1,9 @@
+{
+  "alignment_score": 80,
+  "components": {
+    "humility": 30,
+    "prereg_manifest": 50
+  },
+  "policy": "OpenLaws Epistemic Humility + Reproducibility",
+  "notes": "Avoid absolute claims; include preregistered YAMLs and manifests."
+}

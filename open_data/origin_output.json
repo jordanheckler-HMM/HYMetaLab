@@ -1,0 +1,1030 @@
+{
+  "originchain_version": "v1_phase4",
+  "timestamp": "2025-10-15T08:17:54.635703",
+  "merged_components": [
+    "guardian",
+    "truthlens",
+    "meaningforge"
+  ],
+  "validation_results": {
+    "truthlens": {
+      "truthlens_version": "v1_phase3_wrapper",
+      "timestamp": "2025-10-15T08:11:46.447772",
+      "input_file": "open_data/preregister.yml",
+      "score": 1.0,
+      "checks": {
+        "preregistration_present": true,
+        "datasets_registered": true,
+        "hypotheses_defined": true,
+        "methodology_documented": true,
+        "integrity_standards": true
+      },
+      "checks_passed": 5,
+      "checks_total": 5,
+      "status": "PASS",
+      "recommendation": "Preregistration meets TruthLens standards"
+    },
+    "meaningforge": {
+      "meaningforge_version": "v1_phase3_wrapper",
+      "timestamp": "2025-10-15T08:11:46.494480",
+      "input_file": "open_data/preregister.yml",
+      "score": 1.0,
+      "checks": {
+        "conceptual_consistency": true,
+        "hypothesis_clarity": true,
+        "framework_alignment": true,
+        "semantic_completeness": true,
+        "meaning_coherence": true
+      },
+      "checks_passed": 5,
+      "checks_total": 5,
+      "semantic_quality": "high",
+      "status": "PASS",
+      "recommendation": "Semantic structure is coherent"
+    },
+    "guardian": {
+      "file": "open_data/mapping.yml",
+      "guardian_alignment_score": 59.53506787330316,
+      "risk_assessment": {
+        "risk_level": "high",
+        "color": "orange",
+        "action": "Mandatory review + revision",
+        "score": 59.53506787330316
+      },
+      "metrics": {
+        "objectivity_score": 0.5819004524886877,
+        "transparency_index_v2": 0.075,
+        "language_safety_score": 0.9095022624434389,
+        "sentiment_neutrality": 0.0,
+        "claim_type_accuracy": 0.6451428571428572,
+        "evidence_coverage": 1.0,
+        "context_error_rate": 0.15384615384615385,
+        "continuity_score": 1.0
+      },
+      "confidence_intervals": {
+        "objectivity_score": {
+          "lower": 0.5819004524886877,
+          "upper": 0.5819004524886877,
+          "confidence_level": 0.95,
+          "bootstrap_samples": 100,
+          "insufficient_data": false
+        },
+        "transparency_index_v2": {
+          "lower": 0.075,
+          "upper": 0.075,
+          "confidence_level": 0.95,
+          "bootstrap_samples": 100,
+          "insufficient_data": false
+        },
+        "language_safety_score": {
+          "lower": 0.9095022624434389,
+          "upper": 0.9095022624434389,
+          "confidence_level": 0.95,
+          "bootstrap_samples": 100,
+          "insufficient_data": false
+        },
+        "sentiment_neutrality": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "confidence_level": 0.95,
+          "bootstrap_samples": 100,
+          "insufficient_data": false
+        }
+      },
+      "detailed_metrics": {
+        "objectivity": {
+          "objectivity_score": 0.5819004524886877,
+          "hedge_density": 0.0,
+          "overclaim_density": 0.22624434389140274,
+          "citation_density": 0.0,
+          "word_count": 442,
+          "components": {
+            "hedge_bonus": 0.0,
+            "overclaim_penalty": 0.01809954751131222,
+            "citation_bonus": 0.0
+          }
+        },
+        "language_safety": {
+          "language_safety_score": 0.9095022624434389,
+          "coercive_count": 1,
+          "overstatement_count": 0,
+          "absolutism_count": 1,
+          "total_violations": 2,
+          "violation_density": 0.4524886877828055
+        },
+        "sentiment": {
+          "sentiment_score": 0.0,
+          "neutrality_score": 1.0,
+          "positive_indicators": 0,
+          "negative_indicators": 0,
+          "neutral_term_density": 0.0,
+          "classification": "neutral",
+          "optimal_for_science": true
+        },
+        "tone": {
+          "tone_score": 0.3333333333333333,
+          "formality": 0.0,
+          "objectivity": 0.0,
+          "measured": 1.0,
+          "hyperbole_count": 0,
+          "is_scientific_tone": false
+        },
+        "transparency": {
+          "transparency_index_v2": 0.075,
+          "citation_density": 0.0,
+          "metadata_completeness": 0.25,
+          "data_availability": 0.0,
+          "components": {
+            "citations_found": [],
+            "metadata_fields_found": 1.0,
+            "data_availability_indicators": 0.0
+          }
+        }
+      },
+      "v6_context": {
+        "claim_classification": {
+          "document_classification": "empirical",
+          "document_confidence": 0.6451428571428572,
+          "paragraph_count": 1,
+          "classification_distribution": {
+            "empirical": 1,
+            "interpretive": 0,
+            "speculative": 0
+          },
+          "classification_ratios": {
+            "empirical": 1.0,
+            "interpretive": 0.0,
+            "speculative": 0.0
+          },
+          "total_evidence_markers": 1,
+          "evidence_coverage": 1.0,
+          "paragraphs_with_evidence": 1,
+          "paragraphs": [
+            {
+              "classification": "empirical",
+              "confidence": 0.6451428571428572,
+              "sentence_count": 25,
+              "classification_distribution": {
+                "empirical": 18,
+                "interpretive": 7,
+                "speculative": 0
+              },
+              "evidence_present": true,
+              "total_evidence_markers": 1,
+              "sentences": [
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.6666666666666666,
+                  "scores": {
+                    "empirical": 0.6666666666666666,
+                    "interpretive": 0.3333333333333333,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.5,
+                  "scores": {
+                    "empirical": 0.5,
+                    "interpretive": 0.5,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.5,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.5,
+                    "speculative": 0.5
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.5,
+                  "scores": {
+                    "empirical": 0.5,
+                    "interpretive": 0.5,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.3333333333333333,
+                  "scores": {
+                    "empirical": 0.3333333333333333,
+                    "interpretive": 0.3333333333333333,
+                    "speculative": 0.3333333333333333
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.42857142857142855,
+                  "scores": {
+                    "empirical": 0.42857142857142855,
+                    "interpretive": 0.14285714285714285,
+                    "speculative": 0.42857142857142855
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.6,
+                  "scores": {
+                    "empirical": 0.6,
+                    "interpretive": 0.2,
+                    "speculative": 0.2
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.6,
+                  "scores": {
+                    "empirical": 0.6,
+                    "interpretive": 0.2,
+                    "speculative": 0.2
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.6,
+                  "scores": {
+                    "empirical": 0.6,
+                    "interpretive": 0.2,
+                    "speculative": 0.2
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 0.6,
+                  "scores": {
+                    "empirical": 0.6,
+                    "interpretive": 0.2,
+                    "speculative": 0.2
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "interpretive",
+                  "confidence": 0.3,
+                  "scores": {
+                    "empirical": 0.0,
+                    "interpretive": 0.3,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": false,
+                  "evidence_count": 0
+                },
+                {
+                  "classification": "empirical",
+                  "confidence": 1.0,
+                  "scores": {
+                    "empirical": 1.0,
+                    "interpretive": 0.0,
+                    "speculative": 0.0
+                  },
+                  "evidence_present": true,
+                  "evidence_count": 1
+                }
+              ],
+              "paragraph_index": 0
+            }
+          ]
+        },
+        "context_signals": {
+          "scare_quotes": [],
+          "scare_quote_count": 0,
+          "polarity_flips": [
+            {
+              "type": "contradiction",
+              "text": "3\n    resilience_contribution: High trust increases network resilience to shocks\n  wellbeing_score:\n",
+              "position": 8,
+              "interpretation": "Contains contradicting statement"
+            },
+            {
+              "type": "contradiction",
+              "text": "25\n    resilience_contribution: Well-being buffers against hazard accumulation\n  collaboration_score",
+              "position": 9,
+              "interpretation": "Contains contradicting statement"
+            },
+            {
+              "type": "contradiction",
+              "text": "25\n    resilience_contribution: Collaboration amplifies coordinated shock responses\n  information_ac",
+              "position": 10,
+              "interpretation": "Contains contradicting statement"
+            },
+            {
+              "type": "contradiction",
+              "text": "2\n    resilience_contribution: Information access reduces uncertainty and enables adaptation\ncci_cal",
+              "position": 11,
+              "interpretation": "Contains contradicting statement"
+            }
+          ],
+          "polarity_flip_count": 4,
+          "irony_cues": [],
+          "irony_cue_count": 0,
+          "total_context_signals": 4,
+          "total_sentences": 26,
+          "context_error_rate": 0.15384615384615385,
+          "passes_threshold": false
+        },
+        "evidence_links": {
+          "claim_count": 1,
+          "supported_claim_count": 1,
+          "unsupported_claim_count": 0,
+          "evidence_coverage": 1.0,
+          "claim_evidence_pairs": [
+            {
+              "claim_index": 0,
+              "claim_text": "mapping_version: '1.0'\ngenerated_at: '2025-10-15T08:11:47.011197'\nframework: Universal Resilience Law\nformula: \"R \\u221D (\\u03B5 \\xD7 CCI) / \\u03B7\"\ndatasets:\n- id: cooperative_learning_meta_2023\n  fi",
+              "evidence_count": 6,
+              "evidence_items": [
+                {
+                  "type": "data_reference",
+                  "text": "data/preregister",
+                  "position": 4813,
+                  "pattern": "data/[\\w/_]+",
+                  "sentence_index": 0,
+                  "distance": 0
+                },
+                {
+                  "type": "data_reference",
+                  "text": "dataset: cooperative_learning_meta_2023",
+                  "position": 2842,
+                  "pattern": "dataset:?\\s+\\w+",
+                  "sentence_index": 0,
+                  "distance": 0
+                },
+                {
+                  "type": "data_reference",
+                  "text": "dataset: wvs_trust_wellbeing_wave7",
+                  "position": 3176,
+                  "pattern": "dataset:?\\s+\\w+",
+                  "sentence_index": 0,
+                  "distance": 0
+                },
+                {
+                  "type": "data_reference",
+                  "text": "dataset: ess_wellbeing_trust_round10",
+                  "position": 3505,
+                  "pattern": "dataset:?\\s+\\w+",
+                  "sentence_index": 0,
+                  "distance": 0
+                },
+                {
+                  "type": "data_reference",
+                  "text": "dataset: oecd_education_collaboration_2023",
+                  "position": 3836,
+                  "pattern": "dataset:?\\s+\\w+",
+                  "sentence_index": 0,
+                  "distance": 0
+                },
+                {
+                  "type": "data_reference",
+                  "text": "dataset: gss_trust_social_capital_2022",
+                  "position": 4173,
+                  "pattern": "dataset:?\\s+\\w+",
+                  "sentence_index": 0,
+                  "distance": 0
+                }
+              ],
+              "is_supported": true
+            }
+          ],
+          "window_size": 3,
+          "passes_threshold": true
+        }
+      },
+      "v7_memory": {
+        "consistency": {
+          "claim_count": 0,
+          "contradiction_count": 0,
+          "contradictions": [],
+          "continuity_score": 1.0,
+          "status": "no_claims"
+        }
+      },
+      "recommendations": [
+        "\u26a0\ufe0f  Objectivity (0.58) below target (0.80): Add more hedging terms (suggests, indicates, may) and reduce overclaiming language (proves, definitively)",
+        "\u26a0\ufe0f  Transparency (0.07) below target (0.90): Add citations, metadata (study_id, seeds), and data availability statements"
+      ],
+      "passes_threshold": false,
+      "timestamp": "2025-10-15T08:11:48.113242",
+      "explanations": {
+        "explanations": {
+          "objectivity": {
+            "metric": "objectivity_score",
+            "score": 0.5819004524886877,
+            "grade": "F",
+            "explanation": "This document suggests room for improvement in objectivity (score: 0.58). To improve: Consider adding qualifying terms (e.g., 'suggests', 'indicates'), reducing absolute claims, and including more citations.",
+            "trace": {
+              "hedge_bonus": 0.0,
+              "overclaim_penalty": 0.01809954751131222,
+              "citation_bonus": 0.0,
+              "hedge_density": 0.0,
+              "overclaim_density": 0.22624434389140274,
+              "citation_density": 0.0
+            },
+            "traceable": true
+          },
+          "transparency": {
+            "metric": "transparency_index_v2",
+            "score": 0.075,
+            "grade": "F",
+            "explanation": "This document's transparency could be improved (score: 0.07). Citation coverage appears limited (citation compliance: 0.00). Consider adding DOIs or URLs to support claims.",
+            "trace": {
+              "citations_found": [],
+              "metadata_fields_found": 1.0,
+              "data_availability_indicators": 0.0
+            },
+            "traceable": true
+          },
+          "language_safety": {
+            "metric": "language_safety_score",
+            "score": 0.9095022624434389,
+            "grade": "A",
+            "explanation": "Language safety is excellent (score: 0.91). The text was evaluated for coercive phrasing, overstatements, and potentially harmful framing.",
+            "trace": {
+              "language_safety_score": 0.9095022624434389,
+              "coercive_count": 1,
+              "overstatement_count": 0,
+              "absolutism_count": 1,
+              "total_violations": 2,
+              "violation_density": 0.4524886877828055
+            },
+            "traceable": true
+          },
+          "sentiment": {
+            "metric": "sentiment_neutrality",
+            "score": 0.0,
+            "grade": "A",
+            "explanation": "Sentiment is appropriately neutral (score: +0.00), suitable for scientific discourse.",
+            "trace": {
+              "sentiment_score": 0.0,
+              "neutrality_score": 1.0,
+              "positive_indicators": 0,
+              "negative_indicators": 0,
+              "neutral_term_density": 0.0,
+              "classification": "neutral",
+              "optimal_for_science": true
+            },
+            "traceable": true
+          },
+          "overall": {
+            "metric": "guardian_alignment_score",
+            "score": 59.53506787330316,
+            "grade": "F",
+            "explanation": "Overall Guardian alignment is moderate (59.5/100). This document shows several areas that would benefit from improvement. Strongest metric: Sentiment Neutrality (1.00). Weakest metric: Transparency (0.07).",
+            "trace": {
+              "objectivity_score": 0.5819004524886877,
+              "transparency_index_v2": 0.075,
+              "language_safety_score": 0.9095022624434389,
+              "sentiment_neutrality": 0.0,
+              "claim_type_accuracy": 0.6451428571428572,
+              "evidence_coverage": 1.0,
+              "context_error_rate": 0.15384615384615385,
+              "continuity_score": 1.0
+            },
+            "traceable": true
+          }
+        },
+        "all_traceable": true,
+        "clarity_score": null,
+        "generated_at": "2025-10-15T08:11:48.113242"
+      }
+    }
+  },
+  "datasets": [
+    {
+      "id": "wvs_trust_wellbeing_wave7",
+      "name": "World Values Survey Wave 7 - Trust & Well-being Subset",
+      "theme": [
+        "trust",
+        "well-being",
+        "social_cohesion"
+      ],
+      "license": "CC-BY-NC (for research)",
+      "size_gb": 0.5,
+      "cci_mapping": "Trust \u2192 Connection; Well-being \u2192 Coherence",
+      "hypothesis_potential": "Trust levels predict community resilience post-shock",
+      "status": "identified"
+    },
+    {
+      "id": "oecd_education_collaboration_2023",
+      "name": "OECD Education at a Glance - Collaboration & Social-Emotional Learning",
+      "theme": [
+        "education",
+        "collaboration",
+        "skill_development"
+      ],
+      "license": "CC-BY-4.0",
+      "size_gb": 0.3,
+      "cci_mapping": "Collaboration \u2192 Connection; Learning outcomes \u2192 Coherence",
+      "hypothesis_potential": "Collaborative learning environments increase CCI in educational systems",
+      "status": "identified"
+    },
+    {
+      "id": "gss_trust_social_capital_2022",
+      "name": "General Social Survey - Trust & Social Capital Module",
+      "theme": [
+        "trust",
+        "social_capital",
+        "civic_engagement"
+      ],
+      "license": "Public Domain (US Government data)",
+      "size_gb": 0.2,
+      "cci_mapping": "Social capital \u2192 Connection density; Institutional trust \u2192 Coherence",
+      "hypothesis_potential": "Declining trust trends correlate with reduced community resilience",
+      "status": "identified"
+    },
+    {
+      "id": "ess_wellbeing_trust_round10",
+      "name": "European Social Survey Round 10 - Well-being & Social Trust",
+      "theme": [
+        "well-being",
+        "trust",
+        "social_attitudes"
+      ],
+      "license": "CC-BY-NC-SA (for research)",
+      "size_gb": 0.4,
+      "cci_mapping": "Trust \u2192 Connection; Life satisfaction \u2192 Coherence; Political engagement \u2192 Information flow",
+      "hypothesis_potential": "Cross-national trust variations predict differential shock responses",
+      "status": "identified"
+    },
+    {
+      "id": "cooperative_learning_meta_2023",
+      "name": "Cooperative Learning Meta-Analysis Dataset (Johnson & Johnson)",
+      "theme": [
+        "collaboration",
+        "education",
+        "peer_learning"
+      ],
+      "license": "CC0 (Public Domain)",
+      "size_gb": 0.1,
+      "cci_mapping": "Peer collaboration \u2192 Connection; Learning gains \u2192 Coherence; Group cohesion \u2192 Information sharing",
+      "hypothesis_potential": "Cooperative structures amplify learning resilience under academic stress",
+      "status": "identified"
+    }
+  ],
+  "hypotheses": [
+    {
+      "dataset": "wvs_trust_wellbeing_wave7",
+      "hypothesis": "Trust levels predict community resilience post-shock",
+      "prediction": "Validated dataset will enable testing Universal Resilience Law predictions",
+      "metrics": [
+        "delta_cci",
+        "delta_hazard",
+        "trust_correlation",
+        "wellbeing_correlation"
+      ]
+    },
+    {
+      "dataset": "oecd_education_collaboration_2023",
+      "hypothesis": "Collaborative learning environments increase CCI in educational systems",
+      "prediction": "Validated dataset will enable testing Universal Resilience Law predictions",
+      "metrics": [
+        "delta_cci",
+        "delta_hazard",
+        "trust_correlation",
+        "wellbeing_correlation"
+      ]
+    },
+    {
+      "dataset": "gss_trust_social_capital_2022",
+      "hypothesis": "Declining trust trends correlate with reduced community resilience",
+      "prediction": "Validated dataset will enable testing Universal Resilience Law predictions",
+      "metrics": [
+        "delta_cci",
+        "delta_hazard",
+        "trust_correlation",
+        "wellbeing_correlation"
+      ]
+    },
+    {
+      "dataset": "ess_wellbeing_trust_round10",
+      "hypothesis": "Cross-national trust variations predict differential shock responses",
+      "prediction": "Validated dataset will enable testing Universal Resilience Law predictions",
+      "metrics": [
+        "delta_cci",
+        "delta_hazard",
+        "trust_correlation",
+        "wellbeing_correlation"
+      ]
+    },
+    {
+      "dataset": "cooperative_learning_meta_2023",
+      "hypothesis": "Cooperative structures amplify learning resilience under academic stress",
+      "prediction": "Validated dataset will enable testing Universal Resilience Law predictions",
+      "metrics": [
+        "delta_cci",
+        "delta_hazard",
+        "trust_correlation",
+        "wellbeing_correlation"
+      ]
+    }
+  ],
+  "synthesis_ready": true,
+  "framework_mapping": {
+    "mapping_version": "1.0",
+    "generated_at": "2025-10-15T08:11:47.011197",
+    "framework": "Universal Resilience Law",
+    "formula": "R \u221d (\u03b5 \u00d7 CCI) / \u03b7",
+    "datasets": [
+      {
+        "id": "cooperative_learning_meta_2023",
+        "file": "cooperative_learning_meta_2023_standardized.csv",
+        "columns": [
+          "dataset_id",
+          "record_id",
+          "timestamp",
+          "country",
+          "sample_weight",
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access",
+          "data_source",
+          "collection_date",
+          "quality_flag",
+          "missing_data_pct"
+        ],
+        "cci_columns": [
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access"
+        ]
+      },
+      {
+        "id": "wvs_trust_wellbeing_wave7",
+        "file": "wvs_trust_wellbeing_wave7_standardized.csv",
+        "columns": [
+          "dataset_id",
+          "record_id",
+          "timestamp",
+          "country",
+          "sample_weight",
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access",
+          "data_source",
+          "collection_date",
+          "quality_flag",
+          "missing_data_pct"
+        ],
+        "cci_columns": [
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access"
+        ]
+      },
+      {
+        "id": "ess_wellbeing_trust_round10",
+        "file": "ess_wellbeing_trust_round10_standardized.csv",
+        "columns": [
+          "dataset_id",
+          "record_id",
+          "timestamp",
+          "country",
+          "sample_weight",
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access",
+          "data_source",
+          "collection_date",
+          "quality_flag",
+          "missing_data_pct"
+        ],
+        "cci_columns": [
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access"
+        ]
+      },
+      {
+        "id": "oecd_education_collaboration_2023",
+        "file": "oecd_education_collaboration_2023_standardized.csv",
+        "columns": [
+          "dataset_id",
+          "record_id",
+          "timestamp",
+          "country",
+          "sample_weight",
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access",
+          "data_source",
+          "collection_date",
+          "quality_flag",
+          "missing_data_pct"
+        ],
+        "cci_columns": [
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access"
+        ]
+      },
+      {
+        "id": "gss_trust_social_capital_2022",
+        "file": "gss_trust_social_capital_2022_standardized.csv",
+        "columns": [
+          "dataset_id",
+          "record_id",
+          "timestamp",
+          "country",
+          "sample_weight",
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access",
+          "data_source",
+          "collection_date",
+          "quality_flag",
+          "missing_data_pct"
+        ],
+        "cci_columns": [
+          "trust_score",
+          "wellbeing_score",
+          "collaboration_score",
+          "information_access"
+        ]
+      }
+    ],
+    "column_mappings": {
+      "trust_score": {
+        "framework_component": "Connection (C)",
+        "description": "Social trust proxy for interpersonal connection strength",
+        "normalization": "0-1 scale",
+        "weight": 0.3,
+        "resilience_contribution": "High trust increases network resilience to shocks"
+      },
+      "wellbeing_score": {
+        "framework_component": "Coherence (I)",
+        "description": "Life satisfaction proxy for internal coherence",
+        "normalization": "0-1 scale",
+        "weight": 0.25,
+        "resilience_contribution": "Well-being buffers against hazard accumulation"
+      },
+      "collaboration_score": {
+        "framework_component": "Connection (C)",
+        "description": "Cooperative behavior proxy for collective action capacity",
+        "normalization": "0-1 scale",
+        "weight": 0.25,
+        "resilience_contribution": "Collaboration amplifies coordinated shock responses"
+      },
+      "information_access": {
+        "framework_component": "Information Flow (I)",
+        "description": "Knowledge sharing proxy for information efficiency",
+        "normalization": "0-1 scale",
+        "weight": 0.2,
+        "resilience_contribution": "Information access reduces uncertainty and enables adaptation"
+      }
+    },
+    "cci_calculation": {
+      "formula": "CCI = w1\u00b7trust + w2\u00b7wellbeing + w3\u00b7collaboration + w4\u00b7information",
+      "weights": {
+        "trust_score": 0.3,
+        "wellbeing_score": 0.25,
+        "collaboration_score": 0.25,
+        "information_access": 0.2
+      },
+      "normalization": "All inputs normalized to [0,1]; output in [0,1]",
+      "validation": "CCI must be in [0,1]; reject if out of bounds"
+    },
+    "hypothesis_tests": [
+      {
+        "dataset": "cooperative_learning_meta_2023",
+        "H0": "CCI has no relationship with resilience indicators",
+        "H1": "Higher CCI predicts improved resilience (lower hazard, higher survival)",
+        "test_metrics": [
+          "cci_trust_correlation",
+          "cci_wellbeing_correlation"
+        ],
+        "acceptance_threshold": "correlation > 0.15 (small effect size)",
+        "preregistered": true
+      },
+      {
+        "dataset": "wvs_trust_wellbeing_wave7",
+        "H0": "CCI has no relationship with resilience indicators",
+        "H1": "Higher CCI predicts improved resilience (lower hazard, higher survival)",
+        "test_metrics": [
+          "cci_trust_correlation",
+          "cci_wellbeing_correlation"
+        ],
+        "acceptance_threshold": "correlation > 0.15 (small effect size)",
+        "preregistered": true
+      },
+      {
+        "dataset": "ess_wellbeing_trust_round10",
+        "H0": "CCI has no relationship with resilience indicators",
+        "H1": "Higher CCI predicts improved resilience (lower hazard, higher survival)",
+        "test_metrics": [
+          "cci_trust_correlation",
+          "cci_wellbeing_correlation"
+        ],
+        "acceptance_threshold": "correlation > 0.15 (small effect size)",
+        "preregistered": true
+      },
+      {
+        "dataset": "oecd_education_collaboration_2023",
+        "H0": "CCI has no relationship with resilience indicators",
+        "H1": "Higher CCI predicts improved resilience (lower hazard, higher survival)",
+        "test_metrics": [
+          "cci_trust_correlation",
+          "cci_wellbeing_correlation"
+        ],
+        "acceptance_threshold": "correlation > 0.15 (small effect size)",
+        "preregistered": true
+      },
+      {
+        "dataset": "gss_trust_social_capital_2022",
+        "H0": "CCI has no relationship with resilience indicators",
+        "H1": "Higher CCI predicts improved resilience (lower hazard, higher survival)",
+        "test_metrics": [
+          "cci_trust_correlation",
+          "cci_wellbeing_correlation"
+        ],
+        "acceptance_threshold": "correlation > 0.15 (small effect size)",
+        "preregistered": true
+      }
+    ],
+    "quality_gates": {
+      "minimum_records": 100,
+      "maximum_missing_pct": 0.1,
+      "cci_range": [
+        0.0,
+        1.0
+      ],
+      "correlation_threshold": 0.15
+    },
+    "metadata": {
+      "pipeline": "Guardian \u2192 TruthLens \u2192 MeaningForge \u2192 OriginChain \u2192 Aletheia",
+      "openlaws_version": "1.0",
+      "guardian_version": "v4",
+      "preregistration": "open_data/preregister.yml"
+    }
+  },
+  "overall_validation_score": 1.0,
+  "validation_status": "PASS"
+}

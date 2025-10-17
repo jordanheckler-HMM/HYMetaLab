@@ -1,0 +1,162 @@
+---
+title: README.md
+date: 2025-10-16
+version: draft
+ua008032de9
+---
+
+# Reality Loop Lite - Golden Tests
+
+This directory contains deterministic golden tests for the Reality Loop Lite core module.
+
+## Files
+
+- **`golden_run_seed42.json`** - Golden reference output (seed=42, Team Cohesion scenario)
+- **`create_golden.py`** - Script to create/update golden reference
+- **`verify_golden.py`** - Script to verify current implementation matches golden
+- **`test_invariants.py`** - Script to verify outputs stay within expected ranges
+- **`README.md`** - This file
+
+## Usage
+
+### First Time Setup (or after intentional math changes):
+
+```bash
+python tests/create_golden.py
+```
+
+This creates `golden_run_seed42.json` with current implementation output.
+
+### On Every Check (CI/CD, pre-commit, etc.):
+
+```bash
+python tests/verify_golden.py
+```
+
+This compares current implementation against the golden reference.
+
+**Exit codes:**
+- `0` = PASS (all tests match)
+- `1` = FAIL (tests don't match)
+
+### Run Invariant Tests:
+
+```bash
+python tests/test_invariants.py
+```
+
+This verifies outputs stay within expected ranges across multiple scenarios and seeds.
+
+**Exit codes:**
+- `0` = PASS (all invariants hold)
+- `1` = FAIL (some invariants violated)
+
+### Run All Tests:
+
+```bash
+python tests/verify_golden.py && python tests/test_invariants.py
+```
+
+This runs both golden reference and invariant tests.
+
+## What It Tests
+
+### Golden Tests (`verify_golden.py`)
+
+- **Determinism:** Same seed typically produces same output
+- **Consistency:** Core math hasn't changed unexpectedly
+- **Precision:** Values match within 1e-6 tolerance
+
+**Test Inputs (Team Cohesion scenario):**
+- Trust: 0.70
+- Hope: 0.80
+- Meaning: 0.90
+- Sensitivity: 1.8
+- Seed: 42
+
+**Verified Outputs:**
+- ΔCCI (Collective Coherence Index delta)
+- Δhazard (Collapse risk delta)
+
+### Invariant Tests (`test_invariants.py`)
+
+- **Range Validation:** Outputs stay within expected bounds
+- **Robustness:** Tests both deterministic and stochastic modes
+- **Coverage:** 100 tests across 4 scenarios
+
+**Test Coverage:**
+- 4 scenarios (Crisis, Neutral, Optimistic, Team Cohesion)
+- 5 seeds each (deterministic, noise=0.0) = 20 tests
+- 20 seeds each (stochastic, noise=0.02) = 80 tests
+- **Total: 100 tests**
+
+**Verified Ranges:**
+- ΔCCI: [-0.001, 1.0]
+- Δhazard: [-1.0, 0.05]
+
+## CI/CD Integration
+
+Add to your CI pipeline:
+
+```yaml
+test:
+  script:
+    - python tests/verify_golden.py
+```
+
+Or in GitHub Actions:
+
+```yaml
+- name: Run Golden Tests
+  run: python tests/verify_golden.py
+```
+
+## When Tests Fail
+
+If `verify_golden.py` fails, check:
+
+1. **Did you intentionally change `loop_lite_core.py`?**
+   - If YES: Run `create_golden.py` to update reference
+   - If NO: Review your changes - something broke!
+
+2. **Are you using the correct Python/dependencies?**
+   - Golden tests are sensitive to implementation details
+   - Check Python version and package versions
+
+3. **Is the random seed properly set?**
+   - Should be set to 42 for determinism
+   - Check if `random.seed(42)` is being called
+
+## Development Workflow
+
+```bash
+# Before committing changes to loop_lite_core.py
+python tests/verify_golden.py
+
+# If intentional math change
+python tests/create_golden.py  # Update golden reference
+git add tests/golden_run_seed42.json
+git commit -m "Update golden tests for math change"
+```
+
+## Why Golden Tests?
+
+Golden tests provide:
+- **Regression Detection:** Catch unintended changes immediately
+- **Confidence:** Know your math is behaving consistently
+- **Documentation:** Reference output serves as specification
+- **Debugging:** Compare before/after when troubleshooting
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

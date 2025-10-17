@@ -1,0 +1,32 @@
+{
+  "noise_ceiling": 0.9999992599728544,
+  "M0": {
+    "r2": 0.04019713442940931,
+    "r2_adj": -0.0024607707070614104,
+    "n": 48
+  },
+  "M1": {
+    "r2": null,
+    "r2_adj": null,
+    "n": 0
+  },
+  "M2": {
+    "r2": null,
+    "r2_adj": null,
+    "n": 0
+  },
+  "M3": {
+    "closed": {
+      "note": "insufficient data",
+      "n": 0
+    },
+    "min_open": {
+      "note": "insufficient data",
+      "n": 0
+    },
+    "open": {
+      "note": "insufficient data",
+      "n": 0
+    }
+  }
+}

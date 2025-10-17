@@ -1,0 +1,117 @@
+study:
+  id: trust_survival_v23_cross_domain
+  title: Trust_Survival_Phase23_CrossDomain
+name: "Trust_Survival_Phase23_CrossDomain"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 23 freezes the Phase 22 (ARC + Containment + TAF) settings and evaluates generalization
+  across multiple domains: cultural diffusion, economic coordination, and ecological commons.
+  Goal: retain high coherence (CCI ≥ 0.72) and high survival (≥ 0.80) under domain shifts.
+objectives:
+  - Out-of-domain robustness of the controller (no retuning).
+  - CI-clean survival uplift vs domain-native baselines, with safe hazard.
+design:
+  seeds: 6
+  epochs_cap: 900
+  agents: 240
+  clusters: 12
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["DOMAIN_BASELINE","ARC_TAF_FROZEN"]
+    supernet_topology: ["smallworld"]
+    inter_kappa: [0.18]
+    inter_delay: [25]
+    seed_fraction: [0.50]
+    trust_tau0: [0.70]
+    goal_inequality: [0.35]
+    shock_severity: [0.50]
+arc_controller:
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every: 100, eps_delta: 0.06, lr_boost: 1.10 }
+containment:
+  enabled: true
+  trigger: { hazard_lo: 0.45, hazard_hi: 0.50, var_hi: 0.03 }
+  absorption: { alpha: 0.35, max_rate: 0.08 }
+  reservoir: { cap: 1.80 }
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: { hazard_max: 0.47, cci_min: 0.72 }
+  neighborhood: { kappa_bias: 0.6, deficit_floor: 0.05 }
+  schedule: { base_beta: 0.14, burst_bonus: 1.20, taper_gamma: 0.94 }
+  effects: { eps_delta_scale: 0.06, lr_boost_scale: 0.08 }
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: { base: 1.0, k_sync: 0.25, k_hazard_brake: -0.40, max_gain: 1.8, min_gain: 0.7 }
+  limiter: { lookback: 80, slope_max: 0.08, cooldown: 40 }
+  routing: { top_k: 3, spillover: 0.15 }
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - cascade_lambda
+  - cascade_sustain_rate
+  - inter_sync_index
+  - containment_active_ratio
+  - reservoir_mean
+  - reinject_efficiency
+  - reinject_precision
+  - taf_gain_mean
+  - taf_focus_score
+  - domain_transfer_gap
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 360
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC_TAF_FROZEN vs DOMAIN_BASELINE: Survival uplift ≥ +0.10 abs in ≥2 of 3 domains (95% CI excl 0)"
+    - "For each domain: ≥1 frozen cell sustains (CCI ≥ 0.72 AND Survival ≥ 0.80) for ≥ 200 epochs"
+    - "Mean hazard in frozen ≤ 0.47 and not > +3% vs domain baseline (95% CI)"
+    - "domain_transfer_gap summary: median uplift > 0 on survival, ≤ 0 on hazard"
+exports:
+  data_dir: discovery_results/trust_survival_v23/data
+  figs_dir: discovery_results/trust_survival_v23/figs
+  report_dir: discovery_results/trust_survival_v23/report
+  bundle_zip: discovery_results/trust_survival_v23/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_cross_domain.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 23: Freeze Phase 22 controller; test OOD generalization across cultural/economic/ecological domains."
+ 
+prereg:
+  constants:
+    epochs: 900
+    seeds: [2301,2302,2303,2304,2305,2306]
+    agents: 240
+    clusters: 12
+    domain: ["cultural","economic","ecological"]
+    mode: ["DOMAIN_BASELINE","ARC_TAF_FROZEN"]
+    sim_adapter: "studies/trust_survival/adapter_trust_cross_domain.py:run"

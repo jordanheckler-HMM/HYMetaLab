@@ -1,0 +1,25 @@
+---
+title: requirements.txt
+date: 2025-10-16
+version: draft
+checksum: 7fb39e9a14ac
+---
+
+pandas
+numpy
+statsmodels
+matplotlib
+scipy
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

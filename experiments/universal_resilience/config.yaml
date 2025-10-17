@@ -1,0 +1,66 @@
+experiment:
+  steps: 500
+  shock_step_ratio: 0.25
+  populations: [100]
+
+  # keep severities wide to expose nonlinearity
+  severities: [0.0, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9, 1.0]
+
+  # EXTREME: very long shocks to create long recovery arcs
+  durations: [60, 120, 200, 240, 300]
+
+  # EXTREME: include ultra-narrow and full scope
+  scopes: [0.02, 0.05, 0.1, 0.2, 0.4, 1.0]
+
+  ginis: [0.10, 0.20, 0.30, 0.40]
+  coherence_levels: [low, med, high]
+  replicates: 6
+  seeds_base: 99999
+
+coherence_map:
+  low:   { noise: 0.20, social_coupling: 0.30, coherence_value: 0.40 }
+  med:   { noise: 0.10, social_coupling: 0.60, coherence_value: 0.70 }
+  high:  { noise: 0.05, social_coupling: 0.80, coherence_value: 0.90 }
+
+heterogeneity:
+  enable: true
+  resilience_sigma: 0.50   # ↑↑ extreme spread in per-agent resilience
+  regen_jitter: 1.60       # ±160% regen jitter
+  mort_base_jitter: 1.60   # ±160% mortality jitter
+
+recovery:
+  base_resource_regen_rate: 0.010  # ↓↓ slower recoveries for more variance
+  capacity: 1.0
+  mortality_base_rate: 0.002
+  mortality_k: 6.0
+  mortality_center: 0.25
+
+shock:
+  taper_half_life: 25
+  severity_to_damage: 1.00
+  duration_weight: 1.00
+  scope_weight: 1.00
+
+collapse:
+  # Dynamic rule only: collapse = failure to recover to baseline
+  baseline_window: 50
+  recovery_window: 120
+  recovery_threshold: 0.70
+  consecutive_ok_steps: 12
+  gini_threshold: 0.25   # diagnostics only
+
+ur_learning:
+  learn_constructiveness_peak: true
+  peak_grid: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70]
+  learn_exponents: true
+  exponent_grid:
+    a: [0.5, 1.0, 1.5, 2.0]
+    b: [0.5, 1.0, 1.5, 2.0]
+    c: [0.5, 1.0, 1.5, 2.0]
+  log_smoothing_eps: 1e-3
+  ridge_lambda: 1e-4
+  min_target_variance: 2e-2
+
+outputs:
+  root_dir: discovery_results/universal_resilience
+  overwrite: false

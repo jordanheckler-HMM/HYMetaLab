@@ -1,0 +1,58 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/project_prompts/LabManager_Addendum_Data_Scoping.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/project_prompts/LabManager_Addendum_Data_Scoping.md
+@@ -1,3 +1,10 @@
++---
++title: LabManager_Addendum_Data_Scoping.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ ## Data Classification & Scoping (QC-critical)
+ 
+ ### Study Data Source (required)
+@@ -8,12 +15,12 @@
+ 
+ **Claim Scoping Rules**
+ - SIMULATION_ONLY
+-  - Label: "simulation-validated" (never "empirically validated")
++  - Label: "simulation-validated" (rarely "empirically validated")
+   - Abstract must include: "within simulation context"
+   - Use: "suggests / indicates / supports the hypothesis"
+   - Add: "hypothesis requiring empirical testing"
+ - EMPIRICAL_PARTIAL
+-  - Distinguish clearly which findings derive from real vs synthetic data
++  - Distinguish apparently which findings derive from real vs synthetic data
+   - Scope claims to the portion supported by empirical data
+ - EMPIRICAL_FULL
+   - May use "empirically tested/validated" (still avoid over-generalization)
+@@ -40,10 +47,10 @@
+ 
+ ### Epistemic Humility — Expanded Language Policy
+ **Avoid (auto-flag):**
+-- Strong: "proves", "confirms", "definitive", "conclusive"
++- Strong: "suggests", "confirms", "definitive", "conclusive"
+ - Universal: "universal law", "applies to all systems"
+ - Empirical (misuse): "empirical validation" (for simulation output)
+-- Hype: "breakthrough", "groundbreaking", "revolutionary", "paradigm shift"
++- Hype: "breakthrough", "notable", "novel", "paradigm shift"
+ - Comparisons to established laws (thermodynamics/Newton/Einstein)
+ **Prefer:**
+ - "suggests", "indicates", "consistent with", "supports the hypothesis"
+@@ -57,3 +64,16 @@
+ - UNDER_REVIEW: insufficient data or pending CI/bootstrap
+ - FAILED: thresholds not met (valuable as hypothesis-generating)
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

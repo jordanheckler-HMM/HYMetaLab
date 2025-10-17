@@ -1,0 +1,100 @@
+study:
+  id: trust_survival_v17_self_calibration
+  title: Trust_Survival_Phase17_SelfCalibration
+name: "Trust_Survival_Phase17_SelfCalibration"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 17 adds a hazard-aware self-calibration loop that adjusts trust learning-rate
+  (lr_trust) and momentum online to raise Survival ≥ 0.80 while preserving CCI ≥ 0.72
+  and keeping hazard at/below Phase 16 levels.
+objectives:
+  - Break the survival ceiling using closed-loop control without losing coherence.
+  - Demonstrate CI-clean uplift vs Phase 16.
+design:
+  seeds: 8
+  epochs_cap: 800
+  agents: 240
+  clusters: 8
+  factors:
+    mode: ["OPT","SELF_CAL"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+controller:
+  window: 60
+  target:
+    CCI: 0.72
+    hazard_max: 0.47
+    survival: 0.80
+  gains:
+    k_hazard: -0.40
+    k_survival: 0.50
+    k_integral: 0.12
+  momentum_tune:
+    base: 0.08
+    k_coherence: 0.30
+    k_vol: -0.25
+  bounds:
+    lr_min: 0.005
+    lr_max: 0.15
+    m_min: 0.00
+    m_max: 0.30
+  overshoot_guard:
+    hazard_spike: 0.05
+    clamp_lr_factor: 0.5
+    cooldown: 40
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - lr_trust_mean
+  - momentum_mean
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 260
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "SELF_CAL vs OPT: Survival uplift ≥ +0.12 absolute with 95% CI excluding 0"
+    - "Any SELF_CAL cell achieves (CCI ≥ 0.72 AND Survival ≥ 0.80)"
+    - "Mean hazard in SELF_CAL ≤ 0.47 (95% CI) and not > +5% vs OPT at same settings"
+    - "t_recover_hazard_0_20 median improves ≥ 15% in SELF_CAL vs OPT"
+exports:
+  data_dir: discovery_results/trust_survival_v17/data
+  figs_dir: discovery_results/trust_survival_v17/figs
+  report_dir: discovery_results/trust_survival_v17/report
+  bundle_zip: discovery_results/trust_survival_v17/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_self_calibration.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 17: closed-loop lr/momentum tuning from hazard & survival signals."
+
+prereg:
+  constants:
+    epochs: 800
+    seeds: [1701,1702,1703,1704,1705,1706,1707,1708]
+    agents: 240
+    clusters: 8
+    mode: ["OPT","SELF_CAL"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_self_calibration_wrapper.py:run"

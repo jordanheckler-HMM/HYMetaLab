@@ -1,0 +1,181 @@
+# Epistemic Boundary Integration Log
+
+**Date:** 2025-10-16  
+**Task:** Integrate epistemic boundary utilities into Guardian Check App  
+**Status:** ✅ COMPLETE
+
+---
+
+## Summary
+
+Successfully integrated epistemic boundary declarations and hedging utilities into the Guardian Check application, ensuring all user-facing messages maintain intellectual humility and Guardian alignment.
+
+---
+
+## Files Modified
+
+### 1. `tools/epistemic.py` (Created)
+**SHA256:** `d78264beb2dada8d0afbb966931ff3c6304f6e162146f37e0dfdedf0be007c10`
+
+**Purpose:** Centralized epistemic boundary utilities for HYMetaLab
+
+**Contents:**
+- `BOUNDARY` constant — Standard epistemic boundary declaration
+- `hedge(s)` — Add epistemic hedging to claims
+- `boundary_header()` — Format boundary for reports
+- `wrap_claim(claim, confidence)` — Confidence-based hedging
+- `add_boundary_to_report(report)` — Prepend boundary to reports
+- `EPISTEMIC_MARKERS` dict — 7 epistemic markers with explanations
+- `get_marker_explanation(marker)` — Explain epistemic markers
+
+**Quality Checks:**
+- ✅ Ruff linting: All checks passed
+- ✅ Black formatting: Applied (PEP 8 compliant)
+- ✅ Import test: Module loads successfully
+- ✅ Function tests: All utilities working
+
+### 2. `apps/guardian_check_app.py` (Modified)
+**SHA256:** `d0aa2d9b023c640ef62aa00048b88de83638d2d7284a83919bdf1515d01d5922`
+
+**Changes Applied:**
+
+#### a. Added Module Docstring + Epistemic Boundary
+```python
+"""
+Guardian Check Application
+
+Real-time ethical alignment validation for research documents.
+Provides interactive interface for Guardian v4 validation.
+"""
+
+from tools.epistemic import BOUNDARY, hedge
+
+# Add epistemic boundary to module documentation
+__doc__ = (__doc__ or "") + "\n\n" + BOUNDARY
+```
+
+#### b. Hedged "About Guardian" Sidebar Info
+```python
+guardian_info = hedge(
+    "Guardian v4 validates documents against: Objectivity (hedge terms, claims, citations), "
+    "Sentiment (neutrality and balance), Transparency (metadata, reproducibility), "
+    "and Safety (risk assessment). Target: ≥90/100 for publication."
+)
+st.sidebar.info(guardian_info)
+```
+
+#### c. Hedged Result Messages
+All score result messages now use `hedge()` to maintain epistemic humility:
+
+```python
+# Example: Excellent score
+msg = hedge(f"Guardian score of {score:.1f}/100 indicates strong alignment with integrity standards.")
+st.success(f"✅ **Guardian Score: {score:.1f}/100** (Excellent)\n\n{msg}")
+```
+
+Applied to all 4 score ranges:
+- ≥90: "indicates strong alignment"
+- ≥80: "indicates good alignment"
+- ≥70: "indicates acceptable alignment, though review is recommended"
+- <70: "indicates improvements may enhance integrity alignment"
+
+#### d. Added Epistemic Boundary Footer
+```python
+with st.expander("ℹ️ Epistemic Boundary"):
+    st.info(BOUNDARY)
+    st.caption(
+        "Guardian scores are indicative assessments based on current heuristics and "
+        "should be interpreted as one signal among many in evaluating document quality."
+    )
+```
+
+**Quality Checks:**
+- ✅ Ruff linting: All checks passed (E402 suppressed for Streamlit requirement)
+- ✅ Black formatting: Applied (PEP 8 compliant)
+- ✅ Import test: Module imports work correctly
+
+---
+
+## Compliance
+
+✅ **SOP v1.1** — Epistemic boundaries documented and enforced  
+✅ **Institutional Charter v2.0** — Intellectual humility maintained  
+✅ **Guardian Alignment** — All user-facing claims hedged appropriately  
+✅ **Integrity Standards** — SHA256 checksums computed and logged
+
+---
+
+## Impact
+
+### Before Integration
+- Guardian Check app presented results without epistemic qualifiers
+- No standardized hedging mechanism
+- User-facing messages stated findings as facts
+
+### After Integration
+- All results include epistemic hedging
+- Standardized `BOUNDARY` declaration available
+- User-facing messages appropriately qualified
+- Expandable epistemic boundary explanation in footer
+- Centralized utilities available for other modules
+
+---
+
+## Usage Examples
+
+### In the Guardian Check App
+
+**Sidebar Info (hedged):**
+> "Guardian v4 validates documents against: Objectivity (hedge terms, claims, citations), Sentiment (neutrality and balance), Transparency (metadata, reproducibility), and Safety (risk assessment). Target: ≥90/100 for publication. This suggests, but does not prove, the effect; alternative explanations may exist."
+
+**Excellent Score Result (hedged):**
+> "Guardian score of 92.5/100 indicates strong alignment with integrity standards. This suggests, but does not prove, the effect; alternative explanations may exist."
+
+**Epistemic Boundary Footer:**
+> "Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims should be read as provisional and subject to replication."
+
+---
+
+## Next Steps (Recommended)
+
+1. **Integrate into other apps:**
+   - `apps/loop_lite_core.py`
+   - Any dashboard or reporting tools
+
+2. **Use in validation reports:**
+   ```python
+   from tools.epistemic import add_boundary_to_report
+   
+   report = generate_validation_report()
+   final_report = add_boundary_to_report(report)
+   ```
+
+3. **Use in research outputs:**
+   ```python
+   from tools.epistemic import wrap_claim
+   
+   claim = "X causes Y"
+   hedged = wrap_claim(claim, confidence='moderate')
+   ```
+
+4. **Add to Guardian validation checks:**
+   - Check for presence of epistemic markers in documents
+   - Reward usage of `EPISTEMIC_MARKERS` terms
+
+---
+
+## Files Ready for Commit
+
+```bash
+git add tools/epistemic.py
+git add apps/guardian_check_app.py
+git commit -m "feat: add epistemic boundary utilities and integrate into Guardian Check app"
+```
+
+---
+
+**Integration By:** Lab Techs GPT  
+**Timestamp:** 2025-10-16T15:00:00-05:00  
+**Priority:** HIGH (Guardian alignment requirement)  
+**Guardian Impact:** Improves objectivity scores by standardizing epistemic hedging
+

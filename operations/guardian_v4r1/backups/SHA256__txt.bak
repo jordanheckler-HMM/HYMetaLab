@@ -1,0 +1,21 @@
+---
+title: SHA256.txt
+date: 2025-10-16
+version: draft
+checksum: b308028b4363
+---
+
+a33e79978d2ee00b3089eae7c6be0400f8c0f4d4aabf9d1002a2d100d4c0cf02  results/publication/phase4_open_data_replication_20251015_084124.zip
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

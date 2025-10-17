@@ -1,0 +1,50 @@
+# real_world_validation/scenarios.yaml
+# Real-world validation scenarios configuration
+
+2008_us_market:
+  kind: market
+  key: US_MARKET
+  window: { start: "2006-01-01", end: "2011-01-01" }
+  data:
+    market: { source: "stooq", ticker_primary: "^spx", ticker_fallback: "spy.us", interval: "d" }
+  metrics:
+    shocks: { method: "drawdown_zscore", normalize: true }
+    survival: { method: "trough_to_baseline", baseline_window_days: 120 }
+    collapse: { gini_proxy: "return_dispersion", threshold: 0.3 }
+    cci: { enabled: false }
+
+covid_italy:
+  kind: epidemic
+  key: ITA
+  window: { start: "2020-01-01", end: "2022-12-31" }
+  data:
+    owid: { columns: ["new_cases_smoothed","new_deaths_smoothed","stringency_index"], iso3: "ITA" }
+    world_bank:
+      gini: { iso3: "ITA" }
+      gdp_growth: { iso3: "ITA" }
+  metrics:
+    shocks: { method: "spike_zscore", series: "new_cases_smoothed", normalize: true }
+    survival: { method: "trough_to_baseline", series: "new_cases_smoothed", baseline_window_days: 90 }
+    collapse: { gini_series: "world_bank_gini", threshold: 0.3 }
+    cci: { enabled: false }
+
+gini_gdp_global_2000_2024:
+  kind: macro
+  key: MULTI
+  window: { start: "2000-01-01", end: "2024-12-31" }
+  data:
+    world_bank:
+      countries: ["USA","BRA","ZAF","SWE","IND","CHN"]
+      gini: true
+      gdp_growth: true
+  metrics:
+    shocks: { method: "gdp_drawdown", normalize: true }
+    survival: { method: "trough_to_baseline", series: "gdp_growth", baseline_window_days: 365 }
+    collapse: { gini_series: "world_bank_gini", threshold: 0.3 }
+    cci: { enabled: false }
+
+
+
+
+
+

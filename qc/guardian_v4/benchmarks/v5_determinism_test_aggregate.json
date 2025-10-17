@@ -1,0 +1,9 @@
+{
+  "total_documents": 5,
+  "successful_tests": 5,
+  "deterministic_documents": 5,
+  "determinism_rate": 1.0,
+  "mean_variance_pct": 0.0,
+  "max_variance_pct": 0.0,
+  "reproducibility_pct": 100.0
+}

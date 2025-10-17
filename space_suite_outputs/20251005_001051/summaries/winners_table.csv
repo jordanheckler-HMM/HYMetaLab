@@ -1,0 +1,12 @@
+question,winner_label,stability_CCI_mean,stability_hazard_mean,notes
+1,Q1_A_independent,,,
+2,Q2_vacuum_closed,,,
+3,Q3_continuous,,,
+4,Q4_2D,,,
+5,Q5_infinite,,,
+6,Q6_flat,,,
+7,Q7_softWrap,,,
+8,Q8_none,0.035965583843369564,0.0,
+9,Q9_absolute,,,
+10,Q10_closed,,,
+11,Q11_create,,,

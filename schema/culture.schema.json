@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Culture Event",
+  "type": "object",
+  "required": ["tick", "agent_id", "meme_id", "action"],
+  "properties": {
+    "tick": {"type": "integer", "minimum": 0},
+    "agent_id": {"type": "string"},
+    "meme_id": {"type": "string"},
+    "action": {"type": "string"},
+    "source_id": {"type": "string"},
+    "trust_change": {"type": "number"},
+    "reputation": {"type": "number"}
+  },
+  "additionalProperties": true
+}

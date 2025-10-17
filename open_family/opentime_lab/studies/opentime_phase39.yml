@@ -1,0 +1,23 @@
+study_id: opentime_phase39_temporal_feedback
+version: 1.0
+parameters:
+  lambda:
+  - 0.7
+  - 0.8
+  - 0.9
+  - 0.95
+  delta_t:
+  - 1
+  - 3
+  - 5
+metrics:
+- time_variance
+- recovery_half_life
+validation:
+  tsi_improve_min: 0.2
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

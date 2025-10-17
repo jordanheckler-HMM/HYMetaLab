@@ -1,0 +1,11 @@
+{
+  "used_mocks": true,
+  "timestamp": 1760144292.0456269,
+  "python_executable": "/usr/local/bin/python3",
+  "platform": "darwin",
+  "git_commit": null,
+  "packages": {
+    "numpy": "2.3.3",
+    "pandas": "2.3.3"
+  }
+}

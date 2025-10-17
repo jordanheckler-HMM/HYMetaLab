@@ -1,0 +1,5 @@
+metric,value
+ARI_seed_offdiag_diagmean,0.9956974259457165
+k_clusters,4.0
+seeds,3.0
+epochs,5.0

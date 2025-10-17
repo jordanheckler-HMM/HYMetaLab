@@ -1,0 +1,19 @@
+{
+  "experimentId": "noise_manipulation",
+  "simVersion": "v1.0.0",
+  "runId": "noise_manipulation_13_7",
+  "seed": 7,
+  "horizonSteps": 500,
+  "agent_profile": {
+    "calibration": 0.7,
+    "coherence": 0.7,
+    "emergence": 0.7,
+    "noise": 0.25
+  },
+  "policy_flags": {},
+  "environment": {
+    "shock_severity": 0.55,
+    "coordination_strength": 0.5,
+    "goal_inequality": 0.4
+  }
+}

@@ -1,0 +1,88 @@
+study:
+  id: trust_survival_v11_long_memory
+  title: Trust_Survival_Phase11_LongMemoryOpenness
+name: "Trust_Survival_Phase11_LongMemoryOpenness"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 11 couples macro openness (ε) to slow moving-averages of CCI and
+  hazard variance. Openness increases when sustained coherence is high
+  and hazard is tame; it contracts after volatile periods. Tests whether
+  long-memory ε × adaptive trust crosses validation thresholds.
+objectives:
+  - Detect delayed synergy where ε(t) co-evolves with trust without destabilizing.
+  - Achieve ≥ one validated cell: CCI ≥ 0.70 and Survival ≥ 0.80.
+design:
+  seeds: 5
+  epochs_cap: 700
+  agents: 180
+  clusters: 6
+  factors:
+    mode: ["META", "ADAPTIVE_OPEN_LM"]
+    eps0: [0.10, 0.30, 0.50, 0.70]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+openness_long_memory:
+  ema_window: 80
+  w_cci: 0.6
+  w_hazard_var: 0.4
+  k_step: 0.08
+  eps_min: 0.05
+  eps_max: 0.80
+  guard_rails:
+    max_hazard_uplift: 0.05
+    cool_down: 40
+  anneal_after_epoch: 560
+  anneal_gamma: 0.9
+traits:
+  lr_trust_init: 0.05
+  momentum_init: 0.10
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - openness_eps_mean
+  - openness_eps_var
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 260
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "At least one ADAPTIVE_OPEN_LM cell achieves (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "GLM: survival_rate ~ mode + eps0 + goal_inequality + mode:eps0 shows positive mode effect (p<0.05)"
+    - "Hazard uplift of ADAPTIVE_OPEN_LM vs META ≤ +5% (95% CI) at same g, shock"
+    - "Monotone trend: openness_eps_mean increases with CCI (ordered test p<0.05) while collapse_risk does not rise"
+exports:
+  data_dir: discovery_results/trust_survival_v11/data
+  figs_dir: discovery_results/trust_survival_v11/figs
+  report_dir: discovery_results/trust_survival_v11/report
+  bundle_zip: discovery_results/trust_survival_v11/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_long_memory_openness.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 11: ε follows EMA(CCI↑, −hazard_var) with guard-rails."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 700
+    seeds: [1101, 1102, 1103, 1104, 1105]
+    agents: 180
+    clusters: 6
+    mode: ["META","ADAPTIVE_OPEN_LM"]
+    eps0: [0.10, 0.30, 0.50, 0.70]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_long_memory_openness_wrapper.py:run"

@@ -1,0 +1,10 @@
+include: configs/base.yaml
+experiment: param_sweep
+sweep_param: coordination_strength
+values: [0.0, 0.1, 0.3, 0.5, 0.6, 0.7, 0.8, 1.0]
+fixed:
+  shock_level: 0.40
+  goal_inequality: 0.25
+out_csv: reslab/exports/coord_sweep.csv
+out_fig: reslab/exports/coord_sweep.png
+label: "Coordination → Survival/Alignment (shock=0.40)"

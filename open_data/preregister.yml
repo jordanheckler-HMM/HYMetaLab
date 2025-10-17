@@ -1,0 +1,143 @@
+preregistration:
+  project: Open-Source Data Integration Plan v1.0
+  version: '1.0'
+  date: '2025-10-15'
+  guardian_version: v4
+  openlaws_version: '1.0'
+datasets:
+- id: wvs_trust_wellbeing_wave7
+  name: World Values Survey Wave 7 - Trust & Well-being Subset
+  theme:
+  - trust
+  - well-being
+  - social_cohesion
+  license: CC-BY-NC (for research)
+  size_gb: 0.5
+  cci_mapping: "Trust \u2192 Connection; Well-being \u2192 Coherence"
+  hypothesis_potential: Trust levels predict community resilience post-shock
+  status: identified
+- id: oecd_education_collaboration_2023
+  name: OECD Education at a Glance - Collaboration & Social-Emotional Learning
+  theme:
+  - education
+  - collaboration
+  - skill_development
+  license: CC-BY-4.0
+  size_gb: 0.3
+  cci_mapping: "Collaboration \u2192 Connection; Learning outcomes \u2192 Coherence"
+  hypothesis_potential: Collaborative learning environments increase CCI in educational
+    systems
+  status: identified
+- id: gss_trust_social_capital_2022
+  name: General Social Survey - Trust & Social Capital Module
+  theme:
+  - trust
+  - social_capital
+  - civic_engagement
+  license: Public Domain (US Government data)
+  size_gb: 0.2
+  cci_mapping: "Social capital \u2192 Connection density; Institutional trust \u2192\
+    \ Coherence"
+  hypothesis_potential: Declining trust trends correlate with reduced community resilience
+  status: identified
+- id: ess_wellbeing_trust_round10
+  name: European Social Survey Round 10 - Well-being & Social Trust
+  theme:
+  - well-being
+  - trust
+  - social_attitudes
+  license: CC-BY-NC-SA (for research)
+  size_gb: 0.4
+  cci_mapping: "Trust \u2192 Connection; Life satisfaction \u2192 Coherence; Political\
+    \ engagement \u2192 Information flow"
+  hypothesis_potential: Cross-national trust variations predict differential shock
+    responses
+  status: identified
+- id: cooperative_learning_meta_2023
+  name: Cooperative Learning Meta-Analysis Dataset (Johnson & Johnson)
+  theme:
+  - collaboration
+  - education
+  - peer_learning
+  license: CC0 (Public Domain)
+  size_gb: 0.1
+  cci_mapping: "Peer collaboration \u2192 Connection; Learning gains \u2192 Coherence;\
+    \ Group cohesion \u2192 Information sharing"
+  hypothesis_potential: Cooperative structures amplify learning resilience under academic
+    stress
+  status: identified
+methodology:
+  pipeline: "Guardian \u2192 TruthLens \u2192 MeaningForge \u2192 OriginChain \u2192\
+    \ Aletheia"
+  etl_tool: etl_open.py v1.0
+  standardization:
+    schema: HYMetaLab Standard Schema v1.0
+    required_columns:
+    - dataset_id
+    - record_id
+    - timestamp
+    - country
+    - sample_weight
+    cci_mappings:
+    - "trust_score \u2192 Connection proxy"
+    - "wellbeing_score \u2192 Coherence proxy"
+    - "collaboration_score \u2192 Connection proxy"
+    - "information_access \u2192 Information flow proxy"
+  quality_checks:
+  - License compatibility (tools/license_checker.py)
+  - Missing data threshold < 10%
+  - CCI mappability verification
+  - SHA256 integrity hashing
+hypotheses:
+- dataset: wvs_trust_wellbeing_wave7
+  hypothesis: Trust levels predict community resilience post-shock
+  prediction: Validated dataset will enable testing Universal Resilience Law predictions
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - trust_correlation
+  - wellbeing_correlation
+- dataset: oecd_education_collaboration_2023
+  hypothesis: Collaborative learning environments increase CCI in educational systems
+  prediction: Validated dataset will enable testing Universal Resilience Law predictions
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - trust_correlation
+  - wellbeing_correlation
+- dataset: gss_trust_social_capital_2022
+  hypothesis: Declining trust trends correlate with reduced community resilience
+  prediction: Validated dataset will enable testing Universal Resilience Law predictions
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - trust_correlation
+  - wellbeing_correlation
+- dataset: ess_wellbeing_trust_round10
+  hypothesis: Cross-national trust variations predict differential shock responses
+  prediction: Validated dataset will enable testing Universal Resilience Law predictions
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - trust_correlation
+  - wellbeing_correlation
+- dataset: cooperative_learning_meta_2023
+  hypothesis: Cooperative structures amplify learning resilience under academic stress
+  prediction: Validated dataset will enable testing Universal Resilience Law predictions
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - trust_correlation
+  - wellbeing_correlation
+governance:
+  weekly_standup: true
+  monthly_audit: true
+  quarterly_review: true
+  guardian_threshold: 80
+  guardian_threshold_publication: 90
+integrity:
+  deterministic_processing: true
+  full_provenance: true
+  sha256_checksums: true
+  guardian_threshold_phase2: 80
+  guardian_threshold_publication: 90

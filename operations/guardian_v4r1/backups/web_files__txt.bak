@@ -1,0 +1,26 @@
+---
+title: web_files.txt
+date: 2025-10-16
+version: draft
+W7c45323d17
+---
+
+qc/guardian_v4/dashboard_widget.html
+site/dashboard.html
+site/index.html
+site/replication.html
+site/tools.html
+site/validation.html
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

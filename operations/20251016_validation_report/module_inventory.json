@@ -1,0 +1,79 @@
+{
+  "inventory_date": "2025-10-16T13:45:00Z",
+  "apps_modules": [
+    {
+      "name": "__init__.py",
+      "path": "apps/__init__.py",
+      "type": "init"
+    },
+    {
+      "name": "guardian_check_app.py",
+      "path": "apps/guardian_check_app.py",
+      "type": "application"
+    },
+    {
+      "name": "guardian_compare.py",
+      "path": "apps/guardian_compare.py",
+      "type": "application"
+    },
+    {
+      "name": "loop_lite_app.py",
+      "path": "apps/loop_lite_app.py",
+      "type": "application"
+    },
+    {
+      "name": "loop_lite_core.py",
+      "path": "apps/loop_lite_core.py",
+      "type": "library"
+    },
+    {
+      "name": "loop_lite_minimal.py",
+      "path": "apps/loop_lite_minimal.py",
+      "type": "application"
+    }
+  ],
+  "tools_modules": [
+    {"name": "add_bootstrap_ci.py", "path": "tools/add_bootstrap_ci.py"},
+    {"name": "auto_theorist.py", "path": "tools/auto_theorist.py"},
+    {"name": "auto_theorist_enhanced.py", "path": "tools/auto_theorist_enhanced.py"},
+    {"name": "auto_theorist_v3.py", "path": "tools/auto_theorist_v3.py"},
+    {"name": "check_no_legacy_imports.py", "path": "tools/check_no_legacy_imports.py"},
+    {"name": "coherence_mapper.py", "path": "tools/coherence_mapper.py"},
+    {"name": "compute_feeling_metrics.py", "path": "tools/compute_feeling_metrics.py"},
+    {"name": "export_public_artifacts.py", "path": "tools/export_public_artifacts.py"},
+    {"name": "fix_runs_summary.py", "path": "tools/fix_runs_summary.py"},
+    {"name": "gen_manifest.py", "path": "tools/gen_manifest.py"},
+    {"name": "gen_replication_packet.py", "path": "tools/gen_replication_packet.py"},
+    {"name": "generate_run_manifest.py", "path": "tools/generate_run_manifest.py"},
+    {"name": "guardian_autotune_v8.py", "path": "tools/guardian_autotune_v8.py"},
+    {"name": "guardian_bench_v5.py", "path": "tools/guardian_bench_v5.py"},
+    {"name": "guardian_console_v9.py", "path": "tools/guardian_console_v9.py"},
+    {"name": "guardian_corpus_index.py", "path": "tools/guardian_corpus_index.py"},
+    {"name": "guardian_dualrun_v10.py", "path": "tools/guardian_dualrun_v10.py"},
+    {"name": "language_sanitizer.py", "path": "tools/language_sanitizer.py"},
+    {"name": "license_checker.py", "path": "tools/license_checker.py"},
+    {"name": "make_replication_packet.py", "path": "tools/make_replication_packet.py"},
+    {"name": "mapping_builder.py", "path": "tools/mapping_builder.py"},
+    {"name": "metadashboard.py", "path": "tools/metadashboard.py"},
+    {"name": "origin_cli.py", "path": "tools/origin_cli.py"},
+    {"name": "prepare_github_release.py", "path": "tools/prepare_github_release.py"},
+    {"name": "qc_linter.py", "path": "tools/qc_linter.py"},
+    {"name": "reindex_phase13.py", "path": "tools/reindex_phase13.py"},
+    {"name": "reindex_phase13_14.py", "path": "tools/reindex_phase13_14.py"},
+    {"name": "reindex_phase22.py", "path": "tools/reindex_phase22.py"},
+    {"name": "reorg_repo.py", "path": "tools/reorg_repo.py"},
+    {"name": "run_agent_strategies.py", "path": "tools/run_agent_strategies.py"},
+    {"name": "run_civ_regression.py", "path": "tools/run_civ_regression.py"},
+    {"name": "run_civilization_locator.py", "path": "tools/run_civilization_locator.py"},
+    {"name": "targeted_sanitizer.py", "path": "tools/targeted_sanitizer.py"},
+    {"name": "truthlens_cli.py", "path": "tools/truthlens_cli.py"},
+    {"name": "update_eta_epsilon_log.py", "path": "tools/update_eta_epsilon_log.py"},
+    {"name": "validate_exports.py", "path": "tools/validate_exports.py"},
+    {"name": "zenodo_link_guard.py", "path": "tools/zenodo_link_guard.py"},
+    {"name": "zenodo_publisher.py", "path": "tools/zenodo_publisher.py"}
+  ],
+  "total_apps": 6,
+  "total_tools": 36,
+  "total_modules": 42
+}
+

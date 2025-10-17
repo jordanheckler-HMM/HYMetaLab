@@ -1,0 +1,11 @@
+outputs:
+  out_dir: "discovery_results/safety_cci_smoke"
+grid:
+  agent_count: [10]
+  noise: [0.0]
+  shock_severity: [0.0]
+  goal_diversity: [1]
+  openness:
+    - {label: "baseline", mechanism: "none", epsilon: 0.0}
+seeds: 1
+epochs_cap: 10

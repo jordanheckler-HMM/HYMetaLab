@@ -1,0 +1,22 @@
+---
+title: QC_patch_hashes.txt
+date: 2025-10-16
+version: draft
+Vd87dd1d76a
+---
+
+3bafaa665a96aa17c2c81dc2cff2ec49a16aaa868c8855212423cee4954d5497  FIS_STUDIES_SUMMARY.md
+1173c0b3e9516242cdeced4e8805ff4931ea772d7140db37c451b226d17507e5  REVALIDATION_STATUS.md
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

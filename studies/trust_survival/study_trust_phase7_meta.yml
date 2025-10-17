@@ -1,0 +1,88 @@
+study:
+  id: trust_survival_v7_meta
+  title: Trust_Survival_Phase7_MetaLearning
+name: "Trust_Survival_Phase7_MetaLearning"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 7 introduces a meta-learning layer that evolves trust adaptation
+  parameters (lr_trust, momentum) online using recent performance windows.
+  Compares STATIC, ADAPTIVE (fixed lr), and META (self-tuning lr,momentum).
+objectives:
+  - Break the Phase 6 plateau (CCI≈0.67, Survival≈0.58) via self-tuning trust.
+  - Show META > ADAPTIVE in survival and recovery with CI-backed uplifts.
+design:
+  seeds: 5
+  epochs_cap: 400
+  agents: 160
+  factors:
+    mode: ["STATIC","ADAPTIVE","META"]
+    trust_tau0: [0.30, 0.60, 0.80]         # initial trust level
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    # ADAPTIVE baseline (fixed):
+    lr_trust: [0.05]                       # ignored in META (auto-tuned)
+    momentum: [0.00]                       # ignored in META (auto-tuned)
+meta_learning:
+  enabled_key: "mode"
+  # every meta_period epochs, re-tune lr & momentum from a small candidate set
+  meta_period: 40
+  window: 40
+  candidate_lr: [0.02, 0.05, 0.08, 0.12]
+  candidate_m:  [0.00, 0.30, 0.60]
+  selection_rule: "argmax reward"
+  reward:
+    # reward blends stability + speed of recovery; higher is better
+    # reward_t = 0.6*(ΔCCI/window) + 0.4*(hazard_drop/window) - 0.2*volatility
+    w_dCCI: 0.6
+    w_hazard: 0.4
+    w_vol: 0.2
+  exploration_eps: 0.10   # ε-greedy to avoid local traps
+controls:
+  base_coord: 0.50
+  base_noise: 0.10
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 240
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "META vs ADAPTIVE at g=0.50: survival uplift ≥ +0.05 (abs) with 95% CI excluding 0"
+    - "Any META cell achieves (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "GLM: survival_rate ~ mode + trust_tau0 + goal_inequality + mode:goal_inequality shows significant mode effect (META>ADAPTIVE, p<0.05)"
+exports:
+  data_dir: discovery_results/trust_survival_v7/data
+  figs_dir: discovery_results/trust_survival_v7/figs
+  report_dir: discovery_results/trust_survival_v7/report
+  bundle_zip: discovery_results/trust_survival_v7/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_meta.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 7 evolves lr/momentum online (bandit-style ε-greedy)."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 400
+    # choose distinct seeds to avoid overlap with other phases
+    seeds: [701, 702, 703, 704, 705]
+    agents: 160
+    mode: ["STATIC","ADAPTIVE","META"]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    lr_trust: [0.05]
+    momentum: [0.00]
+    sim_adapter: "studies/trust_survival/adapter_trust_meta_wrapper.py:run"

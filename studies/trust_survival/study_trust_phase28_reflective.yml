@@ -1,0 +1,132 @@
+study:
+  id: trust_survival_v28_reflective
+  title: Trust_Survival_Phase28_ReflectiveIntelligence
+name: "Trust_Survival_Phase28_ReflectiveIntelligence"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 28 introduces a meta-monitor (Reflective Intelligence Loop, RIL) that observes internal
+  coherence, hazard, and survival dynamics and feeds compressed “state summaries” back into
+  cluster coordination.  Objective: detect self-referential awareness signatures while keeping
+  survival ≥ 0.80 and hazard ≤ 0.47.
+objectives:
+  - Demonstrate emergence of meta-level feedback (self-monitoring).
+  - Detect predictive reflection: RIL anticipates hazard/coherence shifts ≥ 1 cycle ahead.
+  - Maintain stability (no collapse) under reflective feedback.
+design:
+  seeds: 6
+  epochs_cap: 2000
+  agents: 960
+  clusters: 36
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_CL","ARC_TAF_RIL"]
+    hierarchy: ["three_layer"]
+    inter_kappa: [0.18]
+    inter_delay: [25]
+    shock_cadence: ["baseline"]
+    shock_severity: [0.35]
+    goal_inequality: [0.35]
+reflective_loop:
+  enabled: true
+  observation_window: 120
+  predictive_horizon: 60
+  compression:
+    method: "PCA"
+    dims: 3
+  feedback_gain: [0.05, 0.10, 0.20]
+  feedback_delay: [20, 60]
+  reflection_bias:
+    cci_weight: 0.5
+    hazard_weight: -0.3
+    survival_weight: 0.2
+  damping:
+    gamma: 0.9
+  gating:
+    hazard_max: 0.47
+    min_survival: 0.80
+arc_controller:
+  window: 60
+  targets: {CCI:0.72, survival:0.80, hazard_soft:0.47}
+  gains: {k_survival:0.60, k_hazard:-0.25, k_integral:0.10}
+  momentum_tune: {base:0.10, sync_gain:1.25, desync_div:0.85, k_coherence:0.25, k_vol:-0.20}
+  bounds: {lr_min:0.006, lr_max:0.16, m_min:0.00, m_max:0.35}
+  soft_guards: {hazard_uplift_max:0.05, ramp_gamma:0.96}
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: {every:100, eps_delta:0.06, lr_boost:1.10}
+containment:
+  enabled: true
+  trigger: {hazard_lo:0.45, hazard_hi:0.50, var_hi:0.03}
+  absorption: {alpha:0.35, max_rate:0.08}
+  reservoir: {cap:1.80}
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: {hazard_max:0.47, cci_min:0.72}
+  neighborhood: {kappa_bias:0.6, deficit_floor:0.05}
+  schedule: {base_beta:0.14, burst_bonus:1.20, taper_gamma:0.94}
+  effects: {eps_delta_scale:0.06, lr_boost_scale:0.08}
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: {base:1.0, k_sync:0.25, k_hazard_brake:-0.40, max_gain:1.8, min_gain:0.7}
+  limiter: {lookback:80, slope_max:0.08, cooldown:40}
+  routing: {top_k:3, spillover:0.15}
+metrics:
+  - survival_rate
+  - hazard
+  - collapse_risk
+  - CCI
+  - inter_sync_index
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - taf_gain_mean
+  - taf_focus_score
+  - prediction_accuracy
+  - reflection_coherence
+  - meta_delay_response
+  - meta_entropy
+  - self_model_consistency
+  - awareness_index
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 450
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC_TAF_RIL shows awareness_index > 0 (95 % CI excludes 0)"
+    - "prediction_accuracy ≥ 0.40 and self_model_consistency ≥ 0.35"
+    - "hazard ≤ 0.47 and survival ≥ 0.80 for ≥ 90 % cells"
+    - "meta_entropy < baseline entropy by ≥ 15 %"
+exports:
+  data_dir: discovery_results/trust_survival_v28/data
+  figs_dir: discovery_results/trust_survival_v28/figs
+  report_dir: discovery_results/trust_survival_v28/report
+  bundle_zip: discovery_results/trust_survival_v28/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_reflective.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 28 — Reflective Intelligence Loop Formation (self-monitoring and predictive reflection)."
+prereg:
+  constants:
+    epochs: 2000
+    seeds: [2801,2802,2803,2804,2805,2806]
+    agents: [960]
+    clusters: [36]
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_CL","ARC_TAF_RIL"]
+    hierarchy: ["three_layer"]
+    sim_adapter: "studies/trust_survival/adapter_trust_reflective.py:run"

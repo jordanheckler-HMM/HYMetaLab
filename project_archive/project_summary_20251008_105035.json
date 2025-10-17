@@ -1,0 +1,18 @@
+[
+  {
+    "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/civilization_exchange_phase6_20251006_090651/data/runs_summary.csv",
+    "mean_CCI": NaN,
+    "mean_survival": NaN,
+    "mean_hazard": NaN,
+    "mean_collapse": NaN,
+    "preregistered_flag": false,
+    "cci_ci_present": false,
+    "survival_ci_present": false,
+    "thresholds": {
+      "cci": 0.72,
+      "survival": 0.8
+    },
+    "category": "under_review",
+    "validation_status": "UNDER REVIEW"
+  }
+]

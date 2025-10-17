@@ -1,0 +1,17 @@
+# Equation Refinement Report (v1)
+
+Rows read: 224, dropped missing required: 0, dropped invalid logs: 0
+
+## Noise Ceiling
+- Estimated upper R² bound (due to seed noise): **-0.29625424725667626**
+
+## Model Fit Summary
+- **M0**: R²=None, adjR²=None, n=0
+- **M1**: R²=None, adjR²=None, n=0
+- **M2**: R²=None, adjR²=None, n=0
+
+### Regime Split (M3)
+- closed: insufficient data (n=0)
+- min_open: insufficient data (n=0)
+- open: insufficient data (n=0)
+

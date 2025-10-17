@@ -1,0 +1,6 @@
+run_id,coupling_AB,coupling_BC,coupling_AC,drift_interval,agents_per_civ,epochs_cap,renaissance_counts,mean_time_to_rebirth,knowledge_recovery_rate,cultural_half_lives,avg_cultural_half_life,global_renaissance_wave,drift_resilience,total_renaissance_count,total_collapse_count,time_sec
+TD_05_05_00,0.05,0.05,0.0,400,40,1500,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 205, 'B': 1, 'C': 1}",69.0,,,0,0,0.1693110466003418
+TD_10_10_05,0.1,0.1,0.05,400,40,1500,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 205, 'B': 1, 'C': 1}",69.0,,,0,0,0.16903901100158691
+TD_15_15_10,0.15,0.15,0.1,400,40,1500,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 205, 'B': 1, 'C': 1}",69.0,,,0,0,0.16607379913330078
+TD_20_10_05,0.2,0.1,0.05,400,40,1500,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 205, 'B': 1, 'C': 1}",69.0,,,0,0,0.16648507118225098
+TD_08_12_02,0.08,0.12,0.02,400,40,1500,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 205, 'B': 1, 'C': 1}",69.0,,,0,0,0.1653890609741211

@@ -1,0 +1,371 @@
+name: Guardian v4/v5 Ethical Alignment CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    # Weekly auto-tune: Every Monday at 00:00 UTC (v8)
+    - cron: '0 0 * * 1'
+
+jobs:
+  guardian-validation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install pyyaml numpy pandas scipy scikit-learn
+        
+    - name: Run Guardian v4 validation
+      run: |
+        python3 qc/guardian_v4/guardian_v4.py --validate --report
+        
+    - name: Check Guardian score threshold
+      run: |
+        SCORE=$(python3 -c "import json; print(json.load(open('qc/guardian_v4/guardian_report_v4.json'))['guardian_alignment_score'])")
+        echo "Guardian Alignment Score: $SCORE"
+        if (( $(echo "$SCORE < 90" | bc -l) )); then
+          echo "❌ Guardian score below deployment threshold (90)"
+          exit 1
+        fi
+        echo "✅ Guardian validation passed"
+        
+    - name: Upload Guardian report
+      uses: actions/upload-artifact@v3
+      with:
+        name: guardian-report
+        path: qc/guardian_v4/guardian_report_v4.json
+        
+    - name: Comment PR with Guardian score
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('qc/guardian_v4/guardian_report_v4.json'));
+          const score = report.guardian_alignment_score;
+          const risk = report.risk_assessment.risk_level;
+          const emoji = score >= 90 ? '🟢' : score >= 70 ? '🟡' : '🔴';
+          
+          const body = `## ${emoji} Guardian v4 Ethical Alignment Report
+          
+          **Guardian Score**: ${score.toFixed(1)}/100
+          **Risk Level**: ${risk.toUpperCase()}
+          
+          ### Component Metrics
+          - **Objectivity**: ${report.metrics.objectivity_score.toFixed(2)}
+          - **Transparency**: ${report.metrics.transparency_index_v2.toFixed(2)}
+          - **Language Safety**: ${report.metrics.language_safety_score.toFixed(2)}
+          - **Sentiment**: ${report.metrics.sentiment_neutrality.toFixed(2)}
+          
+          ${score >= 90 ? '✅ Ready for deployment' : '⚠️ Review recommended'}
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: body
+          });
+  
+  guardian-v5-bench:
+    runs-on: ubuntu-latest
+    name: Guardian v5 Stabilizer Tests
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install pyyaml numpy pandas pytest
+        
+    - name: Run determinism tests
+      run: |
+        pytest tests/test_guardian_determinism_v5.py -v
+        
+    - name: Run runtime tests  
+      run: |
+        pytest tests/test_guardian_runtime_v5.py -v
+        
+    - name: Run benchmark (sample)
+      run: |
+        python3 tools/guardian_bench_v5.py --max-docs 20
+        
+    - name: Check variance threshold
+      run: |
+        python3 - <<'PY'
+        import json, sys
+        baseline = json.load(open("qc/guardian_v4/benchmarks/v5_baseline_aggregate.json"))
+        
+        # Check if we're in determinism mode
+        if "reproducibility_pct" in baseline:
+            repro = baseline["reproducibility_pct"]
+            max_var = baseline["max_variance_pct"]
+            
+            print(f"Reproducibility: {repro:.1f}%")
+            print(f"Max variance: {max_var:.3f}%")
+            
+            if repro < 99.0:
+                print(f"❌ Reproducibility {repro:.1f}% < 99%")
+                sys.exit(1)
+            if max_var >= 2.0:
+                print(f"❌ Max variance {max_var:.3f}% ≥ 2%")
+                sys.exit(1)
+        
+        print("✅ v5 stability criteria met")
+        PY
+        
+    - name: Compare with baseline (if exists)
+      continue-on-error: true
+      run: |
+        if [ -f "qc/guardian_v4/benchmarks/v5_baseline_previous.json" ]; then
+          python3 - <<'PY'
+        import json, sys
+        current = json.load(open("qc/guardian_v4/benchmarks/v5_baseline_aggregate.json"))
+        previous = json.load(open("qc/guardian_v4/benchmarks/v5_baseline_previous.json"))
+        
+        curr_pass = current.get("passing_rate", 0)
+        prev_pass = previous.get("passing_rate", 0)
+        delta = abs(curr_pass - prev_pass)
+        
+        print(f"Current passing rate: {curr_pass*100:.1f}%")
+        print(f"Previous passing rate: {prev_pass*100:.1f}%")
+        print(f"Delta: {delta*100:.1f}%")
+        
+        if delta > 0.02:
+            print(f"⚠️  Passing rate changed by {delta*100:.1f}% (threshold: 2%)")
+        PY
+        fi
+        
+    - name: Upload benchmark results
+      uses: actions/upload-artifact@v3
+      with:
+        name: guardian-v5-benchmark
+        path: |
+          qc/guardian_v4/benchmarks/v5_baseline.csv
+          qc/guardian_v4/benchmarks/v5_baseline_aggregate.json
+  
+  guardian-v10-metaaudit:
+    runs-on: ubuntu-latest
+    name: Guardian v10 Meta-Audit
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2  # Need previous commit for comparison
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install pyyaml numpy pandas
+    
+    - name: Check for schema changes
+      id: schema_check
+      run: |
+        # Check if any schema files changed
+        CHANGED_SCHEMAS=$(git diff --name-only HEAD~1 HEAD | grep -E 'config/.*\.yml$' || true)
+        
+        if [ -n "$CHANGED_SCHEMAS" ]; then
+          echo "schemas_changed=true" >> $GITHUB_OUTPUT
+          echo "changed_files=$CHANGED_SCHEMAS" >> $GITHUB_OUTPUT
+          echo "⚠️  Schema files changed:"
+          echo "$CHANGED_SCHEMAS"
+        else
+          echo "schemas_changed=false" >> $GITHUB_OUTPUT
+          echo "✅ No schema changes detected"
+        fi
+    
+    - name: Verify schema changes are logged
+      if: steps.schema_check.outputs.schemas_changed == 'true'
+      run: |
+        python3 - <<'PY'
+        import sys, yaml
+        from pathlib import Path
+        
+        # Check each changed schema has a recent changelog entry
+        changed_schemas = "${{ steps.schema_check.outputs.changed_files }}".split()
+        unverified = []
+        
+        for schema_file in changed_schemas:
+          schema_path = Path(schema_file)
+          if not schema_path.exists():
+            continue
+          
+          try:
+            schema = yaml.safe_load(open(schema_path))
+            changelog = schema.get('changelog', [])
+            
+            if not changelog:
+              unverified.append(schema_file)
+              print(f"❌ {schema_file}: No changelog")
+            else:
+              latest = changelog[0] if isinstance(changelog, list) else changelog
+              print(f"✅ {schema_file}: Changelog present")
+          
+          except Exception as e:
+            unverified.append(schema_file)
+            print(f"❌ {schema_file}: Error reading - {e}")
+        
+        if unverified:
+          print(f"\n❌ UNVERIFIED SCHEMA CHANGES:")
+          for f in unverified:
+            print(f"   • {f}")
+          print("\n⚠️  All schema changes must include changelog entries")
+          sys.exit(1)
+        
+        print("\n✅ All schema changes are logged")
+        PY
+    
+    - name: Run dual-run comparison
+      run: |
+        python3 tools/guardian_dualrun_v10.py --corpus || true
+      continue-on-error: true  # Informational, don't fail build
+    
+    - name: Compute Self-Integrity Score
+      run: |
+        python3 qc/guardian_v4/metrics/self_integrity.py compute
+    
+    - name: Check Self-Integrity threshold
+      run: |
+        python3 - <<'PY'
+        import json, sys
+        from pathlib import Path
+        
+        metadata_path = Path('qc/guardian_v4/config/self_integrity_metadata.json')
+        
+        if not metadata_path.exists():
+          print("⚠️  No self-integrity data yet")
+          sys.exit(0)
+        
+        metadata = json.load(open(metadata_path))
+        history = metadata.get('self_integrity_history', [])
+        
+        if not history:
+          print("⚠️  No self-integrity history yet")
+          sys.exit(0)
+        
+        latest = history[-1]
+        score = latest.get('self_integrity_score', 0)
+        
+        print(f"Self-Integrity Score: {score:.3f}")
+        
+        if score < 0.95:
+          print(f"❌ Below threshold (0.95)")
+          print(f"   Inconsistency rate: {latest['components']['inconsistency_rate']:.3f}")
+          print(f"   Unverified changes: {latest['components']['unverified_changes']}")
+          sys.exit(1)
+        
+        print(f"✅ Meets threshold (≥0.95)")
+        PY
+    
+    - name: Upload self-integrity report
+      uses: actions/upload-artifact@v3
+      with:
+        name: guardian-v10-metaaudit
+        path: |
+          qc/guardian_v4/config/self_integrity_metadata.json
+          qc/guardian_v4/dualrun/*.json
+  
+  guardian-v8-autotune:
+    runs-on: ubuntu-latest
+    name: Guardian v8 Auto-Calibration
+    if: github.event_name == 'schedule'  # Only run on weekly schedule
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install pyyaml numpy pandas
+    
+    - name: Check override history
+      run: |
+        python3 tools/guardian_autotune_v8.py analyze --days 7
+    
+    - name: Generate calibration suggestions
+      id: autotune
+      run: |
+        python3 tools/guardian_autotune_v8.py apply --dry-run > autotune_output.txt
+        cat autotune_output.txt
+    
+    - name: Apply calibration (if sufficient data)
+      run: |
+        python3 tools/guardian_autotune_v8.py apply
+      continue-on-error: true  # Don't fail if insufficient overrides
+    
+    - name: Check drift threshold
+      run: |
+        if [ -f qc/guardian_v4/config/scoring_schema_v8.yml ]; then
+          python3 - <<'PY'
+          import json, yaml
+          
+          # Check if drift is within limits
+          schema = yaml.safe_load(open('qc/guardian_v4/config/scoring_schema_v8.yml'))
+          
+          # Extract drift from changelog
+          changelog = schema.get('changelog', [])
+          if changelog and 'Total drift' in str(changelog[0]):
+            print("✅ Calibration applied, drift within limits")
+          else:
+            print("ℹ️  No calibration applied (insufficient data or no changes)")
+          PY
+        else
+          echo "ℹ️  No v8 schema generated (insufficient overrides)"
+        fi
+    
+    - name: Create pull request with calibration
+      if: success()
+      uses: peter-evans/create-pull-request@v5
+      with:
+        commit-message: "feat: Guardian v8 weekly auto-calibration"
+        title: "Guardian v8: Weekly Auto-Calibration"
+        body: |
+          **Guardian v8 Auto-Calibration**
+          
+          This PR contains the weekly automated calibration of Guardian thresholds based on override history.
+          
+          **Changes:**
+          - Updated scoring_schema_v8.yml with adjusted weights
+          - Adjustments based on recent override patterns
+          - All changes within ±1% drift threshold
+          
+          **Review:**
+          Please review the weight adjustments and approve if acceptable.
+          The changes are designed to reduce manual overrides by 25%.
+        branch: guardian-v8-autotune
+        delete-branch: true
+    
+    - name: Upload calibration results
+      uses: actions/upload-artifact@v3
+      with:
+        name: guardian-v8-calibration
+        path: |
+          qc/guardian_v4/config/scoring_schema_v8.yml
+          autotune_output.txt

@@ -1,0 +1,15 @@
+include: configs/base.yaml
+variant: anneal_v1
+params:
+  eta_base: 0.18
+  eta_bump: 0.22
+  bump_start: 8
+  bump_end: 11
+  sigma_hi: 0.06
+  sigma_lo: 0.03
+  sigma_hold_until: 10
+  q_frac: 0.20
+  curiosity_floor: 0.25
+  wT: 0.4
+  wD: 0.3
+  wV: 0.3

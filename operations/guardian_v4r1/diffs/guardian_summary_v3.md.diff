@@ -1,0 +1,27 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/qc/guardian_summary_v3.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/qc/guardian_summary_v3.md
+@@ -1,4 +1,24 @@
++---
++title: guardian_summary_v3.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Guardian v3.0 Summary
+ 
+ Score = **52.0/100** 
+ Objectivity 0.606 | Sentiment 0.002 | LangSafety 0.972 | Transparency 0.144
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

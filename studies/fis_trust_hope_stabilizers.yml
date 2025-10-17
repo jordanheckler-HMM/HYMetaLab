@@ -1,0 +1,41 @@
+study_id: fis_trust_hope_stabilizers
+title: "FIS \u2014 Trust & Hope Stabilizers"
+adapter: adapters.fis_trust_hope_stabilizers:run_adapter
+seed_policy:
+  seeds:
+  - 11
+  - 17
+integrity:
+  preregistered: true
+  null_test: true
+sweep:
+  epsilon:
+  - 0.0005
+  - 0.001
+  - 0.0015
+  seeds:
+  - 11
+  - 17
+  shock:
+  - 0.5
+metrics:
+- cci
+- hazard
+- survival
+exports:
+  csv:
+  - data/runs_summary.csv
+  figures:
+  - figures/cci_vs_epsilon.png
+report_md: report/fis_trust_hope_stabilizers.md
+openlaws:
+  steps:
+  - run
+  - validate
+  - report
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

@@ -1,0 +1,26 @@
+{
+  "version": "10.0",
+  "initialized_at": "2025-10-14T20:53:57.521699",
+  "schema_hashes": {
+    "scoring_schema_v5.yml": "9bce4d9af350789c07fc952f23af0054cdd6f890007a41f9f74cf60971b48fe0",
+    "scoring_schema_v6.yml": "40509d023af191ffe08e9e32455a61c0208cfa06fce550a1cdd76d3d864891de",
+    "thresholds_v8.yml": "0fcb0ba8e01ca7774e3a70ea3167947c4cd356535747da4b1ff6c1bd979c636d"
+  },
+  "change_log": [],
+  "self_integrity_history": [
+    {
+      "self_integrity_score": 1.0,
+      "status": "EXCELLENT",
+      "components": {
+        "base_integrity": 1.0,
+        "inconsistency_rate": 0.0,
+        "inconsistency_penalty": 0.0,
+        "unverified_changes": 0,
+        "unverified_penalty": 0.0
+      },
+      "passes_threshold": true,
+      "timestamp": "2025-10-14T20:54:03.949740"
+    }
+  ],
+  "unverified_changes": 0
+}

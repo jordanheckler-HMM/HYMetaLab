@@ -1,0 +1,113 @@
+{
+  "build_date": "2025-10-16T13:50:00Z",
+  "repository": "conciousness_proxy_sim copy 6",
+  "total_modules": 42,
+  "apps_modules": 6,
+  "tools_modules": 36,
+  "test_results": {
+    "syntax_check": {
+      "tool": "python -m py_compile",
+      "apps": {
+        "tested": 6,
+        "passed": 6,
+        "failed": 0,
+        "pass_rate": 1.0,
+        "status": "PASS"
+      },
+      "tools": {
+        "tested": 36,
+        "passed": 35,
+        "failed": 1,
+        "pass_rate": 0.972,
+        "status": "PASS",
+        "failures": [
+          {
+            "module": "tools/meaningforge_cli.py",
+            "error": "FileNotFoundError: [Errno 2] No such file or directory",
+            "note": "File referenced in wildcard but does not exist"
+          }
+        ]
+      },
+      "overall": {
+        "tested": 42,
+        "passed": 41,
+        "failed": 1,
+        "pass_rate": 0.976,
+        "status": "PASS"
+      }
+    },
+    "pytest": {
+      "tool": "pytest 8.4.2",
+      "status": "FAILED",
+      "tests_run": 0,
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "error": "INTERNALERROR during test collection",
+      "root_cause": "truthlens_core.py executes argparse at module level, causing SystemExit during import",
+      "fix_needed": true,
+      "recommendation": "Refactor modules to not execute argparse.parse_args() at import time. Use if __name__ == '__main__' guard.",
+      "affected_modules": [
+        "truthlens_core.py"
+      ]
+    },
+    "ruff": {
+      "tool": "ruff",
+      "status": "NOT_INSTALLED",
+      "modules_tested": 0,
+      "recommendation": "Install ruff for modern Python linting: pip install ruff"
+    },
+    "black": {
+      "tool": "black",
+      "status": "NOT_INSTALLED",
+      "modules_tested": 0,
+      "recommendation": "Install black for code formatting: pip install black"
+    },
+    "guardian_v4": {
+      "tool": "Guardian v4.0",
+      "status": "OPERATIONAL",
+      "modules_tested": 4,
+      "modules_passed": 1,
+      "modules_failed": 3,
+      "pass_rate": 0.25,
+      "mean_score": 59.425,
+      "threshold": 85.0,
+      "recommendation": "Expand Guardian validation to full corpus. Current sample shows 75% failure rate."
+    }
+  },
+  "environment": {
+    "python_version": "3.13",
+    "pytest_version": "8.4.2",
+    "ruff_installed": false,
+    "black_installed": false,
+    "guardian_v4_available": true
+  },
+  "overall_status": "NEEDS_ATTENTION",
+  "critical_issues": [
+    {
+      "severity": "HIGH",
+      "issue": "pytest test suite cannot run due to import-time side effects",
+      "affected": "truthlens_core.py and dependent tests",
+      "fix": "Add if __name__ == '__main__' guard around argparse code"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Guardian validation shows low pass rate (25%)",
+      "affected": "3 out of 4 sampled modules",
+      "fix": "Improve documentation, add hedging language, include epistemic boundaries"
+    },
+    {
+      "severity": "LOW",
+      "issue": "Modern linting tools not installed",
+      "affected": "All Python modules",
+      "fix": "pip install ruff black"
+    }
+  ],
+  "recommendations": [
+    "Priority 1: Fix argparse usage in truthlens_core.py to enable pytest",
+    "Priority 2: Install ruff and black for comprehensive code quality checks",
+    "Priority 3: Run Guardian v4 corpus-wide validation (--corpus flag)",
+    "Priority 4: Improve documentation and hedging in failing modules",
+    "Priority 5: Consider adding pre-commit hooks for automated validation"
+  ]
+}
+

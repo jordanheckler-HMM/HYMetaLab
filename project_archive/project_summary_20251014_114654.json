@@ -1,0 +1,10 @@
+[
+  {
+    "file":"\/Users\/jordanheckler\/conciousness_proxy_sim copy 6\/discovery_results\/phase35b_cross_survey_replication_20251014_114632\/data\/runs_summary.csv",
+    "mean_CCI":0.9354996617,
+    "mean_survival":null,
+    "creation_success_frac":null,
+    "validated":true,
+    "reason":"Phase33: \u0394CCI=0.73241, \u0394hazard=-0.18950, 2\/2 metrics met"
+  }
+]

@@ -1,0 +1,64 @@
+study_id: autotheorist_timing_critical_1760529860
+title: 'Critical Window Hypothesis: Pre-Shock vs Post-Shock'
+version: '2.0'
+prereg_date: '2025-10-15'
+preregistered: true
+hypothesis:
+  text: Interventions applied BEFORE shock are 2-3x more effective than post-shock
+    applications
+  rationale: All validated studies used pre-shock setup; post-shock rescue may require
+    different parameters
+  method: temporal_analysis
+  rank: 3
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  agents: 200
+  epochs: 1500
+  noise: 0.05
+  shock:
+    epoch: 1000
+    severity: 0.5
+  analysis_window:
+  - 960
+  - 1040
+sweep:
+  intervention_epoch:
+  - 800
+  - 950
+  - 1000
+  - 1050
+  - 1200
+  epsilon:
+  - 0.0012
+  - 0.0015
+  rescue_strength:
+  - 0.5
+  - 1.0
+  - 1.5
+validation:
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  bootstrap_ci: 1000
+  confidence: moderate
+exports:
+  outdir: discovery_results/autotheorist_timing_critical_1760529860/
+  require_columns:
+  - CCI
+  - hazard
+  - survival_rate
+  - collapse_risk
+metadata:
+  generated_by: auto_theorist_enhanced.py
+  generated_at: '2025-10-15T07:04:20.089201'
+  priority: medium
+  based_on:
+  - fis_ai_safety_toolkit
+  - fis_trust_hope_stabilizers
+adapter: adapters/universal_resilience_adapter.py

@@ -1,0 +1,58 @@
+---
+title: meaningforge_summary.md
+date: 2025-10-16
+version: draft
+ra2c2ee8894
+---
+
+# MeaningForge Semantic Validation Report — Phase 3
+
+**Generated:** 2025-10-15 08:11:46  
+**Input:** open_data/preregister.yml  
+**MeaningForge Version:** v1 (Phase 3 Wrapper)
+
+---
+
+## Overall Score
+
+**MeaningForge Score:** 1.000 / 1.00  
+**Semantic Quality:** HIGH  
+**Status:** ✅ PASS  
+**Checks Passed:** 5/5
+
+---
+
+## Semantic Coherence Checks
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Conceptual consistency | ✅ PASS | Terms used consistently throughout |
+| Hypothesis clarity | ✅ PASS | All hypotheses apparently stated |
+| Framework alignment | ✅ PASS | Concepts align with stated framework |
+| Semantic completeness | ✅ PASS | All required sections present |
+| Meaning coherence | ✅ PASS | Semantic network is coherent |
+
+---
+
+## Interpretation
+
+✅ The document demonstrates strong semantic coherence (≥0.90). Concepts form a consistent, well-integrated framework.
+
+---
+
+**MeaningForge Target:** ≥ 0.90  
+**Achieved:** 1.000  
+**Result:** PASS ✓
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

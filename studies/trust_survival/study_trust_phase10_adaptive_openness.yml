@@ -1,0 +1,83 @@
+study:
+  id: trust_survival_v10_adaptive_openness
+  title: Trust_Survival_Phase10_AdaptiveOpenness
+name: "Trust_Survival_Phase10_AdaptiveOpenness"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 10 couples macro-level openness (ε) with trust dynamics.
+  Openness regulates: (a) cross-cluster exchange of trust heuristics,
+  (b) information inflow that modulates trust variance, and
+  (c) permeability to shocks (mildly). Tests for a synergy bifurcation where
+  high ε × healthy trust variance lifts CCI & Survival above validation bars.
+objectives:
+  - Identify ε* that maximizes survival & CCI under transition shocks.
+  - Show that ε amplifies productive exploration (trust variance) without runaway hazard.
+design:
+  seeds: 5
+  epochs_cap: 500
+  agents: 180
+  clusters: 6
+  factors:
+    mode: ["META","CULTURAL_FB","ADAPTIVE_OPEN"]
+    openness_eps: [0.10, 0.30, 0.50, 0.70]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+openness:
+  exchange_rate_fn: "0.05 + 0.4*ε"
+  info_inflow_fn: "1.0 + 0.8*ε"
+  shock_permeability_fn: "shock*(1.0 + 0.20*ε)"
+  exchange_period: 25
+  anneal_after_epoch: 400
+  anneal_gamma: 0.9
+traits:
+  lr_trust_init: 0.05
+  momentum_init: 0.10
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - exchange_flow_per_epoch
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 240
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "At ε ∈ {0.5,0.7}, ADAPTIVE_OPEN achieves (CCI ≥ 0.70 AND Survival ≥ 0.80) in ≥1 cell"
+    - "GLM: survival_rate ~ mode*openness_eps + goal_inequality shows positive mode×ε at g≤0.5 (p<0.05)"
+    - "Hazard does NOT increase more than +5% vs META at same g, shock (95% CI)"
+    - "trust_variance increases with ε in ADAPTIVE_OPEN (ordered trend p<0.05) while collapse_risk does not rise"
+exports:
+  data_dir: discovery_results/trust_survival_v10/data
+  figs_dir: discovery_results/trust_survival_v10/figs
+  report_dir: discovery_results/trust_survival_v10/report
+  bundle_zip: discovery_results/trust_survival_v10/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_adaptive_openness.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 10: macro openness ε co-evolves with trust variance + heuristic exchange."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 500
+    seeds: [1001, 1002, 1003, 1004, 1005]
+    agents: 180
+    clusters: 6
+    mode: ["META","CULTURAL_FB","ADAPTIVE_OPEN"]
+    openness_eps: [0.10, 0.30, 0.50, 0.70]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_adaptive_openness_wrapper.py:run"

@@ -1,0 +1,73 @@
+study_id: phase23_creator_emergence
+title: "Origin-of-Universe Sweep: Parent CCI \xD7 Openness \u03B5 \xD7 Temporal Feedback\
+  \ \u03BB\u2605"
+adapter: adapters/creator_emergence_adapter.py:run_study
+seed_policy:
+  seeds:
+  - 42
+  - 43
+  - 44
+integrity:
+  preregistered: true
+  code_freeze_hash: null
+  null_test: true
+  blinded_analysis: true
+sweep:
+  parent_cci:
+  - 0.7
+  - 0.8
+  - 0.9
+  - 0.99
+  epsilon:
+  - 0.002
+  - 0.004
+  - 0.008
+  lambda_star:
+  - 0.85
+  - 0.9
+  - 0.95
+  agents:
+  - 100
+  - 200
+  horizon:
+  - 3000
+constants:
+  shock_profile:
+    kind: none
+  export_paths:
+    base: ./discovery_results/phase23_creator_emergence
+thresholds:
+  creation_success:
+    cci_min: 0.6
+    hazard_max: 0.2
+metrics:
+- creation_success
+- coherence_inheritance_ratio
+- entropy_transfer_efficiency
+- survival_rate_final
+- hazard_stability_mean
+- cci_stability_mean
+exports:
+  csv:
+  - data/runs_summary.csv
+  - data/trajectories_long.csv
+  json:
+  - data/summary_bootstrap.json
+  figures:
+  - figures/cci_long.png
+  - figures/hazard_long.png
+  - figures/stability_window.png
+  - figures/creation_success_grid.png
+  - figures/Inheritance_vs_ParentCCI_epsilon.png
+  report_md: report/phase23_results.md
+acceptance_criteria:
+  validated_fraction_min: 0.6
+  inheritance_positive_slope: true
+  epsilon_parsimony_max: 0.008
+openlaws:
+  steps:
+  - run
+  - validate
+  - report
+data_source: SIMULATION_ONLY
+depends_on: []

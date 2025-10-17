@@ -1,0 +1,24 @@
+# OpenLaws Protocol — Ethics & QC
+
+All labs preregister thresholds (ΔCCI≥0.03, Δhazard≤−0.01) and include humility statements.
+
+## Core Principles
+
+1. **Preregistration**: All study parameters, hypotheses, and validation thresholds must be declared before data collection
+2. **Reproducibility**: Deterministic seeds and version-controlled configuration files
+3. **Epistemic Humility**: Use language that suggests, supports, or indicates rather than proves or confirms
+4. **Integrity**: SHA256 hashing of all outputs with manifest tracking
+
+## Validation Thresholds
+
+- ΔCCI ≥ 0.03 (minimum improvement in Collective Consciousness Index)
+- Δhazard ≤ -0.01 (maximum reduction in hazard/risk)
+- OpenLawsScore ≥ 0.75 (composite quality metric)
+
+## Classification Tags
+
+- **VALIDATED**: Meets all thresholds with bootstrap CI support
+- **PARTIAL**: Meets some thresholds; requires additional investigation
+- **UNDER_REVIEW**: Below thresholds; hypothesis-generation phase
+- **HYPOTHESIS-GEN**: Exploratory results; not yet ready for claims
+

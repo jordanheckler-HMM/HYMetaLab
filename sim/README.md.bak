@@ -1,0 +1,23 @@
+Sim package
+===========
+
+Utilities for writing/validating simulation outputs and a tiny deterministic smoke-run.
+
+Quick start
+-----------
+
+Run the smoke-run (no external data required):
+
+```bash
+python3 smoke_run.py
+```
+
+This creates `outputs/smoke_<timestamp>/` with `run_manifest.json` and `decisions.jsonl` and validates the JSONL file against the schema in `schema/`.
+
+Analysis
+--------
+Use `examples/quick_analysis.py` to plot average reported confidence from a run:
+
+```bash
+python3 examples/quick_analysis.py outputs/smoke_YYYYMMDD_HHMMSS
+```

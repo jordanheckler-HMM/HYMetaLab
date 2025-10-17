@@ -1,0 +1,18 @@
+study_id: openlife_phase43_vitality_dynamics
+version: 1.0
+seeds: [11, 17, 23, 29]
+constants:
+  epsilon: [0.0005, 0.0010, 0.0015]
+  rho: [0.0828, 0.085, 0.0875]
+  vitality_coupling: [0.3, 0.5, 0.7, 0.9]
+  life_emergence_threshold: [0.05, 0.10, 0.15]
+protocols: [VITALITY_FLUX, EMERGENCE_THRESHOLD, LIFE_CONSCIOUSNESS_COUPLING]
+validation: {dcci_min: 0.03, dhazard_max: -0.01}
+exports: [runs_csv, summary_json, figures]
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: "Pilot studies on vitality-consciousness coupling (Open Family framework)"
+  source: "open_family/open_core/openlaws_protocol.md"
+  version: "1.0.0"
+depends_on: []
+

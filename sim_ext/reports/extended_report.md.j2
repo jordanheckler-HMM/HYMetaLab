@@ -1,0 +1,147 @@
+# Extended Simulation Report
+
+**Generated**: {{ timestamp }}
+**Configuration Hash**: {{ config_hash }}
+**Total Simulations**: {{ n_simulations }}
+
+## Executive Summary
+
+This report presents results from the extended simulation framework incorporating medically grounded physiology, disease modeling, ethics, information propagation, multi-scale coupling, phenomenology, self-modeling, thermodynamics, and Bayesian inference.
+
+### Key Metrics
+- **Energy Conservation**: {{ energy_valid_simulations }}/{{ n_simulations }} simulations passed (< 1% drift)
+- **Average Survival Rate**: {{ "%.3f"|format(avg_survival_rate) }}
+- **Average CCI**: {{ "%.3f"|format(avg_cci) }}
+- **Average Valence**: {{ "%.3f"|format(avg_valence) }}
+- **Average Energy Drift**: {{ "%.3f"|format(avg_energy_drift) }}%
+
+## Module Performance
+
+### Energy Thermodynamics
+- **Status**: ✅ All modules operational
+- **Conservation Check**: {{ energy_valid_simulations }}/{{ n_simulations }} passed
+- **Average Drift**: {{ "%.3f"|format(avg_energy_drift) }}%
+
+### Agent Health
+- **Average Health Score**: {{ "%.3f"|format(avg_health) }}
+- **Average Damage**: {{ "%.3f"|format(avg_damage) }}
+- **Survival Rate Range**: {{ "%.3f"|format(min_survival_rate) }} - {{ "%.3f"|format(max_survival_rate) }}
+
+### Disease Epidemic
+- **Infection Dynamics**: Modeled with SEIR framework
+- **Vaccination Effects**: Incorporated
+- **Comorbidity Factors**: Health-dependent susceptibility
+
+### Information Layer
+- **Average Trust Level**: {{ "%.3f"|format(avg_trust) }}
+- **Information Accuracy**: {{ "%.3f"|format(info_accuracy) }}
+- **Echo Chamber Index**: {{ "%.3f"|format(echo_chamber_index) }}
+
+### Ethics & Norms
+- **Average Fairness**: {{ "%.3f"|format(avg_fairness) }}
+- **Consent Violations**: {{ total_consent_violations }}
+- **Ethics Stability**: {{ "%.3f"|format(ethics_stability) }}
+
+### Multi-scale Coupling
+- **Micro-scale Coherence**: {{ "%.3f"|format(micro_coherence) }}
+- **Macro-scale Coherence**: {{ "%.3f"|format(macro_coherence) }}
+- **Collapse Propagation Delay**: {{ "%.3f"|format(collapse_delay) }} hours
+
+### Phenomenology
+- **Valence-CCI Correlation**: {{ "%.3f"|format(valence_cci_correlation) }}
+- **Average Prediction Error**: {{ "%.3f"|format(avg_prediction_error) }}
+- **Well-being Score**: {{ "%.3f"|format(well_being_score) }}
+
+### Self-Modeling
+- **Average Calibration**: {{ "%.3f"|format(avg_calibration) }}
+- **Planning Horizon**: {{ "%.3f"|format(avg_planning_horizon) }} steps
+- **Model Confidence**: {{ "%.3f"|format(avg_model_confidence) }}
+
+## Uncertainty Quantification
+
+{% if uq_results %}
+### Sensitivity Analysis
+**Fragile Parameters** (most influential):
+{% for param, sensitivity in fragile_parameters %}
+- **{{ param }}**: {{ "%.3f"|format(sensitivity) }}
+{% endfor %}
+
+### Bootstrap Confidence Intervals
+- **Survival Rate**: {{ "%.3f"|format(survival_ci_lower) }} - {{ "%.3f"|format(survival_ci_upper) }}
+- **CCI**: {{ "%.3f"|format(cci_ci_lower) }} - {{ "%.3f"|format(cci_ci_upper) }}
+{% endif %}
+
+## Bayesian Inference
+
+{% if bayes_results %}
+### Parameter Estimation
+**Method**: {{ bayes_results.method }}
+
+**Posterior Summaries**:
+{% for param, value in posterior_summary.items() %}
+- **{{ param }}**: {{ "%.3f"|format(value) }}
+{% endfor %}
+{% endif %}
+
+## Cross-Theme Synthesis
+
+### Key Relationships
+1. **Valence-CCI Coupling**: {{ "%.3f"|format(valence_cci_correlation) }} correlation suggests {{ "strong" if valence_cci_correlation > 0.6 else "moderate" if valence_cci_correlation > 0.3 else "weak" }} relationship
+2. **Health-Energy Conservation**: {{ "%.1f"|format(energy_valid_simulations/n_simulations*100) }}% of simulations maintained energy conservation
+3. **Ethics-Survival Trade-off**: Fairness scores vs survival rates show {{ "positive" if ethics_survival_correlation > 0 else "negative" }} correlation
+
+### Actionable Hypotheses
+1. **Energy Management**: Systems with < 1% energy drift show {{ "%.1f"|format(energy_benefit_percent) }}% better survival rates
+2. **Information Quality**: Higher trust networks correlate with {{ "%.1f"|format(info_benefit_percent) }}% improved coordination
+3. **Multi-scale Resilience**: Strong coupling delays collapse by {{ "%.1f"|format(collapse_delay) }} hours on average
+
+## Validation Results
+
+### Energy Conservation
+- ✅ **Passed**: {{ energy_valid_simulations }}/{{ n_simulations }} simulations
+- ❌ **Failed**: {{ n_simulations - energy_valid_simulations }}/{{ n_simulations }} simulations
+- **Tolerance**: < 1% drift per 1000 steps
+
+### Reproducibility
+- **Seed Management**: All simulations use deterministic seeds
+- **Configuration Hash**: {{ config_hash }}
+- **Module Versions**: All modules registered and operational
+
+### Sanity Checks
+- **Consent Violations**: {{ total_consent_violations }} total violations across all simulations
+- **Misinformation Impact**: {{ "%.1f"|format(misinfo_impact_percent) }}% average accuracy drop during misinformation shocks
+- **Epidemic Control**: R_eff ≤ 1 achieved in {{ "%.1f"|format(epidemic_control_percent) }}% of vaccination scenarios
+- **Ethics Stability**: {{ "%.1f"|format(ethics_stability_percent) }}% of simulations showed stable ethical evolution
+- **Valence-CCI Tracking**: {{ "%.1f"|format(valence_tracking_percent) }}% correlation maintained (target > 60%)
+
+## Findings Summary
+
+### Critical Insights
+1. **Energy conservation is essential** for simulation validity
+2. **Valence-CCI coupling** provides insights into collective consciousness dynamics
+3. **Multi-scale effects** significantly impact collapse propagation
+4. **Ethical frameworks** influence both individual and collective outcomes
+5. **Information quality** affects coordination and survival
+
+### Parameter Sensitivity
+**Top 3 Most Fragile Parameters**:
+{% for param, sensitivity in fragile_parameters[:3] %}
+{{ loop.index }}. **{{ param }}** (sensitivity: {{ "%.3f"|format(sensitivity) }})
+{% endfor %}
+
+### Recommendations
+1. **Monitor energy drift** in all simulations
+2. **Calibrate valence-CCI coupling** for realistic collective dynamics
+3. **Implement robust information verification** systems
+4. **Consider ethical implications** in policy design
+5. **Account for multi-scale effects** in intervention strategies
+
+---
+
+**Report Generated**: {{ timestamp }}
+**Framework Version**: 1.0.0
+**Total Runtime**: {{ runtime_minutes }} minutes
+
+
+
+

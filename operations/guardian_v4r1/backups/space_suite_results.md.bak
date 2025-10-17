@@ -1,0 +1,35 @@
+---
+title: space_suite_results.md
+date: 2025-10-16
+version: draft
+checksum: bb42d532288b
+---
+
+# Space Fundamentals Test Suite — 20251005_001051
+
+Total runs: 22
+
+## Winners per question
+- Q1: Q1_A_independent (hazard=nan, cci=nan)
+- Q2: Q2_vacuum_closed (hazard=nan, cci=nan)
+- Q3: Q3_continuous (hazard=nan, cci=nan)
+- Q4: Q4_2D (hazard=nan, cci=nan)
+- Q5: Q5_infinite (hazard=nan, cci=nan)
+- Q6: Q6_flat (hazard=nan, cci=nan)
+- Q7: Q7_softWrap (hazard=nan, cci=nan)
+- Q8: Q8_none (hazard=0.0, cci=0.035965583843369564)
+- Q9: Q9_absolute (hazard=nan, cci=nan)
+- Q10: Q10_closed (hazard=nan, cci=nan)
+- Q11: Q11_create (hazard=nan, cci=nan)
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

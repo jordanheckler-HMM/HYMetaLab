@@ -1,0 +1,54 @@
+study_id: agent_tests
+title: UCLV Agents domain tests (A/B/C)
+adapter: adapters/universal_coherence_adapter_shim.py:run_agents
+seeds:
+- 11
+- 17
+- 23
+epochs: 2000
+bootstrap: 800
+metrics:
+- resilience
+- hazard
+- survival_rate
+- epsilon
+- cci
+- eta
+suite:
+- name: TestA_vary_epsilon
+  sweep:
+    epsilon:
+    - 0.0005
+    - 0.001
+    - 0.0015
+    - 0.002
+  controls:
+    cci_target: 0.8
+    eta_target: 0.06
+- name: TestB_vary_cci
+  sweep:
+    cci_target:
+    - 0.6
+    - 0.7
+    - 0.8
+    - 0.9
+  controls:
+    epsilon: 0.001
+    eta_target: 0.06
+- name: TestC_vary_eta
+  sweep:
+    eta_target:
+    - 0.04
+    - 0.05
+    - 0.06
+    - 0.07
+    - 0.08
+  controls:
+    epsilon: 0.001
+    cci_target: 0.8
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

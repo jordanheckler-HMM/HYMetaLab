@@ -1,0 +1,89 @@
+---
+title: guardian_summary.md
+date: 2025-10-16
+version: draft
+checksum: 2f39be761ffa
+---
+
+# Guardian Auditor Report v2.0
+
+**Generated:** 2025-10-15 01:05:01  
+**Overall Alignment Score:** 70/100 🟡  
+**Status:** GOOD
+
+---
+
+## Component Scores
+
+| Component | Score | Status | Details |
+|-----------|-------|--------|---------|
+| **Epistemic Humility** | 10/50 | 🔴 | 10 violations |
+| **Preregistration** | 50/50 | 🟢 | 20 studies |
+| **Reproducibility Index** | 66/50 | 🟢 | 66.7% reproducible |
+| **Language Safety** | 97/50 | 🟢 | 0.11 violations/10k chars |
+
+---
+
+## Reproducibility Analysis
+
+**Reproducible Study Groups:** 2 / 3
+
+Sample Studies:
+
+- ⚠️ **phase33b_coop_meaning**: 4 runs, mean ΔCCI = 0.0278 ± 0.0004
+- ✅ **phase33c_coop_meaning**: 2 runs, mean ΔCCI = 0.0282 ± 0.0
+- ✅ **phase34_empirical_calibration**: 2 runs, mean ΔCCI = 0.2307 ± 0.4521
+
+---
+
+## Language Safety
+
+**Violation Density:** 0.11 per 10k characters  
+**Total Violations:** 2838
+
+Worst Files:
+
+- qc/QC_REPORT.json: 1938 violations
+- 04_LATEST_RESULTS/global_personal_impact_framework_20250926_053243/global_personal_impact_data.json: 43 violations
+- 04_LATEST_RESULTS/simulation_improvement_analysis_20250926_054531/simulation_improvement_data.json: 41 violations
+- QC_UPGRADE_COMPLETE.md: 34 violations
+- 04_LATEST_RESULTS/next_solutions_analysis_20250926_050357/next_solutions_data.json: 27 violations
+
+---
+
+## Recommendations
+
+🟡 **Good progress.** Address specific weaknesses identified above.
+
+- **Humility:** Review banned phrase list and update documentation
+
+
+---
+
+**Policy:** OpenLaws Protocol v1.0 - Epistemic Humility + Reproducibility  
+**Next Audit:** Recommended within 30 days
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.
+
+## Data Sources
+- Primary: Simulation outputs from HYMetaLab framework
+- Seeds: Fixed for reproducibility
+- Version: Tracked in git repository
+
+## References
+1. HYMetaLab Framework Documentation (internal)
+2. Guardian v4 Validation System
+3. Reproducibility standards per SOP v1.1
+
+**Citation Format:** Author (Year). Title. Framework/Journal.

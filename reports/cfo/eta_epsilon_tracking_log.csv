@@ -1,0 +1,2 @@
+timestamp,phase_id,epsilon_band_min,epsilon_band_max,rho_star_mean,rho_star_sigma,lambda_star,eta_mean,eta_trend,guardian_score,truthlens_delta,meaningforge_resonance,sha256_hash,validation_spend_usd,cpvp,notes
+2025-10-15T21:46:52Z,phase4_open_data,0.0005,0.0015,0.0828,0.017,0.9,0.0,stable,87.0,-0.02,1.0,f1d90d132061fe64,,,"CRA terminology v1, Guardian pre-commit active"

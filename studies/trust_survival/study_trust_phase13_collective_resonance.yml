@@ -1,0 +1,97 @@
+study:
+  id: trust_survival_v13_collective_resonance
+  title: Trust_Survival_Phase13_CollectiveResonance
+name: "Trust_Survival_Phase13_CollectiveResonance"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 13 introduces network-coupled resonance: clusters run resonant openness ε(t)
+  with controlled phase lags, and share phase-lock signals across edges with coupling κ.
+  Goal: coherence wave-fronts that raise CCI and Survival system-wide.
+objectives:
+  - Show inter-cluster synchronization improves recovery and reduces collapse episodes.
+  - Achieve ≥1 validated cell: CCI ≥ 0.72 and Survival ≥ 0.80.
+design:
+  seeds: 5
+  epochs_cap: 800
+  agents: 240
+  clusters: 8
+  factors:
+    mode: ["META","CRN"]
+    network_topology: ["ring","smallworld","fully_connected"]
+    coupling_kappa: [0.10, 0.25, 0.40]
+    phase_lag_phi: [0.00, 0.50, 1.00]
+    exchange_prob: [0.05, 0.12]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+resonance:
+  amplitude: 0.18
+  period_T: 120
+  eps_min: 0.05
+  eps_max: 0.85
+phase_lock:
+  cci_lock_threshold: 0.68
+  hazard_unlock_threshold: 0.52
+  ema_window: 40
+  sync_gain: 1.35
+  desync_divergence: 0.75
+  lr_floor: 0.01
+  lr_ceiling: 0.15
+network:
+  rewire_p: 0.20
+  broadcast_period: 10
+  guard_hazard_uplift: 0.05
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - episodes_collapse_per_1k
+  - trust_variance
+  - openness_eps_mean
+  - openness_eps_var
+  - network_sync_index
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 320
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "At least one CRN cell achieves (CCI ≥ 0.72 AND Survival ≥ 0.80)"
+    - "GLM: survival_rate ~ mode*network_topology*coupling_kappa shows positive mode×κ effect (p<0.05)"
+    - "episodes_collapse_per_1k decreases ≥ 25% in CRN vs META at g=0.8"
+    - "network_sync_index positively correlates with CCI (ρ>0, p<0.05) and hazard does not increase (>+5% CI)"
+exports:
+  data_dir: discovery_results/trust_survival_v13/data
+  figs_dir: discovery_results/trust_survival_v13/figs
+  report_dir: discovery_results/trust_survival_v13/report
+  bundle_zip: discovery_results/trust_survival_v13/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_collective_resonance.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 13: inter-cluster resonance + signal sharing (κ, φ, p_exch)."
+
+# prereg.constants for automation expansion
+prereg:
+  constants:
+    epochs: 800
+    seeds: [1301,1302,1303,1304,1305]
+    agents: 240
+    clusters: 8
+    mode: ["META","CRN"]
+    network_topology: ["ring","smallworld","fully_connected"]
+    coupling_kappa: [0.10, 0.25, 0.40]
+    phase_lag_phi: [0.00, 0.50, 1.00]
+    exchange_prob: [0.05, 0.12]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_collective_resonance_wrapper.py:run"

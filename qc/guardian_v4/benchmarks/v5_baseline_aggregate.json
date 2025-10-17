@@ -1,0 +1,13 @@
+{
+  "total_documents": 10,
+  "successful_validations": 10,
+  "failed_validations": 0,
+  "mean_score": 65.5842213017227,
+  "stdev_score": 6.610982211011791,
+  "min_score": 56.81521739130435,
+  "max_score": 76.8623188405797,
+  "median_runtime_ms": 1.2834579683840275,
+  "mean_runtime_ms": 1.388616708572954,
+  "max_runtime_ms": 3.0242500361055136,
+  "passing_rate": 0.2
+}

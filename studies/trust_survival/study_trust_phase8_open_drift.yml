@@ -1,0 +1,96 @@
+study:
+  id: trust_survival_v8_open_drift
+  title: Trust_Survival_Phase8_OpenTrustDrift
+name: "Trust_Survival_Phase8_OpenTrustDrift"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 8 introduces generations, heritable trust adaptation parameters,
+  small mutations, and light open-system agent flow. Compares STATIC /
+  ADAPTIVE / META (Phase 7) against CULTURAL (heritable) trust.
+objectives:
+  - Test if cultural inheritance of trust surpasses the plateau.
+  - Measure long-horizon survival and collapse episodes under open flow.
+design:
+  seeds: 5
+  epochs_cap: 800                 # longer to see generational effects
+  agents: 180
+  generations:
+    enabled: true
+    period: 80                    # epochs between generations
+    survival_pressure: 0.30       # top-30% fitness more likely to reproduce
+    offspring_per_parent: 1
+    cull_fraction: 0.30           # bottom-30% replaced each generation
+    fitness: "0.5*CCI_norm + 0.5*(1-hazard_norm)"
+  open_flow:
+    enabled: true
+    influx_rate: 0.05             # fraction of new agents each generation
+    efflux_rate: 0.05             # fraction removed (churn)
+    influx_trust_init: "N(μ=0.60, σ=0.10)"  # initial τ0 of newcomers
+  factors:
+    mode: ["STATIC","ADAPTIVE","META","CULTURAL"]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]        # transition band
+  cultural_trust:
+    # heritable parameters for trust learning (only used when mode="CULTURAL")
+    lr_trust_init: 0.05
+    momentum_init: 0.10
+    heritability: 0.60            # parent→child weight for (lr, m, τ0)
+    mutation:
+      lr_trust_sigma: 0.02
+      momentum_sigma: 0.05
+      tau0_sigma: 0.05
+    bounds:
+      tau0: [0.10, 0.95]
+      lr_trust: [0.00, 0.20]
+      momentum: [0.00, 0.90]
+controls:
+  base_coord: 0.50
+  base_noise: 0.10
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - episodes_collapse_per_1k     # count collapses normalized by 1000 epochs
+  - gen_trust_entropy            # diversity of trust traits per generation
+  - gen_mean_tau                 # mean inherited τ each generation
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 300
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "CULTURAL vs META at g=0.50: survival uplift ≥ +0.05 (abs) with 95% CI excluding 0"
+    - "Any CULTURAL cell reaches (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "episodes_collapse_per_1k is ≥ 20% lower in CULTURAL vs META at g=0.80"
+    - "gen_trust_entropy decreases over time while survival increases (Spearman ρ<0, p<0.05)"
+exports:
+  data_dir: discovery_results/trust_survival_v8/data
+  figs_dir: discovery_results/trust_survival_v8/figs
+  report_dir: discovery_results/trust_survival_v8/report
+  bundle_zip: discovery_results/trust_survival_v8/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_open_drift.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 8 adds heritability, mutation, and open-system flow to trust."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 800
+    seeds: [801, 802, 803, 804, 805]
+    agents: 180
+    mode: ["STATIC","ADAPTIVE","META","CULTURAL"]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_open_drift_wrapper.py:run"

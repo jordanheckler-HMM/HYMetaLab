@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/jordanheckler/conciousness_proxy_sim copy 6/discovery_results/agent_tests_20251011_223444/data/runs_summary.csv",
+    "mean_CCI": null,
+    "mean_survival": 0.0,
+    "creation_success_frac": null,
+    "validated": false,
+    "reason": "no criteria matched",
+    "validation_status": "UNDER REVIEW"
+  }
+]

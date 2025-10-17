@@ -1,0 +1,24 @@
+{
+  "file": "discovery_results/mc_phase5_revalidation_20251008_060339/data/runs_summary.csv",
+  "mean_CCI": 0.7874,
+  "mean_survival": 0.9677,
+  "mean_collapse": 0.6051,
+  "mean_hazard": 0.2659,
+  "raw": {
+    "file": "discovery_results/mc_phase5_revalidation_20251008_060339/data/runs_summary.csv",
+    "category": "validated",
+    "mean_CCI": 0.7874,
+    "mean_survival": 0.9677,
+    "mean_collapse": 0.6051,
+    "mean_hazard": 0.2659,
+    "cci_ci_present": true,
+    "survival_ci_present": true,
+    "preregistered_flag": true,
+    "detected_columns": {
+      "CCI": "CCI",
+      "survival_rate": "survival_rate",
+      "collapse_risk": "collapse_risk",
+      "hazard": "hazard"
+    }
+  }
+}

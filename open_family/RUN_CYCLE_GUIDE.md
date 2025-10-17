@@ -1,0 +1,503 @@
+---
+title: RUN_CYCLE_GUIDE.md
+date: 2025-10-16
+version: draft
+checksum: 2f4eec71519f
+---
+
+# 🔄 Unified Run Cycle — Open Family Labs
+
+**Version:** v2.0 (Enhanced with QC Stack)  
+**Date:** October 14, 2025  
+**Status:** Production Ready
+
+---
+
+## 🎯 Quick Reference
+
+### Standard Run Cycle (Per Lab)
+
+```bash
+# Activate environment
+source .venv/bin/activate
+
+# Run → Validate → Report
+python openlaws_automation.py run --lab openlight_lab
+python openlaws_automation.py validate --lab openlight_lab
+python openlaws_automation.py report --lab openlight_lab
+```
+
+### All Labs Sequential Execution
+
+```bash
+for LAB in openlight_lab opentime_lab openmind_lab; do
+    echo "=== Processing $LAB ==="
+    python openlaws_automation.py run --lab $LAB
+    python openlaws_automation.py validate --lab $LAB
+    python openlaws_automation.py report --lab $LAB
+done
+```
+
+---
+
+## 📋 Pre-Flight Checklist
+
+Before executing any lab run:
+
+1. **Verify Installation**
+   ```bash
+   python3 open_family/verify_installation.py
+   ```
+   Expected: ✅ All 7/7 tests passed
+
+2. **Check Virtual Environment**
+   ```bash
+   source .venv/bin/activate
+   pip list | grep -E "(pandas|numpy|pyyaml|pydantic)"
+   ```
+   Expected: All dependencies present
+
+3. **Validate Study Configuration**
+   ```bash
+   python -c "import yaml; print(yaml.safe_load(open('open_family/openlight_lab/studies/openlight_phase36.yml')))"
+   ```
+   Expected: Valid YAML output
+
+4. **Review QC Log**
+   ```bash
+   cat qc/QC_MASTER_LOG.md
+   ```
+   Expected: No unresolved integrity violations
+
+---
+
+## 🔬 Lab-Specific Run Cycles
+
+### OpenLight Lab (Phase 36)
+
+**Study:** Informational Speed of Light  
+**File:** `open_family/openlight_lab/studies/openlight_phase36.yml`
+
+```bash
+# Full cycle
+python openlaws_automation.py run --lab openlight_lab --seeds 11,17,23,29
+python openlaws_automation.py validate --lab openlight_lab --thresholds "dcci_min:0.03,dhazard_max:-0.01"
+python openlaws_automation.py report --lab openlight_lab --output open_family/results/openlight_phase36_report.md
+
+# Expected outputs
+# - open_family/results/openlight_phase36_runs.csv (with SHA256)
+# - open_family/results/openlight_phase36_summary.json
+# - open_family/results/openlight_phase36_report.md
+# - open_family/results/figures/openlight_*.png
+```
+
+**Key Metrics:**
+- ΔCCI vs c_eff_ratio
+- Energy-information coupling (ε)
+- Critical density transitions (ρ)
+
+---
+
+### OpenTime Lab (Phase 39)
+
+**Study:** Temporal Feedback Loops  
+**File:** `open_family/opentime_lab/studies/opentime_phase39.yml`
+
+```bash
+# Full cycle
+python openlaws_automation.py run --lab opentime_lab --seeds 11,17,23,29
+python openlaws_automation.py validate --lab opentime_lab --thresholds "tsi_improve_min:0.20"
+python openlaws_automation.py report --lab opentime_lab --output open_family/results/opentime_phase39_report.md
+
+# Expected outputs
+# - open_family/results/opentime_phase39_runs.csv (with SHA256)
+# - open_family/results/opentime_phase39_summary.json
+# - open_family/results/opentime_phase39_report.md
+# - open_family/results/figures/opentime_*.png
+```
+
+**Key Metrics:**
+- Temporal Stability Index (TSI) improvement
+- Recovery half-life by λ parameter
+- Time variance reduction
+
+---
+
+### OpenMind Lab (Phase 42)
+
+**Study:** Alignment Fields  
+**File:** `open_family/openmind_lab/studies/openmind_phase42.yml`
+
+```bash
+# Full cycle
+python openlaws_automation.py run --lab openmind_lab --seeds 11,17,23,29
+python openlaws_automation.py validate --lab openmind_lab --thresholds "psi_score_min:0.03,dcci_min:0.03,dhazard_max:-0.01"
+python openlaws_automation.py report --lab openmind_lab --output open_family/results/openmind_phase42_report.md
+
+# Expected outputs
+# - open_family/results/openmind_phase42_runs.csv (with SHA256)
+# - open_family/results/openmind_phase42_summary.json
+# - open_family/results/openmind_phase42_report.md
+# - open_family/results/figures/openmind_*.png
+```
+
+**Key Metrics:**
+- ψ-score (alignment strength)
+- ΔCCI (consciousness improvement)
+- Empathy-consciousness coupling
+
+---
+
+## 🔄 Complete Workflow Stages
+
+### Stage 1: Initialization
+
+**Purpose:** Verify lab is ready for execution
+
+```bash
+python openlaws_automation.py init --lab openlight_lab
+```
+
+**Checks:**
+- YAML configuration valid
+- Adapter interface complete (run/validate/report)
+- Output directories exist
+- Previous runs archived
+
+**Expected Output:**
+```
+✅ Lab: openlight_lab
+✅ Study: openlight_phase36_informational_speed
+✅ Adapter: openlight_informational_speed.py
+✅ Configuration: Valid
+✅ Output directory: open_family/results/
+Status: READY FOR EXECUTION
+```
+
+---
+
+### Stage 2: Execution
+
+**Purpose:** Run the study with preregistered parameters
+
+```bash
+python openlaws_automation.py run --lab openlight_lab
+```
+
+**Process:**
+1. Load study YAML configuration
+2. Initialize adapter with config
+3. Execute adapter.run(config) with deterministic seeds
+4. Save raw results to CSV
+
+**Expected Output:**
+```
+Running: openlight_phase36_informational_speed
+Seeds: [11, 17, 23, 29]
+Parameters: epsilon=[0.0005,0.0010,0.0015], rho=[0.0828,0.085,0.0875], c_eff_ratio=[0.25,0.5,1.0,1.5,2.0]
+Progress: [============================] 100%
+Results saved: open_family/results/openlight_phase36_runs.csv
+SHA256: a3f8b2c1d4e5f6789abcdef...
+```
+
+**Logs:**
+- Execution log → `open_family/logs/openlight_phase36_[timestamp].log`
+- Error log → `open_family/logs/openlight_phase36_errors.log` (if any)
+
+---
+
+### Stage 3: Validation
+
+**Purpose:** Classify results against OpenLaws thresholds
+
+```bash
+python openlaws_automation.py validate --lab openlight_lab
+```
+
+**Process:**
+1. Load results CSV
+2. Apply validation.classify(df)
+3. Calculate bootstrap confidence intervals (1000 iterations)
+4. Assign classification tag
+5. Update QC master log
+
+**Expected Output:**
+```
+Validating: openlight_phase36_informational_speed
+Results: open_family/results/openlight_phase36_runs.csv
+
+Metrics:
+  ΔCCI: 0.0450 ± 0.0082 [0.032, 0.061] (threshold: ≥0.03) ✅
+  Δhazard: -0.0213 ± 0.0047 [-0.029, -0.015] (threshold: ≤-0.01) ✅
+  OpenLawsScore: 0.82 (threshold: ≥0.75) ✅
+
+Classification: VALIDATED
+QC Log Updated: qc/QC_MASTER_LOG.md
+```
+
+**Classification Decision Tree:**
+```
+All thresholds met + bootstrap CI support → VALIDATED
+Some thresholds met + CI partial support → PARTIAL
+Below thresholds but CI > 0 → UNDER_REVIEW
+Exploratory phase → HYPOTHESIS-GEN
+```
+
+---
+
+### Stage 4: Reporting
+
+**Purpose:** Generate comprehensive report with figures and summary
+
+```bash
+python openlaws_automation.py report --lab openlight_lab
+```
+
+**Process:**
+1. Load results and validation classification
+2. Generate figures (matplotlib/seaborn)
+3. Compile markdown report with epistemic humility
+4. Export JSON summary with metadata
+5. Archive to results/archive/ if VALIDATED
+
+**Expected Output:**
+```
+Generating report: openlight_phase36_informational_speed
+
+Figures:
+  ✅ open_family/results/figures/openlight_cci_vs_ceff.png
+  ✅ open_family/results/figures/openlight_coupling_heatmap.png
+  ✅ open_family/results/figures/openlight_phase_transitions.png
+
+Reports:
+  ✅ open_family/results/openlight_phase36_report.md
+  ✅ open_family/results/openlight_phase36_summary.json
+
+Archive:
+  ✅ Copied to open_family/results/archive/2025-10-14_openlight_phase36/
+
+Status: COMPLETE
+```
+
+**Report Structure:**
+1. Executive Summary
+2. Methods (parameters, seeds, bootstrap)
+3. Results (metrics + CIs + figures)
+4. Interpretation (with humility language)
+5. Limitations & Next Steps
+
+---
+
+## 🔒 Quality Control Integration
+
+### Automatic QC Log Updates
+
+Every validation step updates `qc/QC_MASTER_LOG.md`:
+
+```markdown
+### 2025-10-14: OpenLight Phase 36 Production Run
+- **Lab:** openlight_lab
+- **Study:** openlight_phase36_informational_speed
+- **Seeds:** [11, 17, 23, 29]
+- **Result:** ✅ VALIDATED
+- **ΔCCI:** 0.0450 ± 0.0082 (95% CI: [0.032, 0.061])
+- **Δhazard:** -0.0213 ± 0.0047 (95% CI: [-0.029, -0.015])
+- **OpenLawsScore:** 0.82
+- **SHA256:** a3f8b2c1d4e5f6789abcdef...
+- **Classification:** VALIDATED
+- **Notes:** All thresholds met with strong CI support. Results consistent with informational speed hypothesis.
+```
+
+### Integrity Verification
+
+```bash
+# Verify SHA256 hashes
+python -c "
+import hashlib, pathlib
+path = pathlib.Path('open_family/results/openlight_phase36_runs.csv')
+print('Computed:', hashlib.sha256(path.read_bytes()).hexdigest())
+print('Recorded:', '[hash from QC log]')
+"
+```
+
+---
+
+## 🎯 Advanced Usage
+
+### Parallel Lab Execution
+
+```bash
+# Run all labs in parallel (requires GNU parallel or similar)
+parallel python openlaws_automation.py run --lab {} ::: openlight_lab opentime_lab openmind_lab
+
+# Sequential validation
+for LAB in openlight_lab opentime_lab openmind_lab; do
+    python openlaws_automation.py validate --lab $LAB
+done
+
+# Generate cross-lab synthesis
+python openlaws_automation.py synthesize --labs all
+```
+
+### Custom Parameter Sweeps
+
+```bash
+# Override YAML parameters
+python openlaws_automation.py run --lab openlight_lab \
+    --override "constants.epsilon=[0.0008,0.0012]" \
+    --note "Focused sweep around ε=0.001"
+```
+
+### Dry Run Mode
+
+```bash
+# Test without execution
+python openlaws_automation.py run --lab openlight_lab --dry-run
+```
+
+Expected: Configuration validated, no actual execution
+
+---
+
+## 🚨 Error Handling
+
+### Common Issues & Solutions
+
+**Issue:** `ModuleNotFoundError: No module named 'open_family'`  
+**Solution:**
+```bash
+export PYTHONPATH="/path/to/conciousness_proxy_sim copy 6:$PYTHONPATH"
+# Or run from project root
+cd "/Users/jordanheckler/conciousness_proxy_sim copy 6"
+python openlaws_automation.py run --lab openlight_lab
+```
+
+**Issue:** Validation fails (UNDER_REVIEW)  
+**Action:**
+1. Review results: `cat open_family/results/openlight_phase36_runs.csv`
+2. Check parameter ranges in YAML
+3. Document in QC log as hypothesis-generation run
+4. Adjust parameters for follow-up study
+
+**Issue:** SHA256 mismatch detected  
+**Action:**
+1. **HALT ALL OPERATIONS**
+2. Log integrity violation in QC_MASTER_LOG.md
+3. Investigate file corruption or tampering
+4. Delete compromised files
+5. Re-run from clean state
+
+---
+
+## 📊 Output File Reference
+
+### Standard Output Structure
+
+```
+open_family/
+├── results/
+│   ├── openlight_phase36_runs.csv          # Raw data
+│   ├── openlight_phase36_summary.json      # Metadata
+│   ├── openlight_phase36_report.md         # Human-readable
+│   ├── figures/
+│   │   ├── openlight_cci_vs_ceff.png
+│   │   ├── openlight_coupling_heatmap.png
+│   │   └── openlight_phase_transitions.png
+│   └── archive/
+│       └── 2025-10-14_openlight_phase36/   # Validated runs
+├── logs/
+│   ├── openlight_phase36_[timestamp].log
+│   └── openlight_phase36_errors.log
+└── qc/
+    └── [Updated QC_MASTER_LOG.md]
+```
+
+### JSON Summary Format
+
+```json
+{
+    "study_id": "openlight_phase36_informational_speed",
+    "version": "1.0",
+    "execution_date": "2025-10-14T10:30:00Z",
+    "seeds": [11, 17, 23, 29],
+    "classification": "VALIDATED",
+    "metrics": {
+        "delta_cci": {
+            "mean": 0.0450,
+            "std": 0.0082,
+            "ci_95": [0.032, 0.061]
+        },
+        "delta_hazard": {
+            "mean": -0.0213,
+            "std": 0.0047,
+            "ci_95": [-0.029, -0.015]
+        },
+        "openlaws_score": 0.82
+    },
+    "sha256": "a3f8b2c1d4e5f6789abcdef...",
+    "lab": "openlight_lab",
+    "adapter": "openlight_informational_speed"
+}
+```
+
+---
+
+## 🎓 Best Practices
+
+1. **typically activate virtual environment** before running
+2. **Verify installation** before each session
+3. **Check QC log** for any unresolved issues
+4. **Document deviations** from standard protocol in QC notes
+5. **Archive VALIDATED runs** immediately
+6. **Use epistemic humility** in all interpretations
+7. **Verify SHA256 hashes** for critical runs
+8. **Bootstrap CIs** for all primary metrics
+9. **Preregister** parameter changes in YAML
+10. **Update QC log** within 24h of run completion
+
+---
+
+## 🔗 Related Documentation
+
+- **Setup Guide:** `open_family/README.md`
+- **Lab Manager Charter:** `project_prompts/LabManager_Prompt.txt`
+- **QC Master Log:** `qc/QC_MASTER_LOG.md`
+- **OpenLaws Protocol:** `open_family/open_core/openlaws_protocol.md`
+- **Verification Script:** `open_family/verify_installation.py`
+
+---
+
+## 🏆 Success Criteria
+
+After completing a full run cycle, you should have:
+
+- ✅ Raw results CSV with SHA256 hash
+- ✅ JSON summary with metadata and CIs
+- ✅ Markdown report with epistemic humility
+- ✅ 3-5 figures visualizing key findings
+- ✅ QC log entry with classification
+- ✅ Archived copy if VALIDATED
+- ✅ No integrity violations
+
+---
+
+**Version:** 2.0 (Enhanced with QC Stack)  
+**Last Updated:** October 14, 2025  
+**Maintained by:** HYMetaLab Research Agent  
+**Status:** Production Ready
+
+**Ethos:** Integrity → Resilience → Meaning
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

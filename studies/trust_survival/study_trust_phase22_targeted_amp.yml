@@ -1,0 +1,136 @@
+study:
+  id: trust_survival_v22_targeted_amp
+  title: Trust_Survival_Phase22_TargetedAmplification
+name: "Trust_Survival_Phase22_TargetedAmplification"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 22 upgrades the Phase 21 smart capacitor with Targeted Amplification Feedback (TAF):
+  energy release is directed to clusters that show positive CCI momentum but sub-threshold survival,
+  with adaptive gain limiting to avoid runaway oscillations.
+objectives:
+  - Sustain CCI ≥ 0.72 while lifting Survival ≥ 0.80 system-wide.
+  - Demonstrate CI-clean survival uplift vs Phase 21.
+design:
+  seeds: 6
+  epochs_cap: 950
+  agents: 240
+  clusters: 12
+  factors:
+    mode: ["ARC_CAP_REINJECT","ARC_TAF"]
+    supernet_topology: ["smallworld","chain"]
+    inter_kappa: [0.12, 0.18, 0.24]
+    inter_delay: [10, 25]
+    seed_fraction: [0.25, 0.50]
+    trust_tau0: [0.60, 0.70]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+arc_controller:
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every: 100, eps_delta: 0.06, lr_boost: 1.10 }
+cascade:
+  seed_clusters_mode: "central"
+  sustain_window: 200
+  measure_every: 10
+  threshold_cci: 0.72
+  threshold_survival: 0.80
+containment:
+  enabled: true
+  trigger: { hazard_lo: 0.45, hazard_hi: 0.50, var_hi: 0.03 }
+  absorption: { alpha: 0.35, max_rate: 0.08 }
+  reservoir: { cap: 1.80 }
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: { hazard_max: 0.47, cci_min: 0.72 }
+  neighborhood: { kappa_bias: 0.6, deficit_floor: 0.05 }
+  schedule: { base_beta: 0.14, burst_bonus: 1.20, taper_gamma: 0.94 }
+  effects: { eps_delta_scale: 0.06, lr_boost_scale: 0.08 }
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain:
+    base: 1.0
+    k_sync: 0.25
+    k_hazard_brake: -0.40
+    max_gain: 1.8
+    min_gain: 0.7
+  limiter:
+    lookback: 80
+    slope_max: 0.08
+    cooldown: 40
+  routing:
+    top_k: 3
+    spillover: 0.15
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - cascade_lambda
+  - cascade_sustain_rate
+  - inter_sync_index
+  - containment_active_ratio
+  - reservoir_mean
+  - reinject_efficiency
+  - reinject_precision
+  - taf_gain_mean
+  - taf_focus_score
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 360
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC_TAF vs ARC_CAP_REINJECT: Survival uplift ≥ +0.12 abs (95% CI excl 0)"
+    - "≥1 ARC_TAF cell sustains (CCI ≥ 0.72 AND Survival ≥ 0.80) for ≥ sustain_window"
+    - "Mean hazard in ARC_TAF ≤ 0.47 and not > +3% vs ARC_CAP_REINJECT (95% CI)"
+    - "taf_focus_score ≥ 0.65 and reinject_precision ≥ 0.65 (95% CI)"
+exports:
+  data_dir: discovery_results/trust_survival_v22/data
+  figs_dir: discovery_results/trust_survival_v22/figs
+  report_dir: discovery_results/trust_survival_v22/report
+  bundle_zip: discovery_results/trust_survival_v22/bundle.zip
+prereg:
+  constants:
+    epochs: 950
+    seeds: [2201,2202,2203,2204,2205,2206]
+    agents: 240
+    clusters: 12
+    mode: ["ARC_CAP_REINJECT","ARC_TAF"]
+    supernet_topology: ["smallworld","chain"]
+    inter_kappa: [0.12, 0.18, 0.24]
+    inter_delay: [10, 25]
+    seed_fraction: [0.25, 0.50]
+    trust_tau0: [0.60, 0.70]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_targeted_amp_wrapper.py:run"
+adapter:
+  path: "studies/trust_survival/adapter_trust_targeted_amp.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 22: Targeted amplification of reinjection to push survival ≥ 0.80 safely."

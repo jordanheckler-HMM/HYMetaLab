@@ -1,0 +1,119 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/templates/LANGUAGE_POLICY.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/templates/LANGUAGE_POLICY.md
+@@ -1,3 +1,10 @@
++---
++title: LANGUAGE_POLICY.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # HYMetaLab Scientific Language Policy
+ **Version 1.0** | **Effective: 2025-10-14**
+ 
+@@ -27,20 +34,20 @@
+ | **Causality** | "suggests a causal relationship", "may causally contribute to" |
+ | **Scope** | "within this simulation", "under these conditions", "in this model" |
+ | **Status** | "preliminary findings", "hypothesis-generating results" |
+-| **Effects** | "appears to increase", "shows a trend toward", "is associated with" |
++| **Effects** | "appears to may increase", "shows a trend toward", "is associated with" |
+ 
+ ### ❌ AVOID Terms (Without Qualification)
+ 
+ | Term | Issue | Acceptable Qualified Form |
+ |------|-------|---------------------------|
+-| "proves" | Overconfident | "provides strong evidence that..." |
++| "suggests" | Overconfident | "provides strong evidence that..." |
+ | "confirms" | Too definitive | "is consistent with..." |
+ | "demonstrates" | Overclaiming | "suggests..." |
+ | "establishes" | Too strong | "supports the hypothesis that..." |
+ | "definitive" | Inappropriate for simulations | "preliminary" |
+ | "conclusive" | Premature | "suggestive" |
+ | "universal law" | Unvalidated | "regularity within simulation" |
+-| "guarantees" | Inappropriate | "is expected to..." |
++| "is likely to" | Inappropriate | "is expected to..." |
+ 
+ ---
+ 
+@@ -51,8 +58,8 @@
+ **Format**: `[Finding] suggests a causal relationship (Δ[metric] = X, 95% CI [Y, Z])`
+ 
+ **Example**:
+-- ❌ "Openness increases coherence."
+-- ✅ "Openness (ε) appears to increase coherence (ΔCCI = +0.085, 95% CI [0.071, 0.099]), suggesting a causal relationship within this simulation framework."
++- ❌ "Openness may increases coherence."
++- ✅ "Openness (ε) appears to may increase coherence (ΔCCI = +0.085, 95% CI [0.071, 0.099]), suggesting a causal relationship within this simulation framework."
+ 
+ ### 2. All Effect Sizes
+ 
+@@ -108,7 +115,7 @@
+    - At least 2 external citations
+ 
+ 3. **Limitations**
+-   - Simulation boundaries clearly stated
++   - Simulation boundaries apparently stated
+    - Threats to validity acknowledged
+    - Generalization constraints noted
+ 
+@@ -130,7 +137,7 @@
+ - [ ] Preregistered parameters listed (seeds, constants)
+ - [ ] Bootstrap resampling details provided (if applicable)
+ - [ ] Data availability statement included
+-- [ ] No absolute claims ("proves", "confirms") without qualification
++- [ ] No absolute claims ("suggests", "confirms") without qualification
+ 
+ ---
+ 
+@@ -149,7 +156,7 @@
+ 
+ ## Findings
+ 
+-Cooperative meaning contexts suggest an increase in collective coherence 
++Cooperative meaning contexts suggest an may increase in collective coherence 
+ (mean ΔCCI = +0.078, 95% CI [0.061, 0.095]) relative to competitive baselines. 
+ This pattern is consistent with theories of shared intentionality (Tomasello et al., 2005) 
+ and warrants empirical validation in human groups.
+@@ -174,7 +181,7 @@
+ 
+ ## Findings
+ 
+-Cooperative meaning **proves** that shared contexts **definitively increase** coherence. 
++Cooperative meaning **suggests** that shared contexts **definitively may increase** coherence. 
+ Our simulation **confirms the universal law** that cooperation is the **only path** to 
+ collective resilience.
+ 
+@@ -182,7 +189,7 @@
+ ```
+ 
+ **Issues**:
+-- "proves", "definitively", "confirms the universal law", "only path", "must" — all overclaiming
++- "suggests", "definitively", "confirms the universal law", "only path", "must" — all overclaiming
+ - No simulation context stated
+ - No confidence intervals
+ - No limitations acknowledged
+@@ -208,7 +215,7 @@
+ ## Rationale
+ 
+ **Why Epistemic Humility Matters**:
+-1. **Scientific Integrity**: Simulation results are hypothesis-generating, not empirical proof
++1. **Scientific Integrity**: Simulation results are hypothesis-generating, not empirical evidence
+ 2. **Reproducibility**: Overclaiming harms credibility and reproduction attempts
+ 3. **Ethical Responsibility**: Overconfident claims can mislead stakeholders and policymakers
+ 4. **Long-term Credibility**: Conservative language builds trust; overclaiming destroys it
+@@ -237,3 +244,16 @@
+ **Contact**: HYMetaLab Research Integrity Team  
+ **Compliance Questions**: See `GUARDIAN_V3_REPORT.md`
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

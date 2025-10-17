@@ -1,0 +1,50 @@
+---
+title: env_vars_scan.txt
+date: 2025-10-16
+version: draft
+q072f3bce92
+---
+
+./adaptivity_trainer.py:ADAPTIVITY_SEED = int(os.getenv('ADAPTIVITY_SEED', '42'))
+./meaning_core.py:MEANINGFORGE_SEED = int(os.getenv('MEANINGFORGE_SEED', '42'))
+./tools/zenodo_publisher.py:    api_token = os.getenv("ZENODO_API_TOKEN")
+./01_CORE_SIMULATION/ultimate_simulation_optimized.py:    epsilon = args.epsilon if args.epsilon is not None else os.environ.get('SIM_EPSILON')
+./01_CORE_SIMULATION/ultimate_simulation_optimized.py:    cci = args.cci if args.cci is not None else os.environ.get('SIM_CCI_TARGET')
+./01_CORE_SIMULATION/ultimate_simulation_optimized.py:    eta = args.eta if args.eta is not None else os.environ.get('SIM_ETA_TARGET')
+./real_world_validation/fetch_runner.py:        self.socrata_client = SocrataClient(os.getenv('SOCRATA_APP_TOKEN'))
+./real_world_validation/fetch_runner.py:        self.census_client = CensusACSClient(os.getenv('CENSUS_API_KEY'))
+./real_world_validation/fetch_runner.py:        self.fema_client = FEMAClient(os.getenv('FEMA_API_KEY'))
+./studies/neuro_coherence_phase31/adapters/neuro_coherence_adapter.py:OUT_DIR = os.environ.get('OUT_DIR', 'discovery_results/neuro_coherence_phase31')
+./experiments/runner/python_shim.py:PORT = int(os.environ.get('SHIM_PORT','5201'))
+./experiments/runner/python_shim.py:INSTANCE_ID = os.environ.get('SIM_INSTANCE_ID','sim_local_5201')
+./experiments/runner/python_shim.py:DATA_DIR = os.environ.get('SIM_DATA_DIR', os.path.abspath('.'))
+./meta/seed/control.py:    os.environ["PYTHONHASHSEED"]=str(s)
+./meta/registry/db.py:DB_PATH = os.environ.get("METOLAB_DB", "metolab.sqlite")
+./meta/logging/logger.py:RUN_ID = os.environ.get("RUN_ID", f"{int(time.time())}-{uuid.uuid4().hex[:6]}")
+./adapters/real_sim_shim.py:    py = os.environ.get("SIM_PYTHON", "").strip() or sys.executable
+./adapters/real_sim_shim.py:    main_path = Path(os.environ.get("SIM_MAIN_PATH", "main.py")).resolve()
+./adapters/real_sim_shim.py:    args_tpl = os.environ.get("SIM_ARGS_TEMPLATE", "{python} {main} --seed {seed} --ticks {epochs} --log-dir {outdir}")
+./adapters/real_sim_shim.py:            env = os.environ.copy()
+./adapters/real_sim_shim.py:    analyze_tpl = os.environ.get("SIM_ANALYZE_CMD", "").strip()
+./adapters/real_sim_shim.py:    summary_base = os.environ.get("SIM_SUMMARY_BASENAME", "summary")
+./adapters/real_sim_shim.py:    prefer_json = os.environ.get("SIM_EXPECT_JSON", "").lower() in ("1", "true", "yes")
+./adapters/real_sim_shim.py:    R_key = os.environ.get("SIM_KEY_RESILIENCE", "resilience")
+./adapters/real_sim_shim.py:    S_key = os.environ.get("SIM_KEY_SURVIVAL", "survival_rate")
+./adapters/real_sim_shim.py:    H_key = os.environ.get("SIM_KEY_HAZARD", "hazard")
+./adapters/real_sim_shim.py:    CCI_key = os.environ.get("SIM_KEY_CCI", "cci")
+./adapters/real_sim_shim.py:    ETA_key = os.environ.get("SIM_KEY_ETA", "eta")
+./adapters/real_sim_shim.py:    R_key   = os.environ.get("SIM_KEY_RESILIENCE","resilience")
+./adapters/real_sim_shim.py:    S_key   = os.environ.get("SIM_KEY_SURVIVAL","survival_rate")
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

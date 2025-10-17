@@ -1,0 +1,31 @@
+# Mathematical Metaphysics — Zenodo Portable Bundle
+
+This bundle packages the whitepaper and atlases into a single, upload‑ready archive for Zenodo.
+
+## Contents
+- `docs/Meaning_Periodic_Table_v0.2.pdf`
+- `docs/Metaphysics_Lab_Whitepaper.md`
+- `docs/Mathematical_Metaphysics_v2.0_Atlas.pdf`
+- `docs/Mathematical_Metaphysics_v1.0_Atlas.pdf`
+
+## Recommended Zenodo metadata (also in `zenodo.json`)
+- **Title:** Mathematical Metaphysics — Whitepaper & Atlases (Portable Bundle)
+- **Upload type:** Publication → Report (or Book)
+- **Description:** See below.
+- **Keywords:** metaphysics, mathematical metaphysics, simulation, openness, entropy, atlas, whitepaper
+- **Version:** 2025-10-09
+- **License:** CC-BY-4.0 (placeholder — change if needed)
+- **Creators:** Jordan (corresponding author) — Heck Yeah! Research Lab (placeholders; edit if needed)
+
+## Description (suggested)
+This bundle consolidates the *Metaphysics Lab Whitepaper* and the *Mathematical Metaphysics Atlas* (v1.0 and v2.0) along with the Meaning Periodic Table (v0.2). It is intended as a portable, citable package for archival on Zenodo and for use by collaborators.
+
+## How to upload
+1. Create a new deposition on Zenodo.
+2. Upload the ZIP produced from this bundle.
+3. Choose “Upload type → Publication → Report” (or Book).
+4. Paste/adjust the metadata from `zenodo.json` or this README.
+5. Set the correct license for your work.
+6. Publish (or save as draft).
+
+Generated: 2025-10-09

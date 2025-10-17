@@ -1,0 +1,27 @@
+---
+title: requirements-nextgen.txt
+date: 2025-10-16
+version: draft
+checksum: a488edc17f97
+---
+
+pandas>=2.0
+numpy>=1.24
+pyyaml>=6.0
+plotly>=5.20
+flask>=3.0
+scikit-learn>=1.3
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

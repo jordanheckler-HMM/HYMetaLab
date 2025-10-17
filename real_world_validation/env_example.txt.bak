@@ -1,0 +1,36 @@
+# Real World Validation Environment Configuration
+# Copy this file to .env and fill in your API keys
+
+# Socrata API (for city crime data)
+SOCRATA_APP_TOKEN=your_socrata_token_here
+
+# US Census API (for ACS Gini data)
+CENSUS_API_KEY=your_census_api_key_here
+
+# FEMA API (for disaster events)
+FEMA_API_KEY=your_fema_api_key_here
+
+# Output configuration
+DEFAULT_OUTPUT_DIR=discovery_results/validation
+DEFAULT_AGGREGATION_FREQ=week
+DEFAULT_COLLAPSE_QUANTILE=0.9
+DEFAULT_COLLAPSE_MIN_WEEKS=3
+
+# Success criteria thresholds
+FEAR_CCI_INTERACTION_THRESHOLD=70
+GINI_COLLAPSE_THRESHOLD=60
+GINI_CCI_INTERACTION_THRESHOLD=60
+SHOCK_RECOVERY_THRESHOLD=60
+SURVIVAL_ALPHA_MIN=0.3
+SURVIVAL_ALPHA_MAX=0.5
+
+# Data quality thresholds
+OUTLIER_Z_THRESHOLD=4.0
+MAX_GAP_PERIODS=2
+MIN_SAMPLES_FOR_MODEL=30
+VIF_THRESHOLD=10.0
+
+# Fetch configuration
+FETCH_TIMEOUT=30
+FETCH_RETRY_ATTEMPTS=3
+FETCH_RATE_LIMIT_DELAY=1.0

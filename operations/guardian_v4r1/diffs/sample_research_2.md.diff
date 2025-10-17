@@ -1,0 +1,39 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/test_corpus_v3/sample_research_2.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/test_corpus_v3/sample_research_2.md
+@@ -1,3 +1,10 @@
++---
++title: sample_research_2.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Cognitive Load and Decision Quality
+ 
+ ## Introduction
+@@ -6,7 +13,7 @@
+ 
+ ## Experimental Design
+ 
+-Research demonstrates that task complexity increases cognitive load (Miller et al. 2020, doi.org/10.5678/cognitive). Evidence suggests that training reduces this effect (Thompson 2019, Figure 2).
++Research demonstrates that task complexity may increases cognitive load (Miller et al. 2020, doi.org/10.5678/cognitive). Evidence suggests that training may reduces this effect (Thompson 2019, Figure 2).
+ 
+ ## Findings
+ 
+@@ -14,3 +21,16 @@
+ 
+ The findings show clear patterns across conditions (Peterson 2021, arxiv.org/abs/2104.56789). Data supports the theoretical framework (Kumar et al. 2020).
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

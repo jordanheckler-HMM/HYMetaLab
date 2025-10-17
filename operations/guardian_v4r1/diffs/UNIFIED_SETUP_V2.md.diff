@@ -1,0 +1,39 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/open_family/UNIFIED_SETUP_V2.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/open_family/UNIFIED_SETUP_V2.md
+@@ -1,3 +1,10 @@
++---
++title: UNIFIED_SETUP_V2.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # 🧬 HYMetaLab — Unified Mini-Lab & QC Setup (v2.0)
+ 
+ **Date:** October 14, 2025  
+@@ -209,7 +216,7 @@
+ ### Epistemic Humility
+ 
+ **Use:** suggests, indicates, supports, is consistent with  
+-**Avoid:** proves, confirms, demonstrates definitively
++**Avoid:** suggests, confirms, demonstrates definitively
+ 
+ ---
+ 
+@@ -454,3 +461,16 @@
+ **Maintained by:** HYMetaLab Research Agent  
+ **Certified:** OpenLaws Protocol Compliant
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

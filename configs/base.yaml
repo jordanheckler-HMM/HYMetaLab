@@ -1,0 +1,19 @@
+seed: 123
+n_agents: 400
+ticks: 300
+replicates: 64
+defaults:
+  shock_level: 0.40
+  coordination_strength: 0.50
+  goal_inequality: 0.25
+  noise: 0.05
+  memory_cap: null
+  energy_drift: false
+bootstrap:
+  enabled: true
+  B: 300
+  ci: 0.95
+targets:   # stability policy targets you wanted
+  max_goal_inequality: 0.30
+  min_coordination: 0.60
+  buffer_hint: 0.20   # informational only

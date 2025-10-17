@@ -1,0 +1,13 @@
+include: configs/base.yaml
+experiment: ablations
+ablations:
+  - { name: "coordination_off", coordination_strength: 0.0 }
+  - { name: "coordination_max", coordination_strength: 1.0 }
+  - { name: "memory_cap_1", memory_cap: 1 }
+  - { name: "noise_0_50", noise: 0.50 }
+  - { name: "noise_0_80", noise: 0.80 }
+  - { name: "energy_drift_on", energy_drift: true }
+  - { name: "ineq_high_0_60", goal_inequality: 0.60 }
+out_csv: reslab/results/ablations_strong.csv
+out_fig: reslab/results/ablations_strong.png
+

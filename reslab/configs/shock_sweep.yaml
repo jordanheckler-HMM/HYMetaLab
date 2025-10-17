@@ -1,0 +1,4 @@
+include: reslab/configs/base.yaml
+experiment: shock_sweep
+out_csv: reslab/results/shock_sweep.csv
+out_fig: reslab/results/shock_sweep.png

@@ -1,0 +1,146 @@
+mapping_version: '1.0'
+generated_at: '2025-10-15T08:11:47.011197'
+framework: Universal Resilience Law
+formula: "R \u221D (\u03B5 \xD7 CCI) / \u03B7"
+datasets:
+- id: cooperative_learning_meta_2023
+  file: cooperative_learning_meta_2023_standardized.csv
+  columns: &id001
+  - dataset_id
+  - record_id
+  - timestamp
+  - country
+  - sample_weight
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+  - data_source
+  - collection_date
+  - quality_flag
+  - missing_data_pct
+  cci_columns:
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+- id: wvs_trust_wellbeing_wave7
+  file: wvs_trust_wellbeing_wave7_standardized.csv
+  columns: *id001
+  cci_columns:
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+- id: ess_wellbeing_trust_round10
+  file: ess_wellbeing_trust_round10_standardized.csv
+  columns: *id001
+  cci_columns:
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+- id: oecd_education_collaboration_2023
+  file: oecd_education_collaboration_2023_standardized.csv
+  columns: *id001
+  cci_columns:
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+- id: gss_trust_social_capital_2022
+  file: gss_trust_social_capital_2022_standardized.csv
+  columns: *id001
+  cci_columns:
+  - trust_score
+  - wellbeing_score
+  - collaboration_score
+  - information_access
+column_mappings:
+  trust_score:
+    framework_component: Connection (C)
+    description: Social trust proxy for interpersonal connection strength
+    normalization: 0-1 scale
+    weight: 0.3
+    resilience_contribution: High trust increases network resilience to shocks
+  wellbeing_score:
+    framework_component: Coherence (I)
+    description: Life satisfaction proxy for internal coherence
+    normalization: 0-1 scale
+    weight: 0.25
+    resilience_contribution: Well-being buffers against hazard accumulation
+  collaboration_score:
+    framework_component: Connection (C)
+    description: Cooperative behavior proxy for collective action capacity
+    normalization: 0-1 scale
+    weight: 0.25
+    resilience_contribution: Collaboration amplifies coordinated shock responses
+  information_access:
+    framework_component: Information Flow (I)
+    description: Knowledge sharing proxy for information efficiency
+    normalization: 0-1 scale
+    weight: 0.2
+    resilience_contribution: Information access reduces uncertainty and enables adaptation
+cci_calculation:
+  formula: "CCI = w1\xB7trust + w2\xB7wellbeing + w3\xB7collaboration + w4\xB7information"
+  weights:
+    trust_score: 0.3
+    wellbeing_score: 0.25
+    collaboration_score: 0.25
+    information_access: 0.2
+  normalization: All inputs normalized to [0,1]; output in [0,1]
+  validation: CCI must be in [0,1]; reject if out of bounds
+hypothesis_tests:
+- dataset: cooperative_learning_meta_2023
+  H0: CCI has no relationship with resilience indicators
+  H1: Higher CCI predicts improved resilience (lower hazard, higher survival)
+  test_metrics:
+  - cci_trust_correlation
+  - cci_wellbeing_correlation
+  acceptance_threshold: correlation > 0.15 (small effect size)
+  preregistered: true
+- dataset: wvs_trust_wellbeing_wave7
+  H0: CCI has no relationship with resilience indicators
+  H1: Higher CCI predicts improved resilience (lower hazard, higher survival)
+  test_metrics:
+  - cci_trust_correlation
+  - cci_wellbeing_correlation
+  acceptance_threshold: correlation > 0.15 (small effect size)
+  preregistered: true
+- dataset: ess_wellbeing_trust_round10
+  H0: CCI has no relationship with resilience indicators
+  H1: Higher CCI predicts improved resilience (lower hazard, higher survival)
+  test_metrics:
+  - cci_trust_correlation
+  - cci_wellbeing_correlation
+  acceptance_threshold: correlation > 0.15 (small effect size)
+  preregistered: true
+- dataset: oecd_education_collaboration_2023
+  H0: CCI has no relationship with resilience indicators
+  H1: Higher CCI predicts improved resilience (lower hazard, higher survival)
+  test_metrics:
+  - cci_trust_correlation
+  - cci_wellbeing_correlation
+  acceptance_threshold: correlation > 0.15 (small effect size)
+  preregistered: true
+- dataset: gss_trust_social_capital_2022
+  H0: CCI has no relationship with resilience indicators
+  H1: Higher CCI predicts improved resilience (lower hazard, higher survival)
+  test_metrics:
+  - cci_trust_correlation
+  - cci_wellbeing_correlation
+  acceptance_threshold: correlation > 0.15 (small effect size)
+  preregistered: true
+quality_gates:
+  minimum_records: 100
+  maximum_missing_pct: 0.1
+  cci_range:
+  - 0.0
+  - 1.0
+  correlation_threshold: 0.15
+metadata:
+  pipeline: "Guardian \u2192 TruthLens \u2192 MeaningForge \u2192 OriginChain \u2192\
+    \ Aletheia"
+  openlaws_version: '1.0'
+  guardian_version: v4
+  preregistration: open_data/preregister.yml

@@ -1,0 +1,37 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/results/Guardian_Scores_Sheet_Entry.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/results/Guardian_Scores_Sheet_Entry.txt
+@@ -1,3 +1,10 @@
++---
++title: Guardian_Scores_Sheet_Entry.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Guardian v4 Corpus Validation — Google Sheet Entry
+ # Date: 2025-10-15
+ # Lab Tech: Validation Team
+@@ -32,9 +39,22 @@
+ 
+ 5. RECOMMENDED ACTIONS:
+    - Archive 15 critical-risk documents (score < 50)
+-   - Patch 541 high-risk documents (transparency boost)
++   - Patch 541 high-risk documents (transparency may boost)
+    - Focus on recent research outputs (Phase 4, completion reports)
+    - Implement Guardian pre-commit hooks for new docs
+ 
+ ## Next Validation: [Schedule quarterly, e.g., 2026-01-15]
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,142 @@
+groups:
+  us_core:
+    aggregation_freq: week
+    start: 2019-01-01
+    end: 2025-06-30
+    fear_terms: ["anxiety","panic attack","fear","crime near me"]
+    cities:
+      - key: nyc
+        name: New York City (US)
+        timezone: America/New_York
+        fetch:
+          crime: {type: socrata, domain: data.cityofnewyork.us, dataset_id: 9s4h-37hy, date_col: complaint_date}
+          gini: {type: census_acs, geo: county, state_fips: "36", county_fips: "061", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-NY-501, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: la
+        name: Los Angeles (US)
+        timezone: America/Los_Angeles
+        fetch:
+          crime: {type: socrata, domain: data.lacity.org}
+          gini: {type: census_acs, geo: county, state_fips: "06", county_fips: "037", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-CA-803, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: chi
+        name: Chicago (US)
+        timezone: America/Chicago
+        fetch:
+          crime: {type: socrata, domain: data.cityofchicago.org, dataset_id: 6zsd-86xi, date_col: date}
+          gini: {type: census_acs, geo: county, state_fips: "17", county_fips: "031", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-IL-602, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: hou
+        name: Houston (US)
+        timezone: America/Chicago
+        fetch:
+          crime: {type: socrata, domain: data.houstontx.gov}
+          gini: {type: census_acs, geo: county, state_fips: "48", county_fips: "201", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-TX-618, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: phx
+        name: Phoenix (US)
+        timezone: America/Phoenix
+        fetch:
+          crime: {type: socrata, domain: performance.phoenix.gov}
+          gini: {type: census_acs, geo: county, state_fips: "04", county_fips: "013", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-AZ-753, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: sea
+        name: Seattle (US)
+        timezone: America/Los_Angeles
+        fetch:
+          crime: {type: socrata, domain: data.seattle.gov}
+          gini: {type: census_acs, geo: county, state_fips: "53", county_fips: "033", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-WA-819, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: mia
+        name: Miami (US)
+        timezone: America/New_York
+        fetch:
+          crime: {type: socrata, domain: opendata.miamidade.gov}
+          gini: {type: census_acs, geo: county, state_fips: "12", county_fips: "086", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-FL-528, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: atl
+        name: Atlanta (US)
+        timezone: America/New_York
+        fetch:
+          crime: {type: socrata, domain: opendata.atlantapd.org}
+          gini: {type: census_acs, geo: county, state_fips: "13", county_fips: "121", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-GA-524, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: den
+        name: Denver (US)
+        timezone: America/Denver
+        fetch:
+          crime: {type: socrata, domain: data.denvergov.org}
+          gini: {type: census_acs, geo: county, state_fips: "08", county_fips: "031", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-CO-751, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+      - key: msp
+        name: Minneapolis–St. Paul (US)
+        timezone: America/Chicago
+        fetch:
+          crime: {type: socrata, domain: opendata.minneapolismn.gov}
+          gini: {type: census_acs, geo: county, state_fips: "27", county_fips: "053", years: [2019,2020,2021,2022,2023,2024,2025]}
+          trends: {type: pytrends, geo: US-MN-613, terms: ["anxiety","panic attack","fear","crime near me"], frequency: weekly}
+          events: {type: fema}
+
+  world_sample:
+    aggregation_freq: week
+    start: 2019-01-01
+    end: 2025-06-30
+    fear_terms: ["anxiety","panic attack","fear"]
+    cities:
+      - key: lon
+        name: London (UK)
+        timezone: Europe/London
+        fetch:
+          gini_worldbank: {country_code: GBR}
+          trends: {type: pytrends, geo: GB, terms: ["anxiety","panic attack","fear"], frequency: weekly}
+      - key: par
+        name: Paris (FR)
+        timezone: Europe/Paris
+        fetch:
+          gini_worldbank: {country_code: FRA}
+          trends: {type: pytrends, geo: FR, terms: ["anxiété","attaque de panique","peur"], frequency: weekly}
+      - key: tyo
+        name: Tokyo (JP)
+        timezone: Asia/Tokyo
+        fetch:
+          gini_worldbank: {country_code: JPN}
+          trends: {type: pytrends, geo: JP, terms: ["不安","パニック発作","恐怖"], frequency: weekly}
+      - key: del
+        name: Delhi (IN)
+        timezone: Asia/Kolkata
+        fetch:
+          gini_worldbank: {country_code: IND}
+          trends: {type: pytrends, geo: IN, terms: ["anxiety","panic attack","fear"], frequency: weekly}
+      - key: lag
+        name: Lagos (NG)
+        timezone: Africa/Lagos
+        fetch:
+          gini_worldbank: {country_code: NGA}
+          trends: {type: pytrends, geo: NG, terms: ["anxiety","panic attack","fear"], frequency: weekly}
+      - key: sp
+        name: São Paulo (BR)
+        timezone: America/Sao_Paulo
+        fetch:
+          gini_worldbank: {country_code: BRA}
+          trends: {type: pytrends, geo: BR, terms: ["ansiedade","ataque de pânico","medo"], frequency: weekly}
+      - key: syd
+        name: Sydney (AU)
+        timezone: Australia/Sydney
+        fetch:
+          gini_worldbank: {country_code: AUS}
+          trends: {type: pytrends, geo: AU, terms: ["anxiety","panic attack","fear"], frequency: weekly}
+      - key: tor
+        name: Toronto (CA)
+        timezone: America/Toronto
+        fetch:
+          gini_worldbank: {country_code: CAN}
+          trends: {type: pytrends, geo: CA, terms: ["anxiety","panic attack","fear"], frequency: weekly}

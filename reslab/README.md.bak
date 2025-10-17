@@ -1,0 +1,35 @@
+# Stability & Alignment Lab (Adapter Mode)
+This lab runs four experiments to help set policy for a **stable, human-aligned multi-agent system**:
+
+1) **coord_sweep**: find the smallest coordination strength that keeps survival near max at shock=0.40  
+2) **ineq_ramp**: find the inequality elbow where survival degrades; set cap ~10–20% below it  
+3) **shock_chaos**: time series with shock spikes ≥0.50 to test recovery and resilience  
+4) **stability_grid**: heatmap at shock=0.50 to identify the safe operating region (coord vs inequality)
+
+### How it uses your sim
+- Calls your existing entrypoint via `reslab/adapter.py`.  
+- If auto-detect fails, fill `configs/adapter_mapping.yaml`.
+
+### Outputs (ALL in `reslab/exports/`)
+- `coord_sweep.csv/.png`, `ineq_ramp.csv/.png`, `shock_chaos.csv/.png`, `stability_grid.csv/.png`  
+- `adapter_report.json` (what function/args were used)  
+- `summary.md` (one-page human readout you can upload back into ChatGPT)
+
+### Quick start
+```bash
+bash reslab/run.sh
+Interpreting results (fast rules)
+If coord_sweep says coord_min_for_near_max_survival ≤ 0.60, your 0.60 target is safe; else raise it.
+If ineq_ramp elbow < 0.30, drop your inequality cap; if >0.30, you can keep or relax it slightly.
+Stability grid: aim to operate in cells where coord ≥ 0.60 and ineq ≤ 0.30 with survival within 2% of grid max.
+Chaos: confirm survival recovers quickly after spikes ≥0.50.
+
+---
+
+### What you'll do now
+
+1) Paste the prompt above in Cursor in your sim repo.  
+2) Run: `bash reslab/run.sh`.  
+3) Upload the contents of `reslab/exports/` here (the **CSV/PNGs + summary.md** are all in one place).
+
+If your sim uses different arg names/returns, just fill `configs/adapter_mapping.yaml` (module, func, argmap, returns) and re-run.

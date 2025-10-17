@@ -1,0 +1,234 @@
+study_id: phase35_cosmic_bridge
+version: 1.0
+prereg_date: 2025-10-14
+adapter: adapters.phase35_cosmic_bridge:run_adapter
+hypothesis:
+  text: "(1) Tri-Flux Universality: The tri-flux model (E^0.4 \xD7 I^0.8 \xD7 K^0.1\
+    \ / N)  captures coherence dynamics at cosmic scales (galaxies, clusters) with\
+    \  RMSE \u226520% better than single-channel models.\n(2) Cross-Scale Elasticity:\
+    \ E-elasticity (energy-side) and I-elasticity  (information-side) at cosmic scales\
+    \ have similar magnitudes to agent-scale  elasticities, suggesting scale-invariant\
+    \ mechanisms.\n(3) Cosmic Scale Constancy: Effects remain consistent across galaxy-scale,\
+    \  cluster-scale, and synthetic control datasets (|\u0394CCI diff| \u2264 1%).\n\
+    (4) Substrate Robustness: Effect signs preserved across kNN vs MST topologies\
+    \  and under noise perturbations at cosmic scales.\n**BOLD CLAIM:** If validated,\
+    \ suggests information-theoretic principles  transcend substrate (agents \u2194\
+    \ galaxies), pointing toward universal dynamics.\n"
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  noise: 0.05
+data:
+  datasets:
+  - id: ds_galaxies
+    path: data/cosmic/ds_galaxies/
+    description: Galaxy-level dataset (survey slice or cluster sample)
+    required_files:
+    - nodes.csv
+    optional_files:
+    - edges.csv
+    scale: galaxy
+  - id: ds_clusters
+    path: data/cosmic/ds_clusters/
+    description: Cluster-level aggregates
+    required_files:
+    - nodes.csv
+    optional_files:
+    - edges.csv
+    scale: cluster
+  - id: ds_synthetic_check
+    path: data/cosmic/ds_synthetic_check/
+    description: Synthetic control dataset
+    required_files:
+    - nodes.csv
+    optional_files:
+    - edges.csv
+    scale: synthetic
+mapping:
+  node_id_col: node_id
+  node_energy_col: energy_proxy
+  node_info_col: info_proxy
+  node_conn_col: conn_proxy
+  edge_weight_col: weight
+priors:
+  epsilon_band:
+  - 0.0005
+  - 0.0015
+  rho_critical: 0.0828
+  tri_flux_exponents:
+  - 0.4
+  - 0.8
+  - 0.1
+protocols:
+- id: FIT_TRI_FLUX
+  description: Fit tri-flux model vs baselines across datasets and size scales
+  sweep:
+    dataset:
+    - ds_galaxies
+    - ds_clusters
+    - ds_synthetic_check
+    graph_topology:
+    - knn
+    - mst
+    size_bin:
+    - small
+    - medium
+    - large
+- id: ELASTICITY_COMPARE
+  description: Compare energy-side vs info-side elasticities at cosmic scales
+  fixed:
+    graph_topology: knn
+    size_bin: medium
+    dataset: ds_galaxies
+  sweep_groups:
+  - name: energy_interventions
+    sweep:
+      energy_scale:
+      - 0.75
+      - 1.0
+      - 1.25
+    fixed:
+      info_scale: 1.0
+  - name: info_interventions
+    sweep:
+      info_scale:
+      - 0.75
+      - 1.0
+      - 1.25
+    fixed:
+      energy_scale: 1.0
+- id: FALSIFIER_SUBSTRATE
+  description: Test robustness to topology choice and noise perturbations
+  fixed:
+    dataset: ds_galaxies
+    size_bin: medium
+  sweep:
+    graph_topology:
+    - knn
+    - mst
+    noise_mult:
+    - 1.0
+    - 1.5
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - risk
+  - survival
+  - seed
+  - epoch
+  - dataset_id
+  - protocol_id
+  - N
+  figures: true
+  csv: true
+  report: true
+validation:
+  bootstrap_ci: 1200
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+  - name: mean_hazard_delta
+    rule: <= -0.01
+  tests:
+  - name: tri_flux_vs_baselines
+    description: Tri-flux model fits cosmic data better than single-channel models
+    spec: RMSE(tri_flux) <= 0.8 * min(RMSE(E_only), RMSE(I_only))
+    protocol: FIT_TRI_FLUX
+    requires_model_fitting: true
+  - name: elasticity_e_vs_i
+    description: E-elasticity and I-elasticity have similar magnitudes at cosmic scales
+    spec: '|E_energy - E_info| <= 0.30'
+    protocol: ELASTICITY_COMPARE
+  - name: scale_constancy
+    description: Effects consistent across cosmic datasets (galaxy vs cluster scales)
+    spec: "|\u0394CCI(cluster) - \u0394CCI(galaxy)| <= 0.01"
+    protocol: FIT_TRI_FLUX
+  - name: falsifier_sign
+    description: Effect signs preserved across topologies and noise at cosmic scales
+    spec: "all(sign(\u0394CCI) > 0) AND all(sign(\u0394hazard) < 0)"
+    protocol: FALSIFIER_SUBSTRATE
+  classify:
+    validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01 AND tri_flux_vs_baselines
+      AND scale_constancy AND falsifier_sign
+    provisionally_validated: mean_CCI_gain >= 0.03 AND mean_hazard_delta <= -0.01
+      AND (tri_flux_vs_baselines OR scale_constancy)
+    hypothesis_generating: else
+report:
+  title: "Phase 35 \u2014 Cosmic Bridge: Tri-Flux at Astronomical Scales"
+  include_figures: true
+  copy_to: results/archive/
+  figures:
+  - cosmic_tri_flux_fit.png
+  - cosmic_elasticity_comparison.png
+  - scale_galaxy_cluster_comparison.png
+  - cosmic_falsifiers.png
+notes:
+- '**BOLD HYPOTHESIS:** Testing if agent-scale principles generalize to cosmic scales'
+- "Cosmic 'energy' proxy (SFR/M*, luminosity) is analogical to agent openness \u03B5"
+- Cosmic 'info' proxy (metallicity gradient, structure) is analogical to meaning content
+- Network construction (kNN, MST) from survey data introduces methodological choices
+- Validation at cosmic scales does NOT prove causality; shows consistency with tri-flux
+  framework
+- "Cross-domain validation (agents \u2194 galaxies) is exploratory; mechanistic theory\
+  \ needed"
+- Results specific to provided cosmic datasets; broader survey validation pending
+- 'Null result (falsification) would be scientifically valuable: bounds domain of
+  applicability'
+data_requirements:
+  nodes_csv:
+    required_columns:
+    - node_id
+    - energy_proxy
+    - info_proxy
+    optional_columns:
+    - conn_proxy
+    - z_redshift
+    - mass
+    - luminosity
+    energy_proxy_examples:
+    - "SFR_per_mass: Star formation rate per stellar mass (M\u2609/yr / M\u2609)"
+    - "luminosity_density: Luminosity per volume (L\u2609/Mpc\xB3)"
+    - 'accretion_rate: AGN accretion rate proxy'
+    info_proxy_examples:
+    - 'metallicity_gradient: |dZ/dR| (information content in chemical evolution)'
+    - 'line_width_info: Spectral line complexity measure'
+    - 'structure_fn: Structural complexity from morphology'
+    conn_proxy_examples:
+    - "local_overdensity: \u03B4 = (\u03C1_local - \u03C1_mean) / \u03C1_mean"
+    - 'neighbor_count: Number of neighbors within linking length'
+    - 'clustering_coeff: Local clustering coefficient'
+  edges_csv:
+    optional: true
+    description: If not provided, adapter builds kNN or MST from feature space
+    columns:
+    - source
+    - target
+    - weight
+preprocessing:
+- Normalize energy_proxy, info_proxy, conn_proxy to [0, 1] per dataset
+- 'Handle missing data: impute with dataset median or exclude nodes with >20% missing'
+- 'For size binning: quantile-based splits (small: 0-33%, medium: 33-66%, large: 66-100%)'
+- 'For kNN graphs: k=8 neighbors in normalized feature space'
+- 'For MST graphs: minimal spanning tree in normalized feature space'
+- Log all preprocessing steps for full audit trail
+expected_outcomes:
+  if_validated:
+  - "Suggests information-theoretic principles transcend substrate (agents \u2194\
+    \ galaxies)"
+  - 'Opens research program: search for universal dynamics across scales'
+  - Provides framework for analyzing cosmic structure formation
+  if_falsified:
+  - 'Bounds domain of applicability: tri-flux specific to agent-like systems'
+  - 'Scientifically valuable: clarifies where analogies break down'
+  - 'Guides future work: identify substrate-specific vs universal features'
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

@@ -1,0 +1,29 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_repo_audit/web_files.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_repo_audit/web_files.txt
+@@ -1,6 +1,26 @@
++---
++title: web_files.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ qc/guardian_v4/dashboard_widget.html
+ site/dashboard.html
+ site/index.html
+ site/replication.html
+ site/tools.html
+ site/validation.html
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

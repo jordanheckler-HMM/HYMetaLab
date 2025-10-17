@@ -1,0 +1,72 @@
+{
+  "@types/fs-extra": {
+    "current": "9.0.13",
+    "wanted": "9.0.13",
+    "latest": "11.0.4",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/@types/fs-extra"
+  },
+  "@types/node": {
+    "current": "18.19.129",
+    "wanted": "18.19.130",
+    "latest": "24.8.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/@types/node"
+  },
+  "@types/uuid": {
+    "current": "9.0.8",
+    "wanted": "9.0.8",
+    "latest": "10.0.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/@types/uuid"
+  },
+  "archiver": {
+    "current": "5.3.2",
+    "wanted": "5.3.2",
+    "latest": "7.0.1",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/archiver"
+  },
+  "date-fns": {
+    "current": "2.30.0",
+    "wanted": "2.30.0",
+    "latest": "4.1.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/date-fns"
+  },
+  "mathjs": {
+    "current": "11.12.0",
+    "wanted": "11.12.0",
+    "latest": "15.0.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/mathjs"
+  },
+  "typescript": {
+    "current": "4.9.5",
+    "wanted": "4.9.5",
+    "latest": "5.9.3",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/typescript"
+  },
+  "undici": {
+    "current": "5.29.0",
+    "wanted": "5.29.0",
+    "latest": "7.16.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/undici"
+  },
+  "uuid": {
+    "current": "9.0.1",
+    "wanted": "9.0.1",
+    "latest": "13.0.0",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/uuid"
+  },
+  "zod": {
+    "current": "3.25.76",
+    "wanted": "3.25.76",
+    "latest": "4.1.12",
+    "dependent": "conciousness_proxy_sim copy 6",
+    "location": "/Users/jordanheckler/conciousness_proxy_sim copy 6/node_modules/zod"
+  }
+}

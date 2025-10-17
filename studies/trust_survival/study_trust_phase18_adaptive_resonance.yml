@@ -1,0 +1,116 @@
+study:
+  id: trust_survival_v18_adaptive_resonance
+  title: Trust_Survival_Phase18_AdaptiveResonance
+name: "Trust_Survival_Phase18_AdaptiveResonance"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 18 replaces the over-conservative controller with an Adaptive Resonance
+  Controller (ARC): a hazard-aware PI loop modulated by resonance/phase-lock signals.
+  ARC adds gentle resonant pulses to avoid stagnation while keeping hazard in check.
+objectives:
+  - Restore high coherence (CCI ≥ 0.72) and lift Survival ≥ 0.80 without hazard overshoot.
+  - Show CI-clean uplift vs Phase 16 and Phase 17 baselines.
+design:
+  seeds: 8
+  epochs_cap: 800
+  agents: 240
+  clusters: 8
+  factors:
+    mode: ["OPT","ARC"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+arc_controller:
+  window: 60
+  targets:
+    CCI: 0.72
+    survival: 0.80
+    hazard_soft: 0.47
+  gains:
+    k_survival: 0.60
+    k_hazard: -0.25
+    k_integral: 0.10
+  momentum_tune:
+    base: 0.10
+    sync_gain: 1.25
+    desync_div: 0.85
+    k_coherence: 0.25
+    k_vol: -0.20
+  bounds:
+    lr_min: 0.006
+    lr_max: 0.16
+    m_min: 0.00
+    m_max: 0.35
+  soft_guards:
+    hazard_uplift_max: 0.05
+    ramp_gamma: 0.96
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse:
+    every: 100
+    eps_delta: 0.06
+    lr_boost: 1.10
+phase_lock:
+  cci_lock_threshold: 0.70
+  hazard_unlock_threshold: 0.51
+  ema_window: 40
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - trust_variance
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 260
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "ARC vs OPT: Survival uplift ≥ +0.12 absolute (95% CI excludes 0)"
+    - "Any ARC cell achieves (CCI ≥ 0.72 AND Survival ≥ 0.80)"
+    - "Mean hazard in ARC ≤ 0.47 and not > +5% vs OPT at same settings (95% CI)"
+    - "Median t_recover_hazard_0_20 improves ≥ 15% in ARC vs OPT"
+exports:
+  data_dir: discovery_results/trust_survival_v18/data
+  figs_dir: discovery_results/trust_survival_v18/figs
+  report_dir: discovery_results/trust_survival_v18/report
+  bundle_zip: discovery_results/trust_survival_v18/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_adaptive_resonance.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 18: ARC blends hazard-aware PI with resonance & lock windows + gentle pulses."
+
+prereg:
+  constants:
+    epochs: 800
+    seeds: [1801,1802,1803,1804,1805,1806,1807,1808]
+    agents: 240
+    clusters: 8
+    mode: ["OPT","ARC"]
+    network_topology: ["smallworld"]
+    coupling_kappa: [0.20, 0.25, 0.30]
+    phase_lag_phi: [0.40, 0.50, 0.60]
+    exchange_prob: [0.10, 0.12, 0.14]
+    trust_tau0: [0.60, 0.70, 0.80]
+    goal_inequality: [0.20, 0.35, 0.50]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_adaptive_resonance_wrapper.py:run"

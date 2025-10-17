@@ -1,0 +1,45 @@
+study:
+  id: trust_survival_v3
+  title: Trust_Survival_Phase3_AmplifiedRepair
+
+name: "Trust_Survival_Phase3_AmplifiedRepair"
+extends: "studies/trust_survival/study_trust_phase2.yml"
+description: |
+  Phase 3 amplified repair sweep: narrower shock band at 0.50
+  with amplified repair parameters and an updated trust grid.
+
+prereg:
+  constants:
+    epochs: 500
+    seeds: [301, 302, 303, 304, 305]
+    agents: 140
+    trust_tau: [0.25, 0.45, 0.65, 0.85]
+    shock_severity: [0.50]
+    goal_inequality: [0.20]
+    derived_events:
+      betrayal_shock:
+        at_epoch: 250
+        delta_defection_noise: 0.25
+        duration: 60
+        repair_rate: 0.10
+    sim_adapter: "studies/trust_survival/adapter_trust_phase2.py:run"
+
+design:
+  seeds: 5
+  epochs_cap: 500
+  agents: 140
+  factors:
+    trust_tau: [0.25, 0.45, 0.65, 0.85]
+    shock_severity: [0.50]
+
+integrity:
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+  require_prereg: true
+  require_ci: true
+
+exports:
+  data_dir: discovery_results/trust_survival_v3/data
+  figs_dir: discovery_results/trust_survival_v3/figs
+  report_dir: discovery_results/trust_survival_v3/report

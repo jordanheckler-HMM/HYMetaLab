@@ -1,0 +1,117 @@
+study:
+  id: trust_survival_v26_emergent
+  title: Trust_Survival_Phase26_EmergentCoherence
+name: "Trust_Survival_Phase26_EmergentCoherence"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 26 runs long-horizon, low-perturbation experiments using the frozen ARC + Containment + TAF
+  controller from P25.  The goal is to detect emergent meso-scale organization: coherence waves,
+  spontaneous clustering, self-synchronizing “intelligent” modes.
+objectives:
+  - Identify secondary order parameters (coherence waves, phase alignment).
+  - Measure temporal & spatial autocorrelation of CCI and hazard.
+  - Detect self-organizing attractors (stable cluster patterns, phase locking).
+design:
+  seeds: 6
+  epochs_cap: 1800
+  agents: [960]
+  clusters: [36]
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["two_layer","three_layer"]
+    inter_kappa: [0.12,0.18]
+    inter_delay: [10,25]
+    shock_cadence: ["baseline"]
+    shock_severity: [0.35]
+    goal_inequality: [0.35]
+arc_controller:
+  window: 60
+  targets: {CCI:0.72, survival:0.80, hazard_soft:0.47}
+  gains: {k_survival:0.60, k_hazard:-0.25, k_integral:0.10}
+  momentum_tune: {base:0.10, sync_gain:1.25, desync_div:0.85, k_coherence:0.25, k_vol:-0.20}
+  bounds: {lr_min:0.006, lr_max:0.16, m_min:0.00, m_max:0.35}
+  soft_guards: {hazard_uplift_max:0.05, ramp_gamma:0.96}
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: {every:100, eps_delta:0.06, lr_boost:1.10}
+containment:
+  enabled: true
+  trigger: {hazard_lo:0.45, hazard_hi:0.50, var_hi:0.03}
+  absorption: {alpha:0.35, max_rate:0.08}
+  reservoir: {cap:1.80}
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: {hazard_max:0.47, cci_min:0.72}
+  neighborhood: {kappa_bias:0.6, deficit_floor:0.05}
+  schedule: {base_beta:0.14, burst_bonus:1.20, taper_gamma:0.94}
+  effects: {eps_delta_scale:0.06, lr_boost_scale:0.08}
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: {base:1.0, k_sync:0.25, k_hazard_brake:-0.40, max_gain:1.8, min_gain:0.7}
+  limiter: {lookback:80, slope_max:0.08, cooldown:40}
+  routing: {top_k:3, spillover:0.15}
+metrics:
+  - survival_rate
+  - hazard
+  - collapse_risk
+  - CCI
+  - inter_sync_index
+  - cascade_lambda
+  - cascade_sustain_rate
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - containment_active_ratio
+  - reservoir_mean
+  - taf_gain_mean
+  - taf_focus_score
+  - spatial_autocorr_CCI
+  - temporal_autocorr_CCI
+  - wave_period_mean
+  - wave_velocity_mean
+  - coherence_entropy
+  - attractor_count
+  - attractor_stability
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 420
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "Detected non-trivial coherence waves: wave_period_mean ∈ [80,400] with CI ≠ null"
+    - "Coherence_entropy < baseline_entropy by ≥ 20 % (95 % CI)"
+    - "Attractor_stability ≥ 400 epochs in ≥ 2 domains"
+exports:
+  data_dir: discovery_results/trust_survival_v26/data
+  figs_dir: discovery_results/trust_survival_v26/figs
+  report_dir: discovery_results/trust_survival_v26/report
+  bundle_zip: discovery_results/trust_survival_v26/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_emergent.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 26 : Detect emergent coherence waves & attractor formation under frozen controller."
+prereg:
+  constants:
+    epochs: 1800
+    seeds: [2601,2602,2603,2604,2605,2606]
+    agents: [960]
+    clusters: [36]
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["two_layer","three_layer"]
+    sim_adapter: "studies/trust_survival/adapter_trust_emergent.py:run"

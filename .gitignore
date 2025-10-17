@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.results/
+results/archive/*.zip
+public/dashboard_data.json
+public/index.html
+tools/autotheorist_out/
+# research artifacts and local caches
+discovery_results/
+results/tmp/
+reports/tmp/
+**/*.ipynb_checkpoints/
+**/.pytest_cache/
+**/__pycache__/
+*.tmp
+*.log
+*.DS_Store
+operations/_auto/
+
+.env
+node_modules

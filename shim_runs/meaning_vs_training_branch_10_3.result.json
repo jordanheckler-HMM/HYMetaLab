@@ -1,0 +1,12 @@
+{
+  "runId": "meaning_vs_training_branch_10_3",
+  "simInstanceId": "sim_D",
+  "startedAt": "2025-10-02T10:48:23.611462Z",
+  "finishedAt": "2025-10-02T10:48:24.611470Z",
+  "ok": true,
+  "survival_rate": 0.51,
+  "collapse_risk": 0.29000000000000004,
+  "aggression_delta": 0.01,
+  "collective_cci_delta": 0.51,
+  "shock_tolerance": 0.51
+}

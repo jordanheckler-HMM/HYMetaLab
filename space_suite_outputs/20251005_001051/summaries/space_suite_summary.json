@@ -1,0 +1,83 @@
+{
+  "stamp": "20251005_001051",
+  "n_runs": 22,
+  "winners": [
+    {
+      "question": 1,
+      "winner_label": "Q1_A_independent",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 2,
+      "winner_label": "Q2_vacuum_closed",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 3,
+      "winner_label": "Q3_continuous",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 4,
+      "winner_label": "Q4_2D",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 5,
+      "winner_label": "Q5_infinite",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 6,
+      "winner_label": "Q6_flat",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 7,
+      "winner_label": "Q7_softWrap",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 8,
+      "winner_label": "Q8_none",
+      "stability_CCI_mean": 0.035965583843369564,
+      "stability_hazard_mean": 0.0,
+      "notes": ""
+    },
+    {
+      "question": 9,
+      "winner_label": "Q9_absolute",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 10,
+      "winner_label": "Q10_closed",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    },
+    {
+      "question": 11,
+      "winner_label": "Q11_create",
+      "stability_CCI_mean": NaN,
+      "stability_hazard_mean": NaN,
+      "notes": ""
+    }
+  ]
+}

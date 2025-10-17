@@ -1,0 +1,18 @@
+# Simulation Report
+
+Generated: 2025-10-11T21:39:47.404938
+
+Modules run: 
+- consciousness
+- quantum
+- biology
+
+Parameters:
+{
+  "n_agents": 50,
+  "n_systems": 10,
+  "n_cells": 100,
+  "n_groups": 5,
+  "n_patterns": 50,
+  "n_timepoints": 20
+}

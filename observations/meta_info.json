@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "name": "clinical_km_oncology",
+      "file": "clinical_km_oncology.csv",
+      "provenance": "Synthetic Kaplan-Meier survival data for oncology trials",
+      "citation": "Phase 4 Validation Framework - Synthetic Data",
+      "cohort_size": 100,
+      "censoring_notes": "No censoring in synthetic data",
+      "treatment_arm": "control",
+      "study_design": "randomized_controlled_trial"
+    },
+    {
+      "name": "epi_timeseries",
+      "file": "epi_timeseries.csv", 
+      "provenance": "Synthetic epidemic time series data",
+      "citation": "Phase 4 Validation Framework - Synthetic Data",
+      "population_size": 1000,
+      "outbreak_duration": 150,
+      "peak_timing": 70,
+      "intervention_timing": 50
+    },
+    {
+      "name": "fairness_collapse",
+      "file": "fairness_collapse.csv",
+      "provenance": "Synthetic fairness and collapse data",
+      "citation": "Phase 4 Validation Framework - Synthetic Data", 
+      "population_size": 500,
+      "scarcity_range": [0.1, 1.0],
+      "fairness_decline": "linear",
+      "collapse_increase": "exponential"
+    }
+  ],
+  "validation_notes": {
+    "data_quality": "Synthetic data generated for Phase 4 testing",
+    "limitations": "Not based on real-world observations",
+    "recommendations": "Replace with actual clinical/epidemic/fairness datasets"
+  },
+  "generated": "2024-01-01T00:00:00Z",
+  "version": "1.0"
+}

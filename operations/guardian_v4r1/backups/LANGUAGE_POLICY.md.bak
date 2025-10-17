@@ -1,0 +1,259 @@
+---
+title: LANGUAGE_POLICY.md
+date: 2025-10-16
+version: draft
+N384e263387
+---
+
+# HYMetaLab Scientific Language Policy
+**Version 1.0** | **Effective: 2025-10-14**
+
+## Purpose
+
+This policy establishes guidelines for epistemic humility, transparency, and scientific rigor in all HYMetaLab communications, reports, and publications.
+
+---
+
+## Core Principles
+
+1. **Epistemic Humility**: Acknowledge the limitations of computational simulations
+2. **Transparency**: Explicitly state assumptions, parameters, and validation status
+3. **Reproducibility**: Provide sufficient detail for independent replication
+4. **Appropriate Hedging**: Use conditional language for preliminary findings
+
+---
+
+## Language Guidelines
+
+### ✅ PREFERRED Terms
+
+| Context | Preferred Language |
+|---------|-------------------|
+| **Findings** | "suggests", "is consistent with", "supports the hypothesis that" |
+| **Evidence** | "provides preliminary evidence for", "warrants further investigation" |
+| **Causality** | "suggests a causal relationship", "may causally contribute to" |
+| **Scope** | "within this simulation", "under these conditions", "in this model" |
+| **Status** | "preliminary findings", "hypothesis-generating results" |
+| **Effects** | "appears to may increase", "shows a trend toward", "is associated with" |
+
+### ❌ AVOID Terms (Without Qualification)
+
+| Term | Issue | Acceptable Qualified Form |
+|------|-------|---------------------------|
+| "suggests" | Overconfident | "provides strong evidence that..." |
+| "confirms" | Too definitive | "is consistent with..." |
+| "demonstrates" | Overclaiming | "suggests..." |
+| "establishes" | Too strong | "supports the hypothesis that..." |
+| "definitive" | Inappropriate for simulations | "preliminary" |
+| "conclusive" | Premature | "suggestive" |
+| "universal law" | Unvalidated | "regularity within simulation" |
+| "is likely to" | Inappropriate | "is expected to..." |
+
+---
+
+## Required Qualifications
+
+### 1. All Causal Claims
+
+**Format**: `[Finding] suggests a causal relationship (Δ[metric] = X, 95% CI [Y, Z])`
+
+**Example**:
+- ❌ "Openness may increases coherence."
+- ✅ "Openness (ε) appears to may increase coherence (ΔCCI = +0.085, 95% CI [0.071, 0.099]), suggesting a causal relationship within this simulation framework."
+
+### 2. All Effect Sizes
+
+**Format**: Report point estimate + confidence interval
+
+**Example**:
+- ❌ "CCI improved."
+- ✅ "CCI increased from baseline (mean Δ = +0.12, 95% CI [0.09, 0.15])."
+
+### 3. All Novel Patterns
+
+**Format**: Acknowledge need for validation
+
+**Example**:
+- ❌ "We discovered a new law of consciousness."
+- ✅ "The simulation exhibits a regularity (R ∝ ε×CCI/η) that warrants empirical investigation. Classification: HYPOTHESIS-GEN."
+
+### 4. All Comparisons to Reality
+
+**Format**: Explicitly note simulation context
+
+**Example**:
+- ❌ "Human societies behave this way."
+- ✅ "Within simulation, agent societies exhibit behavior *consistent with* observed human patterns (e.g., Dunbar's number). Independent validation required."
+
+---
+
+## Classification System
+
+All findings must be tagged with validation status:
+
+| Status | Definition | Language Restrictions |
+|--------|------------|----------------------|
+| **VALIDATED** | Meets preregistered thresholds; bootstrap CI confirms | May use "robust finding", "validated result" |
+| **UNDER_REVIEW** | Partial validation; promising but incomplete | Must use "preliminary", "requires further validation" |
+| **HYPOTHESIS-GEN** | Exploratory; pattern detected but not validated | Must use "exploratory finding", "hypothesis for testing" |
+
+---
+
+## Report Structure Requirements
+
+### Mandatory Sections
+
+1. **Research Context**
+   - Simulation framework explicitly stated
+   - Preregistration details (study ID, seeds, parameters)
+   - Classification status (VALIDATED / UNDER_REVIEW / HYPOTHESIS-GEN)
+
+2. **Methodology**
+   - Full parameter specification
+   - Statistical methods (bootstrap CI, regression, etc.)
+   - Deterministic seed policy
+   - At least 2 external citations
+
+3. **Limitations**
+   - Simulation boundaries apparently stated
+   - Threats to validity acknowledged
+   - Generalization constraints noted
+
+4. **Data Availability**
+   - Path to raw results
+   - Reproduction instructions
+   - Study YAML reference
+
+---
+
+## Checklist for All Research Outputs
+
+- [ ] Research context disclaimer included (see `templates/RESEARCH_DISCLAIMER.md`)
+- [ ] Simulation limitation explicitly stated
+- [ ] Classification status labeled (VALIDATED / UNDER_REVIEW / HYPOTHESIS-GEN)
+- [ ] All effect sizes include 95% CI
+- [ ] Causal language appropriately hedged
+- [ ] At least 2 external citations
+- [ ] Preregistered parameters listed (seeds, constants)
+- [ ] Bootstrap resampling details provided (if applicable)
+- [ ] Data availability statement included
+- [ ] No absolute claims ("suggests", "confirms") without qualification
+
+---
+
+## Examples
+
+### ✅ GOOD: Appropriately Hedged Report
+
+```markdown
+# Phase 33b: Cooperative Meaning Emergence
+
+---
+**Research Context**: Computational simulation (HYMetaLab OpenLaws)  
+**Status**: Preliminary / Hypothesis-generating  
+**Classification**: UNDER_REVIEW
+---
+
+## Findings
+
+Cooperative meaning contexts suggest an may increase in collective coherence 
+(mean ΔCCI = +0.078, 95% CI [0.061, 0.095]) relative to competitive baselines. 
+This pattern is consistent with theories of shared intentionality (Tomasello et al., 2005) 
+and warrants empirical validation in human groups.
+
+Within this simulation framework, agents exposed to cooperative framing exhibited 
+lower hazard rates (Δhazard = -0.023, 95% CI [-0.031, -0.015]), suggesting that 
+meaning-alignment may causally contribute to resilience under the Universal Resilience 
+Law (R ∝ ε×CCI/η).
+
+**Limitations**: Results are derived from agent-based models with simplified social 
+dynamics. Real-world cooperation involves cognitive, cultural, and institutional factors 
+not captured in this simulation. Independent empirical studies required.
+
+**Data**: `discovery_results/phase33b_coop_meaning_20251014_001935/`  
+**Preregistration**: `studies/phase33b_coop_meaning.yml` | Seeds: [11, 17]
+```
+
+### ❌ BAD: Overclaimed Report
+
+```markdown
+# Phase 33b: Cooperative Meaning Emergence
+
+## Findings
+
+Cooperative meaning **suggests** that shared contexts **definitively may increase** coherence. 
+Our simulation **confirms the universal law** that cooperation is the **only path** to 
+collective resilience.
+
+This **establishes** that human societies **must** adopt cooperative frameworks to survive.
+```
+
+**Issues**:
+- "suggests", "definitively", "confirms the universal law", "only path", "must" — all overclaiming
+- No simulation context stated
+- No confidence intervals
+- No limitations acknowledged
+- No citations
+- Inappropriate generalization to human societies without qualification
+
+---
+
+## Enforcement
+
+1. **Guardian v3.0**: Automated scanning for language violations
+   - Minimum alignment score: 70/100
+   - CI/CD integration blocks merges below threshold
+
+2. **Peer Review**: All VALIDATED studies require co-author sign-off on language policy compliance
+
+3. **Pre-Commit Hooks**: Markdown files checked for required disclaimer, classification, and hedging
+
+4. **Training**: All research agents receive language policy orientation
+
+---
+
+## Rationale
+
+**Why Epistemic Humility Matters**:
+1. **Scientific Integrity**: Simulation results are hypothesis-generating, not empirical evidence
+2. **Reproducibility**: Overclaiming harms credibility and reproduction attempts
+3. **Ethical Responsibility**: Overconfident claims can mislead stakeholders and policymakers
+4. **Long-term Credibility**: Conservative language builds trust; overclaiming destroys it
+
+**Why Computational Research Requires Extra Caution**:
+- Simulations explore possibility space, not necessarily reality
+- Parameter choices affect outcomes (sensitivity analysis required)
+- Agent models simplify human complexity
+- Validation against real-world data is non-negotiable for application
+
+---
+
+## Updates
+
+This policy will be reviewed quarterly and updated based on:
+- Guardian v3 alignment trends
+- External review feedback
+- Community standards evolution
+- Empirical validation outcomes
+
+**Version History**:
+- v1.0 (2025-10-14): Initial release
+
+---
+
+**Contact**: HYMetaLab Research Integrity Team  
+**Compliance Questions**: See `GUARDIAN_V3_REPORT.md`
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

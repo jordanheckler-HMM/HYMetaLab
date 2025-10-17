@@ -1,0 +1,30 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/Mathematical_Metaphysics_Zenodo_Portable_2025-10-09/LICENSE.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/Mathematical_Metaphysics_Zenodo_Portable_2025-10-09/LICENSE.txt
+@@ -1,3 +1,10 @@
++---
++title: LICENSE.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ CC BY 4.0 — Creative Commons Attribution 4.0 International
+ 
+ You are free to:
+@@ -8,3 +15,16 @@
+ - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+ 
+ Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

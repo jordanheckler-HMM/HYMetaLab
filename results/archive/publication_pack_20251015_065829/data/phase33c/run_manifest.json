@@ -1,0 +1,843 @@
+{
+  "study_id": "phase33c_coop_meaning",
+  "version": 1.0,
+  "prereg_date": "2025-10-14",
+  "total_runs": 72,
+  "completed_runs": 72,
+  "run_metadata": [
+    {
+      "run_idx": 1,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 2,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 3,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 4,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 5,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 6,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 7,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 8,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 9,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 10,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 11,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 12,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 13,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 14,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 15,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 16,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 17,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 18,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 19,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 20,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 21,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 22,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 23,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 24,
+      "params": {
+        "epsilon": 0.0011,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 25,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 26,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 27,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 28,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 29,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 30,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 31,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 32,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 33,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 34,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 35,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 36,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 37,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 38,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 39,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 40,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 41,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 42,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 43,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 44,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 45,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 46,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 47,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 48,
+      "params": {
+        "epsilon": 0.0012,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 49,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 50,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 51,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 52,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 53,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 54,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0828,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 55,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 56,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 57,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 58,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 59,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 60,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.085,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 61,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 62,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 63,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 64,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 65,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 66,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.0875,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 67,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 68,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 69,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.06,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 70,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.06,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 71,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.07,
+        "seed": 29
+      },
+      "success": true
+    },
+    {
+      "run_idx": 72,
+      "params": {
+        "epsilon": 0.0013,
+        "rho": 0.09,
+        "trust_delta": 0.07,
+        "meaning_delta": 0.08,
+        "seed": 29
+      },
+      "success": true
+    }
+  ],
+  "parameters": {
+    "constants": {
+      "seeds": [
+        11,
+        17,
+        23,
+        29
+      ],
+      "agents": 200,
+      "noise": 0.05,
+      "shock": {
+        "epoch": 1000,
+        "severity": 0.5
+      },
+      "analysis_window": [
+        960,
+        1040
+      ]
+    },
+    "sweep": {
+      "epsilon": [
+        0.0011,
+        0.0012,
+        0.0013
+      ],
+      "rho": [
+        0.0828,
+        0.085,
+        0.0875,
+        0.09
+      ],
+      "trust_delta": [
+        0.06,
+        0.07
+      ],
+      "meaning_delta": [
+        0.06,
+        0.07,
+        0.08
+      ]
+    }
+  }
+}

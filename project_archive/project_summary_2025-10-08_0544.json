@@ -1,0 +1,20 @@
+[
+  {
+    "file": "discovery_results/data/runs_summary.csv",
+    "category": "hypothesis_only",
+    "mean_CCI": 0.4975,
+    "mean_survival": null,
+    "mean_collapse": null,
+    "mean_hazard": 0.0835,
+    "cci_ci_present": false,
+    "survival_ci_present": false,
+    "preregistered_flag": false,
+    "detected_columns": {
+      "CCI": "stability_cci_mean",
+      "survival_rate": null,
+      "collapse_risk": null,
+      "hazard": "stability_hazard_mean"
+    },
+    "validation_status": "UNDER REVIEW"
+  }
+]

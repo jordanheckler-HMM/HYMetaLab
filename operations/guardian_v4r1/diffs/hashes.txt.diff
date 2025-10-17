@@ -1,0 +1,28 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/results/archive/phase4_open_data_replication_20251016_145340/data/hashes.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/results/archive/phase4_open_data_replication_20251016_145340/data/hashes.txt
+@@ -1,5 +1,25 @@
++---
++title: hashes.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ 61e6ee8a9b007eee412d27a0365f00e835a94e48421d2ff73bcfc37059f86c93  wvs_trust_wellbeing_wave7_standardized.csv
+ 9690ac20e622cd587e18d55e7c03c35ac4feab8033b3b4752c338339c93654da  oecd_education_collaboration_2023_standardized.csv
+ a324af92a58267ce9d96d79d5079d58183b733db5f45cad1642c4e122832740f  gss_trust_social_capital_2022_standardized.csv
+ 72e017f33bdf5fe1248b98961c2bb8f33e0d5bf9b16f4e22f0e61c6f56e7c9a2  ess_wellbeing_trust_round10_standardized.csv
+ 78b28df94538bcc4505f64bae8a4a596d2373eeb38ee0e5e7d97a74bbe8ba8aa  cooperative_learning_meta_2023_standardized.csv
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

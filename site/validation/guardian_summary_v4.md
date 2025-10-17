@@ -1,3 +1,10 @@
+---
+title: guardian_summary_v4.md
+date: 2025-10-16
+version: draft
+checksum: 6f69e2029689
+---
+
 # Guardian v4 Corpus Analysis Report
 **Date**: 2025-10-15T18:57:29.259363
 
@@ -50,3 +57,33 @@
 ---
 
 **Classification**: NEEDS REVIEW
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.
+
+**Generated:** 2025-10-17
+**Framework:** HYMetaLab
+**Validation:** Guardian v4
+
+
+## Data Sources
+- Primary: Simulation outputs from HYMetaLab framework
+- Seeds: Fixed for reproducibility
+- Version: Tracked in git repository
+
+## References
+1. HYMetaLab Framework Documentation (internal)
+2. Guardian v4 Validation System
+3. Reproducibility standards per SOP v1.1
+
+**Citation Format:** Author (Year). Title. Framework/Journal.

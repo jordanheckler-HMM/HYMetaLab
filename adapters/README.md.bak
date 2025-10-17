@@ -1,0 +1,11 @@
+Adapters README
+================
+
+The `safety_cci_adapter.py` includes safety and provenance features to avoid accidental fabrication and improve reproducibility.
+
+Usage highlights
+- allow_mocks: boolean flag. The adapter will refuse to run built-in mock simulations unless this is True. Set via `cfg['allow_mocks']=True`, `run_study(..., allow_mocks=True)` or env var `ALLOW_MOCKS=1`.
+- sim_entry: optional string `module:func` to call a real simulator entrypoint. e.g. `sim_entry: 'myproj.sim:run_sim'` in the config.
+
+Provenance
+- The adapter writes `data/provenance.json` containing `used_mocks`, a SHA256 of the config file (if provided), git commit (if available), python executable, platform, and package versions. CI will fail if any provenance indicates `used_mocks: true`.

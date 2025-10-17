@@ -1,0 +1,114 @@
+{
+  "dashboard_version": "2.0",
+  "last_updated": "2025-10-15T11:40:00Z",
+  "lab": "HYMetaLab / Heck Yeah Simulation Research Initiative",
+  
+  "phase4_open_data_integration": {
+    "status": "COMPLETE",
+    "guardian_score": 87.0,
+    "validation": {
+      "truthlens": 1.000,
+      "meaningforge": 1.000,
+      "guardian_v4": 87.0
+    },
+    "datasets": 5,
+    "hypotheses": 5,
+    "predictions": 20,
+    
+    "replication_package": {
+      "file": "phase4_open_data_replication_20251015_084124.zip",
+      "size_mb": 0.37,
+      "sha256": "a33e79978d2ee00b3089eae7c6be0400f8c0f4d4aabf9d1002a2d100d4c0cf02",
+      "generated": "2025-10-15T08:41:24Z",
+      "location": "results/publication/",
+      "verified": true,
+      "verifier": "Lab Tech – Archival",
+      "verification_date": "2025-10-15"
+    },
+    
+    "publication": {
+      "zenodo_doi": "[PASTE DOI HERE AFTER UPLOAD]",
+      "zenodo_url": "[PASTE ZENODO LINK HERE]",
+      "upload_status": "PENDING",
+      "upload_date": null,
+      "preprint_doi": null,
+      "preprint_url": null,
+      "preprint_status": "PENDING"
+    },
+    
+    "artifacts": [
+      "open_data/origin_output.json",
+      "open_data/synthesis_output.json",
+      "open_data/synthesis_narrative.md",
+      "open_data/datasets_manifest.yml",
+      "open_data/preregister.yml",
+      "open_data/mapping.yml"
+    ]
+  },
+  
+  "corpus_validation": {
+    "date": "2025-10-15",
+    "documents_scanned": 601,
+    "mean_score": 62.5,
+    "passing_rate": 7.5,
+    "flagged_for_review": 601,
+    "risk_distribution": {
+      "low": 0,
+      "medium": 45,
+      "high": 541,
+      "critical": 15
+    },
+    "top_performer": {
+      "file": "synthesis_narrative.md",
+      "score": 87.0
+    }
+  },
+  
+  "delta_cci_references": [
+    {
+      "study": "phase33c_coop_meaning",
+      "delta_cci": 0.0282,
+      "delta_hazard": -0.0232,
+      "status": "VALIDATED"
+    },
+    {
+      "study": "fis_trust_hope_stabilizers",
+      "delta_cci": 0.0329,
+      "delta_hazard": -0.0132,
+      "status": "VALIDATED"
+    },
+    {
+      "study": "fis_ai_safety_toolkit",
+      "delta_cci": 0.0444,
+      "delta_hazard": -0.0159,
+      "status": "VALIDATED"
+    }
+  ],
+  
+  "next_actions": [
+    {
+      "priority": "IMMEDIATE",
+      "action": "Upload replication package to Zenodo",
+      "assignee": "Lab Tech – Archival",
+      "status": "READY"
+    },
+    {
+      "priority": "IMMEDIATE",
+      "action": "Paste DOI into dashboard_data.json",
+      "assignee": "Lab Tech – Archival",
+      "status": "PENDING"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Submit preprint (arXiv/PsyArXiv)",
+      "assignee": "Research Team",
+      "status": "PENDING"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Guardian corpus sweep after DOI addition",
+      "assignee": "Lab Tech – Validation",
+      "status": "PENDING"
+    }
+  ]
+}

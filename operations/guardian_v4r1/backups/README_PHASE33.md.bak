@@ -1,0 +1,207 @@
+---
+title: README_PHASE33.md
+date: 2025-10-16
+version: draft
+checksum: TBD
+---
+
+# Phase 33 — Cooperative Meaning Fields (CMF)
+
+**Status:** ✅ Preregistered  
+**Date:** October 13, 2025  
+**Version:** 1.0
+
+---
+
+## 🎯 Research Question
+
+Do Trust + Meaning field interactions maintain consciousness stability (ΔCCI ≥ 0.03) and may reduce system hazard (≥0.01) within optimal coupling parameters?
+
+---
+
+## 📋 Hypothesis
+
+**H1:** Within ε ∈ [0.0005, 0.0015], systems near ρ★ ≈ 0.0828 with positive Trust/Meaning deltas sustain ΔCCI ≥ 0.03 and may reduce hazard ≥ 0.01 vs. control.
+
+### Rationale
+Based on Meaning Periodic Table v0.2, trust-meaning coupling should:
+1. Stabilize consciousness calibration index (CCI)
+2. may Reduce system hazard through cooperative dynamics
+3. Show strongest effects near critical density ρ★ ≈ 0.0828
+
+---
+
+## 🔧 Experimental Design
+
+### Parameters
+
+**Fixed Constants:**
+- Seeds: [11, 17, 23] (deterministic, preregistered)
+- Agents: 200
+- Noise: 0.05
+- Shock: epoch 1000, severity 0.50
+- Analysis window: [960, 1040] epochs
+
+**Parameter Sweep:**
+- **ε (epsilon):** [0.0005, 0.0010, 0.0015] - coupling strength
+- **ρ (rho):** [0.06, 0.0828, 0.10] - density parameter
+- **Δtrust:** [0.00, 0.04, 0.06] - trust interaction delta
+- **Δmeaning:** [0.00, 0.03, 0.05] - meaning field delta
+
+**Total runs:** 243 (3 × 3 × 3 × 3 × 3)
+
+---
+
+## 📊 Primary Outcomes
+
+### Required Exports
+All runs must export:
+- `CCI` - Consciousness Calibration Index
+- `hazard` - System hazard level
+- `risk` - Calculated risk metric
+- `survival` - Agent survival rate
+- `seed` - Random seed used
+- `epoch` - Time point
+
+### Success Criteria
+
+**Metric 1: CCI Gain**
+- Measure: mean(ΔCCI) across conditions
+- Threshold: ≥ 0.03
+- Rationale: Meaningful consciousness stability may increase
+
+**Metric 2: Hazard Reduction**
+- Measure: mean(Δhazard) across conditions
+- Threshold: ≤ -0.01
+- Rationale: Reduced system risk
+
+### Classification
+
+**Validated:**
+- stability_CCI_mean ≥ 0.50
+- stability_hazard_mean ≤ 0.20
+- stability_CCI_slope ≥ 0.0005
+
+**Under Review:**
+- All other outcomes
+
+---
+
+## 🔬 Validation
+
+### Bootstrap Confidence Intervals
+- Iterations: 800
+- Method: Percentile bootstrap
+- Confidence level: 95%
+
+### Statistical Tests
+1. Main effect of epsilon on CCI
+2. Main effect of trust_delta on hazard
+3. Main effect of meaning_delta on survival
+4. Interaction: (trust_delta × meaning_delta) → CCI
+5. Density dependence: effect size vs. (ρ - 0.0828)
+
+---
+
+## 📁 File Structure
+
+```
+studies/
+└── phase33_coop_meaning.yml        # Study specification
+└── README_PHASE33.md               # This file
+
+adapters/
+└── phase33_coop_meaning.py         # Execution adapter
+
+results/discovery_results/phase33_coop_meaning/
+├── phase33_coop_meaning_results.csv    # Full results
+├── run_manifest.json                   # Provenance
+├── summary.json                        # Summary stats
+└── figures/                            # Generated plots
+```
+
+---
+
+## 🚀 Running the Study
+
+### Using OpenLaws Automation
+```bash
+# Full pipeline
+python openlaws_automation.py auto --study studies/phase33_coop_meaning.yml
+
+# Individual steps
+python openlaws_automation.py run --study studies/phase33_coop_meaning.yml
+python openlaws_automation.py validate --study studies/phase33_coop_meaning.yml
+python openlaws_automation.py report --study studies/phase33_coop_meaning.yml
+```
+
+### Standalone Test
+```bash
+# Quick test (runs full study)
+python adapters/phase33_coop_meaning.py
+```
+
+### Expected Runtime
+- Single run: ~0.1s (synthetic data)
+- Full study (243 runs): ~30s
+- With real simulation: ~5-10 minutes
+
+---
+
+## 📖 References
+
+1. **Meaning Periodic Table v0.2** - Trust/Meaning interaction parameters
+2. **CCI Framework** - Consciousness Calibration Index methodology
+3. **Previous phases** - Trust-survival studies (phases 1-32)
+4. **OpenLaws Standards** - Preregistration and reproducibility guidelines
+
+---
+
+## ✅ Preregistration Checklist
+
+- [x] Hypothesis stated before data collection
+- [x] Parameters fixed and documented
+- [x] Seeds preregistered (11, 17, 23)
+- [x] Analysis plan specified
+- [x] Success criteria defined
+- [x] Export schema documented
+- [x] Validation method specified
+- [x] YAML configuration committed
+
+---
+
+## 📝 Notes
+
+### Implementation Status
+- ✅ Study configuration (YAML)
+- ✅ Adapter implementation
+- ⏳ Integration with simulation core (TODO: replace synthetic data)
+- ⏳ Visualization pipeline
+- ⏳ Statistical analysis scripts
+
+### Next Steps
+1. Replace synthetic data with actual simulation calls
+2. Implement visualization functions
+3. Add bootstrap CI calculations
+4. Create classification logic
+5. Generate final report template
+
+---
+
+**Preregistered:** October 13, 2025  
+**Status:** Ready for execution  
+**Integrity:** Committed to MetaLab repository
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

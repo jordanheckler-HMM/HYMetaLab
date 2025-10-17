@@ -1,0 +1,232 @@
+{
+  "synthesis_version": "v1_phase4",
+  "timestamp": "2025-10-15T08:17:57.008909",
+  "source_file": "open_data/origin_output.json",
+  "validation_scores": {
+    "truthlens": 1.0,
+    "meaningforge": 1.0,
+    "overall": 1.0
+  },
+  "synthesized_hypotheses": [
+    {
+      "id": "synth_wvs_trust_wellbeing_wave7_20251015",
+      "dataset": "wvs_trust_wellbeing_wave7",
+      "dataset_name": "World Values Survey Wave 7 - Trust & Well-being Subset",
+      "dataset_theme": [
+        "trust",
+        "well-being",
+        "social_cohesion"
+      ],
+      "hypothesis": {
+        "primary": "Trust levels predict community resilience post-shock",
+        "narrative": "Based on the validated World Values Survey Wave 7 - Trust & Well-being Subset dataset, we hypothesize that trust levels predict community resilience post-shock\n\nThis hypothesis is grounded in the Universal Resilience Law (R \u221d (\u03b5 \u00d7 CCI) / \u03b7) and suggests that \nthe observed relationships between trust, well-being, social_cohesion may indicate measurable effects \non collective coherence and system resilience.\n\nThe hypothesis is testable through correlation analysis between trust, wellbeing, collaboration, \nand information access proxies mapped to the CCI framework. We predict positive correlations \nbetween CCI components and resilience indicators (survival rates, hazard reduction).\n\nThis work builds on validated open-source data integration (TruthLens: 1.000, \nMeaningForge: 1.000) and maintains epistemic humility \nby using language that suggests relationships rather than claiming causation."
+      },
+      "testable_predictions": [
+        "Trust scores correlate positively with CCI (r > 0.15)",
+        "Wellbeing scores correlate positively with CCI (r > 0.15)",
+        "Higher CCI values predict lower hazard rates",
+        "CCI explains \u22655% variance in resilience outcomes"
+      ],
+      "methodology": {
+        "data_source": "wvs_trust_wellbeing_wave7",
+        "sample_size": "~1000 records",
+        "cci_calculation": "CCI = 0.30\u00b7trust + 0.25\u00b7wellbeing + 0.25\u00b7collaboration + 0.20\u00b7information",
+        "statistical_tests": [
+          "Pearson correlation (CCI components)",
+          "Linear regression (CCI \u2192 resilience)",
+          "Bootstrap confidence intervals (n=1000)"
+        ],
+        "preregistered": true
+      },
+      "ethical_considerations": {
+        "data_provenance": "Open-source dataset (CC-BY-NC (for research))",
+        "privacy": "No individual-level identifiers; aggregate analysis only",
+        "transparency": "Full methodology documented; SHA256 integrity seals",
+        "limitations": [
+          "Synthetic demonstration data (production requires real datasets)",
+          "Correlational analysis (causation requires experimental design)",
+          "Cross-sectional data (longitudinal validation needed)"
+        ]
+      },
+      "expected_impact": "If validated, this hypothesis suggests that interventions targeting trust, well-being \ncould improve collective resilience through enhanced CCI. Policy implications include prioritizing \ntrust-building, well-being programs, and collaborative structures in communities facing systemic shocks.",
+      "validation_status": "SYNTHESIZED",
+      "guardian_ready": true
+    },
+    {
+      "id": "synth_oecd_education_collaboration_2023_20251015",
+      "dataset": "oecd_education_collaboration_2023",
+      "dataset_name": "OECD Education at a Glance - Collaboration & Social-Emotional Learning",
+      "dataset_theme": [
+        "education",
+        "collaboration",
+        "skill_development"
+      ],
+      "hypothesis": {
+        "primary": "Collaborative learning environments increase CCI in educational systems",
+        "narrative": "Based on the validated OECD Education at a Glance - Collaboration & Social-Emotional Learning dataset, we hypothesize that collaborative learning environments increase cci in educational systems\n\nThis hypothesis is grounded in the Universal Resilience Law (R \u221d (\u03b5 \u00d7 CCI) / \u03b7) and suggests that \nthe observed relationships between education, collaboration, skill_development may indicate measurable effects \non collective coherence and system resilience.\n\nThe hypothesis is testable through correlation analysis between trust, wellbeing, collaboration, \nand information access proxies mapped to the CCI framework. We predict positive correlations \nbetween CCI components and resilience indicators (survival rates, hazard reduction).\n\nThis work builds on validated open-source data integration (TruthLens: 1.000, \nMeaningForge: 1.000) and maintains epistemic humility \nby using language that suggests relationships rather than claiming causation."
+      },
+      "testable_predictions": [
+        "Trust scores correlate positively with CCI (r > 0.15)",
+        "Wellbeing scores correlate positively with CCI (r > 0.15)",
+        "Higher CCI values predict lower hazard rates",
+        "CCI explains \u22655% variance in resilience outcomes"
+      ],
+      "methodology": {
+        "data_source": "oecd_education_collaboration_2023",
+        "sample_size": "~1000 records",
+        "cci_calculation": "CCI = 0.30\u00b7trust + 0.25\u00b7wellbeing + 0.25\u00b7collaboration + 0.20\u00b7information",
+        "statistical_tests": [
+          "Pearson correlation (CCI components)",
+          "Linear regression (CCI \u2192 resilience)",
+          "Bootstrap confidence intervals (n=1000)"
+        ],
+        "preregistered": true
+      },
+      "ethical_considerations": {
+        "data_provenance": "Open-source dataset (CC-BY-4.0)",
+        "privacy": "No individual-level identifiers; aggregate analysis only",
+        "transparency": "Full methodology documented; SHA256 integrity seals",
+        "limitations": [
+          "Synthetic demonstration data (production requires real datasets)",
+          "Correlational analysis (causation requires experimental design)",
+          "Cross-sectional data (longitudinal validation needed)"
+        ]
+      },
+      "expected_impact": "If validated, this hypothesis suggests that interventions targeting education, collaboration \ncould improve collective resilience through enhanced CCI. Policy implications include prioritizing \ntrust-building, well-being programs, and collaborative structures in communities facing systemic shocks.",
+      "validation_status": "SYNTHESIZED",
+      "guardian_ready": true
+    },
+    {
+      "id": "synth_gss_trust_social_capital_2022_20251015",
+      "dataset": "gss_trust_social_capital_2022",
+      "dataset_name": "General Social Survey - Trust & Social Capital Module",
+      "dataset_theme": [
+        "trust",
+        "social_capital",
+        "civic_engagement"
+      ],
+      "hypothesis": {
+        "primary": "Declining trust trends correlate with reduced community resilience",
+        "narrative": "Based on the validated General Social Survey - Trust & Social Capital Module dataset, we hypothesize that declining trust trends correlate with reduced community resilience\n\nThis hypothesis is grounded in the Universal Resilience Law (R \u221d (\u03b5 \u00d7 CCI) / \u03b7) and suggests that \nthe observed relationships between trust, social_capital, civic_engagement may indicate measurable effects \non collective coherence and system resilience.\n\nThe hypothesis is testable through correlation analysis between trust, wellbeing, collaboration, \nand information access proxies mapped to the CCI framework. We predict positive correlations \nbetween CCI components and resilience indicators (survival rates, hazard reduction).\n\nThis work builds on validated open-source data integration (TruthLens: 1.000, \nMeaningForge: 1.000) and maintains epistemic humility \nby using language that suggests relationships rather than claiming causation."
+      },
+      "testable_predictions": [
+        "Trust scores correlate positively with CCI (r > 0.15)",
+        "Wellbeing scores correlate positively with CCI (r > 0.15)",
+        "Higher CCI values predict lower hazard rates",
+        "CCI explains \u22655% variance in resilience outcomes"
+      ],
+      "methodology": {
+        "data_source": "gss_trust_social_capital_2022",
+        "sample_size": "~1000 records",
+        "cci_calculation": "CCI = 0.30\u00b7trust + 0.25\u00b7wellbeing + 0.25\u00b7collaboration + 0.20\u00b7information",
+        "statistical_tests": [
+          "Pearson correlation (CCI components)",
+          "Linear regression (CCI \u2192 resilience)",
+          "Bootstrap confidence intervals (n=1000)"
+        ],
+        "preregistered": true
+      },
+      "ethical_considerations": {
+        "data_provenance": "Open-source dataset (Public Domain (US Government data))",
+        "privacy": "No individual-level identifiers; aggregate analysis only",
+        "transparency": "Full methodology documented; SHA256 integrity seals",
+        "limitations": [
+          "Synthetic demonstration data (production requires real datasets)",
+          "Correlational analysis (causation requires experimental design)",
+          "Cross-sectional data (longitudinal validation needed)"
+        ]
+      },
+      "expected_impact": "If validated, this hypothesis suggests that interventions targeting trust, social_capital \ncould improve collective resilience through enhanced CCI. Policy implications include prioritizing \ntrust-building, well-being programs, and collaborative structures in communities facing systemic shocks.",
+      "validation_status": "SYNTHESIZED",
+      "guardian_ready": true
+    },
+    {
+      "id": "synth_ess_wellbeing_trust_round10_20251015",
+      "dataset": "ess_wellbeing_trust_round10",
+      "dataset_name": "European Social Survey Round 10 - Well-being & Social Trust",
+      "dataset_theme": [
+        "well-being",
+        "trust",
+        "social_attitudes"
+      ],
+      "hypothesis": {
+        "primary": "Cross-national trust variations predict differential shock responses",
+        "narrative": "Based on the validated European Social Survey Round 10 - Well-being & Social Trust dataset, we hypothesize that cross-national trust variations predict differential shock responses\n\nThis hypothesis is grounded in the Universal Resilience Law (R \u221d (\u03b5 \u00d7 CCI) / \u03b7) and suggests that \nthe observed relationships between well-being, trust, social_attitudes may indicate measurable effects \non collective coherence and system resilience.\n\nThe hypothesis is testable through correlation analysis between trust, wellbeing, collaboration, \nand information access proxies mapped to the CCI framework. We predict positive correlations \nbetween CCI components and resilience indicators (survival rates, hazard reduction).\n\nThis work builds on validated open-source data integration (TruthLens: 1.000, \nMeaningForge: 1.000) and maintains epistemic humility \nby using language that suggests relationships rather than claiming causation."
+      },
+      "testable_predictions": [
+        "Trust scores correlate positively with CCI (r > 0.15)",
+        "Wellbeing scores correlate positively with CCI (r > 0.15)",
+        "Higher CCI values predict lower hazard rates",
+        "CCI explains \u22655% variance in resilience outcomes"
+      ],
+      "methodology": {
+        "data_source": "ess_wellbeing_trust_round10",
+        "sample_size": "~1000 records",
+        "cci_calculation": "CCI = 0.30\u00b7trust + 0.25\u00b7wellbeing + 0.25\u00b7collaboration + 0.20\u00b7information",
+        "statistical_tests": [
+          "Pearson correlation (CCI components)",
+          "Linear regression (CCI \u2192 resilience)",
+          "Bootstrap confidence intervals (n=1000)"
+        ],
+        "preregistered": true
+      },
+      "ethical_considerations": {
+        "data_provenance": "Open-source dataset (CC-BY-NC-SA (for research))",
+        "privacy": "No individual-level identifiers; aggregate analysis only",
+        "transparency": "Full methodology documented; SHA256 integrity seals",
+        "limitations": [
+          "Synthetic demonstration data (production requires real datasets)",
+          "Correlational analysis (causation requires experimental design)",
+          "Cross-sectional data (longitudinal validation needed)"
+        ]
+      },
+      "expected_impact": "If validated, this hypothesis suggests that interventions targeting well-being, trust \ncould improve collective resilience through enhanced CCI. Policy implications include prioritizing \ntrust-building, well-being programs, and collaborative structures in communities facing systemic shocks.",
+      "validation_status": "SYNTHESIZED",
+      "guardian_ready": true
+    },
+    {
+      "id": "synth_cooperative_learning_meta_2023_20251015",
+      "dataset": "cooperative_learning_meta_2023",
+      "dataset_name": "Cooperative Learning Meta-Analysis Dataset (Johnson & Johnson)",
+      "dataset_theme": [
+        "collaboration",
+        "education",
+        "peer_learning"
+      ],
+      "hypothesis": {
+        "primary": "Cooperative structures amplify learning resilience under academic stress",
+        "narrative": "Based on the validated Cooperative Learning Meta-Analysis Dataset (Johnson & Johnson) dataset, we hypothesize that cooperative structures amplify learning resilience under academic stress\n\nThis hypothesis is grounded in the Universal Resilience Law (R \u221d (\u03b5 \u00d7 CCI) / \u03b7) and suggests that \nthe observed relationships between collaboration, education, peer_learning may indicate measurable effects \non collective coherence and system resilience.\n\nThe hypothesis is testable through correlation analysis between trust, wellbeing, collaboration, \nand information access proxies mapped to the CCI framework. We predict positive correlations \nbetween CCI components and resilience indicators (survival rates, hazard reduction).\n\nThis work builds on validated open-source data integration (TruthLens: 1.000, \nMeaningForge: 1.000) and maintains epistemic humility \nby using language that suggests relationships rather than claiming causation."
+      },
+      "testable_predictions": [
+        "Trust scores correlate positively with CCI (r > 0.15)",
+        "Wellbeing scores correlate positively with CCI (r > 0.15)",
+        "Higher CCI values predict lower hazard rates",
+        "CCI explains \u22655% variance in resilience outcomes"
+      ],
+      "methodology": {
+        "data_source": "cooperative_learning_meta_2023",
+        "sample_size": "~1000 records",
+        "cci_calculation": "CCI = 0.30\u00b7trust + 0.25\u00b7wellbeing + 0.25\u00b7collaboration + 0.20\u00b7information",
+        "statistical_tests": [
+          "Pearson correlation (CCI components)",
+          "Linear regression (CCI \u2192 resilience)",
+          "Bootstrap confidence intervals (n=1000)"
+        ],
+        "preregistered": true
+      },
+      "ethical_considerations": {
+        "data_provenance": "Open-source dataset (CC0 (Public Domain))",
+        "privacy": "No individual-level identifiers; aggregate analysis only",
+        "transparency": "Full methodology documented; SHA256 integrity seals",
+        "limitations": [
+          "Synthetic demonstration data (production requires real datasets)",
+          "Correlational analysis (causation requires experimental design)",
+          "Cross-sectional data (longitudinal validation needed)"
+        ]
+      },
+      "expected_impact": "If validated, this hypothesis suggests that interventions targeting collaboration, education \ncould improve collective resilience through enhanced CCI. Policy implications include prioritizing \ntrust-building, well-being programs, and collaborative structures in communities facing systemic shocks.",
+      "validation_status": "SYNTHESIZED",
+      "guardian_ready": true
+    }
+  ]
+}

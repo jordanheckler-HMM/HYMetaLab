@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "generated": "2025-10-15T01:05:01.664512",
+  "alignment_score": 70,
+  "status": "GOOD",
+  "status_emoji": "\ud83d\udfe1",
+  "components": {
+    "humility": 10,
+    "prereg_manifest": 50,
+    "reproducibility": 66,
+    "language_safety": 97
+  },
+  "details": {
+    "humility_violations": [
+      "proves at position 10704",
+      "proves at position 27591",
+      "proves at position 28089",
+      "proved at position 28096",
+      "proves at position 30203",
+      "proves at position 32321",
+      "proves at position 37276",
+      "proves at position 38351",
+      "proves at position 52066",
+      "proves at position 70413"
+    ],
+    "prereg": {
+      "preregistered_studies": 20,
+      "run_manifests": 16,
+      "yaml_files": [
+        "studies/phase31b_universal_coherence_law.yml",
+        "studies/phase33c_coop_meaning.yml",
+        "studies/phase35b_cross_survey_replication.yml",
+        "studies/openspace_phase44.yml",
+        "studies/scale_invariance_meta.yml"
+      ]
+    },
+    "reproducibility": {
+      "reproducible_groups": 2,
+      "total_groups": 3,
+      "percentage": 66.7,
+      "sample_details": {
+        "phase33b_coop_meaning": {
+          "n_runs": 4,
+          "mean_cci": 0.0278,
+          "std": 0.0004,
+          "ci_95": 0.0004,
+          "reproducible": false
+        },
+        "phase33c_coop_meaning": {
+          "n_runs": 2,
+          "mean_cci": 0.0282,
+          "std": 0.0,
+          "ci_95": 0.0,
+          "reproducible": true
+        },
+        "phase34_empirical_calibration": {
+          "n_runs": 2,
+          "mean_cci": 0.2307,
+          "std": 0.3262,
+          "ci_95": 0.4521,
+          "reproducible": true
+        }
+      }
+    },
+    "language_safety": {
+      "total_violations": 2838,
+      "total_characters": 256283068,
+      "density_per_10k": 0.11,
+      "worst_files": {
+        "qc/QC_REPORT.json": 1938,
+        "04_LATEST_RESULTS/global_personal_impact_framework_20250926_053243/global_personal_impact_data.json": 43,
+        "04_LATEST_RESULTS/simulation_improvement_analysis_20250926_054531/simulation_improvement_data.json": 41,
+        "QC_UPGRADE_COMPLETE.md": 34,
+        "04_LATEST_RESULTS/next_solutions_analysis_20250926_050357/next_solutions_data.json": 27
+      }
+    }
+  },
+  "policy": "OpenLaws Protocol v1.0 - Enhanced with Reproducibility & Language Safety",
+  "recommendations": [
+    "Improve epistemic humility: address banned phrases"
+  ]
+}

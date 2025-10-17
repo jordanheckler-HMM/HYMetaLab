@@ -1,0 +1,14 @@
+id: neuro_coherence_phase31
+hypothesis: H31 distributed coupling increases collective CCI and reduces η
+preregistered_constants:
+  seeds: [11, 17, 23]
+  participants: [3, 5, 7]
+  coupling_strength: [0.1, 0.3, 0.5]
+  noise_base: 0.05
+  epochs: 2000
+  metrics: [CCI_mean, hazard_mean, η, coherence_gain]
+thresholds:
+  ΔCCI_min: 0.05
+  η_reduction_min: 0.05
+  validity: bootstrap_CI(p<0.05)
+adapter: adapters/neuro_coherence_adapter.py

@@ -1,0 +1,21 @@
+---
+title: sha256_manifest.txt
+date: 2025-10-16
+version: draft
+checksum: a8ab2ead0e34
+---
+
+d007b59f30dbaf3549e32cafef8b61d22c8b7d2ef19919849d013bf108d185fb  results/archive/realityloop_rerun_v1.1.zip
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

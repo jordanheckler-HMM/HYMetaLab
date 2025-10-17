@@ -1,3 +1,10 @@
+---
+title: README.md
+date: 2025-10-16
+version: draft
+checksum: 49ca5fbcc7a8
+---
+
 # HYMetaLab Reality Loop — Static Site
 
 **Generated:** 2025-10-15  
@@ -129,3 +136,16 @@ Edit CSS variables in `:root` of each HTML file.
 
 **"Integrity → Resilience → Meaning"**  
 — HYMetaLab Research Charter
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,17 @@
+{
+  "truthlens_version": "v1_phase3_wrapper",
+  "timestamp": "2025-10-15T08:11:46.447772",
+  "input_file": "open_data/preregister.yml",
+  "score": 1.0,
+  "checks": {
+    "preregistration_present": true,
+    "datasets_registered": true,
+    "hypotheses_defined": true,
+    "methodology_documented": true,
+    "integrity_standards": true
+  },
+  "checks_passed": 5,
+  "checks_total": 5,
+  "status": "PASS",
+  "recommendation": "Preregistration meets TruthLens standards"
+}

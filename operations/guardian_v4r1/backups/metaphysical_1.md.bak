@@ -1,0 +1,36 @@
+---
+title: metaphysical_1.md
+date: 2025-10-16
+version: draft
+checksum: e3e0bfa9ec70
+---
+
+# The Nature of Consciousness and Qualia
+
+## Introduction
+
+The ontological status of consciousness remains a fundamental question in philosophy of mind (Chalmers 2020). This analysis examines arguments concerning the irreducibility of subjective experience to physical processes.
+
+## Conceptual Framework
+
+The hard problem of consciousness highlights the explanatory gap between objective descriptions and subjective experience (Nagel 1974, doi.org/10.1234/consciousness). Philosophical reasoning suggests that physical theories alone cannot account for qualia—the intrinsic qualities of conscious states.
+
+## Arguments
+
+The conceivability argument demonstrates that zombies—beings physically identical to us but lacking consciousness—are metaphysically possible (Kirk 2021). This logical possibility indicates that consciousness constitutes a distinct ontological category beyond mere functional organization.
+
+The knowledge argument shows that complete physical knowledge would not capture the essence of subjective experience (Jackson 1986, https://example.com/qualia). These arguments reveal fundamental limitations in reductive materialist approaches to consciousness (Levine 2019).
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

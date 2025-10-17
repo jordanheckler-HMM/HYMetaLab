@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.testing.pytestEnabled": true,
+  "editor.rulers": [100],
+  "files.exclude": { "**/__pycache__": true, "**/.mypy_cache": true }
+}

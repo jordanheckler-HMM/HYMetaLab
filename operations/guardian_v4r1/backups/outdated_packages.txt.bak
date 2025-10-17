@@ -1,0 +1,37 @@
+---
+title: outdated_packages.txt
+date: 2025-10-16
+version: draft
+checksum: ffeb3f7dd74d
+---
+
+Package            Version  Latest    Type
+------------------ -------- --------- -----
+certifi            2025.8.3 2025.10.5 wheel
+charset-normalizer 3.4.3    3.4.4     wheel
+fastapi            0.118.0  0.119.0   wheel
+fonttools          4.60.0   4.60.1    wheel
+idna               3.10     3.11      wheel
+llvmlite           0.45.0   0.45.1    wheel
+matplotlib         3.10.6   3.10.7    wheel
+narwhals           2.6.0    2.8.0     wheel
+numpy              2.3.3    2.3.4     wheel
+pillow             11.3.0   12.0.0    wheel
+pydantic           2.11.9   2.12.2    wheel
+pydantic_core      2.33.2   2.41.4    wheel
+rich               14.1.0   14.2.0    wheel
+shap               0.48.0   0.49.1    wheel
+typing-inspection  0.4.1    0.4.2     wheel
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

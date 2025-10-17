@@ -1,0 +1,19 @@
+{
+  "experimentId": "telescope_vs_oracle",
+  "simVersion": "v1.0.0",
+  "runId": "telescope_vs_oracle_1219_10",
+  "seed": 10,
+  "horizonSteps": 500,
+  "agent_profile": {
+    "calibration": 0.9,
+    "coherence": 0.9,
+    "emergence": 0.7,
+    "noise": 0.2
+  },
+  "policy_flags": {},
+  "environment": {
+    "shock_severity": 0.35,
+    "coordination_strength": 0.6,
+    "goal_inequality": 0.5
+  }
+}

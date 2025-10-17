@@ -1,0 +1,30 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_pytest_fix/Pre-Commit_Setup_Log.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_pytest_fix/Pre-Commit_Setup_Log.md
+@@ -1,3 +1,10 @@
++---
++title: Pre-Commit_Setup_Log.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Pre-Commit Hook Setup Log
+ 
+ **Date:** 2025-10-16  
+@@ -351,3 +358,16 @@
+ **Ruff Version:** 0.14.1  
+ **Black Version:** 25.9.0
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,67 @@
+# Guardian v4 CI/CD Hooks Configuration
+version: "1.0"
+
+# Gate configurations
+gates:
+  pre_commit:
+    enabled: true
+    minimum_score: 70
+    block_on_failure: true
+    allowed_bypass: false
+    
+  pre_push:
+    enabled: true
+    minimum_score: 80
+    block_on_failure: true
+    
+  pre_merge:
+    enabled: true
+    minimum_score: 90
+    require_all_metrics_pass: true
+    require_human_review: true
+    
+  pre_deploy:
+    enabled: true
+    minimum_score: 90
+    require_all_metrics_pass: true
+    require_sign_off: true
+
+# File patterns to validate
+validation_patterns:
+  - "**/*.md"
+  - "**/*.txt"
+  - "docs/**/*"
+  - "studies/**/*.yml"
+
+# Exclusions
+exclude_patterns:
+  - "node_modules/**"
+  - ".venv/**"
+  - "**/__pycache__/**"
+  - ".git/**"
+  - "qc/QC_REPORT.json"  # Contains violations as metadata
+
+# Metric thresholds
+thresholds:
+  objectivity_score: 0.80
+  transparency_index_v2: 0.90
+  language_safety_score: 0.85
+  sentiment_neutrality: [-0.1, 0.1]
+
+# Notification settings
+notifications:
+  slack:
+    enabled: "${SLACK_ENABLED:-false}"
+    webhook: "${SLACK_WEBHOOK_URL}"
+    on_failure: true
+    on_success: false
+    
+  email:
+    enabled: false
+    recipients: []
+    
+# Logging
+logging:
+  level: "INFO"
+  file: "qc/guardian_v4/guardian_validation.log"
+  format: "%(asctime)s - %(levelname)s - %(message)s"

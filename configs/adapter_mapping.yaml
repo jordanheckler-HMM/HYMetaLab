@@ -1,0 +1,20 @@
+# Fill these ONLY if auto-detect fails. Otherwise we auto-detect and write back a report.
+module: ""        # e.g., "mysim.core"
+func: ""          # e.g., "run_sim"
+argmap:
+  n_agents: "n_agents"
+  ticks: "ticks"
+  shock_level: "shock"
+  coordination_strength: "coord"
+  goal_inequality: "goal_ineq"
+  noise: "noise"
+  memory_cap: "memory_cap"
+  energy_drift: "energy_drift"
+  seed: "seed"
+returns:
+  survived: "survived"        # if scalar survival_rate, set to "survival_rate"
+  calibration: "calibration"  # optional
+  coherence: "coherence"      # optional
+  emergence: "emergence"      # optional
+  noise: "noise"              # optional
+  misalign_rate: "misalign_rate"  # optional if your sim exposes it

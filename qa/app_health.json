@@ -1,0 +1,20 @@
+[
+  {
+    "app": "Guardian Check",
+    "port": 8501,
+    "http": "200",
+    "timestamp": "2025-10-15 20:22:39"
+  },
+  {
+    "app": "Reality Loop Lite",
+    "port": 8502,
+    "http": "200",
+    "timestamp": "2025-10-15 20:22:39"
+  },
+  {
+    "app": "Guardian Compare",
+    "port": 8503,
+    "http": "200",
+    "timestamp": "2025-10-15 20:22:39"
+  }
+]

@@ -1,0 +1,83 @@
+import streamlit as st
+import sys
+from pathlib import Path
+
+# Add qc to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "qc"))
+
+st.set_page_config(page_title="Guardian Check", page_icon="🛡️", layout="wide")
+
+st.title("🛡️ Guardian v4 Ethics Checker")
+st.markdown("**Real-time ethical alignment validation for research documents**")
+
+st.sidebar.header("About Guardian")
+st.sidebar.info("""
+Guardian v4 validates documents against:
+- **Objectivity**: Hedge terms, claims, citations
+- **Sentiment**: Neutrality and balance
+- **Transparency**: Metadata, reproducibility
+- **Safety**: Risk assessment
+
+Target: ≥90/100 for publication
+""")
+
+# Input options
+input_mode = st.radio("Input Mode", ["Paste Text", "Upload File"])
+
+text = ""
+if input_mode == "Paste Text":
+    text = st.text_area("Paste your document text:", height=300)
+else:
+    uploaded_file = st.file_uploader("Upload a .md or .txt file", type=["md", "txt"])
+    if uploaded_file:
+        text = uploaded_file.read().decode("utf-8")
+
+if st.button("🔍 Run Guardian Check", type="primary"):
+    if not text:
+        st.warning("Please provide text to validate.")
+    else:
+        with st.spinner("Running Guardian v4 validation..."):
+            try:
+                from guardian_v4.guardian_v4 import GuardianV4
+                
+                guardian = GuardianV4()
+                result = guardian.validate_text(text)
+                
+                score = result.get("score", 0)
+                
+                # Display score with color coding
+                if score >= 90:
+                    st.success(f"✅ **Guardian Score: {score}/100** (Excellent)")
+                elif score >= 80:
+                    st.info(f"ℹ️ **Guardian Score: {score}/100** (Good)")
+                elif score >= 70:
+                    st.warning(f"⚠️ **Guardian Score: {score}/100** (Pass, review recommended)")
+                else:
+                    st.error(f"❌ **Guardian Score: {score}/100** (Needs improvement)")
+                
+                # Detailed metrics
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    st.metric("Objectivity", f"{result.get('objectivity', 0):.1f}")
+                with col2:
+                    st.metric("Sentiment", f"{result.get('sentiment', 0):.1f}")
+                with col3:
+                    st.metric("Transparency", f"{result.get('transparency', 0):.1f}")
+                
+                # Recommendations
+                if "recommendations" in result:
+                    st.subheader("📝 Recommendations")
+                    for rec in result["recommendations"][:5]:
+                        st.markdown(f"- {rec}")
+                
+                # Full report
+                with st.expander("📊 Full Report"):
+                    st.json(result)
+                    
+            except Exception as e:
+                st.error(f"Error running Guardian: {e}")
+                st.info("Make sure Guardian v4 is installed in qc/guardian_v4/")
+
+st.markdown("---")
+st.markdown("**Guardian v4** | HYMetaLab Research Integrity Suite")

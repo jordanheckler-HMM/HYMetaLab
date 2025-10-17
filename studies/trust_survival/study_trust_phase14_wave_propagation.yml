@@ -1,0 +1,89 @@
+study:
+  id: trust_survival_v14_wave_propagation
+  title: Trust_Survival_Phase14_WavePropagation
+name: "Trust_Survival_Phase14_WavePropagation"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 14 builds on validated Phase 13 (Collective Resonance Network).
+  It releases one or more seed clusters in coherent lock and measures
+  how resonance waves propagate through the network over time.
+objectives:
+  - Quantify propagation distance λ_wave and damping rate δ.
+  - Confirm self-sustaining coherence without external forcing.
+design:
+  seeds: 5
+  epochs_cap: 1000
+  agents: 240
+  clusters: 10
+  factors:
+    mode: ["CRN","WAVE_PROP"]
+    network_topology: ["ring","smallworld","scale_free"]
+    coupling_kappa: [0.10,0.25,0.40]
+    phase_lag_phi: [0.00,0.50,1.00]
+    exchange_prob: [0.05,0.12]
+    trust_tau0: [0.30,0.60,0.80]
+    goal_inequality: [0.20,0.50,0.80]
+    shock_severity: [0.50]
+wave_dynamics:
+  seed_clusters: [0,1]
+  propagation_window: 40
+  damping_factor: 0.96
+  reinforcement_gain: 1.10
+  noise_floor: 0.02
+  measure_period: 10
+  guard_hazard_uplift: 0.05
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - episodes_collapse_per_1k
+  - trust_variance
+  - openness_eps_mean
+  - network_sync_index
+  - wave_propagation_lambda
+  - wave_damping_delta
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 320
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "Any WAVE_PROP cell shows (CCI ≥ 0.72 AND Survival ≥ 0.80) sustained ≥200 epochs after external forcing stops."
+    - "λ_wave ≥ 0.6 × num_clusters (95 % CI excludes 0)"
+    - "Hazard uplift ≤ +5 % vs CRN baseline at same g, shock."
+    - "GLM: survival_rate ~ mode×network_topology×coupling_kappa → significant mode×κ (p < 0.05)."
+exports:
+  data_dir: discovery_results/trust_survival_v14/data
+  figs_dir: discovery_results/trust_survival_v14/figs
+  report_dir: discovery_results/trust_survival_v14/report
+  bundle_zip: discovery_results/trust_survival_v14/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_wave_propagation.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 14: autonomous propagation of coherence waves."
+
+# prereg.constants for automation expansion
+prereg:
+  constants:
+    epochs: 1000
+    seeds: [1401,1402,1403,1404,1405]
+    agents: 240
+    clusters: 10
+    mode: ["CRN","WAVE_PROP"]
+    network_topology: ["ring","smallworld","scale_free"]
+    coupling_kappa: [0.10,0.25,0.40]
+    phase_lag_phi: [0.00,0.50,1.00]
+    exchange_prob: [0.05,0.12]
+    trust_tau0: [0.30,0.60,0.80]
+    goal_inequality: [0.20,0.50,0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_wave_propagation_wrapper.py:run"

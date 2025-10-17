@@ -1,0 +1,40 @@
+{
+  "validated_studies_count": 5,
+  "studies": [
+    {
+      "path": "discovery_results/phase34_empirical_calibration_20251014_100046/summary.json",
+      "delta_cci": 0.037698,
+      "delta_hazard": -0.018849
+    },
+    {
+      "path": "discovery_results/phase35b_cross_survey_replication_20251014_114632/summary.json",
+      "delta_cci": 0.046775,
+      "delta_hazard": -0.046775
+    },
+    {
+      "path": "discovery_results/phase35c_cross_domain_generalization_20251014_120005/summary.json",
+      "delta_cci": 0.043614,
+      "delta_hazard": -0.043614
+    },
+    {
+      "path": "discovery_results/phase35b_cross_survey_replication_20251014_114551/summary.json",
+      "delta_cci": 0.046775,
+      "delta_hazard": -0.046775
+    },
+    {
+      "path": "discovery_results/phase35_cosmic_bridge_20251014_102012/summary.json",
+      "delta_cci": 0.040171,
+      "delta_hazard": -0.040171
+    }
+  ],
+  "meta_delta_cci": {
+    "mean": 0.043007,
+    "ci_lo": 0.039846,
+    "ci_hi": 0.046167
+  },
+  "meta_delta_hazard": {
+    "mean": -0.039237,
+    "ci_lo": -0.048425,
+    "ci_hi": -0.030049
+  }
+}

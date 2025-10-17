@@ -1,0 +1,23 @@
+# Archetype Recurrence: Quick Fingerprint Report
+
+- Seeds: 3 | Epochs: 5 | Agents: 240 | k: 4
+
+## Key Metric
+
+- **ARI\*** (mean off-diagonal epoch similarity): **0.998**
+
+Higher ARI* means stronger recurrence of archetype centroids across epochs.
+
+## What to look for
+
+- The **centroid_scatter.png** should show clusters that re-appear across different epochs/seeds (overlapping or near-identical points).
+
+- The **epoch_similarity_heatmap.png** should show brighter blocks for recurrent epochs (e.g., 0~2, 1~3).
+
+## Files
+
+- metrics/recurrence_summary.csv
+- metrics/centroids.csv
+- metrics/embeddings_sample.csv
+- figures/centroid_scatter.png
+- figures/epoch_similarity_heatmap.png

@@ -1,0 +1,24 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/.terminal_validation.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/.terminal_validation.txt
+@@ -1 +1,21 @@
++---
++title: .terminal_validation.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ terminal_ok: 2025-10-14T00:09:39.514438
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

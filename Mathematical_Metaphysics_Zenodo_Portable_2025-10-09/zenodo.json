@@ -1,0 +1,24 @@
+{
+  "upload_type": "publication",
+  "publication_type": "report",
+  "title": "Mathematical Metaphysics \u2014 Whitepaper & Atlases (Portable Bundle)",
+  "creators": [
+    {
+      "name": "Jordan",
+      "affiliation": "Heck Yeah! Research Lab"
+    }
+  ],
+  "description": "This bundle consolidates the Metaphysics Lab Whitepaper and the Mathematical Metaphysics Atlas (v1.0 and v2.0) along with the Meaning Periodic Table (v0.2). It is intended as a portable, citable package for archival on Zenodo and collaboration.",
+  "keywords": [
+    "metaphysics",
+    "mathematical metaphysics",
+    "simulation",
+    "openness",
+    "entropy",
+    "atlas",
+    "whitepaper"
+  ],
+  "version": "2025-10-09",
+  "language": "eng",
+  "license": "cc-by-4.0"
+}

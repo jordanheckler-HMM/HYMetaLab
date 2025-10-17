@@ -1,0 +1,51 @@
+study:
+  id: trust_survival_v2
+  title: Trust_Survival_Phase2_TransitionBand
+
+name: "Trust_Survival_Phase2_TransitionBand"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 2 sweep focused on the transition-shock band (0.50),
+  widened trust_tau range, and optional betrayal-shock repair event.
+objectives:
+  - Identify the trust sweet-spot (tau*) where survival peaks.
+  - Quantify recovery time after temporary trust breach.
+
+prereg:
+  constants:
+    epochs: 500
+    seeds: [201, 202, 203, 204, 205]
+    agents: 140
+    trust_tau: [0.15, 0.30, 0.45, 0.60, 0.75, 0.90]
+    shock_severity: [0.50]
+    goal_inequality: [0.20]
+    # derived events passed into each run_conf
+    derived_events:
+      betrayal_shock:
+        at_epoch: 250
+        delta_defection_noise: 0.25
+        duration: 40
+        repair_rate: 0.05
+    sim_adapter: "studies/trust_survival/adapter_trust_phase2.py:run"
+
+design:
+  seeds: 5
+  epochs_cap: 500
+  agents: 140
+
+exports:
+  data_dir: discovery_results/trust_survival_v2/data
+  figs_dir: discovery_results/trust_survival_v2/figs
+  report_dir: discovery_results/trust_survival_v2/report
+
+integrity:
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+  require_prereg: true
+  require_ci: true
+
+validation:
+  pass_if:
+    - "collapse_risk decreases ≥25 % between tau = 0.30 → 0.75"
+    - "t_recover_hazard_0_20 reduces ≥15 % under repair vs. no-repair"

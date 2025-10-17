@@ -1,0 +1,18 @@
+{
+  "meaningforge_version": "v1_phase3_wrapper",
+  "timestamp": "2025-10-15T08:11:46.494480",
+  "input_file": "open_data/preregister.yml",
+  "score": 1.0,
+  "checks": {
+    "conceptual_consistency": true,
+    "hypothesis_clarity": true,
+    "framework_alignment": true,
+    "semantic_completeness": true,
+    "meaning_coherence": true
+  },
+  "checks_passed": 5,
+  "checks_total": 5,
+  "semantic_quality": "high",
+  "status": "PASS",
+  "recommendation": "Semantic structure is coherent"
+}

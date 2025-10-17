@@ -1,0 +1,19 @@
+{
+  "experimentId": "meaning_vs_training_branch",
+  "simVersion": "v1.0.0",
+  "runId": "meaning_vs_training_branch_79_7",
+  "seed": 7,
+  "horizonSteps": 500,
+  "agent_profile": {
+    "calibration": 0.9,
+    "coherence": 0.75,
+    "emergence": 0.7,
+    "noise": 0.1
+  },
+  "policy_flags": {},
+  "environment": {
+    "shock_severity": 0.3,
+    "coordination_strength": 0.7,
+    "goal_inequality": 0.6
+  }
+}

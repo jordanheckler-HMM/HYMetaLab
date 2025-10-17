@@ -1,0 +1,119 @@
+study:
+  id: trust_survival_v25_thresholds
+  title: Trust_Survival_Phase25_ThresholdMapping
+name: "Trust_Survival_Phase25_ThresholdMapping"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 25 maps collapse boundaries by sweeping shock severity, inequality, and coordination delay
+  beyond validated regimes, then stepping back to probe hysteresis and resilience elasticity.
+  Controller (ARC + Containment + TAF) is frozen from Phase 24.
+objectives:
+  - Locate tipping thresholds for Survival and Hazard under multi-factor stress.
+  - Quantify hysteresis widths (down-sweep vs up-sweep) and elasticity under scale/load.
+design:
+  seeds: 6
+  epochs_cap: 1100
+  agents: [480, 960]
+  clusters: [24, 36]
+  factors:
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["flat","two_layer"]
+    inter_kappa: [0.12, 0.18]
+    inter_delay: [10, 25, 40, 60]
+    seed_fraction: [0.25, 0.50]
+    shock_cadence: ["baseline","x2","x4"]
+    shock_severity: [0.50, 0.65, 0.75, 0.85, 0.92]
+    goal_inequality: [0.35, 0.50, 0.65, 0.80]
+arc_controller:
+  window: 60
+  targets: { CCI: 0.72, survival: 0.80, hazard_soft: 0.47 }
+  gains: { k_survival: 0.60, k_hazard: -0.25, k_integral: 0.10 }
+  momentum_tune: { base: 0.10, sync_gain: 1.25, desync_div: 0.85, k_coherence: 0.25, k_vol: -0.20 }
+  bounds: { lr_min: 0.006, lr_max: 0.16, m_min: 0.00, m_max: 0.35 }
+  soft_guards: { hazard_uplift_max: 0.05, ramp_gamma: 0.96 }
+resonance:
+  amplitude: 0.12
+  period_T: 100
+  phase_phi: 0.0
+  eps_min: 0.05
+  eps_max: 0.80
+  pulse: { every: 100, eps_delta: 0.06, lr_boost: 1.10 }
+containment:
+  enabled: true
+  trigger: { hazard_lo: 0.45, hazard_hi: 0.50, var_hi: 0.03 }
+  absorption: { alpha: 0.35, max_rate: 0.08 }
+  reservoir: { cap: 1.80 }
+reinjection_adaptive:
+  enabled: true
+  min_delay: 25
+  ema_smoothing: 0.80
+  gate: { hazard_max: 0.47, cci_min: 0.72 }
+  neighborhood: { kappa_bias: 0.6, deficit_floor: 0.05 }
+  schedule: { base_beta: 0.14, burst_bonus: 1.20, taper_gamma: 0.94 }
+  effects: { eps_delta_scale: 0.06, lr_boost_scale: 0.08 }
+taf:
+  enabled: true
+  momentum_window: 30
+  smoothing: 0.85
+  gain: { base: 1.0, k_sync: 0.25, k_hazard_brake: -0.40, max_gain: 1.8, min_gain: 0.7 }
+  limiter: { lookback: 80, slope_max: 0.08, cooldown: 40 }
+  routing: { top_k: 3, spillover: 0.15 }
+metrics:
+  - survival_rate
+  - hazard
+  - collapse_risk
+  - CCI
+  - inter_sync_index
+  - cascade_lambda
+  - cascade_sustain_rate
+  - t_recover_hazard_0_20
+  - t_recover_CCI_0_50
+  - lr_trust_mean
+  - momentum_mean
+  - openness_eps_mean
+  - containment_active_ratio
+  - reservoir_mean
+  - taf_gain_mean
+  - taf_focus_score
+  - survival_tipping_point
+  - hazard_tipping_point
+  - hysteresis_width
+  - elasticity_index
+  - delay_intolerance_threshold
+  - inequality_intolerance_thr
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 400
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.72
+    survival: 0.80
+validation:
+  pass_if:
+    - "Thresholds resolved: at least one tipping point found for survival and hazard in each domain"
+    - "Hysteresis_width estimated with 95% CI (non-zero) on ≥2 domain × cadence conditions"
+    - "Elasticity_index well-defined (finite) around tipping on ≥70% of (domain×scale) slices"
+    - "Report includes maps for delay/inequality intolerance thresholds"
+exports:
+  data_dir: discovery_results/trust_survival_v25/data
+  figs_dir: discovery_results/trust_survival_v25/figs
+  report_dir: discovery_results/trust_survival_v25/report
+  bundle_zip: discovery_results/trust_survival_v25/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_thresholds.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 25: Threshold mapping (tipping points, hysteresis, elasticity) under frozen controller."
+prereg:
+  constants:
+    epochs: 1100
+    seeds: [2501,2502,2503,2504,2505,2506]
+    agents: [480,960]
+    clusters: [24,36]
+    domain: ["cultural","economic","ecological"]
+    mode: ["ARC_TAF_FROZEN"]
+    hierarchy: ["flat","two_layer"]
+    sim_adapter: "studies/trust_survival/adapter_trust_thresholds.py:run"

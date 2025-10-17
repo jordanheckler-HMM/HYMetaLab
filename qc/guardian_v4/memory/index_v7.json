@@ -1,0 +1,3651 @@
+{
+  "version": "7.0",
+  "generated_at": "2025-10-14T20:06:03.591630",
+  "document_count": 305,
+  "total_claims": 63,
+  "indexed_count": 305,
+  "cached_count": 0,
+  "documents": {
+    "NEXTGEN_SPRINT_MANIFEST.md": {
+      "file": "NEXTGEN_SPRINT_MANIFEST.md",
+      "hash": "58d33867327860df",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.468004",
+      "modified_at": "2025-10-14T17:25:14.316353",
+      "size_bytes": 7678
+    },
+    "discovery_results/phase23_validation_20251008_050642/report/phase23_results.md": {
+      "file": "discovery_results/phase23_validation_20251008_050642/report/phase23_results.md",
+      "hash": "addbac6724303abb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.468628",
+      "modified_at": "2025-10-08T05:06:47.572509",
+      "size_bytes": 6713
+    },
+    "AUTO_THEORIST_VERSIONS.md": {
+      "file": "AUTO_THEORIST_VERSIONS.md",
+      "hash": "6b44b43c308acbac",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.469197",
+      "modified_at": "2025-10-14T17:49:24.454511",
+      "size_bytes": 6134
+    },
+    "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9B_epsilon_pulses/report.md": {
+      "file": "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9B_epsilon_pulses/report.md",
+      "hash": "033f79469088fff6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.469488",
+      "modified_at": "2025-10-06T14:10:33.143609",
+      "size_bytes": 845
+    },
+    "discovery_results/trust_survival_v19_cascade_20251008_110645/report/results.md": {
+      "file": "discovery_results/trust_survival_v19_cascade_20251008_110645/report/results.md",
+      "hash": "240d9228f63e2e27",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.469695",
+      "modified_at": "2025-10-08T11:07:00.528545",
+      "size_bytes": 254
+    },
+    "GUARDIAN_V4_IMPLEMENTATION_COMPLETE.md": {
+      "file": "GUARDIAN_V4_IMPLEMENTATION_COMPLETE.md",
+      "hash": "8518182edf304e3f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.470743",
+      "modified_at": "2025-10-14T19:00:17.954710",
+      "size_bytes": 17615
+    },
+    "BABY_UNIVERSE_RESULTS.md": {
+      "file": "BABY_UNIVERSE_RESULTS.md",
+      "hash": "4b2bd87cdf180ac4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.471129",
+      "modified_at": "2025-10-03T20:00:59.882810",
+      "size_bytes": 1407
+    },
+    "discovery_results/phase16_forecasting_2025-10-06_16-03-19/master_report.md": {
+      "file": "discovery_results/phase16_forecasting_2025-10-06_16-03-19/master_report.md",
+      "hash": "9be2b2142ff63a8a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.471684",
+      "modified_at": "2025-10-06T16:03:36.944831",
+      "size_bytes": 4681
+    },
+    "discovery_results/trust_survival_v12_resonance_20251008_093901/report/results.md": {
+      "file": "discovery_results/trust_survival_v12_resonance_20251008_093901/report/results.md",
+      "hash": "c8ba5c392fdfd5e6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.471940",
+      "modified_at": "2025-10-08T09:39:02.961336",
+      "size_bytes": 252
+    },
+    "discovery_results/trust_survival_v6_adaptive_20251008_082126/report/results.md": {
+      "file": "discovery_results/trust_survival_v6_adaptive_20251008_082126/report/results.md",
+      "hash": "7e4c793a7cae203e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.472230",
+      "modified_at": "2025-10-08T08:21:33.681308",
+      "size_bytes": 248
+    },
+    "docs/prereg/OSF_registration_blurb.md": {
+      "file": "docs/prereg/OSF_registration_blurb.md",
+      "hash": "6f9b6c07e90494a7",
+      "claims": [
+        {
+          "text": "## Hypotheses\n- **H1:** CCI reduces the marginal effect of fear on aggression (\u03b2(Fear\u00d7CCI)<0)",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 4,
+          "file": "docs/prereg/OSF_registration_blurb.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.472641",
+      "modified_at": "2025-09-29T17:34:12.684943",
+      "size_bytes": 1700
+    },
+    "GUARDIAN_V3_EXECUTIVE_SUMMARY.md": {
+      "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md",
+      "hash": "97c1f2edb6e14e05",
+      "claims": [
+        {
+          "text": "**Solution**: Templates + automation \u2192 Easy compliance \u2192 70+ score\n\n---\n\n## \ud83d\udca1 Why This Matters\n\n### Scientific Credibility\n- **Before**: Ad hoc language, inconsistent disclaimers, variable citation de",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 6,
+          "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md"
+        },
+        {
+          "text": "This suggests that shared meaning \nimproves resilience",
+          "claim_key": "cooperation",
+          "stance": "positive",
+          "sentence_index": 7,
+          "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md"
+        },
+        {
+          "text": "By automating alignment monitoring and providing actionable templates, we've created a system that:\n\n- \u2705 **Measures** ethical alignment objectively (4 metrics, 0-100 scale)\n- \u2705 **Improves** compliance",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 36,
+          "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md"
+        }
+      ],
+      "claim_count": 3,
+      "indexed_at": "2025-10-14T20:06:03.473425",
+      "modified_at": "2025-10-14T18:23:56.690304",
+      "size_bytes": 10878
+    },
+    "docs/NEXTGEN_STACK_QUICKSTART.md": {
+      "file": "docs/NEXTGEN_STACK_QUICKSTART.md",
+      "hash": "88c7a30bf8b88476",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.473754",
+      "modified_at": "2025-10-14T16:46:17.810884",
+      "size_bytes": 1077
+    },
+    "discovery_results/phase26d_validation_20251008_054408/report/phase26d_results.md": {
+      "file": "discovery_results/phase26d_validation_20251008_054408/report/phase26d_results.md",
+      "hash": "dd17bcae84d4e9d7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.474038",
+      "modified_at": "2025-10-08T05:44:34.564648",
+      "size_bytes": 186
+    },
+    "discovery_results/safety_cci_20251010_144518/report/safety_cci_results.md": {
+      "file": "discovery_results/safety_cci_20251010_144518/report/safety_cci_results.md",
+      "hash": "181d90424576e914",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.474227",
+      "modified_at": "2025-10-10T14:45:18.393604",
+      "size_bytes": 69
+    },
+    "discovery_results/Phase21_AppliedMetaphysics_20251007_142217/phase21_field_equation_verification.md": {
+      "file": "discovery_results/Phase21_AppliedMetaphysics_20251007_142217/phase21_field_equation_verification.md",
+      "hash": "fc6809740b4b3850",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.474543",
+      "modified_at": "2025-10-07T14:22:17.684868",
+      "size_bytes": 564
+    },
+    "discovery_results/trust_survival_v29_intent_20251008_124453/report/validated_abstract_20251008_124501.md": {
+      "file": "discovery_results/trust_survival_v29_intent_20251008_124453/report/validated_abstract_20251008_124501.md",
+      "hash": "4cf6ac2e7d14b78d",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.474929",
+      "modified_at": "2025-10-08T12:45:01.538957",
+      "size_bytes": 499
+    },
+    "MASTER_QC_REPORT_20251014.md": {
+      "file": "MASTER_QC_REPORT_20251014.md",
+      "hash": "12897c8846e0805a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.475748",
+      "modified_at": "2025-10-14T07:47:53.535553",
+      "size_bytes": 10924
+    },
+    "PHASE35_META_SUMMARY.md": {
+      "file": "PHASE35_META_SUMMARY.md",
+      "hash": "8ebfb0d8d231fa9c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.476660",
+      "modified_at": "2025-10-14T18:23:56.061632",
+      "size_bytes": 11972
+    },
+    "discovery_results/phase26g_coherence_20251008_055152/report/phase26g_results.md": {
+      "file": "discovery_results/phase26g_coherence_20251008_055152/report/phase26g_results.md",
+      "hash": "26f31b0fe8314141",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.477096",
+      "modified_at": "2025-10-08T05:52:25.152094",
+      "size_bytes": 195
+    },
+    "GUARDIAN_V5_STABILIZER_COMPLETE.md": {
+      "file": "GUARDIAN_V5_STABILIZER_COMPLETE.md",
+      "hash": "bf04a50db0108668",
+      "claims": [
+        {
+          "text": "`.github/workflows/guardian_v4_ci.yml`\n   - Added `guardian-v5-bench` job\n   - Runs determinism tests (pytest)\n   - Runs runtime tests (pytest)\n   - Runs benchmark (sample)\n   - Checks variance \u2265 0.02",
+          "claim_key": "meaning",
+          "stance": "positive",
+          "sentence_index": 10,
+          "file": "GUARDIAN_V5_STABILIZER_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.478534",
+      "modified_at": "2025-10-14T19:45:06.630183",
+      "size_bytes": 20870
+    },
+    "discovery_results/phase26i_resolution_20251008_055756/report/phase26i_results.md": {
+      "file": "discovery_results/phase26i_resolution_20251008_055756/report/phase26i_results.md",
+      "hash": "ae03b1fdee66c21f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.478806",
+      "modified_at": "2025-10-08T05:58:48.346171",
+      "size_bytes": 192
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_102700.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_102700.md",
+      "hash": "c45d5b43303bb6d4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.479156",
+      "modified_at": "2025-10-08T10:27:01.102698",
+      "size_bytes": 496
+    },
+    "discovery_results/trust_survival_v3_20251008_074253/report/results.md": {
+      "file": "discovery_results/trust_survival_v3_20251008_074253/report/results.md",
+      "hash": "4d3894abec5cd4d2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.479366",
+      "modified_at": "2025-10-08T07:42:53.189265",
+      "size_bytes": 241
+    },
+    "discovery_results/phase31b_uclv_20251011_160018/REPORT.md": {
+      "file": "discovery_results/phase31b_uclv_20251011_160018/REPORT.md",
+      "hash": "11a707e41b813102",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.479570",
+      "modified_at": "2025-10-11T11:00:18.236849",
+      "size_bytes": 286
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_112743.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_112743.md",
+      "hash": "878f5461894e2fda",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.479779",
+      "modified_at": "2025-10-08T11:27:43.442048",
+      "size_bytes": 496
+    },
+    "CONSOLIDATION_COMPLETE.md": {
+      "file": "CONSOLIDATION_COMPLETE.md",
+      "hash": "d33beafaa8d43aff",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.480394",
+      "modified_at": "2025-09-29T16:39:25.385573",
+      "size_bytes": 6542
+    },
+    "discovery_results/Phase20_GlobalCalibration_20251007_141612/phase20_global_constants.md": {
+      "file": "discovery_results/Phase20_GlobalCalibration_20251007_141612/phase20_global_constants.md",
+      "hash": "d3d07255f88a9b8f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.480738",
+      "modified_at": "2025-10-07T14:16:13.320969",
+      "size_bytes": 1151
+    },
+    "discovery_results/Phase19b_Evaluator_20251007_140023/extracted/report/phase19_validation_report.md": {
+      "file": "discovery_results/Phase19b_Evaluator_20251007_140023/extracted/report/phase19_validation_report.md",
+      "hash": "a809b5ed4806539b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.480954",
+      "modified_at": "2025-10-07T14:00:24.291456",
+      "size_bytes": 112
+    },
+    "PHASE33C_VALIDATED_SUMMARY.md": {
+      "file": "PHASE33C_VALIDATED_SUMMARY.md",
+      "hash": "37f5ad08a42a9827",
+      "claims": [
+        {
+          "text": "---\n\n## Provenance Chain\n\n### Files\n- **Study config:** `studies/phase33c_coop_meaning.yml`\n- **Adapter:** `adapters/phase33_coop_meaning.py`\n- **Results:** `discovery_results/phase33c_coop_meaning_20",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 17,
+          "file": "PHASE33C_VALIDATED_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.481549",
+      "modified_at": "2025-10-14T18:23:56.049122",
+      "size_bytes": 7956
+    },
+    "discovery_results/trust_survival_v5_20251008_080807/report/results.md": {
+      "file": "discovery_results/trust_survival_v5_20251008_080807/report/results.md",
+      "hash": "9a44914ff0ea6549",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.481874",
+      "modified_at": "2025-10-08T08:08:08.417234",
+      "size_bytes": 243
+    },
+    "GUARDIAN_COMPLETE_SESSION_SUMMARY.md": {
+      "file": "GUARDIAN_COMPLETE_SESSION_SUMMARY.md",
+      "hash": "0420349a88362a18",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.482536",
+      "modified_at": "2025-10-14T19:56:09.439651",
+      "size_bytes": 10807
+    },
+    "README_REAL_WORLD_VALIDATION.md": {
+      "file": "README_REAL_WORLD_VALIDATION.md",
+      "hash": "28176c8668cebc7c",
+      "claims": [
+        {
+          "text": "Collapse Model (Logistic)\n```\nCollapse ~ Gini + CCI + Gini\u00d7CCI + controls\n```\nTests if inequality increases collapse risk and if CCI moderates this effect",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 12,
+          "file": "README_REAL_WORLD_VALIDATION.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.483218",
+      "modified_at": "2025-09-30T17:10:22.290029",
+      "size_bytes": 7344
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_093908.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_093908.md",
+      "hash": "8fa4f597d7aa2075",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.483559",
+      "modified_at": "2025-10-08T09:39:08.734377",
+      "size_bytes": 495
+    },
+    "discovery_results/phase11_suite_2025-10-06_15-28-18/11C_adaptive_openness/report.md": {
+      "file": "discovery_results/phase11_suite_2025-10-06_15-28-18/11C_adaptive_openness/report.md",
+      "hash": "33dc27a5962d2817",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.483825",
+      "modified_at": "2025-10-06T15:28:20.085041",
+      "size_bytes": 1806
+    },
+    "discovery_results/phase14_validation_2025-10-06_15-43-45/master_report.md": {
+      "file": "discovery_results/phase14_validation_2025-10-06_15-43-45/master_report.md",
+      "hash": "3580019b8b2e669a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.484282",
+      "modified_at": "2025-10-06T15:44:38.847022",
+      "size_bytes": 4098
+    },
+    "GUARDIAN_V4_RELEASE_NOTES.md": {
+      "file": "GUARDIAN_V4_RELEASE_NOTES.md",
+      "hash": "2f9d15880cf6041a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.485432",
+      "modified_at": "2025-10-14T19:00:17.967600",
+      "size_bytes": 18291
+    },
+    "discovery_results/phase34_empirical_calibration_20251014_095916/report/results.md": {
+      "file": "discovery_results/phase34_empirical_calibration_20251014_095916/report/results.md",
+      "hash": "95b5d662b2e0079d",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.485690",
+      "modified_at": "2025-10-14T09:59:16.348121",
+      "size_bytes": 157
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_114325.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_114325.md",
+      "hash": "d08778a1ed83dc8c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.486004",
+      "modified_at": "2025-10-08T11:43:26.091757",
+      "size_bytes": 496
+    },
+    "CONSOLIDATED_RESEARCH_PACKAGE.md": {
+      "file": "CONSOLIDATED_RESEARCH_PACKAGE.md",
+      "hash": "3d31a38d5335b9ea",
+      "claims": [
+        {
+          "text": "Universal Collapse Laws**\n```\nCollapse_Risk \u221d (Goal_Inequality \u00d7 System_Complexity) / Coordination_Strength\n- Gini coefficient > 0.3 predicts system collapse (90% accuracy)\n- Optimal goal diversity = ",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 6,
+          "file": "CONSOLIDATED_RESEARCH_PACKAGE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.486773",
+      "modified_at": "2025-10-14T18:23:57.330620",
+      "size_bytes": 12138
+    },
+    "5k_results_summary.md": {
+      "file": "5k_results_summary.md",
+      "hash": "1bce463a2d5d290e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.487132",
+      "modified_at": "2025-10-03T22:18:05.380115",
+      "size_bytes": 797
+    },
+    "discovery_results/trust_survival_v10_adaptive_openness_20251008_092409/report/results.md": {
+      "file": "discovery_results/trust_survival_v10_adaptive_openness_20251008_092409/report/results.md",
+      "hash": "77ddce8224cffeae",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.487373",
+      "modified_at": "2025-10-08T09:24:12.783885",
+      "size_bytes": 267
+    },
+    "discovery_results/trust_survival_v22_targeted_amp_20251008_113853/report/results.md": {
+      "file": "discovery_results/trust_survival_v22_targeted_amp_20251008_113853/report/results.md",
+      "hash": "b360d8029cc225bb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.487589",
+      "modified_at": "2025-10-08T11:38:55.451979",
+      "size_bytes": 273
+    },
+    "discovery_results/global_cultural_network_phase7_20251006_091611/report/global_cultural_network_phase7_results.md": {
+      "file": "discovery_results/global_cultural_network_phase7_20251006_091611/report/global_cultural_network_phase7_results.md",
+      "hash": "fa455d3d19c6bd4e",
+      "claims": [
+        {
+          "text": "**Reverse Influence (B\u2192Religion):**\n   - Rare but observable belief contagion from A\u2192B during high stress\n   - Typically temporary, reversed during recovery periods\n   - Indicates learning cultures ca",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 3,
+          "file": "discovery_results/global_cultural_network_phase7_20251006_091611/report/global_cultural_network_phase7_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.488352",
+      "modified_at": "2025-10-13T22:50:47.562831",
+      "size_bytes": 9517
+    },
+    "discovery_results/phase35b_cross_survey_replication_20251014_114528/report/results.md": {
+      "file": "discovery_results/phase35b_cross_survey_replication_20251014_114528/report/results.md",
+      "hash": "416c73023288c6bd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.488611",
+      "modified_at": "2025-10-14T11:45:28.961866",
+      "size_bytes": 228
+    },
+    "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md": {
+      "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md",
+      "hash": "48bc9e4fff97aab1",
+      "claims": [
+        {
+          "text": "### \ud83c\udfaf **Key Findings**\n\n| **Hypothesis Component** | **Status** | **Result** | **Significance** |\n|---|---|---|---|\n| **Fear-Aggression Pathway** | \u26a0\ufe0f PARTIAL | CCI moderation confirmed | Core mechani",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 1,
+          "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md"
+        },
+        {
+          "text": "**CCI Moderation:** \u2705 **Strongly Confirmed**\n   - Mental health coherence dramatically reduces fear-aggression conversion\n   - Protection effect is non-linear (exponential)\n   - **Implication:** CCI i",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 14,
+          "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md"
+        },
+        {
+          "text": "\u2705 **CCI Moderation Confirmed:** Strong evidence that mental health coherence dramatically reduces fear-driven aggression\n2",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 31,
+          "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md"
+        }
+      ],
+      "claim_count": 3,
+      "indexed_at": "2025-10-14T20:06:03.489491",
+      "modified_at": "2025-09-30T17:10:20.152075",
+      "size_bytes": 13027
+    },
+    "OPENLAWS_INFRASTRUCTURE_IMPROVEMENTS.md": {
+      "file": "OPENLAWS_INFRASTRUCTURE_IMPROVEMENTS.md",
+      "hash": "835875783282ad74",
+      "claims": [
+        {
+          "text": "**`openlaws_automation.py`**\n   - Lines 395-415: CSV path resolution\n   - Lines 417-478: Phase 33 validation support\n   - Lines 580-589: None value handling in reports\n   - Impact: Full Phase 33 pipel",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 26,
+          "file": "OPENLAWS_INFRASTRUCTURE_IMPROVEMENTS.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.490468",
+      "modified_at": "2025-10-14T00:58:29.388123",
+      "size_bytes": 14084
+    },
+    "docs/sales_brief.md": {
+      "file": "docs/sales_brief.md",
+      "hash": "b5d5ab7415aafd39",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.490834",
+      "modified_at": "2025-10-03T21:48:03.838480",
+      "size_bytes": 1407
+    },
+    "discovery_results/meaning_phase5_3_20251008_033523/README.md": {
+      "file": "discovery_results/meaning_phase5_3_20251008_033523/README.md",
+      "hash": "0599d7264e1b7987",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.491124",
+      "modified_at": "2025-10-08T03:35:23.819147",
+      "size_bytes": 268
+    },
+    "discovery_results/truth_phase4_adaptive_20251007_205104/README.md": {
+      "file": "discovery_results/truth_phase4_adaptive_20251007_205104/README.md",
+      "hash": "270d2a0693aa962f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.491464",
+      "modified_at": "2025-10-07T20:51:05.340141",
+      "size_bytes": 2239
+    },
+    "docs/pilot_offer.md": {
+      "file": "docs/pilot_offer.md",
+      "hash": "a541a8df7d887ab6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.491684",
+      "modified_at": "2025-10-03T21:48:03.889935",
+      "size_bytes": 890
+    },
+    "discovery_results/neuro_cci_20251009_154701/report/results.md": {
+      "file": "discovery_results/neuro_cci_20251009_154701/report/results.md",
+      "hash": "7a951c9acd4945d5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.491884",
+      "modified_at": "2025-10-09T15:47:01.761877",
+      "size_bytes": 173
+    },
+    "QC_COMPLETION_REPORT.md": {
+      "file": "QC_COMPLETION_REPORT.md",
+      "hash": "aca9593ed864339b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.492385",
+      "modified_at": "2025-10-14T07:38:33.997713",
+      "size_bytes": 4895
+    },
+    "docs/prereg/H3_shock_recovery_prereg.md": {
+      "file": "docs/prereg/H3_shock_recovery_prereg.md",
+      "hash": "8905d8190e8b01f7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.492803",
+      "modified_at": "2025-09-30T13:47:10.968403",
+      "size_bytes": 1086
+    },
+    "NEXTGEN_IMPLEMENTATION_COMPLETE.md": {
+      "file": "NEXTGEN_IMPLEMENTATION_COMPLETE.md",
+      "hash": "f7956d9f4b2cd6b4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.494094",
+      "modified_at": "2025-10-14T17:25:14.314264",
+      "size_bytes": 18639
+    },
+    "discovery_results/phase34_empirical_calibration_20251014_100046/report/results.md": {
+      "file": "discovery_results/phase34_empirical_calibration_20251014_100046/report/results.md",
+      "hash": "0c8e2d3a1cf02ceb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.494460",
+      "modified_at": "2025-10-14T10:00:46.839626",
+      "size_bytes": 157
+    },
+    "discovery_results/neuro_cci_20251009_154701/report/neuro_cci_results.md": {
+      "file": "discovery_results/neuro_cci_20251009_154701/report/neuro_cci_results.md",
+      "hash": "3d9a06fdd825e652",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.494667",
+      "modified_at": "2025-10-09T15:47:01.754821",
+      "size_bytes": 48
+    },
+    "NEXTGEN_STACK_DEPLOYMENT.md": {
+      "file": "NEXTGEN_STACK_DEPLOYMENT.md",
+      "hash": "0413c307db8e3155",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.495644",
+      "modified_at": "2025-10-14T16:46:17.811013",
+      "size_bytes": 14451
+    },
+    "discovery_results/phase9_combo_2025-10-06_14-10-32/master_report.md": {
+      "file": "discovery_results/phase9_combo_2025-10-06_14-10-32/master_report.md",
+      "hash": "93a6e7b318614dde",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.495946",
+      "modified_at": "2025-10-06T14:10:33.265229",
+      "size_bytes": 2001
+    },
+    "docs/integrity/INTEGRITY_UPDATE_20251014.md": {
+      "file": "docs/integrity/INTEGRITY_UPDATE_20251014.md",
+      "hash": "71acad56253ab06c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.496411",
+      "modified_at": "2025-10-13T23:40:44.683723",
+      "size_bytes": 4201
+    },
+    "discovery_results/phase33c_coop_meaning_20251014_004009/report/results.md": {
+      "file": "discovery_results/phase33c_coop_meaning_20251014_004009/report/results.md",
+      "hash": "71316f457a0b7371",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.496637",
+      "modified_at": "2025-10-14T00:40:09.635535",
+      "size_bytes": 149
+    },
+    "discovery_results/report/validated_abstract_20251014_005555.md": {
+      "file": "discovery_results/report/validated_abstract_20251014_005555.md",
+      "hash": "ffbfcc63905760db",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.496943",
+      "modified_at": "2025-10-14T00:55:55.676622",
+      "size_bytes": 506
+    },
+    "discovery_results/THEME_3_CONSCIOUSNESS_CALIBRATION_INDEX_REPORT.md": {
+      "file": "discovery_results/THEME_3_CONSCIOUSNESS_CALIBRATION_INDEX_REPORT.md",
+      "hash": "d6c2586bf2cc5d3c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.497603",
+      "modified_at": "2025-10-13T22:50:46.686280",
+      "size_bytes": 8258
+    },
+    "LIFECYCLE_RESULTS.md": {
+      "file": "LIFECYCLE_RESULTS.md",
+      "hash": "30c260283e7bd8dc",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.497938",
+      "modified_at": "2025-10-03T20:47:57.750395",
+      "size_bytes": 1110
+    },
+    "discovery_results/trust_survival_v11_long_memory_20251008_093224/report/results.md": {
+      "file": "discovery_results/trust_survival_v11_long_memory_20251008_093224/report/results.md",
+      "hash": "7a1e5bc7cd46dc72",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.498135",
+      "modified_at": "2025-10-08T09:32:26.806334",
+      "size_bytes": 263
+    },
+    "PHASE34_35_QUICK_REFERENCE.md": {
+      "file": "PHASE34_35_QUICK_REFERENCE.md",
+      "hash": "1d9c27ff5006e164",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.498631",
+      "modified_at": "2025-10-14T18:23:56.031020",
+      "size_bytes": 6221
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_071113.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_071113.md",
+      "hash": "3b164fcca2f3439e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.498972",
+      "modified_at": "2025-10-08T07:11:13.692073",
+      "size_bytes": 495
+    },
+    "REAL_WORLD_VALIDATION_SUMMARY.md": {
+      "file": "REAL_WORLD_VALIDATION_SUMMARY.md",
+      "hash": "f8ee4b1c71300627",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.499668",
+      "modified_at": "2025-09-30T17:10:21.332810",
+      "size_bytes": 8124
+    },
+    "discovery_results/temporal_drift_phase8_20251006_093038/report/temporal_drift_phase8_results.md": {
+      "file": "discovery_results/temporal_drift_phase8_20251006_093038/report/temporal_drift_phase8_results.md",
+      "hash": "0840c65c014bab86",
+      "claims": [
+        {
+          "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 5,
+          "file": "discovery_results/temporal_drift_phase8_20251006_093038/report/temporal_drift_phase8_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.500276",
+      "modified_at": "2025-10-06T09:30:39.960330",
+      "size_bytes": 8569
+    },
+    "discovery_results/phase18/report/phase18_results.md": {
+      "file": "discovery_results/phase18/report/phase18_results.md",
+      "hash": "a0a427e816549f1c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.500628",
+      "modified_at": "2025-10-06T22:33:33.567888",
+      "size_bytes": 601
+    },
+    "METADASHBOARD_LAUNCHAGENT_SETUP.md": {
+      "file": "METADASHBOARD_LAUNCHAGENT_SETUP.md",
+      "hash": "1d63b9bd00a2404f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.501241",
+      "modified_at": "2025-10-14T16:53:19.536221",
+      "size_bytes": 6966
+    },
+    "discovery_results/trust_survival_v23_cross_domain_20251008_115058/report/results.md": {
+      "file": "discovery_results/trust_survival_v23_cross_domain_20251008_115058/report/results.md",
+      "hash": "5dfedb7fe7cbe8bd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.501491",
+      "modified_at": "2025-10-08T11:50:58.694484",
+      "size_bytes": 263
+    },
+    "discovery_results/metaphysics_quickscan_20251005_200453/report/metaphysics_quickscan_results.md": {
+      "file": "discovery_results/metaphysics_quickscan_20251005_200453/report/metaphysics_quickscan_results.md",
+      "hash": "10759860d8b5fe3d",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.501771",
+      "modified_at": "2025-10-05T20:04:58.570849",
+      "size_bytes": 2934
+    },
+    "REVALIDATION_STATUS.md": {
+      "file": "REVALIDATION_STATUS.md",
+      "hash": "f55e35ceb2276485",
+      "claims": [
+        {
+          "text": "**Direct information clarity** (transparency) reduces noise most effectively\n2",
+          "claim_key": "openness",
+          "stance": "negative",
+          "sentence_index": 15,
+          "file": "REVALIDATION_STATUS.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.502396",
+      "modified_at": "2025-10-14T07:43:38.438735",
+      "size_bytes": 7715
+    },
+    "VALIDATION_REPORT.md": {
+      "file": "VALIDATION_REPORT.md",
+      "hash": "b5cb9366d6906982",
+      "claims": [
+        {
+          "text": "Language Sanitization \u2705\n```bash\npython tools/language_sanitizer.py\n```\n- \u2705 **2 files sanitized** (METALAB_STATUS.md, BOOTSTRAP_COMPLETE.md)\n- \u2705 Replaced exploratory language:\n  - `ultimate` \u2192 `optimiz",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 2,
+          "file": "VALIDATION_REPORT.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.502846",
+      "modified_at": "2025-10-14T18:23:57.607465",
+      "size_bytes": 4855
+    },
+    "discovery_results/phase23_wormhole_20251007_164629/report.md": {
+      "file": "discovery_results/phase23_wormhole_20251007_164629/report.md",
+      "hash": "558078f53148972f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.503188",
+      "modified_at": "2025-10-07T16:46:29.942360",
+      "size_bytes": 1097
+    },
+    "discovery_results/phase24_crossdomain_20251008_052001/report/phase24_results.md": {
+      "file": "discovery_results/phase24_crossdomain_20251008_052001/report/phase24_results.md",
+      "hash": "79c0cf7532bc4850",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.503463",
+      "modified_at": "2025-10-08T05:21:15.846378",
+      "size_bytes": 190
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_114044.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_114044.md",
+      "hash": "de390188f3e70808",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.503746",
+      "modified_at": "2025-10-08T11:40:44.441384",
+      "size_bytes": 496
+    },
+    "discovery_results/phase24b_scaling_20251008_052317/report/phase24b_results.md": {
+      "file": "discovery_results/phase24b_scaling_20251008_052317/report/phase24b_results.md",
+      "hash": "c668a5dfa7b0a6fa",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.503948",
+      "modified_at": "2025-10-08T05:23:19.481246",
+      "size_bytes": 631
+    },
+    "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md": {
+      "file": "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md",
+      "hash": "657eb47764416156",
+      "claims": [
+        {
+          "text": "**Goal Externalities with Retro Channels** \u26a0\ufe0f\n**Purpose:** Test if retro messaging reduces system collapse in multi-agent coordination\n\n**Results:**\n- **Overall Collapse Rate:** 66.7% (high instabilit",
+          "claim_key": "resilience",
+          "stance": "negative",
+          "sentence_index": 6,
+          "file": "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md"
+        },
+        {
+          "text": "**Retro Bandwidth Threshold:** No effect observed up to 4 bits/step\n\n---\n\n## \ud83d\udcc8 **STATISTICAL SIGNIFICANCE**\n\n### **Sample Sizes & Power**\n- **3 seeds** per configuration (statistical minimum)\n- **24 C",
+          "claim_key": "hazard",
+          "stance": "positive",
+          "sentence_index": 19,
+          "file": "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.504696",
+      "modified_at": "2025-10-13T22:50:46.292935",
+      "size_bytes": 10230
+    },
+    "discovery_results/phase31_distributed_neurocoherence_20251010_003341/report/results.md": {
+      "file": "discovery_results/phase31_distributed_neurocoherence_20251010_003341/report/results.md",
+      "hash": "4e530fd66450cd16",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.505014",
+      "modified_at": "2025-10-10T00:33:42.587399",
+      "size_bytes": 194
+    },
+    "FIS_STUDIES_SUMMARY.md": {
+      "file": "FIS_STUDIES_SUMMARY.md",
+      "hash": "904c66bd7058da92",
+      "claims": [
+        {
+          "text": "**Trust/Hope emotional stabilizers** provide validated resilience benefits\n3",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 32,
+          "file": "FIS_STUDIES_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.505853",
+      "modified_at": "2025-10-14T07:43:38.437810",
+      "size_bytes": 9929
+    },
+    "discovery_results/trust_survival_v14_wave_propagation_20251008_095606/report/results.md": {
+      "file": "discovery_results/trust_survival_v14_wave_propagation_20251008_095606/report/results.md",
+      "hash": "12737cd4525fa8ac",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.506297",
+      "modified_at": "2025-10-08T09:56:39.833003",
+      "size_bytes": 266
+    },
+    "BOOTSTRAP_COMPLETE.md": {
+      "file": "BOOTSTRAP_COMPLETE.md",
+      "hash": "1f26a1ce6dad1f5c",
+      "claims": [
+        {
+          "text": "**Actions Completed**\n   - \u2705 Created virtual environment (`.venv/`)\n   - \u2705 Installed dev dependencies\n   - \u2705 Archived 200+ legacy discovery results with SHA256 checksums\n   - \u2705 Sanitized 90+ files, re",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 6,
+          "file": "BOOTSTRAP_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.506934",
+      "modified_at": "2025-10-13T23:08:27.659110",
+      "size_bytes": 6202
+    },
+    "OPENLAWS_FIXES_20251014.md": {
+      "file": "OPENLAWS_FIXES_20251014.md",
+      "hash": "faf40612248891bc",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.507769",
+      "modified_at": "2025-10-14T00:16:29.851681",
+      "size_bytes": 9734
+    },
+    "OPEN_MIN_CHEM_RETRY_REPORT.md": {
+      "file": "OPEN_MIN_CHEM_RETRY_REPORT.md",
+      "hash": "ac1f8f96a6df3977",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.508078",
+      "modified_at": "2025-10-08T16:59:48.879611",
+      "size_bytes": 301
+    },
+    "discovery_results/phase26e_coherence_20251008_054611/report/phase26e_results.md": {
+      "file": "discovery_results/phase26e_coherence_20251008_054611/report/phase26e_results.md",
+      "hash": "55257da9fb628b0a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.508276",
+      "modified_at": "2025-10-08T05:46:27.740824",
+      "size_bytes": 193
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_105037.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_105037.md",
+      "hash": "86de7976c50066d2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.508485",
+      "modified_at": "2025-10-08T10:50:38.462442",
+      "size_bytes": 496
+    },
+    "discovery_results/phase23_wormhole_20251007_165105/report.md": {
+      "file": "discovery_results/phase23_wormhole_20251007_165105/report.md",
+      "hash": "887e6dc446a9bd71",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.508706",
+      "modified_at": "2025-10-07T16:51:06.224340",
+      "size_bytes": 1098
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_111718.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_111718.md",
+      "hash": "93799ed84ae42cf4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.508914",
+      "modified_at": "2025-10-08T11:17:19.045234",
+      "size_bytes": 496
+    },
+    "OPEN_FAMILY_V2_FINAL_SUMMARY.md": {
+      "file": "OPEN_FAMILY_V2_FINAL_SUMMARY.md",
+      "hash": "ce36ba29ec3e53c6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.509921",
+      "modified_at": "2025-10-14T16:03:54.648436",
+      "size_bytes": 14285
+    },
+    "discovery_results/trust_survival_v27_metastability_20251008_122906/report/validated_abstract_20251008_122913.md": {
+      "file": "discovery_results/trust_survival_v27_metastability_20251008_122906/report/validated_abstract_20251008_122913.md",
+      "hash": "a626dca277ade5f2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.510391",
+      "modified_at": "2025-10-08T12:29:13.043478",
+      "size_bytes": 506
+    },
+    "EXPANSION_CAUSES_RESULTS.md": {
+      "file": "EXPANSION_CAUSES_RESULTS.md",
+      "hash": "9efcfed37bad0305",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.510717",
+      "modified_at": "2025-10-03T18:57:08.032686",
+      "size_bytes": 613
+    },
+    "discovery_results/phase23_creator_emergence_20251008_194005/report/results.md": {
+      "file": "discovery_results/phase23_creator_emergence_20251008_194005/report/results.md",
+      "hash": "93e3823f1f9b2cee",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.511047",
+      "modified_at": "2025-10-08T19:40:14.064665",
+      "size_bytes": 227
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_073351.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_073351.md",
+      "hash": "831c874449a2dbdf",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.511355",
+      "modified_at": "2025-10-08T07:33:52.296293",
+      "size_bytes": 495
+    },
+    "discovery_results/phase11_suite_2025-10-06_15-28-18/master_report.md": {
+      "file": "discovery_results/phase11_suite_2025-10-06_15-28-18/master_report.md",
+      "hash": "0387c312d5daab61",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.511786",
+      "modified_at": "2025-10-06T15:28:20.085386",
+      "size_bytes": 5089
+    },
+    "docs/phase35b_preregistration.md": {
+      "file": "docs/phase35b_preregistration.md",
+      "hash": "9a49f5cbf666b78f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.512698",
+      "modified_at": "2025-10-14T11:40:43.293647",
+      "size_bytes": 11074
+    },
+    "discovery_results/Phase22_Optimization_20251007_142624/Field_Equation_of_Meaning_v1_WhitePaper.md": {
+      "file": "discovery_results/Phase22_Optimization_20251007_142624/Field_Equation_of_Meaning_v1_WhitePaper.md",
+      "hash": "5df3cc642c95cac9",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.512995",
+      "modified_at": "2025-10-07T14:26:24.543061",
+      "size_bytes": 1538
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_093233.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_093233.md",
+      "hash": "394509184c48c272",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.513314",
+      "modified_at": "2025-10-08T09:32:33.958220",
+      "size_bytes": 495
+    },
+    "GUARDIAN_V3_QUICK_REFERENCE.md": {
+      "file": "GUARDIAN_V3_QUICK_REFERENCE.md",
+      "hash": "30b85e24e2811ced",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.513766",
+      "modified_at": "2025-10-14T17:54:07.670130",
+      "size_bytes": 4402
+    },
+    "discovery_results/Phase19b_Evaluator_20251007_140023/phase19b_summary.md": {
+      "file": "discovery_results/Phase19b_Evaluator_20251007_140023/phase19b_summary.md",
+      "hash": "1429656a2a818d47",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.514005",
+      "modified_at": "2025-10-07T14:00:24.326133",
+      "size_bytes": 807
+    },
+    "EXPANSION_TEST_RESULTS.md": {
+      "file": "EXPANSION_TEST_RESULTS.md",
+      "hash": "8febfad35a4e9644",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.514303",
+      "modified_at": "2025-10-03T18:48:26.191481",
+      "size_bytes": 538
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_091926.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_091926.md",
+      "hash": "871d1a551ba626cd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.514609",
+      "modified_at": "2025-10-08T09:19:26.733952",
+      "size_bytes": 495
+    },
+    "GUARDIAN_CHEAT_SHEET.md": {
+      "file": "GUARDIAN_CHEAT_SHEET.md",
+      "hash": "0158c28aabf593c0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.514895",
+      "modified_at": "2025-10-14T19:57:52.646906",
+      "size_bytes": 1665
+    },
+    "discovery_results/phase31b_uclv_20251011_155948/REPORT.md": {
+      "file": "discovery_results/phase31b_uclv_20251011_155948/REPORT.md",
+      "hash": "98621a69c5334e74",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.515114",
+      "modified_at": "2025-10-11T10:59:48.392906",
+      "size_bytes": 286
+    },
+    "discovery_results/trust_survival_v26_emergent_20251008_121448/report/results.md": {
+      "file": "discovery_results/trust_survival_v26_emergent_20251008_121448/report/results.md",
+      "hash": "a5914419726bf747",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.515311",
+      "modified_at": "2025-10-08T12:14:48.871293",
+      "size_bytes": 266
+    },
+    "OPEN_MIN_BUDGET_FOLLOWUPS_REPORT.md": {
+      "file": "OPEN_MIN_BUDGET_FOLLOWUPS_REPORT.md",
+      "hash": "c2e3795af6614659",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.515581",
+      "modified_at": "2025-10-04T00:31:26.005159",
+      "size_bytes": 716
+    },
+    "docs/integrity/Research_Integrity_Prompt.md": {
+      "file": "docs/integrity/Research_Integrity_Prompt.md",
+      "hash": "630684c6d9314be0",
+      "claims": [
+        {
+          "text": "---\n\n## Study: phase33b_coop_meaning (2025-10-14) \u2014 preregistered ridge refinement\n**Preregistered:** yes  \n**Seeds (preregistered & used):** [11, 17, 23, 29]  \n**Runs:** 720 total (180 configs \u00d7 4 se",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 2,
+          "file": "docs/integrity/Research_Integrity_Prompt.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.516236",
+      "modified_at": "2025-10-14T01:06:32.717966",
+      "size_bytes": 7237
+    },
+    "discovery_results/trust_survival_v7_meta_20251008_083757/report/results.md": {
+      "file": "discovery_results/trust_survival_v7_meta_20251008_083757/report/results.md",
+      "hash": "c2adca98edb68b2f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.516475",
+      "modified_at": "2025-10-08T08:37:58.620923",
+      "size_bytes": 243
+    },
+    "discovery_results/phase14/report/phase14_results.md": {
+      "file": "discovery_results/phase14/report/phase14_results.md",
+      "hash": "829163af3cbed4d2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.516835",
+      "modified_at": "2025-10-06T21:11:13.233262",
+      "size_bytes": 1917
+    },
+    "EXPERIMENTAL_RESULTS_SUMMARY.md": {
+      "file": "EXPERIMENTAL_RESULTS_SUMMARY.md",
+      "hash": "470ea5d89ea740e5",
+      "claims": [
+        {
+          "text": "**Retrocausal interventions provide no survival benefits** in tested scenarios\n4",
+          "claim_key": "causality",
+          "stance": "positive",
+          "sentence_index": 9,
+          "file": "EXPERIMENTAL_RESULTS_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.517260",
+      "modified_at": "2025-10-14T18:23:56.678135",
+      "size_bytes": 5622
+    },
+    "discovery_results/phase11_suite_2025-10-06_15-28-18/11B_quantum_swarm/report.md": {
+      "file": "discovery_results/phase11_suite_2025-10-06_15-28-18/11B_quantum_swarm/report.md",
+      "hash": "ef514e8b9bc9a142",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.517550",
+      "modified_at": "2025-10-06T15:28:19.783003",
+      "size_bytes": 1448
+    },
+    "discovery_results/truth_phase3_drift_20251007_201214/README.md": {
+      "file": "discovery_results/truth_phase3_drift_20251007_201214/README.md",
+      "hash": "b6c345063672fafe",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.517765",
+      "modified_at": "2025-10-07T20:12:14.904885",
+      "size_bytes": 577
+    },
+    "discovery_results/phase23_creator_emergence_20251008_193939/report/results.md": {
+      "file": "discovery_results/phase23_creator_emergence_20251008_193939/report/results.md",
+      "hash": "0c7e0d0a32eee0fa",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.517969",
+      "modified_at": "2025-10-08T19:39:48.419140",
+      "size_bytes": 227
+    },
+    "discovery_results/phase33b_coop_meaning_20251014_001935/report/results.md": {
+      "file": "discovery_results/phase33b_coop_meaning_20251014_001935/report/results.md",
+      "hash": "09748bd13fe1691f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.518160",
+      "modified_at": "2025-10-14T00:19:36.000195",
+      "size_bytes": 149
+    },
+    "discovery_results/trust_survival_v25_thresholds_20251008_120914/report/results.md": {
+      "file": "discovery_results/trust_survival_v25_thresholds_20251008_120914/report/results.md",
+      "hash": "ddee066d00a8cb95",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.518432",
+      "modified_at": "2025-10-08T12:09:14.634864",
+      "size_bytes": 267
+    },
+    "discovery_results/phase26h_final_20251008_055515/report/phase26h_results.md": {
+      "file": "discovery_results/phase26h_final_20251008_055515/report/phase26h_results.md",
+      "hash": "b6b82f7f374880cb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.518637",
+      "modified_at": "2025-10-08T05:55:46.379916",
+      "size_bytes": 187
+    },
+    "discovery_results/trust_survival_v8_open_drift_20251008_091304/report/results.md": {
+      "file": "discovery_results/trust_survival_v8_open_drift_20251008_091304/report/results.md",
+      "hash": "90dce4f285c7d0d7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.518905",
+      "modified_at": "2025-10-08T09:13:05.828176",
+      "size_bytes": 251
+    },
+    "discovery_results/phase12/report/phase12_results.md": {
+      "file": "discovery_results/phase12/report/phase12_results.md",
+      "hash": "6a37430c6716ea0a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.519180",
+      "modified_at": "2025-10-06T20:48:41.488380",
+      "size_bytes": 372
+    },
+    "discovery_results/phase35c_cross_domain_generalization_20251014_120005/report/results.md": {
+      "file": "discovery_results/phase35c_cross_domain_generalization_20251014_120005/report/results.md",
+      "hash": "4b455ec072a7a2b2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.519448",
+      "modified_at": "2025-10-14T12:00:06.223578",
+      "size_bytes": 213
+    },
+    "discovery_results/phase23_wormhole_20251007_164616/report.md": {
+      "file": "discovery_results/phase23_wormhole_20251007_164616/report.md",
+      "hash": "27d6a2f659390629",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.519642",
+      "modified_at": "2025-10-07T16:46:17.065581",
+      "size_bytes": 331
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_110707.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_110707.md",
+      "hash": "a5230c4a5240785b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.519923",
+      "modified_at": "2025-10-08T11:07:08.370786",
+      "size_bytes": 496
+    },
+    "README.md": {
+      "file": "README.md",
+      "hash": "0df5074506d7ab86",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.520267",
+      "modified_at": "2025-10-14T17:54:07.671033",
+      "size_bytes": 2307
+    },
+    "CONTRIBUTING.md": {
+      "file": "CONTRIBUTING.md",
+      "hash": "0fe5850cd6af4fda",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.520451",
+      "modified_at": "2025-10-13T22:59:10.233228",
+      "size_bytes": 294
+    },
+    "PHASE4_IMPLEMENTATION_SUMMARY.md": {
+      "file": "PHASE4_IMPLEMENTATION_SUMMARY.md",
+      "hash": "1b28a675004fe524",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.520943",
+      "modified_at": "2025-09-29T14:00:25.739826",
+      "size_bytes": 6672
+    },
+    "docs/prereg/H1_fearxCCI_prereg.md": {
+      "file": "docs/prereg/H1_fearxCCI_prereg.md",
+      "hash": "0c984bbc377ee492",
+      "claims": [
+        {
+          "text": "# Preregistration \u2014 H1: Fear \u00d7 CCI Moderation (Protective Effect)\n**Version:** v2  \n**Claim (directional):** In city\u2013week panels, higher CCI reduces the marginal effect of fear on aggression (negative",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 0,
+          "file": "docs/prereg/H1_fearxCCI_prereg.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.521255",
+      "modified_at": "2025-09-30T13:47:10.922665",
+      "size_bytes": 1369
+    },
+    "GUARDIAN_V6_CONTEXT_ENGINE_COMPLETE.md": {
+      "file": "GUARDIAN_V6_CONTEXT_ENGINE_COMPLETE.md",
+      "hash": "f28d305cdf410904",
+      "claims": [
+        {
+          "text": "Assign based on maximum score\n\n**Confidence**: Probability of winning category\n\n### Context Signal Detection\n\n**Scare Quote Detection**:\n```python\n# Pattern: \"word\" with skeptical context\nif \"so-calle",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 10,
+          "file": "GUARDIAN_V6_CONTEXT_ENGINE_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.522456",
+      "modified_at": "2025-10-14T19:59:07.034218",
+      "size_bytes": 20117
+    },
+    "PHASE35_QUICK_REFERENCE.md": {
+      "file": "PHASE35_QUICK_REFERENCE.md",
+      "hash": "3cb5e7a195b8051e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.522913",
+      "modified_at": "2025-10-14T18:23:56.035705",
+      "size_bytes": 3627
+    },
+    "PHASE6_IMPLEMENTATION_SUMMARY.md": {
+      "file": "PHASE6_IMPLEMENTATION_SUMMARY.md",
+      "hash": "46da3701a74b6250",
+      "claims": [
+        {
+          "text": "The framework now supports:\n- Large-scale simulations (10k-100k agents)\n- Deep integration of emergent layers\n- Expanded external validation\n- Multi-objective optimization\n- Tipping point detection\n- ",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 18,
+          "file": "PHASE6_IMPLEMENTATION_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.523618",
+      "modified_at": "2025-09-29T14:55:33.346667",
+      "size_bytes": 11563
+    },
+    "discovery_results/phase11_suite_2025-10-06_15-28-18/11A_chaotic_smallworld/report.md": {
+      "file": "discovery_results/phase11_suite_2025-10-06_15-28-18/11A_chaotic_smallworld/report.md",
+      "hash": "6752c3c300a00efd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.523885",
+      "modified_at": "2025-10-06T15:28:19.476815",
+      "size_bytes": 1267
+    },
+    "FEAR_VIOLENCE_FRAMEWORK_SUMMARY.md": {
+      "file": "FEAR_VIOLENCE_FRAMEWORK_SUMMARY.md",
+      "hash": "ae3965d6ad59ab28",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.524520",
+      "modified_at": "2025-10-14T18:23:56.685425",
+      "size_bytes": 10928
+    },
+    "OPEN_FAMILY_EXPANSION.md": {
+      "file": "OPEN_FAMILY_EXPANSION.md",
+      "hash": "7cf917547b872d27",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.525175",
+      "modified_at": "2025-10-14T17:55:54.494257",
+      "size_bytes": 9121
+    },
+    "discovery_results/trust_survival_v25_thresholds_20251008_120914/report/validated_abstract_20251008_120919.md": {
+      "file": "discovery_results/trust_survival_v25_thresholds_20251008_120914/report/validated_abstract_20251008_120919.md",
+      "hash": "4cc16eddbfba5ac2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.525410",
+      "modified_at": "2025-10-08T12:09:19.824814",
+      "size_bytes": 503
+    },
+    "discovery_results/phase23_creator_emergence_20251008_174000/report/phase23_results.md": {
+      "file": "discovery_results/phase23_creator_emergence_20251008_174000/report/phase23_results.md",
+      "hash": "359d8a1752f63a26",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.525616",
+      "modified_at": "2025-10-08T17:40:12.990649",
+      "size_bytes": 371
+    },
+    "discovery_results/temporal_coherence_sweep_2025-10-06_13-56-48/report_temporal_coherence.md": {
+      "file": "discovery_results/temporal_coherence_sweep_2025-10-06_13-56-48/report_temporal_coherence.md",
+      "hash": "b5df5b238b2af3da",
+      "claims": [
+        {
+          "text": "Small openness (\u03b5\u22480.005) slightly boosts arrow via dissipation proxy",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 3,
+          "file": "discovery_results/temporal_coherence_sweep_2025-10-06_13-56-48/report_temporal_coherence.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.525967",
+      "modified_at": "2025-10-06T13:56:48.662731",
+      "size_bytes": 1912
+    },
+    "discovery_results/meaning_phase5_2_20251007_212507/README.md": {
+      "file": "discovery_results/meaning_phase5_2_20251007_212507/README.md",
+      "hash": "a22821b50a4d94fd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.526340",
+      "modified_at": "2025-10-07T21:25:09.419621",
+      "size_bytes": 829
+    },
+    "discovery_results/phase23_validation_20251008_045906/report/phase23_results.md": {
+      "file": "discovery_results/phase23_validation_20251008_045906/report/phase23_results.md",
+      "hash": "dcd42433de650db0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.526862",
+      "modified_at": "2025-10-08T04:59:07.856889",
+      "size_bytes": 3512
+    },
+    "OPEN_FAMILY_QUICK_START.md": {
+      "file": "OPEN_FAMILY_QUICK_START.md",
+      "hash": "2b46768ff302f90a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.527473",
+      "modified_at": "2025-10-14T16:03:54.639063",
+      "size_bytes": 5893
+    },
+    "discovery_results/meaning_phase5_1_20251007_211642/README.md": {
+      "file": "discovery_results/meaning_phase5_1_20251007_211642/README.md",
+      "hash": "a5dfd41d8e100d52",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.527911",
+      "modified_at": "2025-10-07T21:16:42.660698",
+      "size_bytes": 1945
+    },
+    "discovery_results/fis_ai_safety_toolkit_20251014_070233/report/results.md": {
+      "file": "discovery_results/fis_ai_safety_toolkit_20251014_070233/report/results.md",
+      "hash": "e152a7b2936770cc",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.528133",
+      "modified_at": "2025-10-14T07:02:33.893696",
+      "size_bytes": 196
+    },
+    "discovery_results/truth_phase4_crit_20251007_202928/README.md": {
+      "file": "discovery_results/truth_phase4_crit_20251007_202928/README.md",
+      "hash": "2886030dec8e05db",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.528572",
+      "modified_at": "2025-10-07T20:29:31.649545",
+      "size_bytes": 3413
+    },
+    "discovery_results/safety_cci_20251010_144534/report/safety_cci_results.md": {
+      "file": "discovery_results/safety_cci_20251010_144534/report/safety_cci_results.md",
+      "hash": "181d90424576e914",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.528831",
+      "modified_at": "2025-10-10T14:45:34.552346",
+      "size_bytes": 69
+    },
+    "PHASE3_README.md": {
+      "file": "PHASE3_README.md",
+      "hash": "621c0ff5aed5a3b5",
+      "claims": [
+        {
+          "text": "## Quick Start\n\n```bash\n# Run all Phase 3 experiments\npython3 run_phase3.py\n\n# Run tests first\npython3 test_phase3.py\n```\n\n## Experiments\n\n### E1: Norm Evolution (Emergence of Reciprocity)\n- **Scale:*",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 1,
+          "file": "PHASE3_README.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.529320",
+      "modified_at": "2025-09-29T13:49:53.571269",
+      "size_bytes": 6427
+    },
+    "discovery_results/truth_phase3_run_20251007_200931/README.md": {
+      "file": "discovery_results/truth_phase3_run_20251007_200931/README.md",
+      "hash": "6e3306e7717160af",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.529670",
+      "modified_at": "2025-10-07T20:09:31.816427",
+      "size_bytes": 1576
+    },
+    "SESSION_GUARDIAN_V3_IMPLEMENTATION.md": {
+      "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md",
+      "hash": "49cad68fa97bb854",
+      "claims": [
+        {
+          "text": "Comprehensive Language Policy\n**Location**: `templates/LANGUAGE_POLICY.md`\n\n**Key Guidelines**:\n- \u2705 **Preferred**: \"suggests\", \"is consistent with\", \"within simulation\", \"preliminary\"\n- \u274c **Avoid**: \"",
+          "claim_key": "causality",
+          "stance": "positive",
+          "sentence_index": 6,
+          "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md"
+        },
+        {
+          "text": "Core References Library\n**Location**: `CITATIONS.bib`\n\n**Contents**: 30+ BibTeX entries covering:\n- Statistical methods (bootstrap, CI theory)\n- Agent-based modeling foundations\n- Coherence & integrat",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 8,
+          "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md"
+        },
+        {
+          "text": "**Target**: 70+ score (VALIDATED threshold)\n\n### Implementation Roadmap\n\n**Week 1: Quick Wins** (Target: 65+)\n- [x] Deploy Guardian v3 scanner\n- [x] Generate baseline audit\n- [x] Create templates & po",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 13,
+          "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md"
+        },
+        {
+          "text": "Cooperation improves resilience",
+          "claim_key": "cooperation",
+          "stance": "positive",
+          "sentence_index": 15,
+          "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md"
+        }
+      ],
+      "claim_count": 4,
+      "indexed_at": "2025-10-14T20:06:03.530593",
+      "modified_at": "2025-10-14T18:23:56.377713",
+      "size_bytes": 13721
+    },
+    "discovery_results/phase17/report/phase17_results.md": {
+      "file": "discovery_results/phase17/report/phase17_results.md",
+      "hash": "f32f1a6dd1c79f83",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.530976",
+      "modified_at": "2025-10-06T22:17:21.585618",
+      "size_bytes": 477
+    },
+    "GUARDIAN_QUICK_START.md": {
+      "file": "GUARDIAN_QUICK_START.md",
+      "hash": "31dee14682595eac",
+      "claims": [
+        {
+          "text": "**Sentiment** (target \u22480.0): Neutral scientific tone\n\n---\n\n## \ud83d\udd27 Common Fixes\n\n### Low Objectivity Score\n**Add**:\n- Hedging: \"suggests\", \"may\", \"appears to\", \"preliminary\"\n- Confidence intervals: \"(\u0394CC",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 9,
+          "file": "GUARDIAN_QUICK_START.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.531448",
+      "modified_at": "2025-10-14T19:00:17.976185",
+      "size_bytes": 4814
+    },
+    "discovery_results/fis_emotion_cci_stabilizers_20251014_070152/report/results.md": {
+      "file": "discovery_results/fis_emotion_cci_stabilizers_20251014_070152/report/results.md",
+      "hash": "716a3de4132ce490",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.531669",
+      "modified_at": "2025-10-14T07:01:52.692678",
+      "size_bytes": 205
+    },
+    "discovery_results/phase13/report/phase13_results.md": {
+      "file": "discovery_results/phase13/report/phase13_results.md",
+      "hash": "7bb9720be3181dd1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.532024",
+      "modified_at": "2025-10-06T21:01:57.978393",
+      "size_bytes": 1398
+    },
+    "NEXTGEN_QUICK_REF.md": {
+      "file": "NEXTGEN_QUICK_REF.md",
+      "hash": "119c6fd91cbed1c3",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.532373",
+      "modified_at": "2025-10-14T16:46:17.819556",
+      "size_bytes": 2486
+    },
+    "discovery_results/trust_survival_v26_emergent_20251008_121448/report/validated_abstract_20251008_121454.md": {
+      "file": "discovery_results/trust_survival_v26_emergent_20251008_121448/report/validated_abstract_20251008_121454.md",
+      "hash": "2054797dae5a495f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.532669",
+      "modified_at": "2025-10-08T12:14:54.676917",
+      "size_bytes": 501
+    },
+    "discovery_results/phase26c_light_20251008_054119/report/phase26c_light_results.md": {
+      "file": "discovery_results/phase26c_light_20251008_054119/report/phase26c_light_results.md",
+      "hash": "dec65eee88bf1f4a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.532873",
+      "modified_at": "2025-10-08T05:41:19.945312",
+      "size_bytes": 195
+    },
+    "qc/guardian_summary_v3.md": {
+      "file": "qc/guardian_summary_v3.md",
+      "hash": "16b33d2823203505",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.533128",
+      "modified_at": "2025-10-14T17:53:38.122978",
+      "size_bytes": 123
+    },
+    "discovery_results/ai_consciousness_deep_20251010_200601/summary.md": {
+      "file": "discovery_results/ai_consciousness_deep_20251010_200601/summary.md",
+      "hash": "a4ec633df469d631",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.533336",
+      "modified_at": "2025-10-10T20:06:01.616753",
+      "size_bytes": 288
+    },
+    "GUARDIAN_VERSIONS_QUICK_REF.md": {
+      "file": "GUARDIAN_VERSIONS_QUICK_REF.md",
+      "hash": "40016222e2395911",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.533654",
+      "modified_at": "2025-10-14T19:56:36.033989",
+      "size_bytes": 2602
+    },
+    "discovery_results/phase26f_stability_20251008_054842/report/phase26f_results.md": {
+      "file": "discovery_results/phase26f_stability_20251008_054842/report/phase26f_results.md",
+      "hash": "8c082e06f0dcf054",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.533956",
+      "modified_at": "2025-10-08T05:49:02.007066",
+      "size_bytes": 191
+    },
+    "discovery_results/phase15/report/phase15_results.md": {
+      "file": "discovery_results/phase15/report/phase15_results.md",
+      "hash": "a25e3f47c0b6bb1e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.534274",
+      "modified_at": "2025-10-06T21:31:04.167792",
+      "size_bytes": 839
+    },
+    "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md": {
+      "file": "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md",
+      "hash": "813c0643dd02adbc",
+      "claims": [
+        {
+          "text": "**Mutual Assimilation:**\n   - Both civilizations shift toward intermediate cultural state\n   - Most common at moderate coupling levels\n   - Represents cultural homogenization through sustained contact",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 4,
+          "file": "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md"
+        },
+        {
+          "text": "Homogenization Regime (\u03ba \u2265 0.20):\n- Rapid cultural convergence and identity loss\n- High equilibrium stability but reduced cultural diversity\n- Risk of synchronized vulnerabilities\n\n## Policy Implicati",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 7,
+          "file": "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.534777",
+      "modified_at": "2025-10-06T09:06:54.855456",
+      "size_bytes": 6987
+    },
+    "UNIVERSE_ASSAY_RESULTS.md": {
+      "file": "UNIVERSE_ASSAY_RESULTS.md",
+      "hash": "c0be3682d45b2270",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.535107",
+      "modified_at": "2025-10-03T16:15:24.663474",
+      "size_bytes": 642
+    },
+    "discovery_results/report/phase9_results.md": {
+      "file": "discovery_results/report/phase9_results.md",
+      "hash": "4271b7484f1d4c62",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.535479",
+      "modified_at": "2025-10-06T19:47:10.612715",
+      "size_bytes": 2657
+    },
+    "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md": {
+      "file": "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md",
+      "hash": "177f41f717f6a2bd",
+      "claims": [
+        {
+          "text": "**Bidirectional effects** - Fear affects agent behavior and survival\n\n## \ud83d\udcca **Corrected Experimental Results**\n\n### **Shock \u2192 Fear \u2192 Aggression Dynamics**\n\n**\u2705 FEAR DYNAMICS NOW WORKING:**\n\nFrom `shock",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 5,
+          "file": "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md"
+        },
+        {
+          "text": "The core hypothesis is **partially validated**:\n\n- \u2705 **Fear dynamics work** - shocks trigger fear responses\n- \u2705 **CCI moderation confirmed** - coherence reduces aggression\n- \u2705 **Interventions effectiv",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 10,
+          "file": "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.535982",
+      "modified_at": "2025-09-30T17:10:20.111717",
+      "size_bytes": 5997
+    },
+    "QC_UPGRADE_COMPLETE.md": {
+      "file": "QC_UPGRADE_COMPLETE.md",
+      "hash": "f7aea53464cb254f",
+      "claims": [
+        {
+          "text": "**Validation Framework:** Enhances `open_family/open_core/validation.py`\n\n### Updated Workflow\n\n```bash\n# Standard run cycle (unchanged)\npython openlaws_automation.py run --lab openlight_lab\npython op",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 23,
+          "file": "QC_UPGRADE_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.536955",
+      "modified_at": "2025-10-14T16:09:16.862888",
+      "size_bytes": 14522
+    },
+    "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9C_multi_domain/report.md": {
+      "file": "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9C_multi_domain/report.md",
+      "hash": "7067f897c70bea97",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.537243",
+      "modified_at": "2025-10-06T14:10:33.264903",
+      "size_bytes": 1117
+    },
+    "PHASE35B_SUMMARY.md": {
+      "file": "PHASE35B_SUMMARY.md",
+      "hash": "bba3e1a6e16cfafd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.537887",
+      "modified_at": "2025-10-14T18:23:56.034104",
+      "size_bytes": 9067
+    },
+    "discovery_results/report/validated_abstract_20251014_093604.md": {
+      "file": "discovery_results/report/validated_abstract_20251014_093604.md",
+      "hash": "517e00ab63e948b3",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.538297",
+      "modified_at": "2025-10-14T09:36:05.074701",
+      "size_bytes": 507
+    },
+    "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md": {
+      "file": "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md",
+      "hash": "d221dd2e68d08205",
+      "claims": [
+        {
+          "text": "# Money Competition Phase 5: Synthesis & Multi-Level Resilience Results\n\n**Generated:** 2025-10-06 08:57:20  \n**Total Runtime:** 30.04 seconds  \n**Long-term Analysis:** 2000-epoch civilizational metab",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 0,
+          "file": "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md"
+        },
+        {
+          "text": "**\u03b5 \u2265 0.010:** Robust learning cultures that self-stabilize through cycles\n\n### Cultural Memory Effects:\n- **Memory Boosts:** Triggered by 20+ epochs of CCI > 0.75, add +0.5% to cultural memory\n- **Le",
+          "claim_key": "cooperation",
+          "stance": "positive",
+          "sentence_index": 3,
+          "file": "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.538788",
+      "modified_at": "2025-10-13T22:50:47.534882",
+      "size_bytes": 5767
+    },
+    "MULTIVERSE_RESULTS.md": {
+      "file": "MULTIVERSE_RESULTS.md",
+      "hash": "c3ab927745bd377c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.539132",
+      "modified_at": "2025-10-03T19:42:35.617111",
+      "size_bytes": 1476
+    },
+    "qc/guardian_summary.md": {
+      "file": "qc/guardian_summary.md",
+      "hash": "90d116098e0263b0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.539429",
+      "modified_at": "2025-10-14T18:25:03.600912",
+      "size_bytes": 1609
+    },
+    "discovery_results/phase15b_validation_2025-10-06_15-54-25/master_report.md": {
+      "file": "discovery_results/phase15b_validation_2025-10-06_15-54-25/master_report.md",
+      "hash": "48fc16d5b0aaff75",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.539784",
+      "modified_at": "2025-10-06T15:54:43.667632",
+      "size_bytes": 2172
+    },
+    "discovery_results/phase23_creator_emergence_20251008_194005/report/validated_abstract_20251008_194014.md": {
+      "file": "discovery_results/phase23_creator_emergence_20251008_194005/report/validated_abstract_20251008_194014.md",
+      "hash": "64a413413f23bec0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.540006",
+      "modified_at": "2025-10-08T19:40:14.080937",
+      "size_bytes": 501
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_074026.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_074026.md",
+      "hash": "deea77daa96c137d",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.540312",
+      "modified_at": "2025-10-08T07:40:26.587664",
+      "size_bytes": 495
+    },
+    "discovery_results/next_master_report.md": {
+      "file": "discovery_results/next_master_report.md",
+      "hash": "dbff7c35bd75eef3",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.540669",
+      "modified_at": "2025-09-29T12:51:47.492911",
+      "size_bytes": 1644
+    },
+    "discovery_results/phase25_threshold_20251008_052543/report/phase25_results.md": {
+      "file": "discovery_results/phase25_threshold_20251008_052543/report/phase25_results.md",
+      "hash": "a73a54f0e179ec96",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.540890",
+      "modified_at": "2025-10-08T05:25:50.556745",
+      "size_bytes": 681
+    },
+    "AUTO_THEORIST_V3_SUCCESS.md": {
+      "file": "AUTO_THEORIST_V3_SUCCESS.md",
+      "hash": "e6c8a96c779fdb79",
+      "claims": [
+        {
+          "text": "v2.0 for weekly deep analysis\n\n---\n\n## \u2705 Verification\n\n**Test Run:**\n- \u2705 Processed 17 studies successfully\n- \u2705 Generated scores for all studies\n- \u2705 Ranked from 0.926 (best) to 0.0 (lowest)\n- \u2705 Exporte",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 15,
+          "file": "AUTO_THEORIST_V3_SUCCESS.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.541402",
+      "modified_at": "2025-10-14T17:49:24.454536",
+      "size_bytes": 5432
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/mc_phase5_revalidation_results.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/mc_phase5_revalidation_results.md",
+      "hash": "e2377164ca278aeb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.541636",
+      "modified_at": "2025-10-08T06:03:40.690463",
+      "size_bytes": 186
+    },
+    "discovery_results/phase25_threshold_20251008_052515/report/phase25_results.md": {
+      "file": "discovery_results/phase25_threshold_20251008_052515/report/phase25_results.md",
+      "hash": "a73a54f0e179ec96",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.541852",
+      "modified_at": "2025-10-08T05:25:22.872595",
+      "size_bytes": 681
+    },
+    "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md": {
+      "file": "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md",
+      "hash": "46da902e0c52b427",
+      "claims": [
+        {
+          "text": "## Results Summary\n\n| Run | \u03b5 | Profile | t_flip | Persistence | Hysteresis | Final CCI | Final Training | AUH Post-Shocks |\n|-----|---|---------|--------|-------------|------------|-----------|------",
+          "claim_key": "openness",
+          "stance": "negative",
+          "sentence_index": 3,
+          "file": "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md"
+        },
+        {
+          "text": "**Learning Dominance (\u03b5 \u2265 0.005):** Stable training-based culture\n\n### Shock Response Dynamics:\n- **Immediate Reversion:** Training drops during shock windows\n- **Recovery Patterns:** Open systems res",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 6,
+          "file": "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.542228",
+      "modified_at": "2025-10-06T08:48:17.094211",
+      "size_bytes": 3552
+    },
+    "discovery_results/scale_invariance_meta_20251014_093549/report/results.md": {
+      "file": "discovery_results/scale_invariance_meta_20251014_093549/report/results.md",
+      "hash": "5d746ab0e0e273fb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.542567",
+      "modified_at": "2025-10-14T09:35:49.904880",
+      "size_bytes": 149
+    },
+    "discovery_results/trust_survival_v17_self_calibration_20251008_103540/report/results.md": {
+      "file": "discovery_results/trust_survival_v17_self_calibration_20251008_103540/report/results.md",
+      "hash": "58400207debce2f7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.542807",
+      "modified_at": "2025-10-08T10:36:01.865688",
+      "size_bytes": 283
+    },
+    "discovery_results/report/phase10_results.md": {
+      "file": "discovery_results/report/phase10_results.md",
+      "hash": "1a76f5a83efd2449",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.543271",
+      "modified_at": "2025-10-06T19:55:42.045278",
+      "size_bytes": 2462
+    },
+    "RETROCAUSALITY_SUMMARY.md": {
+      "file": "RETROCAUSALITY_SUMMARY.md",
+      "hash": "12ef707f39245772",
+      "claims": [
+        {
+          "text": "**Goal Externalities with Retro Channels** (`run_retro_goals`)\n- Multi-agent goal coordination with retro messaging\n- Bandwidth constraints b \u2208 {0,1,4} bits/step\n- Tests if retro reduces collapse only",
+          "claim_key": "coherence",
+          "stance": "negative",
+          "sentence_index": 9,
+          "file": "RETROCAUSALITY_SUMMARY.md"
+        },
+        {
+          "text": "\u2705 **Integration**: Seamless integration with existing simulation framework\n\n**The retrocausality simulation framework is ready to probe the logical constraints and potential benefits of time travel in",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 18,
+          "file": "RETROCAUSALITY_SUMMARY.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.544027",
+      "modified_at": "2025-09-30T17:10:19.568299",
+      "size_bytes": 8799
+    },
+    "PHASE33_COMPLETE.md": {
+      "file": "PHASE33_COMPLETE.md",
+      "hash": "ad6d6cc5d7d1f09b",
+      "claims": [
+        {
+          "text": "**Hazard Reduction Robust** \u2705\n   - Mean \u0394hazard = -0.0239\n   - Exceeds threshold (-0.01)\n   - Trust+Meaning interaction reduces system risk\n\n2",
+          "claim_key": "resilience",
+          "stance": "negative",
+          "sentence_index": 7,
+          "file": "PHASE33_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.544652",
+      "modified_at": "2025-10-14T18:23:56.058672",
+      "size_bytes": 6066
+    },
+    "5k_multiseed_summary.md": {
+      "file": "5k_multiseed_summary.md",
+      "hash": "eb84176882c54564",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.545041",
+      "modified_at": "2025-10-03T22:18:05.447857",
+      "size_bytes": 1489
+    },
+    "discovery_results/trust_survival_v16_optimization_20251008_102643/report/results.md": {
+      "file": "discovery_results/trust_survival_v16_optimization_20251008_102643/report/results.md",
+      "hash": "dedf506eac883940",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.545248",
+      "modified_at": "2025-10-08T10:26:53.476957",
+      "size_bytes": 276
+    },
+    "discovery_results/phase23b_promotion_20251008_051400/report/phase23b_results.md": {
+      "file": "discovery_results/phase23b_promotion_20251008_051400/report/phase23b_results.md",
+      "hash": "1c9fe419a6c107c7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.545559",
+      "modified_at": "2025-10-08T05:14:26.100913",
+      "size_bytes": 261
+    },
+    "PHASE35B_COMPLETION_REPORT.md": {
+      "file": "PHASE35B_COMPLETION_REPORT.md",
+      "hash": "a0fd381d59d6875b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.546349",
+      "modified_at": "2025-10-14T11:40:43.305731",
+      "size_bytes": 11923
+    },
+    "ETHICS.md": {
+      "file": "ETHICS.md",
+      "hash": "32701123e4b529ec",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.547043",
+      "modified_at": "2025-10-14T17:54:07.670951",
+      "size_bytes": 8862
+    },
+    "GUARDIAN_EVOLUTION_SUMMARY.md": {
+      "file": "GUARDIAN_EVOLUTION_SUMMARY.md",
+      "hash": "9afa96e48fca54ff",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.547772",
+      "modified_at": "2025-10-14T19:39:51.206968",
+      "size_bytes": 8458
+    },
+    "discovery_results/THEME_1_UNIFIED_SURVIVAL_CURVES_REPORT.md": {
+      "file": "discovery_results/THEME_1_UNIFIED_SURVIVAL_CURVES_REPORT.md",
+      "hash": "e3b0c44298fc1c14",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.548060",
+      "modified_at": "2025-09-29T13:07:37.246585",
+      "size_bytes": 0
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_082642.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_082642.md",
+      "hash": "56a216660c6007ac",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.548352",
+      "modified_at": "2025-10-08T08:26:43.231879",
+      "size_bytes": 495
+    },
+    "discovery_results/phase23_3I_atlas_20251007_145015/report/phase23_results.md": {
+      "file": "discovery_results/phase23_3I_atlas_20251007_145015/report/phase23_results.md",
+      "hash": "4cd8c635457ad1f8",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.548565",
+      "modified_at": "2025-10-07T14:50:15.554169",
+      "size_bytes": 328
+    },
+    "discovery_results/phase33b_coop_meaning_20251013_235233/PHASE33B_SUMMARY.md": {
+      "file": "discovery_results/phase33b_coop_meaning_20251013_235233/PHASE33B_SUMMARY.md",
+      "hash": "e9edf0e0333eb864",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.549225",
+      "modified_at": "2025-10-14T18:23:56.319859",
+      "size_bytes": 8982
+    },
+    "discovery_results/phase35b_cross_survey_replication_20251014_114632/report/results.md": {
+      "file": "discovery_results/phase35b_cross_survey_replication_20251014_114632/report/results.md",
+      "hash": "aaaa312e0a55393c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.549519",
+      "modified_at": "2025-10-14T11:46:54.285474",
+      "size_bytes": 228
+    },
+    "discovery_results/temporal_drift_phase8_20251006_093013/report/temporal_drift_phase8_results.md": {
+      "file": "discovery_results/temporal_drift_phase8_20251006_093013/report/temporal_drift_phase8_results.md",
+      "hash": "8ed63ca71885fdc9",
+      "claims": [
+        {
+          "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 5,
+          "file": "discovery_results/temporal_drift_phase8_20251006_093013/report/temporal_drift_phase8_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.550059",
+      "modified_at": "2025-10-06T09:30:14.681081",
+      "size_bytes": 8354
+    },
+    "discovery_results/Phase19_Validation_20251007_134940/report/phase19_validation_report.md": {
+      "file": "discovery_results/Phase19_Validation_20251007_134940/report/phase19_validation_report.md",
+      "hash": "a809b5ed4806539b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.550393",
+      "modified_at": "2025-10-07T13:49:40.736367",
+      "size_bytes": 112
+    },
+    "discovery_results/phase10_suite_2025-10-06_14-36-05/10C_quantum_reversal/report.md": {
+      "file": "discovery_results/phase10_suite_2025-10-06_14-36-05/10C_quantum_reversal/report.md",
+      "hash": "66cb8562b7b330b8",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.550645",
+      "modified_at": "2025-10-06T14:36:06.346165",
+      "size_bytes": 1307
+    },
+    "discovery_results/phase23b_promotion_20251008_051450/report/phase23b_results.md": {
+      "file": "discovery_results/phase23b_promotion_20251008_051450/report/phase23b_results.md",
+      "hash": "b92af9c17ea244b4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.550923",
+      "modified_at": "2025-10-08T05:15:14.674210",
+      "size_bytes": 261
+    },
+    "discovery_results/trust_survival_v28_reflective_20251008_123809/report/validated_abstract_20251008_123818.md": {
+      "file": "discovery_results/trust_survival_v28_reflective_20251008_123809/report/validated_abstract_20251008_123818.md",
+      "hash": "d473a65edfce823a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.551130",
+      "modified_at": "2025-10-08T12:38:18.689122",
+      "size_bytes": 503
+    },
+    "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9A_threshold_map/report.md": {
+      "file": "discovery_results/phase9_combo_2025-10-06_14-10-32/phase9A_threshold_map/report.md",
+      "hash": "b37938a0afae2277",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.551341",
+      "modified_at": "2025-10-06T14:10:32.976405",
+      "size_bytes": 561
+    },
+    "GUARDIAN_V5_FINAL_REPORT.md": {
+      "file": "GUARDIAN_V5_FINAL_REPORT.md",
+      "hash": "10f8b62ca89722e7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.552205",
+      "modified_at": "2025-10-14T19:41:54.811733",
+      "size_bytes": 14621
+    },
+    "discovery_results/trust_survival_v13_collective_resonance_20251008_100918/report/results.md": {
+      "file": "discovery_results/trust_survival_v13_collective_resonance_20251008_100918/report/results.md",
+      "hash": "a09e6238bd7af2c6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.552548",
+      "modified_at": "2025-10-08T10:09:47.587594",
+      "size_bytes": 273
+    },
+    "SESSION_FINAL_SUMMARY_20251014.md": {
+      "file": "SESSION_FINAL_SUMMARY_20251014.md",
+      "hash": "af7d6f7b53f72cb1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.553275",
+      "modified_at": "2025-10-14T18:23:56.384208",
+      "size_bytes": 10987
+    },
+    "discovery_results/Phase19c_Calibration_20251007_141044/phase19c_calibration_report.md": {
+      "file": "discovery_results/Phase19c_Calibration_20251007_141044/phase19c_calibration_report.md",
+      "hash": "14dd8b016703b78c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.553544",
+      "modified_at": "2025-10-07T14:10:45.006240",
+      "size_bytes": 869
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_102134.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_102134.md",
+      "hash": "7c87ab0735a8452b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.553856",
+      "modified_at": "2025-10-08T10:21:35.348036",
+      "size_bytes": 496
+    },
+    "LATEST_RESULTS_INDEX.md": {
+      "file": "LATEST_RESULTS_INDEX.md",
+      "hash": "e493f60e82f95468",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.554129",
+      "modified_at": "2025-10-08T16:59:48.833711",
+      "size_bytes": 604
+    },
+    "LIFECYCLE_LONG_RESULTS.md": {
+      "file": "LIFECYCLE_LONG_RESULTS.md",
+      "hash": "b243b1d876c4658a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.554436",
+      "modified_at": "2025-10-03T20:59:25.240212",
+      "size_bytes": 1455
+    },
+    "discovery_results/trust_survival_v9_env_feedback_20251008_091919/report/results.md": {
+      "file": "discovery_results/trust_survival_v9_env_feedback_20251008_091919/report/results.md",
+      "hash": "4a80d867f4196c82",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.554631",
+      "modified_at": "2025-10-08T09:19:19.800872",
+      "size_bytes": 250
+    },
+    "discovery_results/truth_test_run_20251007_195751/README.md": {
+      "file": "discovery_results/truth_test_run_20251007_195751/README.md",
+      "hash": "85c53fe34195d51b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.554909",
+      "modified_at": "2025-10-07T19:57:52.062455",
+      "size_bytes": 919
+    },
+    "LIFECYCLE_10MIN_RESULTS.md": {
+      "file": "LIFECYCLE_10MIN_RESULTS.md",
+      "hash": "5d7eb28805214389",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.555226",
+      "modified_at": "2025-10-03T21:13:22.036160",
+      "size_bytes": 1687
+    },
+    "SESSION_ACHIEVEMENTS_20251014.md": {
+      "file": "SESSION_ACHIEVEMENTS_20251014.md",
+      "hash": "1d097bde43c97e6c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.555968",
+      "modified_at": "2025-10-14T18:23:56.381013",
+      "size_bytes": 11775
+    },
+    "PHASE35B_EXECUTION_RESULTS.md": {
+      "file": "PHASE35B_EXECUTION_RESULTS.md",
+      "hash": "e7bd3c9878fba20b",
+      "claims": [
+        {
+          "text": "---\n\n## \ud83d\udd2c Scientific Interpretation\n\n### Universality of Tri-Flux Law\n\nThe tri-flux resilience law:\n\n```\nR \u221d (E^\u03b1 \u00d7 I^\u03b2 \u00d7 K^\u03b3) / N\n```\n\nsuccessfully predicts coherence dynamics across:\n- **Galaxy clus",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 10,
+          "file": "PHASE35B_EXECUTION_RESULTS.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.556727",
+      "modified_at": "2025-10-14T11:48:56.124395",
+      "size_bytes": 9675
+    },
+    "discovery_results/meaning_table_inputs/feeling_effects_v04.md": {
+      "file": "discovery_results/meaning_table_inputs/feeling_effects_v04.md",
+      "hash": "573ce17d87dca6e6",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.557114",
+      "modified_at": "2025-10-08T14:36:16.798771",
+      "size_bytes": 2507
+    },
+    "discovery_results/temporal_drift_phase8_20251006_092905/report/temporal_drift_phase8_results.md": {
+      "file": "discovery_results/temporal_drift_phase8_20251006_092905/report/temporal_drift_phase8_results.md",
+      "hash": "e049a14e86bd5118",
+      "claims": [
+        {
+          "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 5,
+          "file": "discovery_results/temporal_drift_phase8_20251006_092905/report/temporal_drift_phase8_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.557645",
+      "modified_at": "2025-10-06T09:29:15.574587",
+      "size_bytes": 8289
+    },
+    "discovery_results/trust_survival_v23_cross_domain_20251008_115058/report/validated_abstract_20251008_115114.md": {
+      "file": "discovery_results/trust_survival_v23_cross_domain_20251008_115058/report/validated_abstract_20251008_115114.md",
+      "hash": "ef60fc7ad201bceb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.557889",
+      "modified_at": "2025-10-08T11:51:14.424727",
+      "size_bytes": 505
+    },
+    "discovery_results/phase18_adaptive_2025-10-06_16-27-01/master_report.md": {
+      "file": "discovery_results/phase18_adaptive_2025-10-06_16-27-01/master_report.md",
+      "hash": "ff48d105b7ca9598",
+      "claims": [
+        {
+          "text": "### Learning Architecture\n- **Plant Model**: C_{t+1} = \u03b8\u2080 + \u03b8\u2081\u00b7\u0394\u03b5_t + \u03b8\u2082\u00b7\u03ba_t\u00b7\u0394\u03b5_t + \u03b8\u2083\u00b7C_t\n- **Learning**: Recursive Least Squares (RLS) with \u03bb=0.995\n- **Adaptive Gain**: Based on learned sensitivity ",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 2,
+          "file": "discovery_results/phase18_adaptive_2025-10-06_16-27-01/master_report.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.558394",
+      "modified_at": "2025-10-06T16:27:18.899288",
+      "size_bytes": 4750
+    },
+    "discovery_results/truth_phase4_sweep_20251007_201836/README.md": {
+      "file": "discovery_results/truth_phase4_sweep_20251007_201836/README.md",
+      "hash": "fde30ad4eab04d58",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.558731",
+      "modified_at": "2025-10-07T20:18:37.516839",
+      "size_bytes": 1742
+    },
+    "discovery_results/trust_survival_v20_containment_20251008_111652/report/results.md": {
+      "file": "discovery_results/trust_survival_v20_containment_20251008_111652/report/results.md",
+      "hash": "ecbac9e5eb2d51c3",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.558963",
+      "modified_at": "2025-10-08T11:17:10.268369",
+      "size_bytes": 262
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_091312.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_091312.md",
+      "hash": "edea46060ce5b362",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.559208",
+      "modified_at": "2025-10-08T09:13:12.683616",
+      "size_bytes": 495
+    },
+    "FINAL_SESSION_SUMMARY.md": {
+      "file": "FINAL_SESSION_SUMMARY.md",
+      "hash": "7ec357f045be990e",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.559806",
+      "modified_at": "2025-10-14T17:55:54.482577",
+      "size_bytes": 6768
+    },
+    "NEXTGEN_EXECUTIVE_BRIEF.md": {
+      "file": "NEXTGEN_EXECUTIVE_BRIEF.md",
+      "hash": "58d7437bec2c3629",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.560547",
+      "modified_at": "2025-10-14T17:25:14.316442",
+      "size_bytes": 7148
+    },
+    "discovery_results/safety_cci_20251010_144534/report/results.md": {
+      "file": "discovery_results/safety_cci_20251010_144534/report/results.md",
+      "hash": "87e179d31a80c305",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.560803",
+      "modified_at": "2025-10-10T14:45:34.558170",
+      "size_bytes": 199
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_080250.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_080250.md",
+      "hash": "b633408c41c52e16",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.561115",
+      "modified_at": "2025-10-08T08:02:50.721587",
+      "size_bytes": 495
+    },
+    "DEV_NOTES.md": {
+      "file": "DEV_NOTES.md",
+      "hash": "441dd6e7dd4d2596",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.561343",
+      "modified_at": "2025-10-03T21:48:03.695903",
+      "size_bytes": 629
+    },
+    "discovery_results/phase31b_uclv_20251011_160056/REPORT.md": {
+      "file": "discovery_results/phase31b_uclv_20251011_160056/REPORT.md",
+      "hash": "53613cd24735c8e1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.561686",
+      "modified_at": "2025-10-11T11:00:57.693624",
+      "size_bytes": 577
+    },
+    "discovery_results/trust_survival_v1_20251008_073339/report/results.md": {
+      "file": "discovery_results/trust_survival_v1_20251008_073339/report/results.md",
+      "hash": "f969f6d5b85b93ed",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.561900",
+      "modified_at": "2025-10-08T07:33:40.440968",
+      "size_bytes": 215
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_095658.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_095658.md",
+      "hash": "16cafb2d143b1a13",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.562112",
+      "modified_at": "2025-10-08T09:56:59.085046",
+      "size_bytes": 496
+    },
+    "CLEANUP_SCRIPT.md": {
+      "file": "CLEANUP_SCRIPT.md",
+      "hash": "816ea6ccad6dfeee",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.562668",
+      "modified_at": "2025-09-29T16:39:25.380580",
+      "size_bytes": 4424
+    },
+    "qc/QC_MASTER_LOG.md": {
+      "file": "qc/QC_MASTER_LOG.md",
+      "hash": "df0e9540dfcfaeb5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.563140",
+      "modified_at": "2025-10-14T16:03:54.637985",
+      "size_bytes": 3620
+    },
+    "discovery_results/phase10_suite_2025-10-06_14-36-05/10B_domain_coupling/report.md": {
+      "file": "discovery_results/phase10_suite_2025-10-06_14-36-05/10B_domain_coupling/report.md",
+      "hash": "cd5e1ede46c6ac82",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.563378",
+      "modified_at": "2025-10-06T14:36:06.186758",
+      "size_bytes": 1218
+    },
+    "discovery_results/safety_cci_smoke/report/safety_cci_results.md": {
+      "file": "discovery_results/safety_cci_smoke/report/safety_cci_results.md",
+      "hash": "181d90424576e914",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.563586",
+      "modified_at": "2025-10-10T14:42:39.113479",
+      "size_bytes": 69
+    },
+    "docs/prereg/post_run_qc_checklist.md": {
+      "file": "docs/prereg/post_run_qc_checklist.md",
+      "hash": "c7b1d374e7fbb204",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.563868",
+      "modified_at": "2025-09-30T13:47:10.995550",
+      "size_bytes": 361
+    },
+    "discovery_results/phase35b_cross_survey_replication_20251014_114632/report/validated_abstract_20251014_114654.md": {
+      "file": "discovery_results/phase35b_cross_survey_replication_20251014_114632/report/validated_abstract_20251014_114654.md",
+      "hash": "2abd16ad4e2f34f4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.564083",
+      "modified_at": "2025-10-14T11:46:54.348347",
+      "size_bytes": 507
+    },
+    "EVOLUTIONARY_RESULTS.md": {
+      "file": "EVOLUTIONARY_RESULTS.md",
+      "hash": "dcd76acc6bc084b1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.564366",
+      "modified_at": "2025-10-03T15:31:28.726928",
+      "size_bytes": 1097
+    },
+    "discovery_results/phase24_crossdomain_20251008_051717/report/phase24_results.md": {
+      "file": "discovery_results/phase24_crossdomain_20251008_051717/report/phase24_results.md",
+      "hash": "bcc261063a07f986",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.564636",
+      "modified_at": "2025-10-08T05:18:34.391488",
+      "size_bytes": 190
+    },
+    "discovery_results/phase35b_cross_survey_replication_20251014_114551/report/results.md": {
+      "file": "discovery_results/phase35b_cross_survey_replication_20251014_114551/report/results.md",
+      "hash": "4acff27a3acf01e2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.564840",
+      "modified_at": "2025-10-14T11:46:14.302560",
+      "size_bytes": 228
+    },
+    "discovery_results/trust_survival_v27_metastability_20251008_122906/report/results.md": {
+      "file": "discovery_results/trust_survival_v27_metastability_20251008_122906/report/results.md",
+      "hash": "f9460ea4881e0d38",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.565043",
+      "modified_at": "2025-10-08T12:29:06.834094",
+      "size_bytes": 267
+    },
+    "discovery_results/agent_tests_20251011_223444/report/results.md": {
+      "file": "discovery_results/agent_tests_20251011_223444/report/results.md",
+      "hash": "708565d786c6232f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.565242",
+      "modified_at": "2025-10-11T22:35:19.620321",
+      "size_bytes": 167
+    },
+    "discovery_results/phase10_suite_2025-10-06_14-36-05/10A_chaotic_openness/report.md": {
+      "file": "discovery_results/phase10_suite_2025-10-06_14-36-05/10A_chaotic_openness/report.md",
+      "hash": "6d29c519fb4894d0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.565443",
+      "modified_at": "2025-10-06T14:36:05.906946",
+      "size_bytes": 933
+    },
+    "discovery_results/phase33b_coop_meaning_20251013_235233/report/results.md": {
+      "file": "discovery_results/phase33b_coop_meaning_20251013_235233/report/results.md",
+      "hash": "79ac5eae3745829a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.565648",
+      "modified_at": "2025-10-13T23:52:33.323708",
+      "size_bytes": 149
+    },
+    "SESSION_QUICK_REFERENCE.md": {
+      "file": "SESSION_QUICK_REFERENCE.md",
+      "hash": "e84d46dd86bb920c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.566116",
+      "modified_at": "2025-10-14T18:23:56.374044",
+      "size_bytes": 5591
+    },
+    "docs/phase35b_execution_guide.md": {
+      "file": "docs/phase35b_execution_guide.md",
+      "hash": "f32ba923eb498d2a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.566882",
+      "modified_at": "2025-10-14T11:40:43.284918",
+      "size_bytes": 7873
+    },
+    "discovery_results/truth_phase4_recovery_20251007_204128/README.md": {
+      "file": "discovery_results/truth_phase4_recovery_20251007_204128/README.md",
+      "hash": "2148e4e454bbf737",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.567242",
+      "modified_at": "2025-10-07T20:41:29.504059",
+      "size_bytes": 1023
+    },
+    "discovery_results/civ_tests_20251011_223408/report/results.md": {
+      "file": "discovery_results/civ_tests_20251011_223408/report/results.md",
+      "hash": "d7e57b7d03163e6f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.567438",
+      "modified_at": "2025-10-11T22:34:44.069080",
+      "size_bytes": 162
+    },
+    "discovery_results/trust_survival_v6_adaptive_20251008_082626/report/results.md": {
+      "file": "discovery_results/trust_survival_v6_adaptive_20251008_082626/report/results.md",
+      "hash": "bbb4f316dad204c1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.567641",
+      "modified_at": "2025-10-08T08:26:36.614253",
+      "size_bytes": 248
+    },
+    "discovery_results/trust_survival_v18_adaptive_resonance_20251008_104956/report/results.md": {
+      "file": "discovery_results/trust_survival_v18_adaptive_resonance_20251008_104956/report/results.md",
+      "hash": "4cb8e9372e7f9347",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.567835",
+      "modified_at": "2025-10-08T10:50:16.982388",
+      "size_bytes": 287
+    },
+    "INTEGRITY_ADDENDUM_V2_COMPLETE.md": {
+      "file": "INTEGRITY_ADDENDUM_V2_COMPLETE.md",
+      "hash": "f15972158c6308dc",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.568456",
+      "modified_at": "2025-10-13T22:50:46.278929",
+      "size_bytes": 7698
+    },
+    "discovery_results/truth_phase4_misinfo_20251007_202549/README.md": {
+      "file": "discovery_results/truth_phase4_misinfo_20251007_202549/README.md",
+      "hash": "97d9c137495855a1",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.568711",
+      "modified_at": "2025-10-07T20:25:50.038610",
+      "size_bytes": 963
+    },
+    "cross_domain_integration_report.md": {
+      "file": "cross_domain_integration_report.md",
+      "hash": "6cef5a669615af56",
+      "claims": [
+        {
+          "text": "### Key Findings:\n- **Final Survival Rate:** 0.984 \u00b1 0.015\n- **Average Fairness Score:** 0.599\n- **Average CCI Level:** 0.071\n- **Average Valence:** 0.646\n\n---\n\n## Clinical Findings\n\n### Treatment Eff",
+          "claim_key": "cooperation",
+          "stance": "positive",
+          "sentence_index": 2,
+          "file": "cross_domain_integration_report.md"
+        },
+        {
+          "text": "**Long-term Monitoring:** Establish continuous monitoring systems for temporal drift\n\n---\n\n## Technical Implementation Notes\n\n### System Architecture\n- **Modular Design:** Separate components for trea",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 14,
+          "file": "cross_domain_integration_report.md"
+        }
+      ],
+      "claim_count": 2,
+      "indexed_at": "2025-10-14T20:06:03.569206",
+      "modified_at": "2025-09-29T13:44:06.334888",
+      "size_bytes": 6584
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_080813.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_080813.md",
+      "hash": "c7cff10fc6b89817",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.569454",
+      "modified_at": "2025-10-08T08:08:13.858627",
+      "size_bytes": 495
+    },
+    "discovery_results/phase10_suite_2025-10-06_14-36-05/master_report.md": {
+      "file": "discovery_results/phase10_suite_2025-10-06_14-36-05/master_report.md",
+      "hash": "d45937db7f6c1ab4",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.569912",
+      "modified_at": "2025-10-06T14:36:06.346631",
+      "size_bytes": 4464
+    },
+    "GUARDIAN_V3_REPORT.md": {
+      "file": "GUARDIAN_V3_REPORT.md",
+      "hash": "6b59f85c5f8a7f18",
+      "claims": [
+        {
+          "text": "Include data availability statements:\n   ```markdown\n   **Data Availability**: Full results at `discovery_results/[study_id]/`  \n   **Code Repository**: https://github.com/[org]/[repo]  \n   **Preregis",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 17,
+          "file": "GUARDIAN_V3_REPORT.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.570539",
+      "modified_at": "2025-10-14T17:54:07.661261",
+      "size_bytes": 8456
+    },
+    "discovery_results/phase17_control_2025-10-06_16-12-37/master_report.md": {
+      "file": "discovery_results/phase17_control_2025-10-06_16-12-37/master_report.md",
+      "hash": "86e8832621f106d9",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.571042",
+      "modified_at": "2025-10-06T16:12:53.657258",
+      "size_bytes": 4289
+    },
+    "QC_QUICK_REFERENCE.md": {
+      "file": "QC_QUICK_REFERENCE.md",
+      "hash": "4e38c00886887038",
+      "claims": [
+        {
+          "text": "# \ud83d\udd12 HYMetaLab QC Framework \u2014 Quick Reference\n\n**Version:** QC v2.0  \n**Date:** October 14, 2025\n\n---\n\n## \u26a1 Quick Commands\n\n```bash\n# Run QC linter manually\npython3 tools/qc_linter.py\n\n# View QC report",
+          "claim_key": "openness",
+          "stance": "positive",
+          "sentence_index": 0,
+          "file": "QC_QUICK_REFERENCE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.571479",
+      "modified_at": "2025-10-14T16:09:16.863150",
+      "size_bytes": 4103
+    },
+    "discovery_results/phase26d_validation_20251008_054315/report/phase26d_results.md": {
+      "file": "discovery_results/phase26d_validation_20251008_054315/report/phase26d_results.md",
+      "hash": "064c44071e88c5b5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.571718",
+      "modified_at": "2025-10-08T05:43:42.779835",
+      "size_bytes": 186
+    },
+    "discovery_results/truth_phase2_run_20251007_200452/README.md": {
+      "file": "discovery_results/truth_phase2_run_20251007_200452/README.md",
+      "hash": "0d0fe3784ec26b32",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.571988",
+      "modified_at": "2025-10-07T20:04:52.494012",
+      "size_bytes": 2473
+    },
+    "discovery_results/money_competition_phase3_20251006_083942/report/money_competition_phase3_results.md": {
+      "file": "discovery_results/money_competition_phase3_20251006_083942/report/money_competition_phase3_results.md",
+      "hash": "2a47f3a953111006",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.572356",
+      "modified_at": "2025-10-06T08:39:48.372811",
+      "size_bytes": 3579
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_083813.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_083813.md",
+      "hash": "36c316e6410c1992",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.572695",
+      "modified_at": "2025-10-08T08:38:13.642157",
+      "size_bytes": 495
+    },
+    "discovery_results/THEME_9_GOAL_EXTERNALITIES_SYSTEM_COLLAPSE_REPORT.md": {
+      "file": "discovery_results/THEME_9_GOAL_EXTERNALITIES_SYSTEM_COLLAPSE_REPORT.md",
+      "hash": "c94793f28ae7cbe3",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.573309",
+      "modified_at": "2025-09-29T17:23:51.568681",
+      "size_bytes": 7232
+    },
+    "discovery_results/phase16/report/phase16_results.md": {
+      "file": "discovery_results/phase16/report/phase16_results.md",
+      "hash": "fd745c8fae3e4021",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.573630",
+      "modified_at": "2025-10-06T22:08:22.485167",
+      "size_bytes": 490
+    },
+    "discovery_results/fis_trust_hope_stabilizers_20251014_070232/report/results.md": {
+      "file": "discovery_results/fis_trust_hope_stabilizers_20251014_070232/report/results.md",
+      "hash": "dcfa94468a705c71",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.573826",
+      "modified_at": "2025-10-14T07:02:32.428301",
+      "size_bytes": 182
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_103609.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_103609.md",
+      "hash": "f07f2c1c42e8b78c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.574117",
+      "modified_at": "2025-10-08T10:36:09.690875",
+      "size_bytes": 496
+    },
+    "CODEBASE_SUMMARY.md": {
+      "file": "CODEBASE_SUMMARY.md",
+      "hash": "d7ac446f4bdb4bf5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.574452",
+      "modified_at": "2025-10-13T22:50:46.277013",
+      "size_bytes": 1975
+    },
+    "PHASE3_EXECUTION_SUMMARY.md": {
+      "file": "PHASE3_EXECUTION_SUMMARY.md",
+      "hash": "185b3c7c6f8b76db",
+      "claims": [
+        {
+          "text": "---\n\n## \ud83d\udce6 Archival & Checksums\n\n### Archive Created\n**File**: `results/archive/validated_20251014_181157.zip`  \n**Size**: TBD  \n**Contents**:\n- 2 validated study directories (Phase 35b, 35c)\n- Guardia",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 11,
+          "file": "PHASE3_EXECUTION_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.575407",
+      "modified_at": "2025-10-14T18:23:56.053327",
+      "size_bytes": 14293
+    },
+    "discovery_results/trust_survival_v1/report/results.md": {
+      "file": "discovery_results/trust_survival_v1/report/results.md",
+      "hash": "3796468a76cd0db5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.575640",
+      "modified_at": "2025-10-08T08:20:43.141199",
+      "size_bytes": 243
+    },
+    "discovery_results/phase24b_scaling_20251008_052342/report/phase24b_results.md": {
+      "file": "discovery_results/phase24b_scaling_20251008_052342/report/phase24b_results.md",
+      "hash": "c668a5dfa7b0a6fa",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.575982",
+      "modified_at": "2025-10-08T05:23:43.785974",
+      "size_bytes": 631
+    },
+    "discovery_results/trust_survival_v15_exploit_20251008_102118/report/results.md": {
+      "file": "discovery_results/trust_survival_v15_exploit_20251008_102118/report/results.md",
+      "hash": "876eca90d009b340",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.576191",
+      "modified_at": "2025-10-08T10:21:27.801165",
+      "size_bytes": 273
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_082140.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_082140.md",
+      "hash": "4b0cd0a387200204",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.576419",
+      "modified_at": "2025-10-08T08:21:40.789531",
+      "size_bytes": 495
+    },
+    "LONG_HORIZON_RESULTS.md": {
+      "file": "LONG_HORIZON_RESULTS.md",
+      "hash": "d15c89eaf14ebbdd",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.576891",
+      "modified_at": "2025-10-03T21:21:34.098445",
+      "size_bytes": 1882
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_101004.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_101004.md",
+      "hash": "95e2f42c467ac8de",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.577280",
+      "modified_at": "2025-10-08T10:10:05.321918",
+      "size_bytes": 496
+    },
+    "EXPANSION_COMBO_RESULTS.md": {
+      "file": "EXPANSION_COMBO_RESULTS.md",
+      "hash": "222fbe0810fa4f4b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.577598",
+      "modified_at": "2025-10-03T19:03:39.218784",
+      "size_bytes": 579
+    },
+    "discovery_results/phase35_cosmic_bridge_20251014_102012/report/results.md": {
+      "file": "discovery_results/phase35_cosmic_bridge_20251014_102012/report/results.md",
+      "hash": "d909dc5fca4d9520",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.577823",
+      "modified_at": "2025-10-14T10:20:12.901903",
+      "size_bytes": 149
+    },
+    "NEXT_STEPS.md": {
+      "file": "NEXT_STEPS.md",
+      "hash": "ea6a2cb688e0ae2a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.578294",
+      "modified_at": "2025-10-13T22:59:10.233990",
+      "size_bytes": 5639
+    },
+    "OPEN_MIN_BUDGET_LATEST.md": {
+      "file": "OPEN_MIN_BUDGET_LATEST.md",
+      "hash": "45769ef1751e4f19",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.578671",
+      "modified_at": "2025-10-04T17:11:27.333340",
+      "size_bytes": 378
+    },
+    "discovery_results/money_competition_20251006_071657/report/money_competition_results.md": {
+      "file": "discovery_results/money_competition_20251006_071657/report/money_competition_results.md",
+      "hash": "82695afd5d91d956",
+      "claims": [
+        {
+          "text": "# Money Competition Experiment Results\n\n**Generated:** 2025-10-06 07:16:58  \n**Total Runtime:** 0.95 seconds  \n**Conditions:** 6 runs testing zero-sum vs cooperative dynamics\n\n## Experimental Design\n\n",
+          "claim_key": "openness",
+          "stance": "negative",
+          "sentence_index": 0,
+          "file": "discovery_results/money_competition_20251006_071657/report/money_competition_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.579005",
+      "modified_at": "2025-10-06T07:16:58.031281",
+      "size_bytes": 2604
+    },
+    "discovery_results/phase23_creator_emergence_20251008_193907/report/results.md": {
+      "file": "discovery_results/phase23_creator_emergence_20251008_193907/report/results.md",
+      "hash": "652b3d483e8498c7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.579192",
+      "modified_at": "2025-10-08T19:39:16.578193",
+      "size_bytes": 227
+    },
+    "discovery_results/meaning_phase5_run_20251007_210426/README.md": {
+      "file": "discovery_results/meaning_phase5_run_20251007_210426/README.md",
+      "hash": "2689798c1a01b62a",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.579401",
+      "modified_at": "2025-10-07T21:04:26.555724",
+      "size_bytes": 301
+    },
+    "GUARDIAN_SYSTEMS_COMPLETE.md": {
+      "file": "GUARDIAN_SYSTEMS_COMPLETE.md",
+      "hash": "8a44d316dcb9dcd8",
+      "claims": [
+        {
+          "text": "Fast performance (<1s per doc)\n\n---\n\n## \ud83d\udea6 Gate Status\n\nAll required gates passed:\n\n| Gate | Threshold | Result | Status |\n|------|-----------|--------|--------|\n| **Deliverables** | 100% | 17/17 (100%",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 53,
+          "file": "GUARDIAN_SYSTEMS_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.580085",
+      "modified_at": "2025-10-14T18:57:04.294981",
+      "size_bytes": 8473
+    },
+    "docs/INTEGRITY_ADDENDUM_V2.md": {
+      "file": "docs/INTEGRITY_ADDENDUM_V2.md",
+      "hash": "c4a1eec45e89a6b2",
+      "claims": [
+        {
+          "text": "**Regrowth Independence:** Statistical tests with confidence intervals determine parameter significance\n\n### **Quality Gates**\n- All experiments must pass time scale alignment checks\n- Fear-violence e",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 13,
+          "file": "docs/INTEGRITY_ADDENDUM_V2.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.580709",
+      "modified_at": "2025-10-13T22:50:46.696993",
+      "size_bytes": 8498
+    },
+    "discovery_results/report/validated_abstract_20251014_070202.md": {
+      "file": "discovery_results/report/validated_abstract_20251014_070202.md",
+      "hash": "54f57632146f6e64",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.581039",
+      "modified_at": "2025-10-14T07:02:03.370820",
+      "size_bytes": 506
+    },
+    "discovery_results/phase19_collective_2025-10-06_17-33-47/master_report.md": {
+      "file": "discovery_results/phase19_collective_2025-10-06_17-33-47/master_report.md",
+      "hash": "121faad54d7545fa",
+      "claims": [
+        {
+          "text": "### System Architecture\n- **Network**: Watts-Strogatz small-world (k=6, \u03b2=0.18)\n- **Agent Dynamics**: Individual RLS learners with heterogeneous plant parameters\n- **Coupling**: \u03ba_i = (A @ C) / deg_i ",
+          "claim_key": "cooperation",
+          "stance": "positive",
+          "sentence_index": 2,
+          "file": "discovery_results/phase19_collective_2025-10-06_17-33-47/master_report.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.581509",
+      "modified_at": "2025-10-06T17:33:50.593012",
+      "size_bytes": 4078
+    },
+    "discovery_results/phase35c_cross_domain_generalization_20251014_120005/report/validated_abstract_20251014_120006.md": {
+      "file": "discovery_results/phase35c_cross_domain_generalization_20251014_120005/report/validated_abstract_20251014_120006.md",
+      "hash": "64cd484c79afd8ef",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.581740",
+      "modified_at": "2025-10-14T12:00:06.294544",
+      "size_bytes": 510
+    },
+    "discovery_results/discovery_results/ai_consciousness_deep_20251004_181018/summary.md": {
+      "file": "discovery_results/discovery_results/ai_consciousness_deep_20251004_181018/summary.md",
+      "hash": "5dd9832c8f8304b0",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.581940",
+      "modified_at": "2025-10-04T18:10:18",
+      "size_bytes": 288
+    },
+    "NEXTGEN_QUICK_ACCESS.md": {
+      "file": "NEXTGEN_QUICK_ACCESS.md",
+      "hash": "18f061d5ead5048c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.582265",
+      "modified_at": "2025-10-14T17:25:14.316521",
+      "size_bytes": 3592
+    },
+    "COMBINED_LONG_RESULTS.md": {
+      "file": "COMBINED_LONG_RESULTS.md",
+      "hash": "a9b57fc020c8393c",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.582636",
+      "modified_at": "2025-10-03T21:28:17.173952",
+      "size_bytes": 2485
+    },
+    "METALAB_STATUS.md": {
+      "file": "METALAB_STATUS.md",
+      "hash": "8ad14b33dff5bd9b",
+      "claims": [
+        {
+          "text": "# MetaLab Status Dashboard\n\n**Last Updated:** October 14, 2025\n\n---\n\n## \ud83c\udfaf Current State: **PROFESSIONAL INFRASTRUCTURE** \u2705\n\nFrom Game \u2192 Research \u2192 **Official Lab Pipeline**\n\n---\n\n## \ud83d\udcca Infrastructure S",
+          "claim_key": "competition",
+          "stance": "positive",
+          "sentence_index": 0,
+          "file": "METALAB_STATUS.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.583043",
+      "modified_at": "2025-10-13T23:08:27.654794",
+      "size_bytes": 4780
+    },
+    "discovery_results/trust_survival_v21_reinjection_20251008_112723/report/results.md": {
+      "file": "discovery_results/trust_survival_v21_reinjection_20251008_112723/report/results.md",
+      "hash": "18b2b436471bca73",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.583287",
+      "modified_at": "2025-10-08T11:27:36.382082",
+      "size_bytes": 270
+    },
+    "PHASE35C_EXECUTION_RESULTS.md": {
+      "file": "PHASE35C_EXECUTION_RESULTS.md",
+      "hash": "aa13f11c663aceef",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.583938",
+      "modified_at": "2025-10-14T18:23:56.056617",
+      "size_bytes": 10911
+    },
+    "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_092419.md": {
+      "file": "discovery_results/mc_phase5_revalidation_20251008_060339/report/validated_abstract_20251008_092419.md",
+      "hash": "2c3a528b3bfd488f",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.584260",
+      "modified_at": "2025-10-08T09:24:20.172823",
+      "size_bytes": 495
+    },
+    "discovery_results/trust_survival_v28_reflective_20251008_123809/report/results.md": {
+      "file": "discovery_results/trust_survival_v28_reflective_20251008_123809/report/results.md",
+      "hash": "0388552675c95f44",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.584457",
+      "modified_at": "2025-10-08T12:38:10.070571",
+      "size_bytes": 273
+    },
+    "discovery_results/trust_survival_v29_intent_20251008_124453/report/results.md": {
+      "file": "discovery_results/trust_survival_v29_intent_20251008_124453/report/results.md",
+      "hash": "2e30216d5871e7c2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.584651",
+      "modified_at": "2025-10-08T12:44:53.420280",
+      "size_bytes": 264
+    },
+    "docs/prereg/H2_gini_collapse_prereg.md": {
+      "file": "docs/prereg/H2_gini_collapse_prereg.md",
+      "hash": "95e008b30ab343ef",
+      "claims": [
+        {
+          "text": "# Preregistration \u2014 H2: Inequality Predicts Collapse; Moderation by CCI\n**Version:** v2  \n**Claim (threshold):** Collapse probability increases with Gini; CCI raises the threshold",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 0,
+          "file": "docs/prereg/H2_gini_collapse_prereg.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.584911",
+      "modified_at": "2025-09-30T13:47:10.949101",
+      "size_bytes": 1210
+    },
+    "discovery_results/truth_phase4_run_20251007_201611/README.md": {
+      "file": "discovery_results/truth_phase4_run_20251007_201611/README.md",
+      "hash": "5af6e7024f1959c7",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.585235",
+      "modified_at": "2025-10-07T20:16:11.808516",
+      "size_bytes": 904
+    },
+    "discovery_results/money_competition_phase2_20251006_083327/report/money_competition_phase2_results.md": {
+      "file": "discovery_results/money_competition_phase2_20251006_083327/report/money_competition_phase2_results.md",
+      "hash": "8ea6094234abb402",
+      "claims": [
+        {
+          "text": "# Money Competition Phase 2: Openness Sweep Results\n\n**Generated:** 2025-10-06 08:33:35  \n**Total Runtime:** 8.66 seconds  \n**Extended Analysis:** 300 epochs, adaptive branching, noise=0.04  \n**Openne",
+          "claim_key": "openness",
+          "stance": "negative",
+          "sentence_index": 0,
+          "file": "discovery_results/money_competition_phase2_20251006_083327/report/money_competition_phase2_results.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.585656",
+      "modified_at": "2025-10-06T08:33:35.813556",
+      "size_bytes": 4393
+    },
+    "discovery_results/trust_survival_v24_scaling_20251008_120211/report/validated_abstract_20251008_120217.md": {
+      "file": "discovery_results/trust_survival_v24_scaling_20251008_120211/report/validated_abstract_20251008_120217.md",
+      "hash": "2dc7754a463ec5ae",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.585995",
+      "modified_at": "2025-10-08T12:02:17.882071",
+      "size_bytes": 500
+    },
+    "NEXT_STEP_EXECUTION_COMPLETE.md": {
+      "file": "NEXT_STEP_EXECUTION_COMPLETE.md",
+      "hash": "c947a00adc91bc94",
+      "claims": [
+        {
+          "text": "**Dashboard infrastructure** ready for live monitoring\n\n**Scientific Impact**:\n- Strong meta-evidence for Universal Resilience Law\n- Preregistration + bootstrap CIs set new integrity standard\n- Cross-",
+          "claim_key": "resilience",
+          "stance": "positive",
+          "sentence_index": 54,
+          "file": "NEXT_STEP_EXECUTION_COMPLETE.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.586983",
+      "modified_at": "2025-10-14T18:29:46.527775",
+      "size_bytes": 16542
+    },
+    "HYMETALAB_SETUP_GUIDE.md": {
+      "file": "HYMETALAB_SETUP_GUIDE.md",
+      "hash": "a198cf92e333aee5",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.587536",
+      "modified_at": "2025-10-14T17:44:04.812761",
+      "size_bytes": 5727
+    },
+    "GUARDIAN_MASTER_INDEX.md": {
+      "file": "GUARDIAN_MASTER_INDEX.md",
+      "hash": "24c4551968f720d2",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.588463",
+      "modified_at": "2025-10-14T19:59:07.034265",
+      "size_bytes": 17321
+    },
+    "discovery_results/THEME_2_CONSTRUCTIVE_SHOCK_THRESHOLDS_REPORT.md": {
+      "file": "discovery_results/THEME_2_CONSTRUCTIVE_SHOCK_THRESHOLDS_REPORT.md",
+      "hash": "0d964e99585419bb",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.589059",
+      "modified_at": "2025-09-30T17:10:18.658278",
+      "size_bytes": 7306
+    },
+    "discovery_results/trust_survival_v24_scaling_20251008_120211/report/results.md": {
+      "file": "discovery_results/trust_survival_v24_scaling_20251008_120211/report/results.md",
+      "hash": "a1f9f8567dea970b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.589436",
+      "modified_at": "2025-10-08T12:02:12.628639",
+      "size_bytes": 265
+    },
+    "discovery_results/trust_survival_v2_20251008_074002/report/results.md": {
+      "file": "discovery_results/trust_survival_v2_20251008_074002/report/results.md",
+      "hash": "4b34205aefffb772",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.589643",
+      "modified_at": "2025-10-08T07:40:03.171696",
+      "size_bytes": 240
+    },
+    "discovery_results/trust_survival_v4_20251008_080236/report/results.md": {
+      "file": "discovery_results/trust_survival_v4_20251008_080236/report/results.md",
+      "hash": "3fd59c665ff97678",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.589844",
+      "modified_at": "2025-10-08T08:02:36.769917",
+      "size_bytes": 235
+    },
+    "discovery_results/meaning_phase5_4_20251008_035327/README.md": {
+      "file": "discovery_results/meaning_phase5_4_20251008_035327/README.md",
+      "hash": "1c891a38e4f49340",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.590122",
+      "modified_at": "2025-10-08T03:53:27.893070",
+      "size_bytes": 98
+    },
+    "discovery_results/THEME_6_GRAVITATIONAL_CONSCIOUSNESS_EMERGENCE_REPORT.md": {
+      "file": "discovery_results/THEME_6_GRAVITATIONAL_CONSCIOUSNESS_EMERGENCE_REPORT.md",
+      "hash": "f2585eb33a5cdd90",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.590666",
+      "modified_at": "2025-10-13T22:50:46.685310",
+      "size_bytes": 7707
+    },
+    "discovery_results/MASTER_DISCOVERY_SUMMARY.md": {
+      "file": "discovery_results/MASTER_DISCOVERY_SUMMARY.md",
+      "hash": "9ca986af0542724a",
+      "claims": [
+        {
+          "text": "Universal Collapse Laws**\n```\nCollapse_Risk \u221d (Goal_Inequality \u00d7 System_Complexity) / Coordination_Strength\n- Gini coefficient > 0.3 predicts system collapse (90% accuracy)\n- Optimal goal diversity = ",
+          "claim_key": "coherence",
+          "stance": "positive",
+          "sentence_index": 15,
+          "file": "discovery_results/MASTER_DISCOVERY_SUMMARY.md"
+        }
+      ],
+      "claim_count": 1,
+      "indexed_at": "2025-10-14T20:06:03.591350",
+      "modified_at": "2025-10-14T18:23:56.743449",
+      "size_bytes": 10102
+    },
+    "discovery_results/phase26c_light_20251008_054038/report/phase26c_light_results.md": {
+      "file": "discovery_results/phase26c_light_20251008_054038/report/phase26c_light_results.md",
+      "hash": "24969eb9c563357b",
+      "claims": [],
+      "claim_count": 0,
+      "indexed_at": "2025-10-14T20:06:03.591573",
+      "modified_at": "2025-10-08T05:40:38.896800",
+      "size_bytes": 195
+    }
+  },
+  "claim_key_index": {
+    "coherence": [
+      {
+        "file": "docs/prereg/OSF_registration_blurb.md",
+        "text": "## Hypotheses\n- **H1:** CCI reduces the marginal effect of fear on aggression (\u03b2(Fear\u00d7CCI)<0)",
+        "stance": "negative",
+        "modified_at": "2025-09-29T17:34:12.684943"
+      },
+      {
+        "file": "README_REAL_WORLD_VALIDATION.md",
+        "text": "Collapse Model (Logistic)\n```\nCollapse ~ Gini + CCI + Gini\u00d7CCI + controls\n```\nTests if inequality increases collapse risk and if CCI moderates this effect",
+        "stance": "positive",
+        "modified_at": "2025-09-30T17:10:22.290029"
+      },
+      {
+        "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md",
+        "text": "### \ud83c\udfaf **Key Findings**\n\n| **Hypothesis Component** | **Status** | **Result** | **Significance** |\n|---|---|---|---|\n| **Fear-Aggression Pathway** | \u26a0\ufe0f PARTIAL | CCI moderation confirmed | Core mechani",
+        "stance": "negative",
+        "modified_at": "2025-09-30T17:10:20.152075"
+      },
+      {
+        "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md",
+        "text": "**CCI Moderation:** \u2705 **Strongly Confirmed**\n   - Mental health coherence dramatically reduces fear-aggression conversion\n   - Protection effect is non-linear (exponential)\n   - **Implication:** CCI i",
+        "stance": "negative",
+        "modified_at": "2025-09-30T17:10:20.152075"
+      },
+      {
+        "file": "FEAR_VIOLENCE_EXPERIMENTAL_ANALYSIS.md",
+        "text": "\u2705 **CCI Moderation Confirmed:** Strong evidence that mental health coherence dramatically reduces fear-driven aggression\n2",
+        "stance": "negative",
+        "modified_at": "2025-09-30T17:10:20.152075"
+      },
+      {
+        "file": "docs/integrity/Research_Integrity_Prompt.md",
+        "text": "---\n\n## Study: phase33b_coop_meaning (2025-10-14) \u2014 preregistered ridge refinement\n**Preregistered:** yes  \n**Seeds (preregistered & used):** [11, 17, 23, 29]  \n**Runs:** 720 total (180 configs \u00d7 4 se",
+        "stance": "positive",
+        "modified_at": "2025-10-14T01:06:32.717966"
+      },
+      {
+        "file": "docs/prereg/H1_fearxCCI_prereg.md",
+        "text": "# Preregistration \u2014 H1: Fear \u00d7 CCI Moderation (Protective Effect)\n**Version:** v2  \n**Claim (directional):** In city\u2013week panels, higher CCI reduces the marginal effect of fear on aggression (negative",
+        "stance": "negative",
+        "modified_at": "2025-09-30T13:47:10.922665"
+      },
+      {
+        "file": "PHASE6_IMPLEMENTATION_SUMMARY.md",
+        "text": "The framework now supports:\n- Large-scale simulations (10k-100k agents)\n- Deep integration of emergent layers\n- Expanded external validation\n- Multi-objective optimization\n- Tipping point detection\n- ",
+        "stance": "positive",
+        "modified_at": "2025-09-29T14:55:33.346667"
+      },
+      {
+        "file": "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md",
+        "text": "**Bidirectional effects** - Fear affects agent behavior and survival\n\n## \ud83d\udcca **Corrected Experimental Results**\n\n### **Shock \u2192 Fear \u2192 Aggression Dynamics**\n\n**\u2705 FEAR DYNAMICS NOW WORKING:**\n\nFrom `shock",
+        "stance": "positive",
+        "modified_at": "2025-09-30T17:10:20.111717"
+      },
+      {
+        "file": "FEAR_VIOLENCE_CORRECTED_ANALYSIS.md",
+        "text": "The core hypothesis is **partially validated**:\n\n- \u2705 **Fear dynamics work** - shocks trigger fear responses\n- \u2705 **CCI moderation confirmed** - coherence reduces aggression\n- \u2705 **Interventions effectiv",
+        "stance": "negative",
+        "modified_at": "2025-09-30T17:10:20.111717"
+      },
+      {
+        "file": "RETROCAUSALITY_SUMMARY.md",
+        "text": "**Goal Externalities with Retro Channels** (`run_retro_goals`)\n- Multi-agent goal coordination with retro messaging\n- Bandwidth constraints b \u2208 {0,1,4} bits/step\n- Tests if retro reduces collapse only",
+        "stance": "negative",
+        "modified_at": "2025-09-30T17:10:19.568299"
+      },
+      {
+        "file": "RETROCAUSALITY_SUMMARY.md",
+        "text": "\u2705 **Integration**: Seamless integration with existing simulation framework\n\n**The retrocausality simulation framework is ready to probe the logical constraints and potential benefits of time travel in",
+        "stance": "positive",
+        "modified_at": "2025-09-30T17:10:19.568299"
+      },
+      {
+        "file": "cross_domain_integration_report.md",
+        "text": "**Long-term Monitoring:** Establish continuous monitoring systems for temporal drift\n\n---\n\n## Technical Implementation Notes\n\n### System Architecture\n- **Modular Design:** Separate components for trea",
+        "stance": "positive",
+        "modified_at": "2025-09-29T13:44:06.334888"
+      },
+      {
+        "file": "docs/INTEGRITY_ADDENDUM_V2.md",
+        "text": "**Regrowth Independence:** Statistical tests with confidence intervals determine parameter significance\n\n### **Quality Gates**\n- All experiments must pass time scale alignment checks\n- Fear-violence e",
+        "stance": "positive",
+        "modified_at": "2025-10-13T22:50:46.696993"
+      },
+      {
+        "file": "docs/prereg/H2_gini_collapse_prereg.md",
+        "text": "# Preregistration \u2014 H2: Inequality Predicts Collapse; Moderation by CCI\n**Version:** v2  \n**Claim (threshold):** Collapse probability increases with Gini; CCI raises the threshold",
+        "stance": "positive",
+        "modified_at": "2025-09-30T13:47:10.949101"
+      },
+      {
+        "file": "discovery_results/MASTER_DISCOVERY_SUMMARY.md",
+        "text": "Universal Collapse Laws**\n```\nCollapse_Risk \u221d (Goal_Inequality \u00d7 System_Complexity) / Coordination_Strength\n- Gini coefficient > 0.3 predicts system collapse (90% accuracy)\n- Optimal goal diversity = ",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.743449"
+      }
+    ],
+    "openness": [
+      {
+        "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md",
+        "text": "**Solution**: Templates + automation \u2192 Easy compliance \u2192 70+ score\n\n---\n\n## \ud83d\udca1 Why This Matters\n\n### Scientific Credibility\n- **Before**: Ad hoc language, inconsistent disclaimers, variable citation de",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.690304"
+      },
+      {
+        "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md",
+        "text": "By automating alignment monitoring and providing actionable templates, we've created a system that:\n\n- \u2705 **Measures** ethical alignment objectively (4 metrics, 0-100 scale)\n- \u2705 **Improves** compliance",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.690304"
+      },
+      {
+        "file": "PHASE33C_VALIDATED_SUMMARY.md",
+        "text": "---\n\n## Provenance Chain\n\n### Files\n- **Study config:** `studies/phase33c_coop_meaning.yml`\n- **Adapter:** `adapters/phase33_coop_meaning.py`\n- **Results:** `discovery_results/phase33c_coop_meaning_20",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.049122"
+      },
+      {
+        "file": "discovery_results/global_cultural_network_phase7_20251006_091611/report/global_cultural_network_phase7_results.md",
+        "text": "**Reverse Influence (B\u2192Religion):**\n   - Rare but observable belief contagion from A\u2192B during high stress\n   - Typically temporary, reversed during recovery periods\n   - Indicates learning cultures ca",
+        "stance": "positive",
+        "modified_at": "2025-10-13T22:50:47.562831"
+      },
+      {
+        "file": "OPENLAWS_INFRASTRUCTURE_IMPROVEMENTS.md",
+        "text": "**`openlaws_automation.py`**\n   - Lines 395-415: CSV path resolution\n   - Lines 417-478: Phase 33 validation support\n   - Lines 580-589: None value handling in reports\n   - Impact: Full Phase 33 pipel",
+        "stance": "positive",
+        "modified_at": "2025-10-14T00:58:29.388123"
+      },
+      {
+        "file": "discovery_results/temporal_drift_phase8_20251006_093038/report/temporal_drift_phase8_results.md",
+        "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+        "stance": "positive",
+        "modified_at": "2025-10-06T09:30:39.960330"
+      },
+      {
+        "file": "REVALIDATION_STATUS.md",
+        "text": "**Direct information clarity** (transparency) reduces noise most effectively\n2",
+        "stance": "negative",
+        "modified_at": "2025-10-14T07:43:38.438735"
+      },
+      {
+        "file": "GUARDIAN_V6_CONTEXT_ENGINE_COMPLETE.md",
+        "text": "Assign based on maximum score\n\n**Confidence**: Probability of winning category\n\n### Context Signal Detection\n\n**Scare Quote Detection**:\n```python\n# Pattern: \"word\" with skeptical context\nif \"so-calle",
+        "stance": "positive",
+        "modified_at": "2025-10-14T19:59:07.034218"
+      },
+      {
+        "file": "discovery_results/temporal_coherence_sweep_2025-10-06_13-56-48/report_temporal_coherence.md",
+        "text": "Small openness (\u03b5\u22480.005) slightly boosts arrow via dissipation proxy",
+        "stance": "positive",
+        "modified_at": "2025-10-06T13:56:48.662731"
+      },
+      {
+        "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md",
+        "text": "Core References Library\n**Location**: `CITATIONS.bib`\n\n**Contents**: 30+ BibTeX entries covering:\n- Statistical methods (bootstrap, CI theory)\n- Agent-based modeling foundations\n- Coherence & integrat",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.377713"
+      },
+      {
+        "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md",
+        "text": "**Target**: 70+ score (VALIDATED threshold)\n\n### Implementation Roadmap\n\n**Week 1: Quick Wins** (Target: 65+)\n- [x] Deploy Guardian v3 scanner\n- [x] Generate baseline audit\n- [x] Create templates & po",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.377713"
+      },
+      {
+        "file": "GUARDIAN_QUICK_START.md",
+        "text": "**Sentiment** (target \u22480.0): Neutral scientific tone\n\n---\n\n## \ud83d\udd27 Common Fixes\n\n### Low Objectivity Score\n**Add**:\n- Hedging: \"suggests\", \"may\", \"appears to\", \"preliminary\"\n- Confidence intervals: \"(\u0394CC",
+        "stance": "positive",
+        "modified_at": "2025-10-14T19:00:17.976185"
+      },
+      {
+        "file": "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md",
+        "text": "**Mutual Assimilation:**\n   - Both civilizations shift toward intermediate cultural state\n   - Most common at moderate coupling levels\n   - Represents cultural homogenization through sustained contact",
+        "stance": "positive",
+        "modified_at": "2025-10-06T09:06:54.855456"
+      },
+      {
+        "file": "discovery_results/civilization_exchange_phase6_20251006_090651/report/civilization_exchange_phase6_results.md",
+        "text": "Homogenization Regime (\u03ba \u2265 0.20):\n- Rapid cultural convergence and identity loss\n- High equilibrium stability but reduced cultural diversity\n- Risk of synchronized vulnerabilities\n\n## Policy Implicati",
+        "stance": "positive",
+        "modified_at": "2025-10-06T09:06:54.855456"
+      },
+      {
+        "file": "QC_UPGRADE_COMPLETE.md",
+        "text": "**Validation Framework:** Enhances `open_family/open_core/validation.py`\n\n### Updated Workflow\n\n```bash\n# Standard run cycle (unchanged)\npython openlaws_automation.py run --lab openlight_lab\npython op",
+        "stance": "positive",
+        "modified_at": "2025-10-14T16:09:16.862888"
+      },
+      {
+        "file": "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md",
+        "text": "# Money Competition Phase 5: Synthesis & Multi-Level Resilience Results\n\n**Generated:** 2025-10-06 08:57:20  \n**Total Runtime:** 30.04 seconds  \n**Long-term Analysis:** 2000-epoch civilizational metab",
+        "stance": "positive",
+        "modified_at": "2025-10-13T22:50:47.534882"
+      },
+      {
+        "file": "AUTO_THEORIST_V3_SUCCESS.md",
+        "text": "v2.0 for weekly deep analysis\n\n---\n\n## \u2705 Verification\n\n**Test Run:**\n- \u2705 Processed 17 studies successfully\n- \u2705 Generated scores for all studies\n- \u2705 Ranked from 0.926 (best) to 0.0 (lowest)\n- \u2705 Exporte",
+        "stance": "positive",
+        "modified_at": "2025-10-14T17:49:24.454536"
+      },
+      {
+        "file": "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md",
+        "text": "## Results Summary\n\n| Run | \u03b5 | Profile | t_flip | Persistence | Hysteresis | Final CCI | Final Training | AUH Post-Shocks |\n|-----|---|---------|--------|-------------|------------|-----------|------",
+        "stance": "negative",
+        "modified_at": "2025-10-06T08:48:17.094211"
+      },
+      {
+        "file": "discovery_results/money_competition_phase4_20251006_084811/report/money_competition_phase4_results.md",
+        "text": "**Learning Dominance (\u03b5 \u2265 0.005):** Stable training-based culture\n\n### Shock Response Dynamics:\n- **Immediate Reversion:** Training drops during shock windows\n- **Recovery Patterns:** Open systems res",
+        "stance": "positive",
+        "modified_at": "2025-10-06T08:48:17.094211"
+      },
+      {
+        "file": "discovery_results/temporal_drift_phase8_20251006_093013/report/temporal_drift_phase8_results.md",
+        "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+        "stance": "positive",
+        "modified_at": "2025-10-06T09:30:14.681081"
+      },
+      {
+        "file": "discovery_results/temporal_drift_phase8_20251006_092905/report/temporal_drift_phase8_results.md",
+        "text": "**Stochastic Factor:** Probability scales with memory \u00d7 information flux\n\n### Asynchronous Stabilization Effects:\n\n**Global System Resilience:**\n- **Phase Diversity:** Temporal offsets prevent synchro",
+        "stance": "positive",
+        "modified_at": "2025-10-06T09:29:15.574587"
+      },
+      {
+        "file": "discovery_results/phase18_adaptive_2025-10-06_16-27-01/master_report.md",
+        "text": "### Learning Architecture\n- **Plant Model**: C_{t+1} = \u03b8\u2080 + \u03b8\u2081\u00b7\u0394\u03b5_t + \u03b8\u2082\u00b7\u03ba_t\u00b7\u0394\u03b5_t + \u03b8\u2083\u00b7C_t\n- **Learning**: Recursive Least Squares (RLS) with \u03bb=0.995\n- **Adaptive Gain**: Based on learned sensitivity ",
+        "stance": "positive",
+        "modified_at": "2025-10-06T16:27:18.899288"
+      },
+      {
+        "file": "GUARDIAN_V3_REPORT.md",
+        "text": "Include data availability statements:\n   ```markdown\n   **Data Availability**: Full results at `discovery_results/[study_id]/`  \n   **Code Repository**: https://github.com/[org]/[repo]  \n   **Preregis",
+        "stance": "positive",
+        "modified_at": "2025-10-14T17:54:07.661261"
+      },
+      {
+        "file": "QC_QUICK_REFERENCE.md",
+        "text": "# \ud83d\udd12 HYMetaLab QC Framework \u2014 Quick Reference\n\n**Version:** QC v2.0  \n**Date:** October 14, 2025\n\n---\n\n## \u26a1 Quick Commands\n\n```bash\n# Run QC linter manually\npython3 tools/qc_linter.py\n\n# View QC report",
+        "stance": "positive",
+        "modified_at": "2025-10-14T16:09:16.863150"
+      },
+      {
+        "file": "discovery_results/money_competition_20251006_071657/report/money_competition_results.md",
+        "text": "# Money Competition Experiment Results\n\n**Generated:** 2025-10-06 07:16:58  \n**Total Runtime:** 0.95 seconds  \n**Conditions:** 6 runs testing zero-sum vs cooperative dynamics\n\n## Experimental Design\n\n",
+        "stance": "negative",
+        "modified_at": "2025-10-06T07:16:58.031281"
+      },
+      {
+        "file": "discovery_results/money_competition_phase2_20251006_083327/report/money_competition_phase2_results.md",
+        "text": "# Money Competition Phase 2: Openness Sweep Results\n\n**Generated:** 2025-10-06 08:33:35  \n**Total Runtime:** 8.66 seconds  \n**Extended Analysis:** 300 epochs, adaptive branching, noise=0.04  \n**Openne",
+        "stance": "negative",
+        "modified_at": "2025-10-06T08:33:35.813556"
+      }
+    ],
+    "cooperation": [
+      {
+        "file": "GUARDIAN_V3_EXECUTIVE_SUMMARY.md",
+        "text": "This suggests that shared meaning \nimproves resilience",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.690304"
+      },
+      {
+        "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md",
+        "text": "Cooperation improves resilience",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.377713"
+      },
+      {
+        "file": "discovery_results/money_competition_phase5_20251006_085650/report/money_competition_phase5_results.md",
+        "text": "**\u03b5 \u2265 0.010:** Robust learning cultures that self-stabilize through cycles\n\n### Cultural Memory Effects:\n- **Memory Boosts:** Triggered by 20+ epochs of CCI > 0.75, add +0.5% to cultural memory\n- **Le",
+        "stance": "positive",
+        "modified_at": "2025-10-13T22:50:47.534882"
+      },
+      {
+        "file": "cross_domain_integration_report.md",
+        "text": "### Key Findings:\n- **Final Survival Rate:** 0.984 \u00b1 0.015\n- **Average Fairness Score:** 0.599\n- **Average CCI Level:** 0.071\n- **Average Valence:** 0.646\n\n---\n\n## Clinical Findings\n\n### Treatment Eff",
+        "stance": "positive",
+        "modified_at": "2025-09-29T13:44:06.334888"
+      },
+      {
+        "file": "discovery_results/phase19_collective_2025-10-06_17-33-47/master_report.md",
+        "text": "### System Architecture\n- **Network**: Watts-Strogatz small-world (k=6, \u03b2=0.18)\n- **Agent Dynamics**: Individual RLS learners with heterogeneous plant parameters\n- **Coupling**: \u03ba_i = (A @ C) / deg_i ",
+        "stance": "positive",
+        "modified_at": "2025-10-06T17:33:50.593012"
+      }
+    ],
+    "meaning": [
+      {
+        "file": "GUARDIAN_V5_STABILIZER_COMPLETE.md",
+        "text": "`.github/workflows/guardian_v4_ci.yml`\n   - Added `guardian-v5-bench` job\n   - Runs determinism tests (pytest)\n   - Runs runtime tests (pytest)\n   - Runs benchmark (sample)\n   - Checks variance \u2265 0.02",
+        "stance": "positive",
+        "modified_at": "2025-10-14T19:45:06.630183"
+      }
+    ],
+    "resilience": [
+      {
+        "file": "CONSOLIDATED_RESEARCH_PACKAGE.md",
+        "text": "Universal Collapse Laws**\n```\nCollapse_Risk \u221d (Goal_Inequality \u00d7 System_Complexity) / Coordination_Strength\n- Gini coefficient > 0.3 predicts system collapse (90% accuracy)\n- Optimal goal diversity = ",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:57.330620"
+      },
+      {
+        "file": "VALIDATION_REPORT.md",
+        "text": "Language Sanitization \u2705\n```bash\npython tools/language_sanitizer.py\n```\n- \u2705 **2 files sanitized** (METALAB_STATUS.md, BOOTSTRAP_COMPLETE.md)\n- \u2705 Replaced exploratory language:\n  - `ultimate` \u2192 `optimiz",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:57.607465"
+      },
+      {
+        "file": "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md",
+        "text": "**Goal Externalities with Retro Channels** \u26a0\ufe0f\n**Purpose:** Test if retro messaging reduces system collapse in multi-agent coordination\n\n**Results:**\n- **Overall Collapse Rate:** 66.7% (high instabilit",
+        "stance": "negative",
+        "modified_at": "2025-10-13T22:50:46.292935"
+      },
+      {
+        "file": "FIS_STUDIES_SUMMARY.md",
+        "text": "**Trust/Hope emotional stabilizers** provide validated resilience benefits\n3",
+        "stance": "positive",
+        "modified_at": "2025-10-14T07:43:38.437810"
+      },
+      {
+        "file": "BOOTSTRAP_COMPLETE.md",
+        "text": "**Actions Completed**\n   - \u2705 Created virtual environment (`.venv/`)\n   - \u2705 Installed dev dependencies\n   - \u2705 Archived 200+ legacy discovery results with SHA256 checksums\n   - \u2705 Sanitized 90+ files, re",
+        "stance": "positive",
+        "modified_at": "2025-10-13T23:08:27.659110"
+      },
+      {
+        "file": "PHASE3_README.md",
+        "text": "## Quick Start\n\n```bash\n# Run all Phase 3 experiments\npython3 run_phase3.py\n\n# Run tests first\npython3 test_phase3.py\n```\n\n## Experiments\n\n### E1: Norm Evolution (Emergence of Reciprocity)\n- **Scale:*",
+        "stance": "positive",
+        "modified_at": "2025-09-29T13:49:53.571269"
+      },
+      {
+        "file": "PHASE33_COMPLETE.md",
+        "text": "**Hazard Reduction Robust** \u2705\n   - Mean \u0394hazard = -0.0239\n   - Exceeds threshold (-0.01)\n   - Trust+Meaning interaction reduces system risk\n\n2",
+        "stance": "negative",
+        "modified_at": "2025-10-14T18:23:56.058672"
+      },
+      {
+        "file": "PHASE35B_EXECUTION_RESULTS.md",
+        "text": "---\n\n## \ud83d\udd2c Scientific Interpretation\n\n### Universality of Tri-Flux Law\n\nThe tri-flux resilience law:\n\n```\nR \u221d (E^\u03b1 \u00d7 I^\u03b2 \u00d7 K^\u03b3) / N\n```\n\nsuccessfully predicts coherence dynamics across:\n- **Galaxy clus",
+        "stance": "positive",
+        "modified_at": "2025-10-14T11:48:56.124395"
+      },
+      {
+        "file": "PHASE3_EXECUTION_SUMMARY.md",
+        "text": "---\n\n## \ud83d\udce6 Archival & Checksums\n\n### Archive Created\n**File**: `results/archive/validated_20251014_181157.zip`  \n**Size**: TBD  \n**Contents**:\n- 2 validated study directories (Phase 35b, 35c)\n- Guardia",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.053327"
+      },
+      {
+        "file": "GUARDIAN_SYSTEMS_COMPLETE.md",
+        "text": "Fast performance (<1s per doc)\n\n---\n\n## \ud83d\udea6 Gate Status\n\nAll required gates passed:\n\n| Gate | Threshold | Result | Status |\n|------|-----------|--------|--------|\n| **Deliverables** | 100% | 17/17 (100%",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:57:04.294981"
+      },
+      {
+        "file": "NEXT_STEP_EXECUTION_COMPLETE.md",
+        "text": "**Dashboard infrastructure** ready for live monitoring\n\n**Scientific Impact**:\n- Strong meta-evidence for Universal Resilience Law\n- Preregistration + bootstrap CIs set new integrity standard\n- Cross-",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:29:46.527775"
+      }
+    ],
+    "hazard": [
+      {
+        "file": "TIME_TRAVEL_EXPERIMENTAL_ANALYSIS.md",
+        "text": "**Retro Bandwidth Threshold:** No effect observed up to 4 bits/step\n\n---\n\n## \ud83d\udcc8 **STATISTICAL SIGNIFICANCE**\n\n### **Sample Sizes & Power**\n- **3 seeds** per configuration (statistical minimum)\n- **24 C",
+        "stance": "positive",
+        "modified_at": "2025-10-13T22:50:46.292935"
+      }
+    ],
+    "causality": [
+      {
+        "file": "EXPERIMENTAL_RESULTS_SUMMARY.md",
+        "text": "**Retrocausal interventions provide no survival benefits** in tested scenarios\n4",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.678135"
+      },
+      {
+        "file": "SESSION_GUARDIAN_V3_IMPLEMENTATION.md",
+        "text": "Comprehensive Language Policy\n**Location**: `templates/LANGUAGE_POLICY.md`\n\n**Key Guidelines**:\n- \u2705 **Preferred**: \"suggests\", \"is consistent with\", \"within simulation\", \"preliminary\"\n- \u274c **Avoid**: \"",
+        "stance": "positive",
+        "modified_at": "2025-10-14T18:23:56.377713"
+      }
+    ],
+    "competition": [
+      {
+        "file": "METALAB_STATUS.md",
+        "text": "# MetaLab Status Dashboard\n\n**Last Updated:** October 14, 2025\n\n---\n\n## \ud83c\udfaf Current State: **PROFESSIONAL INFRASTRUCTURE** \u2705\n\nFrom Game \u2192 Research \u2192 **Official Lab Pipeline**\n\n---\n\n## \ud83d\udcca Infrastructure S",
+        "stance": "positive",
+        "modified_at": "2025-10-13T23:08:27.654794"
+      }
+    ]
+  },
+  "claim_keys": [
+    "openness",
+    "cooperation",
+    "competition",
+    "resilience",
+    "coherence",
+    "hazard",
+    "meaning",
+    "causality"
+  ]
+}

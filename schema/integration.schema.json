@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Integration Event",
+  "type": "object",
+  "required": ["tick", "agent_id", "conflicts", "broadcasts"],
+  "properties": {
+    "tick": {"type": "integer", "minimum": 0},
+    "agent_id": {"type": "string"},
+    "conflicts": {"type": "integer", "minimum": 0},
+    "conflict_types": {"type": "array", "items": {"type": "string"}},
+    "broadcasts": {"type": "integer", "minimum": 0},
+    "resolution_time_ms": {"type": "number", "minimum": 0}
+  },
+  "additionalProperties": true
+}

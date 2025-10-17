@@ -1,0 +1,60 @@
+---
+title: Guardian_Scores_Sheet_Entry.txt
+date: 2025-10-16
+version: draft
+checksum: a69654df6843
+---
+
+# Guardian v4 Corpus Validation — Google Sheet Entry
+# Date: 2025-10-15
+# Lab Tech: Validation Team
+
+## Row Data for 'Guardian Scores' Sheet:
+
+Date,Total_Docs,Mean_Score,Passing_Pct,Flagged,Risk_Low,Risk_Medium,Risk_High,Risk_Critical
+2025-10-15,601,62.5,7.5,601,0,45,541,15
+
+## Key Findings:
+
+1. CORPUS HEALTH: ⚠️ NEEDS IMPROVEMENT
+   - Mean score: 62.5/100 (below 70 threshold)
+   - Only 7.5% passing (45 docs ≥70)
+   - 0 documents reach high-confidence level (≥90)
+
+2. RISK BREAKDOWN:
+   - Critical (0-50): 15 docs (2.5%) — Archive candidates
+   - High (50-70): 541 docs (90.0%) — Bulk of corpus
+   - Medium (70-90): 45 docs (7.5%) — Near publication quality
+   - Low (90-100): 0 docs (0%) — None yet
+
+3. TOP PERFORMERS:
+   - synthesis_narrative.md: 87.0/100 (Phase 4 Open Data)
+   - RESEARCH_DISCLAIMER.md: 83.7/100
+   - NEXT_STEP_EXECUTION_COMPLETE.md: 79.1/100
+
+4. ΔCCI REFERENCE (from individual studies, not Guardian):
+   - Phase 33c: ΔCCI = 0.0282 (Guardian: 87.0)
+   - FIS Trust/Hope: ΔCCI = 0.0329 (Guardian: N/A)
+   - FIS AI Safety: ΔCCI = 0.0444 (Guardian: N/A)
+
+5. RECOMMENDED ACTIONS:
+   - Archive 15 critical-risk documents (score < 50)
+   - Patch 541 high-risk documents (transparency may boost)
+   - Focus on recent research outputs (Phase 4, completion reports)
+   - Implement Guardian pre-commit hooks for new docs
+
+## Next Validation: [Schedule quarterly, e.g., 2026-01-15]
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,61 @@
+survival:
+  sources:
+    - name: "who_life_table_demo"
+      type: "csv_url"
+      url: "https://raw.githubusercontent.com/akbarshohajon/life-table-samples/main/sample_life_table.csv"
+    - name: "synthetic_survival"
+      type: "synthetic"
+
+shocks:
+  sources:
+    - name: "usgs_quakes_demo"
+      type: "json_url"
+      url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"
+    - name: "synthetic_shocks"
+      type: "synthetic"
+
+goals:
+  sources:
+    - name: "oecd_inequality_demo"
+      type: "csv_url"
+      url: "https://raw.githubusercontent.com/datasets/income-distribution/master/data/inequality.csv"
+    - name: "synthetic_goals"
+      type: "synthetic"
+
+calibration:
+  sources:
+    # If a local domain-specific calibration file exists, prefer it automatically.
+    - name: "local_domain_calibration"
+      type: "local_csv"
+      path: "./real_world_inputs/calibration.csv"
+    - name: "open_rt_reaction_demo"
+      type: "csv_url"
+      url: "https://raw.githubusercontent.com/psyteachr/intro-r-reaction-times/master/data/reaction-times.csv"
+    - name: "synthetic_calibration"
+      type: "synthetic"
+
+gravity:
+  sources:
+    - name: "nea_orbits_demo"
+      type: "csv_url"
+      url: "https://raw.githubusercontent.com/ytliuSVT/NEO-dataset/main/neo_sample.csv"
+    - name: "synthetic_gravity"
+      type: "synthetic"
+
+output_dir: "discovery_results"
+log_level: "INFO"
+
+tuning:
+  collapse_logistic:
+    center: 0.30  # Gini value at 50% collapse probability
+    k: 40.0       # steepness; larger = sharper threshold
+    floor: 0.02   # minimum background risk
+    cap: 0.98     # maximum risk cap
+  cci:
+    min_noise: 0.05           # never let noise go below this
+    beta_prior_success: 2.0   # smoothing for accuracy estimate
+    beta_prior_fail: 2.0
+  gravity:
+    dt_period_divisor: 1200    # dt ≈ orbital_period / this
+    eps_min: 0.01
+    eps_max: 0.12

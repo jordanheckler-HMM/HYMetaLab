@@ -1,0 +1,12 @@
+{
+  "runId": "telescope_vs_oracle_514_14",
+  "simInstanceId": "sim_A",
+  "startedAt": "2025-10-02T00:30:44.487526Z",
+  "finishedAt": "2025-10-02T00:30:45.487531Z",
+  "ok": true,
+  "survival_rate": 0.78,
+  "collapse_risk": 0.42,
+  "aggression_delta": -0.22,
+  "collective_cci_delta": 0.28,
+  "shock_tolerance": 0.28
+}

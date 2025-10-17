@@ -1,0 +1,16 @@
+# Space Fundamentals Test Suite — 20251005_001051
+
+Total runs: 22
+
+## Winners per question
+- Q1: Q1_A_independent (hazard=nan, cci=nan)
+- Q2: Q2_vacuum_closed (hazard=nan, cci=nan)
+- Q3: Q3_continuous (hazard=nan, cci=nan)
+- Q4: Q4_2D (hazard=nan, cci=nan)
+- Q5: Q5_infinite (hazard=nan, cci=nan)
+- Q6: Q6_flat (hazard=nan, cci=nan)
+- Q7: Q7_softWrap (hazard=nan, cci=nan)
+- Q8: Q8_none (hazard=0.0, cci=0.035965583843369564)
+- Q9: Q9_absolute (hazard=nan, cci=nan)
+- Q10: Q10_closed (hazard=nan, cci=nan)
+- Q11: Q11_create (hazard=nan, cci=nan)

@@ -1,0 +1,67 @@
+study:
+  id: trust_survival_v4
+  title: "Trust_Survival_Phase4_TrustXFairness"
+extends: "studies/trust_survival/study.yml"
+name: "Trust_Survival_Phase4_TrustXFairness"
+description: |
+  Phase 4: quantify the interaction between trust (τ) and goal_inequality (g)
+  on collapse risk, survival, and recovery times. Focus on the transition shock
+  band, with light flanks for robustness.
+objectives:
+  - Estimate main effects of trust (τ) and inequality (g) on collapse_risk & survival_rate.
+  - Test the τ×g interaction: does trust buffer the harm of inequality?
+  - Compare recovery times after shocks across τ×g cells.
+design:
+  seeds: 4
+  epochs_cap: 400
+  agents: 120
+  factors:
+    trust_tau: [0.30, 0.60, 0.90]          # low / mid / high trust
+    goal_inequality: [0.20, 0.50, 0.80]    # fair / mixed / unfair
+    shock_severity: [0.35, 0.50, 0.65]     # gentle / transition / harsh
+controls:
+  base_coord: 0.50
+  base_noise: 0.10
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 200
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "GLM: collapse_risk ~ trust_tau * goal_inequality shows τ×g interaction (p<0.05 or 95% CI excludes 0)"
+    - "Simple slopes: at g=0.80, higher trust reduces collapse_risk by ≥20% from τ=0.30→0.90"
+    - "At g=0.80, survival_rate increases monotonically with τ (ANOVA/ordered trend, p<0.05)"
+    - "Recovery: median t_recover_hazard_0_20 is ≥15% faster at τ=0.90 vs τ=0.30 when g=0.80"
+exports:
+  data_dir: discovery_results/trust_survival_v4/data
+  figs_dir: discovery_results/trust_survival_v4/figs
+  report_dir: discovery_results/trust_survival_v4/report
+  bundle_zip: discovery_results/trust_survival_v4/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 4 focuses on τ×g buffering hypothesis."
+
+# Add prereg.constants expected by openlaws_automation
+prereg:
+  constants:
+    epochs: 400
+    seeds: [301, 302, 303, 304]
+    agents: 120
+    trust_tau: [0.30, 0.60, 0.90]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.35, 0.50, 0.65]
+    sim_adapter: "studies/trust_survival/adapter_wrapper.py:run"

@@ -1,0 +1,30 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_repo_audit/tools_checksums.txt.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/operations/20251016_repo_audit/tools_checksums.txt
+@@ -1,3 +1,10 @@
++---
++title: tools_checksums.txt
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ 5b86d920e04e66e7c5474707e3555451ff411e84979c6dc361bc1cbe002dd1e1  tools/generate_run_manifest.py
+ dd7cca3782ba21b307cddcfe742d2c1d8a8dbd96fe17313c0bf1293fe8b7fac9  tools/metadashboard.py
+ 5fc387fe5cca7cc2e996fe00d12863807bd7b0d9e27c13d60f9bd1b3f704b5ec  tools/run_agent_strategies.py
+@@ -36,3 +43,16 @@
+ 30bfb9fcb6b55bcd8d35e5e16d4bc996fd7a657e85edcf36e6c78cb294a3050b  tools/license_checker.py
+ a984f45bbabd5abfd3d52977c9d7b0b00269a993b42400fc41e758cbb3d4cc1e  tools/guardian_autotune_v8.py
+ 4aa37b797f17e4a4cd3356223798978c3a69a4d8b372a5b882b82d8d60231756  tools/qc_linter.py
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-10-15T07:55:48.020327",
+  "manifest_version": "1.0",
+  "processed_datasets": [
+    {
+      "dataset_id": "wvs_trust_wellbeing_wave7",
+      "records": 1000,
+      "validation_status": "PASS",
+      "status": "processed"
+    },
+    {
+      "dataset_id": "oecd_education_collaboration_2023",
+      "records": 1000,
+      "validation_status": "PASS",
+      "status": "processed"
+    },
+    {
+      "dataset_id": "gss_trust_social_capital_2022",
+      "records": 1000,
+      "validation_status": "PASS",
+      "status": "processed"
+    },
+    {
+      "dataset_id": "ess_wellbeing_trust_round10",
+      "records": 1000,
+      "validation_status": "PASS",
+      "status": "processed"
+    },
+    {
+      "dataset_id": "cooperative_learning_meta_2023",
+      "records": 1000,
+      "validation_status": "PASS",
+      "status": "processed"
+    }
+  ],
+  "total_processed": 5
+}

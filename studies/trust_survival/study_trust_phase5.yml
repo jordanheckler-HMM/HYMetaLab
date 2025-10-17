@@ -1,0 +1,53 @@
+study:
+  id: trust_survival_v5
+  title: "Trust_Survival_Phase5_SynergySweep"
+name: "Trust_Survival_Phase5_SynergySweep"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 5: Joint optimization of trust (τ), fairness (g), and repair_rate (r)
+  to test whether synergistic effects raise CCI ≥ 0.7 and Survival ≥ 0.8.
+design:
+  seeds: 6
+  epochs_cap: 500
+  agents: 160
+  factors:
+    trust_tau: [0.30, 0.60, 0.90]
+    goal_inequality: [0.20, 0.50, 0.80]
+    repair_rate: [0.00, 0.05, 0.10]
+    shock_severity: [0.50]
+validation:
+  pass_if:
+    - "2D surface (τ,g) shows survival_rate ≥ 0.8 and CCI ≥ 0.7 for τ ≥ 0.6 when g ≤ 0.5."
+    - "Interaction (τ×g×r) significant (p<0.05) in GLM."
+    - "Bootstrap CI for synergistic effect excludes 0."
+exports:
+  data_dir: discovery_results/trust_survival_v5/data
+  figs_dir: discovery_results/trust_survival_v5/figs
+  report_dir: discovery_results/trust_survival_v5/report
+adapter:
+  path: "studies/trust_survival/adapter_trust.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 5 tests joint synergy of trust, fairness, and repair dynamics."
+
+# prereg constants expected by openlaws_automation
+prereg:
+  constants:
+    epochs: 500
+    seeds: [401, 402, 403, 404, 405, 406]
+    agents: 160
+    trust_tau: [0.30, 0.60, 0.90]
+    goal_inequality: [0.20, 0.50, 0.80]
+    repair_rate: [0.00, 0.05, 0.10]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_wrapper.py:run"
+
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 300
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80

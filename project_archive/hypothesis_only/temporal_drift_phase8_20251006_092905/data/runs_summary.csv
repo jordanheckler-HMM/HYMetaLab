@@ -1,0 +1,5 @@
+run_id,coupling_AB,coupling_BC,coupling_AC,drift_interval,agents_per_civ,epochs_cap,renaissance_counts,mean_time_to_rebirth,knowledge_recovery_rate,cultural_half_lives,avg_cultural_half_life,global_renaissance_wave,drift_resilience,total_renaissance_count,total_collapse_count,time_sec
+TD_05_05_00,0.05,0.05,0.0,400,40,2000,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 1, 'B': 1, 'C': 1}",1.0,,0.2942812415901578,0,0,2.2929019927978516
+TD_10_10_05,0.1,0.1,0.05,400,40,2000,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 1, 'B': 1, 'C': 1}",1.0,,0.2942812415901578,0,0,2.3681480884552
+TD_15_15_10,0.15,0.15,0.1,400,40,2000,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 1, 'B': 1, 'C': 1}",1.0,,0.2942812415901578,0,0,2.2858989238739014
+TD_20_10_05,0.2,0.1,0.05,400,40,2000,"{'A': 0, 'B': 0, 'C': 0}",,0,"{'A': 1, 'B': 1, 'C': 1}",1.0,,0.2942812415901578,0,0,2.2925796508789062

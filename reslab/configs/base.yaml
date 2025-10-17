@@ -1,0 +1,16 @@
+seed: 123
+n_agents: 100
+ticks: 150
+replicates: 10
+shock_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+coordination_strength: 0.5
+goal_inequality: 0.25
+noise: 0.05
+memory_cap: null
+energy_drift: false
+bootstrap:
+  enabled: true
+  B: 100
+  ci: 0.95
+defaults:
+  shock_level: 0.4

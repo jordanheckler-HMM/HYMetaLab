@@ -1,0 +1,18 @@
+study_id: openspace_phase44_cosmic_expansion
+version: 1.0
+seeds: [11, 17, 23, 29]
+constants:
+  epsilon: [0.0005, 0.0010, 0.0015]
+  rho: [0.0828, 0.085, 0.0875]
+  hubble_analog: [0.67, 0.70, 0.73]
+  cosmic_consciousness_density: [0.1, 0.3, 0.5, 0.7]
+protocols: [EXPANSION_DYNAMICS, COSMIC_COHERENCE, UNIVERSAL_CONSCIOUSNESS]
+validation: {dcci_min: 0.03, dhazard_max: -0.01}
+exports: [runs_csv, summary_json, figures]
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: "Pilot studies on cosmic consciousness and expansion dynamics"
+  source: "open_family/open_core/openlaws_protocol.md"
+  version: "1.0.0"
+depends_on: []
+

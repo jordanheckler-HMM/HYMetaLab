@@ -1,0 +1,36 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/test_corpus_v3/sample_research_1.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/test_corpus_v3/sample_research_1.md
+@@ -1,8 +1,15 @@
++---
++title: sample_research_1.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Cooperation Dynamics in Social Networks
+ 
+ ## Abstract
+ 
+-This study shows that openness significantly increases cooperation in social networks (Smith et al. 2020). We found a strong correlation between openness and cooperation (r=0.65, p<0.001, n=200).
++This study shows that openness significantly may increases cooperation in social networks (Smith et al. 2020). We found a strong correlation between openness and cooperation (r=0.65, p<0.001, n=200).
+ 
+ ## Methods
+ 
+@@ -16,5 +23,15 @@
+ 
+ ## Discussion
+ 
+-Research shows that resilience improves when cooperation increases (Wilson 2022). This finding is consistent with theoretical predictions (Davis et al. 2020, Figure 3).
++Research shows that resilience may improves when cooperation may increases (Wilson 2022). This finding is consistent with theoretical predictions (Davis et al. 2020, Figure 3).
+ 
++
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

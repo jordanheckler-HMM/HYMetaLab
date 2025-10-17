@@ -1,0 +1,103 @@
+study:
+  id: trust_survival_v9_env_feedback
+  title: Trust_Survival_Phase9_EnvFeedback
+name: "Trust_Survival_Phase9_EnvFeedback"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 9 co-evolves cultural trust with environmental feedback:
+  mutation/exploration increase when the environment is unstable
+  (high hazard / rising entropy), and decrease when stable.
+objectives:
+  - Recover exploration lost in Phase 8 while maintaining coherence.
+  - Achieve sustained uplift in Survival and CCI under open flow.
+design:
+  seeds: 5
+  epochs_cap: 800
+  agents: 180
+  generations:
+    enabled: true
+    period: 80
+    survival_pressure: 0.30
+    offspring_per_parent: 1
+    cull_fraction: 0.30
+    fitness: "0.5*CCI_norm + 0.5*(1-hazard_norm)"
+  open_flow:
+    enabled: true
+    influx_rate: 0.05
+    efflux_rate: 0.05
+    influx_trust_init: "N(μ=0.60, σ=0.10)"
+  factors:
+    mode: ["META","CULTURAL_FB"]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+env_feedback:
+  window: 40
+  hazard_weight: 0.7
+  entropy_weight: 0.3
+  mut_scale_min: 0.6
+  mut_scale_max: 1.6
+  eps_min: 0.02
+  eps_max: 0.18
+  anneal_after_epoch: 560
+  anneal_gamma: 0.85
+cultural_trust_fb:
+  base:
+    lr_trust_init: 0.05
+    momentum_init: 0.10
+    heritability: 0.60
+    bounds:
+      tau0: [0.10, 0.95]
+      lr_trust: [0.00, 0.20]
+      momentum: [0.00, 0.90]
+  mutation_sigmas:
+    lr_trust_sigma: 0.02
+    momentum_sigma: 0.05
+    tau0_sigma: 0.05
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+  - episodes_collapse_per_1k
+  - gen_trust_entropy
+  - gen_mean_tau
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 300
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "CULTURAL_FB vs META at g=0.50: survival uplift ≥ +0.05 (abs) with 95% CI excluding 0"
+    - "Any CULTURAL_FB cell reaches (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "episodes_collapse_per_1k is ≥ 25% lower in CULTURAL_FB vs META at g=0.80"
+    - "Spearman ρ(gen_trust_entropy, survival_rate) < 0 over generations (p<0.05), indicating productive consolidation"
+exports:
+  data_dir: discovery_results/trust_survival_v9/data
+  figs_dir: discovery_results/trust_survival_v9/figs
+  report_dir: discovery_results/trust_survival_v9/report
+  bundle_zip: discovery_results/trust_survival_v9/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_env_feedback.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 9: environment-responsive mutation & exploration in cultural trust."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 800
+    seeds: [901, 902, 903, 904, 905]
+    agents: 180
+    mode: ["META","CULTURAL_FB"]
+    trust_tau0: [0.30, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_env_feedback_wrapper.py:run"

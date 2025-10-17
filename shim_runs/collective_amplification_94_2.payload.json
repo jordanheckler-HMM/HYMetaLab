@@ -1,0 +1,19 @@
+{
+  "experimentId": "collective_amplification",
+  "simVersion": "v1.0.0",
+  "runId": "collective_amplification_94_2",
+  "seed": 2,
+  "horizonSteps": 500,
+  "agent_profile": {
+    "calibration": 0.65,
+    "coherence": 0.65,
+    "emergence": 0.8,
+    "noise": 0.15
+  },
+  "policy_flags": {},
+  "environment": {
+    "shock_severity": 0.5,
+    "coordination_strength": 0.7,
+    "goal_inequality": 0.3
+  }
+}

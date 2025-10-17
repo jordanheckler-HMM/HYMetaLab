@@ -1,0 +1,28 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/open_family/opentime_lab/studies/abstract.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/open_family/opentime_lab/studies/abstract.md
+@@ -1,5 +1,25 @@
++---
++title: abstract.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Abstract
+ 
+ 
+ 
+ *Note: Findings are within simulation context, simulation-validated, hypothesis requiring empirical testing.*
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

@@ -1,0 +1,12 @@
+{
+  "runId": "shock_dose_response_6_15",
+  "simInstanceId": "sim_B",
+  "startedAt": "2025-10-02T00:18:57.636871Z",
+  "finishedAt": "2025-10-02T00:18:58.636877Z",
+  "ok": true,
+  "survival_rate": 0.67,
+  "collapse_risk": 0.32999999999999996,
+  "aggression_delta": -0.33,
+  "collective_cci_delta": 0.17,
+  "shock_tolerance": 0.37
+}

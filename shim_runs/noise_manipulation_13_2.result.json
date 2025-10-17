@@ -1,0 +1,12 @@
+{
+  "runId": "noise_manipulation_13_2",
+  "simInstanceId": "sim_A",
+  "startedAt": "2025-10-02T00:18:36.565796Z",
+  "finishedAt": "2025-10-02T00:18:37.565801Z",
+  "ok": true,
+  "survival_rate": 0.74,
+  "collapse_risk": 0.46,
+  "aggression_delta": 0.24,
+  "collective_cci_delta": 0.74,
+  "shock_tolerance": 0.94
+}

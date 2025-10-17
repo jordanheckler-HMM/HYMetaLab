@@ -1,0 +1,54 @@
+--- /Users/jordanheckler/conciousness_proxy_sim copy 6/studies/README_PHASE33B.md.bak
++++ /Users/jordanheckler/conciousness_proxy_sim copy 6/studies/README_PHASE33B.md
+@@ -1,3 +1,10 @@
++---
++title: README_PHASE33B.md
++date: 2025-10-16
++version: draft
++checksum: TBD
++---
++
+ # Phase 33b — Cooperative Meaning Fields (Ridge Refinement)
+ 
+ **Status:** ✅ Preregistered  
+@@ -57,12 +64,12 @@
+ 
+ ### Optimistic Scenario
+ If the ridge hypothesis is correct:
+-- ΔCCI increases from 0.0266 → **≥0.030**
++- ΔCCI may increases from 0.0266 → **≥0.030**
+ - CI lower bound crosses threshold
+ - Classification: **"validated"**
+ 
+ ### Realistic Scenario
+-- ΔCCI increases to ~0.028-0.029
++- ΔCCI may increases to ~0.028-0.029
+ - CI: [0.027, 0.030]
+ - Classification: **"under_review_promising"**
+ - Informs Phase 33c parameter choices
+@@ -204,7 +211,7 @@
+ - **Next:** Real simulation integration
+ - **Publication:** Write up Phases 33 + 33b as coherent story
+ 
+-### If Phase 33b improves but doesn't validate (0.028 ≤ ΔCCI < 0.03):
++### If Phase 33b may improves but doesn't validate (0.028 ≤ ΔCCI < 0.03):
+ - **Phase 33c:** Even finer sampling around new peak
+ - **Alternative:** Test interaction terms (Trust × Meaning)
+ - **Re-evaluate:** Is 0.03 threshold appropriate?
+@@ -221,3 +228,16 @@
+ **Integrity:** Full provenance from Phase 33  
+ **Classification:** Pending (will run after preregistration)
+ 
++
++
++## Methods
++Briefly state datasets, parameters, seeds, and procedures.
++
++## Limitations
++List key caveats (sampling bias, small N, model assumptions).
++
++## Evidence & Links
++- [Link 1](#)
++- [Link 2](#)
++
++Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

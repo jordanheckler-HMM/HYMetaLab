@@ -1,0 +1,75 @@
+study:
+  id: trust_survival_v6_adaptive
+  title: "Trust_Survival_Phase6_AdaptiveTrust"
+name: "Trust_Survival_Phase6_AdaptiveTrust"
+extends: "studies/trust_survival/study.yml"
+description: |
+  Phase 6 tests dynamic/adaptive trust: agents update coordination_strength and
+  defection_noise via a learning rule after shocks. Compares STATIC vs ADAPTIVE.
+objectives:
+  - Determine if adaptive trust surpasses the Phase 5 plateau (CCI≈0.67, Survival≈0.58).
+  - Find (tau0, lr_trust, momentum) regions that raise Survival ≥ 0.80 and CCI ≥ 0.70.
+design:
+  seeds: 5
+  epochs_cap: 400
+  agents: 160
+  factors:
+    mode: ["STATIC","ADAPTIVE"]
+    trust_tau0: [0.20, 0.40, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    lr_trust: [0.00, 0.02, 0.05, 0.10]
+    momentum: [0.00, 0.50]
+controls:
+  base_coord: 0.50
+  base_noise: 0.10
+adaptive_trust:
+  enabled_key: "mode"
+  rule: "coord_t+1 = clip(coord_t + lr_trust*(peer_signal - coord_t) + momentum*(coord_t - coord_t-1), 0.2, 0.9)"
+  inverse_coupling: "defection_noise_t = base_noise*(1.0 - 0.9*(coord_t - 0.5))"
+  peer_signal: "blend(CCI_norm, survival_rate, wCCI=0.6)"
+metrics:
+  - survival_rate
+  - collapse_risk
+  - hazard
+  - CCI
+  - t_recover_CCI_0_50
+  - t_recover_hazard_0_20
+integrity:
+  code_freeze: true
+  bootstrap_resamples: 200
+  blinded: true
+  null_test: true
+  thresholds:
+    cci: 0.70
+    survival: 0.80
+validation:
+  pass_if:
+    - "ADAPTIVE vs STATIC at g=0.50: Survival uplift ≥ +0.10 (absolute) with 95% CI excluding 0"
+    - "Any ADAPTIVE cell achieves (CCI ≥ 0.70 AND Survival ≥ 0.80)"
+    - "Interaction: mode×lr_trust significant in GLM for survival_rate (p<0.05)"
+exports:
+  data_dir: discovery_results/trust_survival_v6/data
+  figs_dir: discovery_results/trust_survival_v6/figs
+  report_dir: discovery_results/trust_survival_v6/report
+  bundle_zip: discovery_results/trust_survival_v6/bundle.zip
+adapter:
+  path: "studies/trust_survival/adapter_trust_adaptive.py"
+  entrypoint: "run_study"
+notes:
+  prereg: true
+  comment: "Phase 6 introduces online trust learning after shocks."
+
+# prereg.constants for automation
+prereg:
+  constants:
+    epochs: 400
+    seeds: [501, 502, 503, 504, 505]
+    agents: 160
+    mode: ["STATIC","ADAPTIVE"]
+    trust_tau0: [0.20, 0.40, 0.60, 0.80]
+    goal_inequality: [0.20, 0.50, 0.80]
+    shock_severity: [0.50]
+    lr_trust: [0.00, 0.02, 0.05, 0.10]
+    momentum: [0.00, 0.50]
+    sim_adapter: "studies/trust_survival/adapter_trust_adaptive_wrapper.py:run"

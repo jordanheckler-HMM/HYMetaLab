@@ -1,0 +1,26 @@
+---
+title: apps_checksums.txt
+date: 2025-10-16
+version: draft
+checksum: d543b6cfcf33
+---
+
+f6c4f4cfa8ef0452d64dfb656060a5ce8d9dcb8d5b4c15430fe85b2e568635d1  apps/loop_lite_app.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  apps/__init__.py
+df493b627c231e014f57fbf9f1e98af8cebb9d0d5841a230e9dd5f4de17a9fba  apps/guardian_check_app.py
+2044fe00608121b8880b0bc200441199521a6648efa31362278da62b3f35210c  apps/guardian_compare.py
+6991f6daec9079ff9ef79f44c24351ac1d738291013e1bcfdfa70d634f13dfb2  apps/loop_lite_core.py
+c56fe0b9ea22cf7e1508f9ce96fb55ef8f65539b4d04d91eb61e0504f3119cc1  apps/loop_lite_minimal.py
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

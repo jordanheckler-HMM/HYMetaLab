@@ -1,0 +1,36 @@
+---
+title: science_1.md
+date: 2025-10-16
+version: draft
+checksum: TBD
+---
+
+# Quantum Coherence in Biological Systems
+
+## Abstract
+
+This study measured quantum coherence in photosynthetic complexes using ultrafast spectroscopy (n=150, λ=680nm). The experimental data demonstrates significant coherence lifetimes (t=660±40 fs, p<0.001) as shown in Figure 1.
+
+## Methodology
+
+Laboratory protocols followed standard procedures for sample preparation (Smith et al. 2020). Control variables included temperature (T=77K), laser intensity, and measurement timing (Jones & Brown 2019, doi.org/10.1234/quantum).
+
+## Results
+
+Statistical analysis reveals strong correlations between coherence and energy transfer efficiency (r=0.82, 95% CI [0.78, 0.86], p<0.001). The data shows that quantum effects persist longer than predicted by classical models (Garcia et al. 2021).
+
+Observed phenomena replicate earlier findings (Lee 2020, https://example.com/quantum-bio) with improved precision. Measurements indicate coherent superposition states (Martinez & Chen 2022, arxiv.org/abs/2201.12345).
+
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

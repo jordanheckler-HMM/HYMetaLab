@@ -1,0 +1,418 @@
+# Extended Simulation Framework - User Guide
+
+## Overview
+
+The Extended Simulation Framework is a comprehensive, medically grounded simulation system that models complex social and biological systems with unprecedented detail. It incorporates physiology, disease dynamics, ethics, information propagation, multi-scale coupling, phenomenology, self-modeling, thermodynamics, and Bayesian inference.
+
+## Quick Start
+
+### Installation
+
+```bash
+# Install required dependencies
+pip install -r requirements_extended.txt
+
+# Verify installation
+python3 -c "import sim_ext; print('✅ Framework ready!')"
+```
+
+### Basic Usage
+
+```python
+from sim_ext.extended_sweep import run_extended
+
+# Simple configuration
+config = {
+    "n_agents": [100],
+    "timesteps": 1000,
+    "disease": {"R0": 2.0, "IFR": 0.1},
+    "enable_uq": True
+}
+
+# Run simulation
+result = run_extended(config)
+print(f"Results saved to: {result['output_dir']}")
+```
+
+### Running the Example
+
+```bash
+python3 run_extended.py
+```
+
+## Configuration Guide
+
+### Core Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `n_agents` | int/list | 100 | Number of agents in simulation |
+| `timesteps` | int | 1000 | Simulation duration |
+| `dt` | float | 1.0 | Time step size |
+| `noise` | float/list | 0.1 | System noise level |
+
+### Module-Specific Parameters
+
+#### Disease Module
+```python
+"disease": {
+    "R0": 2.0,           # Basic reproduction number
+    "IFR": 0.1,          # Infection fatality rate
+    "incubation": 5.0,   # Incubation period
+    "vacc_rate": 0.01,   # Vaccination rate
+    "waning": 0.001      # Immunity waning rate
+}
+```
+
+#### Information Layer
+```python
+"info": {
+    "misinfo_rate": 0.1,    # Misinformation injection rate
+    "trust_decay": 0.005    # Trust decay rate
+}
+```
+
+#### Ethics Module
+```python
+"ethics": {
+    "rule_set": "utilitarian",  # Ethics framework
+    "mutation_rate": 0.01       # Norm evolution rate
+}
+```
+
+#### Multi-scale Module
+```python
+"multiscale": {
+    "coupling_coeff": 0.5,  # Coupling strength
+    "cell_agents": 16       # Sub-agents per organism
+}
+```
+
+#### Energy/Thermodynamics
+```python
+"energy": {
+    "softening": 0.05,     # Energy softening parameter
+    "heat_loss": 0.02,     # Heat loss rate
+    "work_coeffs": {       # Work efficiency coefficients
+        "metabolic": 0.8,
+        "social": 0.2
+    }
+}
+```
+
+### Performance Options
+
+```python
+config = {
+    # ... other parameters ...
+    "use_parallel": True,    # Enable parallel processing
+    "n_workers": 4,         # Number of parallel workers
+    "limit_history": True   # Optimize memory usage
+}
+```
+
+## Module Reference
+
+### Core Modules
+
+#### 1. Energy Thermodynamics (`energy_thermo.py`)
+- **Purpose**: First-law energy accounting with entropy proxy
+- **Key Functions**:
+  - `init_energy(agent)`: Initialize energy stores
+  - `step_energy(agent, world, dt)`: Step energy dynamics
+  - `conservation_check(population)`: Validate energy conservation
+
+#### 2. Agent Health (`agent_health.py`)
+- **Purpose**: Metabolism, damage, healing, immune response
+- **Key Functions**:
+  - `init_health(agent)`: Initialize health parameters
+  - `step_health(agent, world, dt)`: Step health dynamics
+  - `apply_lesion(agent, severity)`: Apply damage
+  - `heal(agent, rate)`: Apply healing
+
+#### 3. Disease Epidemic (`disease_epidemic.py`)
+- **Purpose**: SEIR dynamics with comorbidities and vaccination
+- **Key Functions**:
+  - `init_disease(agent, config)`: Initialize disease state
+  - `step_disease(agents, world, dt, config)`: Step disease dynamics
+  - `create_contact_network(agents, world)`: Create transmission network
+
+#### 4. Information Layer (`info_layer.py`)
+- **Purpose**: Trust networks, rumor propagation, misinformation
+- **Key Functions**:
+  - `init_info_layer(agents, world)`: Initialize communication network
+  - `step_info_layer(agents, world, dt, config)`: Step information dynamics
+  - `inject_misinformation(agents, world, severity)`: Inject misinformation shock
+
+#### 5. Ethics & Norms (`ethics_norms.py`)
+- **Purpose**: Evolving moral rules, consent, fairness
+- **Key Functions**:
+  - `init_ethics(agents, world, config)`: Initialize ethics framework
+  - `step_ethics(agents, world, dt, config)`: Step ethics evolution
+  - `evaluate_action_ethics(agent, action, target)`: Evaluate ethical score
+
+#### 6. Multi-scale Coupling (`multiscale.py`)
+- **Purpose**: Cell→organism→group dynamics
+- **Key Functions**:
+  - `init_multiscale(agents, world, config)`: Initialize multi-scale structure
+  - `step_multiscale(agents, world, dt, config)`: Step multi-scale dynamics
+
+#### 7. Phenomenology (`phenomenology.py`)
+- **Purpose**: Valence/affect tracking with CCI linkage
+- **Key Functions**:
+  - `init_phenomenology(agents, world)`: Initialize valence tracking
+  - `step_phenomenology(agents, world, dt, weighting)`: Step valence dynamics
+
+#### 8. Self-Modeling (`self_modeling.py`)
+- **Purpose**: Agents' internal world models and meta-prediction
+- **Key Functions**:
+  - `init_self_modeling(agents, world)`: Initialize self-models
+  - `step_self_modeling(agents, world, dt)`: Step self-modeling dynamics
+
+#### 9. Uncertainty Quantification (`uq_sensitivity.py`)
+- **Purpose**: Sobol/PRCC sensitivity analysis + bootstrap CI
+- **Key Functions**:
+  - `run_uq(results_df, params)`: Run uncertainty quantification
+
+#### 10. Bayesian Inference (`bayes_infer.py`)
+- **Purpose**: Bayesian parameter inference wrapper
+- **Key Functions**:
+  - `run_bayes_infer(observed_data, config)`: Run Bayesian inference
+
+## Output Structure
+
+### Directory Layout
+```
+discovery_results/<timestamp>_<run_id>/
+├── csv/
+│   └── results.csv              # Full simulation results
+├── plots/
+│   ├── survival_curves.png     # Medical-style survival curves
+│   ├── infection_curves.png    # Disease dynamics
+│   ├── energy_drift.png        # Energy conservation
+│   ├── valence_cci_correlation.png
+│   ├── ethics_evolution.png    # Ethics evolution
+│   └── multiscale_coherence.png
+├── reports/
+│   └── extended_report.md      # Comprehensive analysis report
+├── json/
+│   ├── config.json             # Configuration used
+│   ├── summary.json            # Summary statistics
+│   ├── uq_results.json         # Uncertainty quantification
+│   └── bayes_results.json      # Bayesian inference (if enabled)
+└── artifacts/
+    └── posteriors/              # Posterior samples (if enabled)
+```
+
+### Key Metrics
+
+#### Survival & Health
+- `survival_rate`: Fraction of agents surviving
+- `avg_health`: Average health score
+- `avg_damage`: Average damage level
+- `recovery_time`: Time to recovery
+
+#### Social & Cognitive
+- `cci_mean`: Mean collective consciousness index
+- `valence_mean`: Mean affective valence
+- `avg_trust`: Average trust level
+- `info_accuracy`: Information accuracy
+
+#### Ethics & Fairness
+- `fairness_score`: Fairness measure
+- `consent_violations`: Number of consent violations
+- `ethics_stability`: Ethics system stability
+
+#### Disease Dynamics
+- `R_eff`: Effective reproduction number
+- `infection_rate`: Current infection rate
+- `hospitalization_proxy`: Severe cases proxy
+
+#### Multi-scale
+- `cell_coherence_micro`: Micro-scale coherence
+- `cell_coherence_macro`: Macro-scale coherence
+- `collapse_propagation_delay`: Collapse delay
+
+#### Thermodynamics
+- `energy_drift`: Energy conservation drift %
+- `entropy_flux`: Entropy flux rate
+
+## Advanced Usage
+
+### Custom Module Development
+
+```python
+# Create a new module
+def init_custom_module(agents, world, config):
+    """Initialize custom module."""
+    for agent in agents:
+        agent.custom_attribute = config.get("custom_value", 0.5)
+
+def step_custom_module(agents, world, dt, config):
+    """Step custom module dynamics."""
+    # Your custom logic here
+    return {"custom_metric": 0.8}
+
+def run(config):
+    """Module entry point."""
+    return {"module": "custom", "status": "completed"}
+```
+
+### Parameter Sweeps
+
+```python
+# Large parameter sweep
+config = {
+    "n_agents": [50, 100, 200],
+    "timesteps": 2000,
+    "disease": {
+        "R0": [1.2, 2.0, 3.0],
+        "IFR": [0.1, 0.3, 0.5]
+    },
+    "ethics": {
+        "rule_set": ["utilitarian", "deontic", "reciprocity"]
+    },
+    "use_parallel": True,
+    "n_workers": 8
+}
+```
+
+### Custom Analysis
+
+```python
+# Load results for custom analysis
+import pandas as pd
+import json
+
+# Load simulation results
+results_df = pd.read_csv("discovery_results/latest/csv/results.csv")
+
+# Load summary
+with open("discovery_results/latest/json/summary.json") as f:
+    summary = json.load(f)
+
+# Custom analysis
+print(f"Success rate: {summary['successful_simulations']}/{summary['n_simulations']}")
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Energy Conservation Warnings
+```
+WARNING: Energy drift 2.216 exceeds tolerance 0.01
+```
+**Solution**: Check energy parameters, reduce time step size, or adjust energy coefficients.
+
+#### Module Initialization Failures
+```
+WARNING: Failed to initialize energy_thermo: 'AgentState' object has no field 'bmr'
+```
+**Solution**: Ensure all required attributes are defined in schemas.py.
+
+#### Parallel Processing Issues
+```
+ERROR: Simulation failed with exception: ...
+```
+**Solution**: Disable parallel processing or reduce number of workers.
+
+### Performance Optimization
+
+#### Memory Usage
+- Enable `limit_history: True` for long simulations
+- Use smaller `n_agents` for initial testing
+- Reduce `timesteps` for parameter sweeps
+
+#### Speed Optimization
+- Enable `use_parallel: True` for multiple parameter combinations
+- Use appropriate `n_workers` (typically CPU count)
+- Disable unnecessary modules for focused experiments
+
+## Validation & Quality Assurance
+
+### Energy Conservation
+- All simulations validate energy conservation (< 1% drift)
+- Failed simulations are marked as invalid
+- Energy drift is reported in summary
+
+### Reproducibility
+- All simulations use deterministic seeds
+- Configuration hash ensures reproducibility
+- Results include parameter hashes
+
+### Module Validation
+- Each module includes unit tests
+- Success rates are tracked per module
+- Error handling provides graceful degradation
+
+## API Reference
+
+### Main Functions
+
+#### `run_extended(config: Dict[str, Any]) -> Dict[str, Any]`
+Main entry point for extended simulations.
+
+**Parameters:**
+- `config`: Configuration dictionary
+
+**Returns:**
+- `output_dir`: Path to results directory
+- `n_simulations`: Number of simulations run
+- `summary`: Summary statistics
+
+#### `run_single_simulation(params: Dict[str, Any], config: Dict[str, Any]) -> Dict[str, Any]`
+Run a single simulation with given parameters.
+
+**Parameters:**
+- `params`: Parameter combination
+- `config`: Base configuration
+
+**Returns:**
+- `final_metrics`: Final simulation metrics
+- `energy_valid`: Energy conservation status
+- `simulation_valid`: Overall validation status
+
+### Utility Functions
+
+#### `create_output_dir(run_id: str) -> str`
+Create timestamped output directory.
+
+#### `config_hash(config: Dict[str, Any]) -> str`
+Generate configuration hash for reproducibility.
+
+#### `validate_energy_conservation(energy_history: List[float]) -> bool`
+Validate energy conservation within tolerance.
+
+## Contributing
+
+### Adding New Modules
+
+1. Create module file in `sim_ext/`
+2. Implement `init_*` and `step_*` functions
+3. Add `run(config)` entry point
+4. Register in `registry.py`
+5. Add unit tests
+
+### Reporting Issues
+
+1. Check existing issues
+2. Provide configuration and error logs
+3. Include system information
+4. Describe expected vs actual behavior
+
+## License
+
+This framework is part of the consciousness proxy simulation project. See project license for details.
+
+## Support
+
+For questions and support:
+1. Check this documentation
+2. Review example configurations
+3. Run unit tests to verify installation
+4. Check logs for detailed error information
+
+
+
+

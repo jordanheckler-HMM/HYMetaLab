@@ -1,0 +1,12 @@
+{
+  "runId": "collective_amplification_191_7",
+  "simInstanceId": "sim_D",
+  "startedAt": "2025-10-02T10:32:18.787449Z",
+  "finishedAt": "2025-10-02T10:32:19.787472Z",
+  "ok": true,
+  "survival_rate": 0.6799999999999999,
+  "collapse_risk": 0.32,
+  "aggression_delta": 0.18,
+  "collective_cci_delta": 0.68,
+  "shock_tolerance": 0.8800000000000001
+}

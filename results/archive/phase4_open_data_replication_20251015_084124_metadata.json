@@ -1,0 +1,50 @@
+{
+  "packet_name": "phase4_open_data_replication_20251015_084124",
+  "generated_at": "2025-10-15T08:41:24.247889",
+  "phase": "Phase 4 \u2014 Open-Source Data Integration",
+  "guardian_score": 87.2,
+  "status": "HYPOTHESIS-GEN",
+  "validation": {
+    "truthlens": 1.0,
+    "meaningforge": 1.0,
+    "guardian_v4": 87.2
+  },
+  "datasets": 5,
+  "hypotheses": 5,
+  "sha256": "a33e79978d2ee00b3089eae7c6be0400f8c0f4d4aabf9d1002a2d100d4c0cf02",
+  "file_size_mb": 0.37,
+  "contents": {
+    "data": [
+      "results/archive/phase4_open_data_replication_20251015_084124/data/cooperative_learning_meta_2023_standardized.csv",
+      "results/archive/phase4_open_data_replication_20251015_084124/data/wvs_trust_wellbeing_wave7_standardized.csv",
+      "results/archive/phase4_open_data_replication_20251015_084124/data/ess_wellbeing_trust_round10_standardized.csv",
+      "results/archive/phase4_open_data_replication_20251015_084124/data/hashes.txt",
+      "results/archive/phase4_open_data_replication_20251015_084124/data/oecd_education_collaboration_2023_standardized.csv",
+      "results/archive/phase4_open_data_replication_20251015_084124/data/gss_trust_social_capital_2022_standardized.csv"
+    ],
+    "config": [
+      "results/archive/phase4_open_data_replication_20251015_084124/config/datasets_manifest.yml",
+      "results/archive/phase4_open_data_replication_20251015_084124/config/mapping.yml",
+      "results/archive/phase4_open_data_replication_20251015_084124/config/preregister.yml"
+    ],
+    "outputs": [
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/guardian_summary_v4.md",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/synthesis_output.json",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/PHASE4_COMPLETION_REPORT.md",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/origin_output.json",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/guardian_report_v4.json",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/synthesis_narrative.md",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/PHASE3_COMPLETION_REPORT.md",
+      "results/archive/phase4_open_data_replication_20251015_084124/outputs/PHASE2_COMPLETION_REPORT.md"
+    ],
+    "code": [
+      "results/archive/phase4_open_data_replication_20251015_084124/code/truthlens_core.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/mapping_builder.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/originchain.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/etl_open.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/gen_manifest.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/aletheia_sync.py",
+      "results/archive/phase4_open_data_replication_20251015_084124/code/license_checker.py"
+    ]
+  }
+}

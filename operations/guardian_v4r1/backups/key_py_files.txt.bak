@@ -1,0 +1,84 @@
+---
+title: key_py_files.txt
+date: 2025-10-16
+version: draft
+checksum: eba21a597ec1
+---
+
+apps/__init__.py
+apps/guardian_check_app.py
+apps/guardian_compare.py
+apps/loop_lite_app.py
+apps/loop_lite_core.py
+apps/loop_lite_minimal.py
+qc/guardian_auditor.py
+qc/guardian_v4/__init__.py
+qc/guardian_v4/api.py
+qc/guardian_v4/dashboard_patch_v4.py
+qc/guardian_v4/explain/explainer_v9.py
+qc/guardian_v4/guardian_v4.py
+qc/guardian_v4/integration/__init__.py
+qc/guardian_v4/integration/hooks.py
+qc/guardian_v4/metrics/__init__.py
+qc/guardian_v4/metrics/consistency_checker.py
+qc/guardian_v4/metrics/evidence_linker.py
+qc/guardian_v4/metrics/risk_assessor.py
+qc/guardian_v4/metrics/self_integrity.py
+qc/guardian_v4/nlp/__init__.py
+qc/guardian_v4/nlp/claim_classifier.py
+qc/guardian_v4/nlp/context_signals.py
+qc/guardian_v4/nlp/objectivity_model.py
+qc/guardian_v4/nlp/sentiment_analyzer.py
+qc/guardian_v4/overrides/override_logger.py
+qc/guardian_v4/verify_implementation.py
+tools/add_bootstrap_ci.py
+tools/auto_theorist.py
+tools/auto_theorist_enhanced.py
+tools/auto_theorist_v3.py
+tools/check_no_legacy_imports.py
+tools/coherence_mapper.py
+tools/compute_feeling_metrics.py
+tools/export_public_artifacts.py
+tools/fix_runs_summary.py
+tools/gen_manifest.py
+tools/gen_replication_packet.py
+tools/generate_run_manifest.py
+tools/guardian_autotune_v8.py
+tools/guardian_bench_v5.py
+tools/guardian_console_v9.py
+tools/guardian_corpus_index.py
+tools/guardian_dualrun_v10.py
+tools/language_sanitizer.py
+tools/license_checker.py
+tools/make_replication_packet.py
+tools/mapping_builder.py
+tools/metadashboard.py
+tools/origin_cli.py
+tools/prepare_github_release.py
+tools/qc_linter.py
+tools/reindex_phase13.py
+tools/reindex_phase13_14.py
+tools/reindex_phase22.py
+tools/reorg_repo.py
+tools/run_agent_strategies.py
+tools/run_civ_regression.py
+tools/run_civilization_locator.py
+tools/targeted_sanitizer.py
+tools/truthlens_cli.py
+tools/update_eta_epsilon_log.py
+tools/validate_exports.py
+tools/zenodo_link_guard.py
+tools/zenodo_publisher.py
+
+
+## Methods
+Briefly state datasets, parameters, seeds, and procedures.
+
+## Limitations
+List key caveats (sampling bias, small N, model assumptions).
+
+## Evidence & Links
+- [Link 1](#)
+- [Link 2](#)
+
+Epistemic boundary: Results are contingent on dataset scope, fixed seeds, and current model versions; claims are provisional and subject to replication.

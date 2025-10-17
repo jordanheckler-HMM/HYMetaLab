@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Phase31b — CIV sweep",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/run_phase31b_sweep.py",
+        "--domain","civ",
+        "--base-export","discovery_results/civ_tests_${currentDate:yyyyMMdd}_${currentTime:HHmmss}/data",
+        "--run-sanitizer"
+      ]
+    },
+    {
+      "label": "Phase31b — AGENTS sweep",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/run_phase31b_sweep.py",
+        "--domain","agents",
+        "--base-export","discovery_results/agent_tests_${currentDate:yyyyMMdd}_${currentTime:HHmmss}/data",
+        "--run-sanitizer"
+      ]
+    },
+    {
+      "label": "Fix+Report — CIV",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/sanitize_and_report.py",
+        "--domain", "civ",
+        "--runs", "discovery_results/civ_tests_*/data/runs_summary.csv",
+        "--outdir", "discovery_results/civ_tests_*/data"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Fix+Report — AGENTS",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/sanitize_and_report.py",
+        "--domain", "agents",
+        "--runs", "discovery_results/agent_tests_*/data/runs_summary.csv",
+        "--outdir", "discovery_results/agent_tests_*/data"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate Terminal — echo",
+      "type": "shell",
+      "command": "echo",
+      "args": ["hello"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate Terminal — write file",
+      "type": "shell",
+      "command": "python",
+      "args": ["scripts/terminal_smoke.py"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

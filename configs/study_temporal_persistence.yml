@@ -1,0 +1,49 @@
+name: temporal_persistence
+description: |
+  Preregistered study to measure temporal persistence of a simple decay process (F(t)).
+  This config uses longer epochs and targeted sweeps specified in the preregistration.
+
+defaults:
+  epochs: 20000
+  delta_fidelity: 10
+  n_reps: 200
+  threshold: 0.5
+  determinism_base_seed: 12345
+
+sweeps:
+  epsilon: [0.0002, 0.0005, 0.001, 0.002]
+  noise_eta: [0.10, 0.07, 0.05, 0.03]
+  rho: [0.02, 0.05, 0.08, 0.12, 0.20]
+  lambda_init: [0.7, 0.8, 0.9]
+  seed: [11, 17, 23]
+
+logging:
+  save_curves: true
+  save_traces: true
+
+preregistration:
+  notes: configs/temporal_persistence_prereg.md
+  deterministic_seeds: true
+
+prereg:
+  hypotheses:
+    - "tau_c ∝ epsilon / eta"
+    - "t_arrow_var ∝ (1 - lambda_est) / epsilon"
+    - "tau_c peaks near rho≈0.08"
+  acceptance:
+    - "R2 >= 0.85 for exp fit on >=70% runs"
+    - "Spearman tau_c vs epsilon/eta >= 0.6 (p<0.01)"
+    - "Quadratic tau_c(rho) interior maximum in [0.05,0.12]"
+
+integrity:
+  deterministic: true
+  code_freeze_hash: auto
+  bootstrap_n: 800
+
+exports:
+  - runs_summary.csv
+  - curves_fidelity_seed*.png
+  - heatmap_tau_by_epsilon_eta.png
+  - tau_vs_rho_quadratic.png
+  - arrow_variance_vs_lambda_eps.png
+  - report/summary.md

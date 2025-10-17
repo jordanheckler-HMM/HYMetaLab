@@ -1,0 +1,270 @@
+study_id: phase35c_cross_domain_generalization
+version: '1.0'
+prereg_date: '2025-10-14'
+title: Cross-Domain Generalization of Tri-Flux Coherence Law
+hypothesis:
+  text: "The tri-flux resilience law R \u221D (E^\u03B1 \xD7 I^\u03B2 \xD7 K^\u03B3\
+    ) / N is domain-invariant and generalizes across biological networks, social systems,\
+    \ infrastructure, and AI agent systems with stable exponents (\u03B1 \u2248 0.4,\
+    \ \u03B2 \u2248 0.8, \u03B3 \u2248 0.1).\n"
+  predictions:
+  - H1: "\u0394CCI \u2265 0.03 across \u22653/4 domains (95% CI lower bound > 0)"
+  - H2: "\u0394hazard \u2264 \u22120.01 across \u22653/4 domains (95% CI upper bound\
+      \ < 0)"
+  - H3: "Exponent stability: |\u03B1 - 0.4| \u2264 0.1, |\u03B2 - 0.8| \u2264 0.1,\
+      \ |\u03B3 - 0.1| \u2264 0.05"
+  - H4: "Tri-flux RMSE \u2264 0.8 \xD7 min(RMSE_E_only, RMSE_I_only)"
+  - H5: "Energy-Information elasticity equivalence: |E_\u03B5 - E_I| within \xB10.15"
+  - H6: "Scale constancy: |\u0394CCI(large) - \u0394CCI(small)| \u2264 0.01"
+  falsifiers:
+  - "Sign reversal in \u0394CCI or \u0394hazard for any domain"
+  - Exponent variance across domains > 50% of mean
+  - Tri-flux model performs worse than single-channel models
+  - Scale-dependent effect (large vs small systems)
+constants:
+  seeds:
+  - 11
+  - 17
+  - 23
+  - 29
+  epsilon_band:
+  - 0.0005
+  - 0.0015
+  epsilon_nominal: 0.001
+  rho_critical: 0.0828
+  lambda_star: 0.9
+  alpha_prior: 0.4
+  beta_prior: 0.8
+  gamma_prior: 0.1
+  bootstrap_iterations: 2000
+  confidence_level: 0.95
+  baseline_CCI: 0.54
+  baseline_hazard: 0.254
+  noise_mult_levels:
+  - 1.0
+  - 1.5
+  knn_k: 8
+  min_nodes: 20
+data:
+  datasets:
+  - id: ppi_human
+    path: data/cross/biological/ppi_human/
+    domain: biological
+    description: Human protein-protein interaction network
+    expected_nodes: 100
+    energy_proxy_def: Metabolic demand / ATP requirement
+    info_proxy_def: Signaling entropy / mutual information
+    conn_proxy_def: PPI network degree
+  - id: social_threads
+    path: data/cross/social/social_threads/
+    domain: social
+    description: Social media discussion threads
+    expected_nodes: 150
+    energy_proxy_def: User activity (posts/time, session duration)
+    info_proxy_def: Information novelty (cross-entropy gain)
+    conn_proxy_def: Follower/mention network degree
+  - id: power_grid
+    path: data/cross/infrastructure/power_grid/
+    domain: infrastructure
+    description: Electrical power distribution network
+    expected_nodes: 80
+    energy_proxy_def: Power flow / load per bus
+    info_proxy_def: Reliability entropy / SCADA alert density
+    conn_proxy_def: Grid connectivity degree
+  - id: agents_runs
+    path: data/cross/ai/agents_runs/
+    domain: ai
+    description: Multi-agent AI system runs
+    expected_nodes: 120
+    energy_proxy_def: Compute energy per token
+    info_proxy_def: Perplexity drop / cross-entropy improvement
+    conn_proxy_def: Inter-agent communication degree
+mapping:
+  node_id_col: node_id
+  node_energy_col: energy_proxy
+  node_info_col: info_proxy
+  node_conn_col: conn_proxy
+  edge_weight_col: weight
+protocols:
+- id: FIT_TRI_FLUX
+  description: Fit tri-flux law across all domains and size bins
+  sweep:
+    dataset:
+    - ppi_human
+    - social_threads
+    - power_grid
+    - agents_runs
+    graph_topology:
+    - knn
+    - mst
+    size_bin:
+    - small
+    - medium
+    - large
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - tri_flux_value
+  - rmse_triflux
+  - rmse_baseline
+- id: ELASTICITY_COMPARE
+  description: Compare Energy and Information elasticities per domain
+  fixed:
+    graph_topology: knn
+    size_bin: medium
+  sweep:
+    dataset:
+    - ppi_human
+    - social_threads
+    - power_grid
+    - agents_runs
+    energy_scale:
+    - 0.75
+    - 1.0
+    - 1.25
+    info_scale:
+    - 0.75
+    - 1.0
+    - 1.25
+  metrics:
+  - elasticity_energy
+  - elasticity_info
+  - elasticity_diff
+- id: EXPONENT_FIT
+  description: "Estimate \u03B1, \u03B2, \u03B3 exponents via log-log regression"
+  sweep:
+    dataset:
+    - ppi_human
+    - social_threads
+    - power_grid
+    - agents_runs
+  outputs:
+  - alpha
+  - beta
+  - gamma
+  - r2
+  - alpha_ci_lo
+  - alpha_ci_hi
+  - beta_ci_lo
+  - beta_ci_hi
+  - gamma_ci_lo
+  - gamma_ci_hi
+- id: FALSIFIER_SUBSTRATE
+  description: Topology and noise robustness testing
+  sweep:
+    dataset:
+    - ppi_human
+    - social_threads
+    - power_grid
+    - agents_runs
+    graph_topology:
+    - knn
+    - mst
+    noise_mult:
+    - 1.0
+    - 1.5
+  metrics:
+  - delta_cci
+  - delta_hazard
+  - sign_reversal_flag
+validation:
+  bootstrap_ci: 2000
+  metrics:
+  - name: mean_CCI_gain
+    rule: '>= 0.03'
+    description: CCI improvement over baseline
+  - name: mean_hazard_delta
+    rule: <= -0.01
+    description: Hazard reduction from baseline
+  - name: exponent_alpha_stability
+    rule: abs(alpha - 0.4) <= 0.1
+    description: Energy exponent within theoretical bounds
+  - name: exponent_beta_stability
+    rule: abs(beta - 0.8) <= 0.1
+    description: Information exponent within theoretical bounds
+  - name: exponent_gamma_stability
+    rule: abs(gamma - 0.1) <= 0.05
+    description: Connection exponent within theoretical bounds
+  tests:
+  - name: tri_flux_vs_baselines
+    spec: RMSE_triflux <= 0.8 * min(RMSE_E_only, RMSE_I_only)
+    classification: validated
+  - name: elasticity_e_vs_i
+    spec: '|E_eps - E_info| CI width <= 0.30 and includes 0'
+    classification: validated
+  - name: exponent_stability
+    spec: '|alpha-0.4|<=0.1 and |beta-0.8|<=0.1 and |gamma-0.1|<=0.05'
+    classification: validated
+  - name: scale_constancy
+    spec: "|\u0394CCI(N_large)-\u0394CCI(N_small)| <= 0.01"
+    classification: validated
+  - name: falsifier_sign
+    spec: "no sign reversal in \u0394CCI or \u0394hazard"
+    classification: validated
+  classify:
+    validated: "all([mean_CCI_gain >= 0.03 for \u22653/4 domains, mean_hazard_delta\
+      \ <= -0.01 for \u22653/4 domains, exponent_stability, no_sign_reversals])"
+    under_review: else
+adapter: adapters.phase35c_cross_domain_generalization:run_adapter
+exports:
+  outdir: results/discovery_results/${study_id}/
+  require_columns:
+  - CCI
+  - hazard
+  - delta_cci
+  - delta_hazard
+  - alpha
+  - beta
+  - gamma
+  - r2
+  - dataset
+  - domain
+  - graph_topology
+  csv:
+  - runs_summary.csv
+  - exponent_fits.csv
+  - elasticity_results.csv
+  - falsifier_tests.csv
+  json:
+  - summary.json
+  - bootstrap_ci.json
+  - cross_domain_variance.json
+  figures:
+  - cci_by_domain.png
+  - hazard_by_domain.png
+  - exponent_forest_plot.png
+  - triflux_fit_quality.png
+  - elasticity_comparison.png
+  - cross_domain_variance.png
+  - scale_constancy_plot.png
+report:
+  title: 'Phase 35c: Cross-Domain Generalization of Tri-Flux Coherence Law'
+  include_figures: true
+  copy_to: results/archive/
+  sections:
+  - abstract
+  - hypothesis_summary
+  - methods_data_sources
+  - results_exponent_fits
+  - results_validation_tests
+  - discussion_universality
+  - discussion_domain_differences
+  - limitations_uncertainty
+  - conclusion
+integrity:
+  preregistered: true
+  code_freeze: false
+  blinded_analysis: false
+  prereg_hash: auto
+  classification_tags:
+  - PREREGISTERED
+  - CROSS_DOMAIN_GENERALIZATION
+  - TRI_FLUX_LAW
+  - UNIVERSALITY_TEST
+  - PHASE35_FOLLOWUP
+data_source: SIMULATION_ONLY
+thresholds:
+  rationale: Pilot studies + prior internal QC (see Research_Integrity_Prompt.md)
+  source: docs/integrity/Research_Integrity_Prompt.md
+  version: 1.0.0
+depends_on: []

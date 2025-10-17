@@ -1,0 +1,23 @@
+study_id: TD_08_adaptive_anneal
+seeds: [1,2,3,4]
+windows: { attack: [8,11], recovery: [12,16] }
+schedule:
+  selection_eta:
+    mode: adaptive
+    triggers:
+      metric: dispersion
+      thresholds: [0.15, 0.25, 0.35]
+      rise_durations: [2,3,5]
+      base: 0.18
+      max: 0.24
+  mutation_sigma:
+    mode: adaptive
+    base: 0.06
+    floor: 0.04
+    decay_durations: [2,3,4]
+outputs:
+  export_dir: discovery_results/truth_dynamics/TD_08_adaptive
+  save_csv: true
+  save_png: true
+  save_markdown: true
+  save_json: true
