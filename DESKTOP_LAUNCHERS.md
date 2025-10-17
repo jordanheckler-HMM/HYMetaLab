@@ -106,14 +106,48 @@ BASE_DIR="..."  # Update if repo moves
 
 ---
 
+## 🔄 HYMetaLab_AutoLoop_Start.command
+
+**Purpose**: Continuous autonomous experimentation (infinite loop)
+
+**What it does**:
+1. Runs `auto_lab.py` for N cycles (default: 5)
+2. Sleeps for N seconds (default: 10)
+3. Repeats indefinitely until stopped
+4. Shows batch progress in real-time
+
+**Usage**:
+- **Double-click** to start continuous learning
+- Runs forever (until you stop it)
+- Stop with: `HYMetaLab_AutoStop.command` or Ctrl+C
+
+**Customization**:
+```bash
+CYCLES=5       # Experiments per batch
+SLEEP_SEC=10   # Seconds between batches
+```
+
+**Features**:
+- ✅ Infinite autonomous learning
+- ✅ Configurable batch size
+- ✅ Adjustable sleep interval
+- ✅ Real-time progress display
+- ✅ Graceful shutdown support
+
+**Perfect for**: Overnight runs, continuous discovery, long-term learning
+
+---
+
 ## Launcher Comparison
 
 | Launcher | Purpose | Opens Terminal? | Runs What? | Best For |
 |----------|---------|-----------------|------------|----------|
-| **AutoStart** | Autonomous experiments | Yes (1 window) | auto_lab.py | Hands-free experimentation |
-| **AutoStop** | Stop AutoLab | Yes (shows status) | Kill auto_lab.py | Stopping long runs |
+| **AutoLoop_Start** | Continuous learning | Yes (1 window) | auto_lab.py (infinite) | Overnight/long-term runs |
+| **AutoStop** | Stop AutoLab | Yes (shows status) | Kill auto_lab.py | Stopping any AutoLab run |
 | **Start** | Full infrastructure | Yes (3 windows) | API + UI + Runner | Development & monitoring |
 | **Stop** | Shutdown services | No | Cleanup | Ending sessions |
+
+**Note**: Single-run launcher removed (use AutoLoop with CYCLES=N and then stop)
 
 ---
 
