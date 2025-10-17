@@ -6,6 +6,7 @@ HYMetaLab lab tech runner — Guardian-gated.
 """
 
 from __future__ import annotations
+import argparse
 import json
 import time
 from pathlib import Path
@@ -60,8 +61,16 @@ def run_task() -> dict:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--hypothesis", type=str, default="")
+    args = parser.parse_args()
+
+    hypo_text = args.hypothesis.strip()
+    if not hypo_text:
+        hypo_text = "baseline: demo-run"
+
     # 1) Guardian PRE check (on planned inputs)
-    pre_payload = {"prompt": "demo-run", "params": {"k": 1}}
+    pre_payload = {"prompt": hypo_text, "params": {"k": 1}}
     pre = validate(pre_payload, actor="LAB_TECH", target="pipeline:runner", phase="pre")
 
     if not _passes(pre):
@@ -73,7 +82,7 @@ def main():
     out = run_task()
 
     # 3) Guardian POST check (on produced outputs)
-    post_payload = {"prompt": "demo-run", "output": out}
+    post_payload = {"prompt": hypo_text, "output": out}
     post = validate(
         post_payload, actor="LAB_TECH", target="pipeline:runner", phase="post"
     )
