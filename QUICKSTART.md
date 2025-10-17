@@ -287,3 +287,40 @@ The Desktop launcher (`HYMetaLab_Start.command`) includes:
 
 **Configuration**: Edit `BASE_DIR` in the script if your repo is elsewhere.
 
+
+---
+
+## 🧪 Hypothesis-Driven Experiments
+
+The runner now accepts a `--hypothesis` argument for research documentation:
+
+```bash
+# Default (no hypothesis)
+python3 lab_techs_runner.py
+# Uses: "baseline: demo-run"
+
+# Custom hypothesis
+python3 lab_techs_runner.py --hypothesis "H1: Coherence increases under stress"
+
+# Multi-word hypothesis
+python3 lab_techs_runner.py --hypothesis "Testing entropy dynamics in phase transition"
+```
+
+**Purpose**: The hypothesis text is included in Guardian validation payloads, allowing:
+- ✅ Traceability of experiment intent
+- ✅ Better Guardian context for validation
+- ✅ Audit trail in Task_Log.md
+- ✅ Scientific rigor and reproducibility
+
+**Example Workflow**:
+```bash
+# Experiment 1
+python3 lab_techs_runner.py --hypothesis "H1: X causes Y"
+
+# Experiment 2
+python3 lab_techs_runner.py --hypothesis "H2: Y moderates Z"
+
+# Compare results
+grep "Guardian PASS" Task_Log.md
+```
+
