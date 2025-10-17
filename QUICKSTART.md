@@ -271,3 +271,19 @@ pkill -f streamlit
 pkill -f "uvicorn\|streamlit"
 ```
 
+
+---
+
+## 🔧 Launcher Features (v2)
+
+The Desktop launcher (`HYMetaLab_Start.command`) includes:
+
+✅ **Argv-safe AppleScript** — No shell injection risks  
+✅ **Port checking** — Waits for services to start (30s timeout)  
+✅ **Fallback logic** — Uses `nc` or Python for port detection  
+✅ **macOS notifications** — Alerts if startup fails  
+✅ **Fixed ports** — API:8000, UI:8501 (configurable)  
+✅ **Auto-browser** — Opens dashboard when ready  
+
+**Configuration**: Edit `BASE_DIR` in the script if your repo is elsewhere.
+
