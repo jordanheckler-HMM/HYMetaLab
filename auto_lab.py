@@ -120,7 +120,9 @@ def update_kb(kb, hypo_text, success):
 
 def main(cycles=1):
     kb = load_kb()
+    print(f"🔁 Autopilot cycles: {cycles}")
     for i in range(cycles):
+        print(f"\n— Cycle {i+1}/{cycles} —")
         cands = propose(kb)
         choice = choose(kb, cands)
 
