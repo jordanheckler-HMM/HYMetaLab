@@ -250,8 +250,47 @@ git commit -m "results: experiment XYZ completed"
 
 ---
 
+## 🚀 AutoLab Autopilot (New!)
+
+### One-Click Autonomous Experimentation
+
+**macOS Desktop Launcher**:
+```bash
+# Double-click on Desktop:
+HYMetaLab_AutoStart.command
+```
+
+This runs 5 autonomous experiment cycles:
+- Selects hypotheses via UCB algorithm
+- Pre-validates with Guardian
+- Executes via lab_techs_runner.py
+- Learns from outcomes
+- Shows results when complete
+
+**Manual Usage**:
+```bash
+# Single cycle
+python3 auto_lab.py
+
+# 10 cycles
+python3 auto_lab.py 10
+
+# Background (long session)
+nohup python3 auto_lab.py 50 > autolab_log.txt 2>&1 &
+tail -f autolab_log.txt
+```
+
+**Check Learning Progress**:
+```bash
+cat autolab/knowledge.json | python3 -m json.tool
+```
+
+See `AUTOLAB_README.md` and `DESKTOP_LAUNCHERS.md` for full documentation.
+
+---
+
 *"Integrity → Resilience → Meaning"*  
-*HYMetaLab Lab Techs v2.0*
+*HYMetaLab Lab Techs v4.1 + AutoLab Lite*
 
 ---
 
