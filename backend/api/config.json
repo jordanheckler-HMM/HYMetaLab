@@ -1,0 +1,22 @@
+{
+  "api_version": "1.0",
+  "deployment_timestamp": "2025-10-21T16:03:40.392264",
+  "module": "metrics_api",
+  "parameters": {
+    "Guardian": true,
+    "TruthLens": true,
+    "CCI": true
+  },
+  "endpoints": [
+    "/api/metrics",
+    "/api/metrics/guardian",
+    "/api/metrics/truthlens",
+    "/api/metrics/cci",
+    "/api/health"
+  ],
+  "cors_enabled": true,
+  "rate_limiting": {
+    "enabled": false,
+    "requests_per_minute": 60
+  }
+}

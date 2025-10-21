@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_updated": "2025-10-15T08:41:22.268040",
+  "last_updated": "2025-10-21T16:03:29.136066",
   "entries": [
     {
       "phase": "Phase 4 \u2014 Open Data Integration",
@@ -26,5 +26,33 @@
       "visibility": "public",
       "replication_status": "pending"
     }
-  ]
+  ],
+  "metrics": {
+    "guardian_metrics": {
+      "current_score": 89.96377625048652,
+      "compliance_rate": 100.0,
+      "threshold_met": false,
+      "last_updated": "2025-10-21T16:03:29.135857"
+    },
+    "cci_metrics": {
+      "current_cci": 0.9464950746180201,
+      "baseline_cci": 0.85,
+      "delta_cci": 0.0964950746180201,
+      "variance_flag": true,
+      "last_updated": "2025-10-21T16:03:29.135869"
+    },
+    "truthlens_metrics": {
+      "current_score": 0.9680613482155505,
+      "validation_status": "PASSED",
+      "threshold_met": true,
+      "last_updated": "2025-10-21T16:03:29.135871"
+    },
+    "qc_metrics": {
+      "verdict": 97.0,
+      "status": "PASSED",
+      "threshold_met": true,
+      "last_updated": "2025-10-21T16:03:29.135872"
+    }
+  },
+  "highlighted_metric": "delta_cci"
 }

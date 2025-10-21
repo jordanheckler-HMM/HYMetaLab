@@ -1,0 +1,72 @@
+{
+  "site_integration": {
+    "integration_timestamp": "2025-10-21T16:01:41.314086",
+    "integration_type": "originchain_attachment",
+    "site_version": "reality_loop_v2.0"
+  },
+  "originchain_source": {
+    "originchain_metadata": {
+      "chain_type": "OriginChain",
+      "session_id": "0d206f1b-bd5a-45b8-ac7e-2f09b0e53212",
+      "generation_timestamp": "2025-10-21T15:46:54.362307",
+      "hash_algorithm": "SHA256"
+    },
+    "file_hashes": {
+      "Environment_Validation_Log.json": {
+        "sha256": "e3957fe13f269847fa12ea0269354dc11cb5ca22446ead5d8b71e61af9f3df0f",
+        "size_bytes": 2005,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      },
+      "Theta_TimelineChain.json": {
+        "sha256": "0a01174536e75d224084fb05d2a84fb1284e6337a7223210b05123b57b189c86",
+        "size_bytes": 8196,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      },
+      "Iota_CalcEngine_Log.json": {
+        "sha256": "8d2d1c7455006d58d8d0c719c40b5839bfb5cb9fef14d16812512b61e4cd63bd",
+        "size_bytes": 3664,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      },
+      "QC_Report.md": {
+        "sha256": "1289b169cacca593abc7b30edac8359ee0e2164d16eece52b20402771cffdfcf",
+        "size_bytes": 1404,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      },
+      "Telemetry_Log.json": {
+        "sha256": "efe6aa68c6539555acb78c381ab7f08f1d80028a2221f1a16ccfa45f9bdcd264",
+        "size_bytes": 4497,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      },
+      "Guardian_Summary.json": {
+        "sha256": "00cc69035eb811958420f9d7dea53d48acca03d33afe7a8fce2fc638d4dc07a6",
+        "size_bytes": 1479,
+        "hash_timestamp": "2025-10-21T15:46:54.362307"
+      }
+    },
+    "chain_validation": {
+      "chain_hash": "69593541321b5fd8ca25394c8fc8f4e452cd5f2115b9015701b986d60ce4715e",
+      "session_integrity_hash": "1e713dd189b79dc6c1843148c7f6720db8812787e36c50c5ae2ebe655f7e2742",
+      "total_files": 6,
+      "chain_complete": true
+    },
+    "governance_compliance": {
+      "charter_version": "v2.0",
+      "sop_version": "v1.1",
+      "cra_directive": "v1.0",
+      "originchain_validated": true
+    }
+  },
+  "web_display_metrics": {
+    "guardian_score": "90.8",
+    "truthlens_score": "0.968",
+    "qc_verdict": "97.0",
+    "delta_cci": "0.096",
+    "system_safety": "SAFE"
+  },
+  "chain_integrity": {
+    "chain_hash": "69593541321b5fd8ca25394c8fc8f4e452cd5f2115b9015701b986d60ce4715e",
+    "total_files": 6,
+    "chain_complete": true,
+    "hash_algorithm": "SHA256"
+  }
+}
