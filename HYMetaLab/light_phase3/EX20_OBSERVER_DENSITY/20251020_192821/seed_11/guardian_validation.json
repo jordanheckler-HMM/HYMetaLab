@@ -1,0 +1,70 @@
+{
+  "guardian_score": 1.0,
+  "truthlens_score": 1.0,
+  "meaningforge_score": 0.9660000000000001,
+  "validation_input": {
+    "experiment_id": "EX20_OBSERVER_DENSITY",
+    "seed": 11,
+    "timestamp": "2025-10-20T19:28:22.014765",
+    "output_directory": "HYMetaLab/light_phase3/EX20_OBSERVER_DENSITY/20251020_192821/seed_11",
+    "results": {
+      "observer_density_data": [
+        {
+          "observer_density": 0.0,
+          "mean_visibility": 1.000615335198191,
+          "std_visibility": 0.02830176171034485,
+          "n_pulses": 100,
+          "decoherence_factor": -0.0006153351981910138
+        },
+        {
+          "observer_density": 0.25,
+          "mean_visibility": 0.6093911881436127,
+          "std_visibility": 0.029839202555009978,
+          "n_pulses": 100,
+          "decoherence_factor": 0.3906088118563873
+        },
+        {
+          "observer_density": 0.5,
+          "mean_visibility": 0.36513850554521776,
+          "std_visibility": 0.02687536254572717,
+          "n_pulses": 100,
+          "decoherence_factor": 0.6348614944547822
+        },
+        {
+          "observer_density": 0.75,
+          "mean_visibility": 0.22547336354711336,
+          "std_visibility": 0.029083311075165822,
+          "n_pulses": 100,
+          "decoherence_factor": 0.7745266364528867
+        },
+        {
+          "observer_density": 1.0,
+          "mean_visibility": 0.1341077988982197,
+          "std_visibility": 0.028041649443048135,
+          "n_pulses": 100,
+          "decoherence_factor": 0.8658922011017803
+        }
+      ],
+      "fit_v0": 1.001224486084434,
+      "fit_alpha": 2.0010456433783546,
+      "fit_v0_error": 0.00250710611855542,
+      "fit_alpha_error": 0.009778117903994563,
+      "rho_critical": 0.3463924887738736,
+      "fit_quality": "good",
+      "max_visibility": 1.000615335198191,
+      "min_visibility": 0.1341077988982197,
+      "visibility_range": 0.8665075362999713,
+      "monotonic_decrease": true,
+      "pass_observer_density_test": true,
+      "decoherence_strength": 0.8659746716037916
+    },
+    "raw_data_count": 5,
+    "has_plots": true,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "quantum_bonus": 0.55,
+  "passes_guardian_threshold": true,
+  "passes_truthlens_threshold": true,
+  "passes_meaningforge_threshold": true
+}

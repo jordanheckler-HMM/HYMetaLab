@@ -1,0 +1,3 @@
+constant,method,estimated_value,target_value,relative_error,calibration_factor,within_tolerance
+speed_of_light,EX01_wavefront,298743086.15826905,299792458.0,0.003500327689134035,1.0035126230207552,False
+planck_constant,simulation_default,6.623349021807109e-34,6.62607015e-34,0.0004106699946258516,1.0004108387137582,True

@@ -1,0 +1,7 @@
+{
+  "experiment_id": "EX11_SHAPIRO",
+  "harm_score": 0.0,
+  "safety_score": 1.0,
+  "physics_validation": true,
+  "methodology": "FDTD_simulation"
+}

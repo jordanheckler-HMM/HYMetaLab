@@ -1,0 +1,4 @@
+snr_db,snr_linear,pattern_correlation,coherence_factor,meaning_resonance_index,original_message,received_message,bit_error_rate,pattern_length
+10,10.0,-0.210818510677892,0.9090909090909091,0.6519297802863642,HELLO,??;??,0.575,40
+20,100.0,0.25,0.9900990099009901,0.7335012869801236,HELLO,?????,0.4,40
+40,10000.0,0.08206099398622181,0.9999000099990001,0.5804656335871119,HELLO,?????,0.45,40

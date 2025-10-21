@@ -1,0 +1,63 @@
+{
+  "guardian_score": 1.0,
+  "truthlens_score": 1.0,
+  "meaningforge_score": 0.9,
+  "validation_input": {
+    "experiment_id": "EX13_PHOTOELECTRIC",
+    "seed": 11,
+    "timestamp": "2025-10-20T19:12:34.019716",
+    "output_directory": "HYMetaLab/light_phase2/EX13_PHOTOELECTRIC/20251020_191233/seed_11",
+    "results": {
+      "photoelectric_data": [
+        {
+          "frequency_hz": 400000000000000.0,
+          "photon_energy_ev": 1.6542670787695435,
+          "kinetic_energy_ev": 0.0,
+          "count_rate_per_s": 0.0,
+          "above_threshold": false
+        },
+        {
+          "frequency_hz": 600000000000000.0,
+          "photon_energy_ev": 2.481400618154315,
+          "kinetic_energy_ev": 0.0,
+          "count_rate_per_s": 0.0,
+          "above_threshold": false
+        },
+        {
+          "frequency_hz": 800000000000000.0,
+          "photon_energy_ev": 3.308534157539087,
+          "kinetic_energy_ev": 0.8085341575390871,
+          "count_rate_per_s": 1.8864877245526896e+30,
+          "above_threshold": true
+        },
+        {
+          "frequency_hz": 1000000000000000.0,
+          "photon_energy_ev": 4.135667696923859,
+          "kinetic_energy_ev": 1.635667696923859,
+          "count_rate_per_s": 1.5091901796421515e+30,
+          "above_threshold": true
+        }
+      ],
+      "h_estimated_js": 6.62607015000001e-34,
+      "h_theoretical_js": 6.62607015e-34,
+      "h_error_percent": 1.548944737138654e-13,
+      "work_function_fit_ev": 2.500000000000006,
+      "work_function_error_percent": 2.4868995751603507e-13,
+      "threshold_freq_fit_hz": 604497310521230.0,
+      "linear_fit_slope": 4.135667696923865e-15,
+      "linear_fit_intercept": -2.500000000000006,
+      "total_electron_rate": 3.395677904194841e+30,
+      "threshold_violations": 0,
+      "physics_consistent": true,
+      "pass_photoelectric_test": true
+    },
+    "raw_data_count": 4,
+    "has_plots": true,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "physics_bonus": 0.45,
+  "passes_guardian_threshold": true,
+  "passes_truthlens_threshold": true,
+  "passes_meaningforge_threshold": true
+}

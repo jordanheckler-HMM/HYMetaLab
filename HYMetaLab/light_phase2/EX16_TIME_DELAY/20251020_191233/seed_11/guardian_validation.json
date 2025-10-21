@@ -1,0 +1,64 @@
+{
+  "guardian_score": 1.0,
+  "truthlens_score": 0.95,
+  "meaningforge_score": 0.9500000000000001,
+  "validation_input": {
+    "experiment_id": "EX16_TIME_DELAY",
+    "seed": 11,
+    "timestamp": "2025-10-20T19:12:35.362763",
+    "output_directory": "HYMetaLab/light_phase2/EX16_TIME_DELAY/20251020_191233/seed_11",
+    "results": {
+      "timedelay_data": [
+        {
+          "impact_parameter_m": 0.5,
+          "time_delay_s": 1.9985374505678798e-09,
+          "relative_delay": 0.029919946148638913,
+          "t_vacuum_s": 6.67961580090877e-08,
+          "effective_mass_kg": 6.732954607500544e+25,
+          "log_term": 2.995732273553991
+        },
+        {
+          "impact_parameter_m": 1.0,
+          "time_delay_s": 1.5361194263226236e-09,
+          "relative_delay": 0.02291157801152202,
+          "t_vacuum_s": 6.704555336826312e-08,
+          "effective_mass_kg": 6.732954607500546e+25,
+          "log_term": 2.302585092994046
+        },
+        {
+          "impact_parameter_m": 1.5,
+          "time_delay_s": 1.265622222481582e-09,
+          "relative_delay": 0.018761309188066035,
+          "t_vacuum_s": 6.745916341950365e-08,
+          "effective_mass_kg": 6.732954607500546e+25,
+          "log_term": 1.8971199848858813
+        },
+        {
+          "impact_parameter_m": 2.0,
+          "time_delay_s": 1.0737014020773667e-09,
+          "relative_delay": 0.01578183715657214,
+          "t_vacuum_s": 6.803399321797194e-08,
+          "effective_mass_kg": 6.732954607500545e+25,
+          "log_term": 1.6094379124341003
+        }
+      ],
+      "shapiro_fit_slope": 6.671281903963041e-10,
+      "shapiro_fit_intercept": 1.5361194263226232e-09,
+      "mass_parameter_kg": 6.732954607500546e+25,
+      "mass_parameter_solar": 3.385095328054573e-05,
+      "max_time_delay_s": 1.9985374505678798e-09,
+      "min_time_delay_s": 1.0737014020773667e-09,
+      "delay_range_s": 9.248360484905131e-10,
+      "monotonic_behavior": true,
+      "pass_shapiro_test": true
+    },
+    "raw_data_count": 4,
+    "has_plots": true,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "physics_bonus": 0.45,
+  "passes_guardian_threshold": true,
+  "passes_truthlens_threshold": true,
+  "passes_meaningforge_threshold": true
+}

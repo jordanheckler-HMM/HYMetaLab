@@ -1,0 +1,63 @@
+{
+  "guardian_score": 0.45,
+  "truthlens_score": 0.472,
+  "meaningforge_score": 0.47400000000000003,
+  "validation_input": {
+    "experiment_id": "EX21_MEANING_RESONANCE",
+    "seed": 23,
+    "timestamp": "2025-10-20T19:26:19.639378",
+    "output_directory": "HYMetaLab/light_phase3/EX21_MEANING_RESONANCE/20251020_192618/seed_23",
+    "results": {
+      "meaning_resonance_data": [
+        {
+          "snr_db": 10,
+          "snr_linear": 10.0,
+          "pattern_correlation": 0.12309149097933278,
+          "coherence_factor": 0.9090909090909091,
+          "meaning_resonance_index": 0.11190135543575706,
+          "original_message": "HELLO",
+          "received_message": "o?t(v",
+          "bit_error_rate": 0.45,
+          "pattern_length": 40
+        },
+        {
+          "snr_db": 20,
+          "snr_linear": 100.0,
+          "pattern_correlation": -0.04166666666666664,
+          "coherence_factor": 0.9900990099009901,
+          "meaning_resonance_index": 0.041254125412541226,
+          "original_message": "HELLO",
+          "received_message": "E?)??",
+          "bit_error_rate": 0.5,
+          "pattern_length": 40
+        },
+        {
+          "snr_db": 40,
+          "snr_linear": 10000.0,
+          "pattern_correlation": 0.10206207261596573,
+          "coherence_factor": 0.9999000099990001,
+          "meaning_resonance_index": 0.1020518674292228,
+          "original_message": "HELLO",
+          "received_message": "???qj",
+          "bit_error_rate": 0.45,
+          "pattern_length": 40
+        }
+      ],
+      "max_mri": 0.11190135543575706,
+      "mean_pattern_correlation": 0.06116229897621062,
+      "perfect_recoveries": 0,
+      "message_recovery_rate": 0.0,
+      "monotonic_mri": false,
+      "pass_meaning_resonance_test": false,
+      "meaning_preservation_efficiency": 0.11190135543575706
+    },
+    "raw_data_count": 3,
+    "has_plots": true,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "quantum_bonus": 0.0,
+  "passes_guardian_threshold": false,
+  "passes_truthlens_threshold": false,
+  "passes_meaningforge_threshold": false
+}

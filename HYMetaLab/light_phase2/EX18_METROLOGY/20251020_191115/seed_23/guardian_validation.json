@@ -1,0 +1,49 @@
+{
+  "guardian_score": 0.55,
+  "truthlens_score": 0.5225,
+  "meaningforge_score": 0.5950000000000001,
+  "validation_input": {
+    "experiment_id": "EX18_METROLOGY",
+    "seed": 23,
+    "timestamp": "2025-10-20T19:11:18.053300",
+    "output_directory": "HYMetaLab/light_phase2/EX18_METROLOGY/20251020_191115/seed_23",
+    "results": {
+      "calibration_data": [
+        {
+          "constant": "speed_of_light",
+          "method": "EX01_wavefront",
+          "estimated_value": 298743086.15826905,
+          "target_value": 299792458.0,
+          "relative_error": 0.003500327689134035,
+          "calibration_factor": 1.0035126230207552,
+          "within_tolerance": false
+        },
+        {
+          "constant": "planck_constant",
+          "method": "simulation_default",
+          "estimated_value": 6.6e-34,
+          "target_value": 6.62607015e-34,
+          "relative_error": 0.003934481436179812,
+          "calibration_factor": 1.0039500227272729,
+          "within_tolerance": false
+        }
+      ],
+      "all_within_tolerance": false,
+      "max_relative_error": 0.003934481436179812,
+      "mean_relative_error": 0.0037174045626569233,
+      "successful_calibrations": 0,
+      "total_calibrations": 2,
+      "calibration_success_rate": 0.0,
+      "pass_metrology_test": false
+    },
+    "raw_data_count": 2,
+    "has_plots": false,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "physics_tests_passed": 0,
+  "physics_tests_total": 6,
+  "passes_guardian_threshold": false,
+  "passes_truthlens_threshold": false,
+  "passes_meaningforge_threshold": false
+}

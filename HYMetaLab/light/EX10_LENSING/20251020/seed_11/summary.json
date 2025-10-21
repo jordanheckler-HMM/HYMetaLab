@@ -1,0 +1,17 @@
+{
+  "lensing_data": [
+    {
+      "alpha": 0.0,
+      "deflection_angle_rad": 0.0
+    },
+    {
+      "alpha": 0.1,
+      "deflection_angle_rad": 0.010000000000000002
+    },
+    {
+      "alpha": 0.2,
+      "deflection_angle_rad": 0.020000000000000004
+    }
+  ],
+  "pass_lensing_test": true
+}

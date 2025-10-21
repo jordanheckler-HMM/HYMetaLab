@@ -1,0 +1,3329 @@
+{
+  "guardian_score": 1.0,
+  "truthlens_score": 1.0,
+  "meaningforge_score": 1.0,
+  "validation_input": {
+    "experiment_id": "EX19_ENTANGLEMENT",
+    "seed": 11,
+    "timestamp": "2025-10-20T19:29:40.943925",
+    "output_directory": "HYMetaLab/light_phase3/EX19_ENTANGLEMENT/20251020_192940/seed_11",
+    "results": {
+      "entanglement_data": [
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9955794851843018,
+          "correlation_std": 0.029749864782606487,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9861632941827568,
+          "correlation_std": 0.028236241481904737,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.940487620490636,
+          "correlation_std": 0.0281764241941343,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8627300551568328,
+          "correlation_std": 0.03015757952759909,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7658776379456924,
+          "correlation_std": 0.02863126507569335,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.641016174574283,
+          "correlation_std": 0.029205253092451488,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.4993049871567101,
+          "correlation_std": 0.02871938486224804,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34723323035513715,
+          "correlation_std": 0.028402957997963833,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.16868757929688594,
+          "correlation_std": 0.028127966863630102,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.0013008440589790968,
+          "correlation_std": 0.029010935383447522,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.1749232769473058,
+          "correlation_std": 0.027988639355652867,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.3427311178678788,
+          "correlation_std": 0.026309678953606364,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.5038654838460139,
+          "correlation_std": 0.02841163270886121,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6442087374504106,
+          "correlation_std": 0.03126123855699891,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -70.0,
+          "correlation": 0.768627132665075,
+          "correlation_std": 0.02861670880330491,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -75.0,
+          "correlation": 0.8596581344512504,
+          "correlation_std": 0.027335623110591206,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -80.0,
+          "correlation": 0.9371619615119066,
+          "correlation_std": 0.02989842903598931,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -85.0,
+          "correlation": 0.9816933976937031,
+          "correlation_std": 0.02963207167207795,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 0.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -90.0,
+          "correlation": 0.9972382083094256,
+          "correlation_std": 0.030077100638787026,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9791208903619879,
+          "correlation_std": 0.02720637122758564,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9963934420399968,
+          "correlation_std": 0.030164177386851287,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9876327827109683,
+          "correlation_std": 0.02902736896213121,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9421208469795646,
+          "correlation_std": 0.029620806173660454,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8618160098058694,
+          "correlation_std": 0.028889360070411995,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7695729205285311,
+          "correlation_std": 0.028874240508717352,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6467852649542597,
+          "correlation_std": 0.02689942152350399,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.4943607246244464,
+          "correlation_std": 0.027730489303554907,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.3421317603395683,
+          "correlation_std": 0.02826737984410669,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17170692453234246,
+          "correlation_std": 0.029073957190468708,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.0038868720126522954,
+          "correlation_std": 0.02935484190153408,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.1740712260256878,
+          "correlation_std": 0.028797476893471875,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.33999617299809615,
+          "correlation_std": 0.027005331229918907,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.5042015900234152,
+          "correlation_std": 0.028457029059414544,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6421249731716678,
+          "correlation_std": 0.027940175213046425,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -70.0,
+          "correlation": 0.7595704480723312,
+          "correlation_std": 0.029042474973476885,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -75.0,
+          "correlation": 0.8694238420945544,
+          "correlation_std": 0.02879227945835426,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -80.0,
+          "correlation": 0.9348591106443442,
+          "correlation_std": 0.027202863818529616,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 5.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -85.0,
+          "correlation": 0.983534936395463,
+          "correlation_std": 0.02919196051245231,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9446625308013012,
+          "correlation_std": 0.030812163892222817,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9840195785615269,
+          "correlation_std": 0.028168452779835162,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0015666478737983,
+          "correlation_std": 0.029631859223927807,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9863628520853838,
+          "correlation_std": 0.02719698105569848,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9439126133290743,
+          "correlation_std": 0.02922820531740501,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8677300451503173,
+          "correlation_std": 0.029008492764628052,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7688485659522677,
+          "correlation_std": 0.030552447007975804,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6425610336184997,
+          "correlation_std": 0.02801560872293645,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.49757506293017906,
+          "correlation_std": 0.03053754168485101,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.3399819140082776,
+          "correlation_std": 0.027882072047074755,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17348565182639394,
+          "correlation_std": 0.030645657345125754,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.001846530795284813,
+          "correlation_std": 0.03038396573267786,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.17366104787234146,
+          "correlation_std": 0.027387274397811894,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.3412449440527245,
+          "correlation_std": 0.028904553156174836,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.5029520845789552,
+          "correlation_std": 0.031723565911181896,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6426183298494204,
+          "correlation_std": 0.029648085046509582,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -70.0,
+          "correlation": 0.7657050610916412,
+          "correlation_std": 0.030332587314686386,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -75.0,
+          "correlation": 0.861332974550299,
+          "correlation_std": 0.028105198383163357,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 10.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -80.0,
+          "correlation": 0.9416512257272006,
+          "correlation_std": 0.029807201299796998,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8675717180973369,
+          "correlation_std": 0.028737495626422083,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9435897395556085,
+          "correlation_std": 0.0279189215839562,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9865253396938064,
+          "correlation_std": 0.033257482354896235,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9969534697588648,
+          "correlation_std": 0.029421535278285928,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9791725096130997,
+          "correlation_std": 0.030287709552565014,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9389687622402683,
+          "correlation_std": 0.02847513585041035,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8579878497137895,
+          "correlation_std": 0.027202989936560975,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7649776657383817,
+          "correlation_std": 0.02916838592530979,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6482795378228435,
+          "correlation_std": 0.027969603492087516,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.49821296292095285,
+          "correlation_std": 0.0302220477520814,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.3417863175722916,
+          "correlation_std": 0.028191051671162672,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.174630578055789,
+          "correlation_std": 0.02973013836285616,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -45.0,
+          "correlation": 0.002437297862105378,
+          "correlation_std": 0.026410719332375862,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.17320588205293624,
+          "correlation_std": 0.028499878128023428,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.34601038895238545,
+          "correlation_std": 0.028463458548339655,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.4961627499988389,
+          "correlation_std": 0.028777087614923456,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6437816291849476,
+          "correlation_std": 0.02882448200942628,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -70.0,
+          "correlation": 0.766411406292062,
+          "correlation_std": 0.026073606011922577,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 15.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -75.0,
+          "correlation": 0.8636917324962029,
+          "correlation_std": 0.027774462438859792,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.765783712509104,
+          "correlation_std": 0.029591446963444543,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8625962478364364,
+          "correlation_std": 0.026716876865305963,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9401781691096204,
+          "correlation_std": 0.028595986006885732,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9801332642496111,
+          "correlation_std": 0.02964991285951554,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9936529346961261,
+          "correlation_std": 0.02889037370718445,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9859604591118388,
+          "correlation_std": 0.03102628329667751,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9412282529760663,
+          "correlation_std": 0.02998885518893315,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.867185472111688,
+          "correlation_std": 0.02797279722423431,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7632147703381598,
+          "correlation_std": 0.028147615075945532,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6461110039306902,
+          "correlation_std": 0.02998651868138061,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.49998784814285707,
+          "correlation_std": 0.028706701885939892,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34119609610028767,
+          "correlation_std": 0.027146622030500226,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17519217500791157,
+          "correlation_std": 0.02687227966976243,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -45.0,
+          "correlation": 0.0017629757546420476,
+          "correlation_std": 0.02873162698826649,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.1688296474698332,
+          "correlation_std": 0.0298985091156391,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.3355297540883258,
+          "correlation_std": 0.028703517953620417,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.502658580589941,
+          "correlation_std": 0.030929308197382183,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6434003237808247,
+          "correlation_std": 0.030035966759319428,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 20.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -70.0,
+          "correlation": 0.7653254595524327,
+          "correlation_std": 0.026732782345499095,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6446896291389248,
+          "correlation_std": 0.02787769144276341,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7657366038271245,
+          "correlation_std": 0.029418877792238902,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8671096835626547,
+          "correlation_std": 0.02914034280739484,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.934076200518665,
+          "correlation_std": 0.02951497167304076,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9826882806264916,
+          "correlation_std": 0.030520559496128728,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9961557754961748,
+          "correlation_std": 0.029241061225155084,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9857829109712651,
+          "correlation_std": 0.029560744029565576,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9374731128366405,
+          "correlation_std": 0.030393295408044432,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8640655349564693,
+          "correlation_std": 0.026908936036249564,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7682117663581443,
+          "correlation_std": 0.028698768643222017,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6434544938937595,
+          "correlation_std": 0.0281267939340189,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5007498032320938,
+          "correlation_std": 0.028607362899392107,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34130419508383125,
+          "correlation_std": 0.027410660279142574,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17190889899887263,
+          "correlation_std": 0.028769826235867643,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.000739592103257884,
+          "correlation_std": 0.029254498975431684,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.16817650878888057,
+          "correlation_std": 0.027559409834916563,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.34520667975251734,
+          "correlation_std": 0.029535679079619796,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.5000440146517656,
+          "correlation_std": 0.02894328272349187,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 25.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -65.0,
+          "correlation": 0.6425083748415144,
+          "correlation_std": 0.030306374984566363,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5029333131946759,
+          "correlation_std": 0.02591773791497759,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6430406701130389,
+          "correlation_std": 0.030778780107840988,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7678051536058775,
+          "correlation_std": 0.02859942019390932,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8621568471272392,
+          "correlation_std": 0.028185855612565456,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9372100321182486,
+          "correlation_std": 0.027153635073879297,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9844383483917993,
+          "correlation_std": 0.03029165407211207,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0014696751495025,
+          "correlation_std": 0.027496692056970584,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9872020424767262,
+          "correlation_std": 0.030657202723222816,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9408432094429792,
+          "correlation_std": 0.028649548682825373,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8674717886069339,
+          "correlation_std": 0.02852876473703071,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7686763794537237,
+          "correlation_std": 0.028690527915356707,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6435359075112597,
+          "correlation_std": 0.028833498795365366,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.49527123922343214,
+          "correlation_std": 0.028811705707010946,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34448179288539676,
+          "correlation_std": 0.02841906109151541,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.1725076259625829,
+          "correlation_std": 0.02989323452541421,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.004415289240163302,
+          "correlation_std": 0.030355007105256036,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.17405250571253705,
+          "correlation_std": 0.028605170717102155,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.3433586755792394,
+          "correlation_std": 0.02820405197087093,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 30.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -60.0,
+          "correlation": 0.5023252319432392,
+          "correlation_std": 0.028500951434003677,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3425027159019832,
+          "correlation_std": 0.02745688903321193,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5039549094409168,
+          "correlation_std": 0.02816526806089647,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6394947337460455,
+          "correlation_std": 0.025724495632474097,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7734517425298685,
+          "correlation_std": 0.03082645018501235,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8608600549762923,
+          "correlation_std": 0.02940710878359397,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9379362094978181,
+          "correlation_std": 0.027311752178351374,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9897068476172514,
+          "correlation_std": 0.02743349883310839,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9971883508272232,
+          "correlation_std": 0.0295383705422633,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9851997450305369,
+          "correlation_std": 0.02686869031738551,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9371045578838022,
+          "correlation_std": 0.030100516944993497,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8623230561580877,
+          "correlation_std": 0.027792904199778895,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7619460021143594,
+          "correlation_std": 0.027758061713642593,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6430773905040996,
+          "correlation_std": 0.03001241454181754,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5010227351084848,
+          "correlation_std": 0.03039599513133463,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.3413104825522824,
+          "correlation_std": 0.02812733128797051,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17015210741241707,
+          "correlation_std": 0.027429790900275454,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -45.0,
+          "correlation": -0.0024572447196394695,
+          "correlation_std": 0.028009371727950223,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.1705755007320257,
+          "correlation_std": 0.030944109696484992,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 35.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -55.0,
+          "correlation": 0.3447210717906381,
+          "correlation_std": 0.02732710462886123,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17204089307718,
+          "correlation_std": 0.027096323077617054,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3449791868666639,
+          "correlation_std": 0.02955450616491212,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5019754865503174,
+          "correlation_std": 0.028249354041891078,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6405832060572506,
+          "correlation_std": 0.02767141206111073,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.769121830416999,
+          "correlation_std": 0.02858421711943448,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8730020930016891,
+          "correlation_std": 0.028825477077808408,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9394842742931426,
+          "correlation_std": 0.027400587874341773,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9835992060387013,
+          "correlation_std": 0.028033709130368095,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0022607480635584,
+          "correlation_std": 0.0277962737436831,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9791484258436026,
+          "correlation_std": 0.026312560037998894,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9372630393179995,
+          "correlation_std": 0.028255976136467846,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8694824147495198,
+          "correlation_std": 0.029576458579022417,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7734869318784058,
+          "correlation_std": 0.030268324503505233,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6445388375507412,
+          "correlation_std": 0.028223016898076034,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.49820416120104416,
+          "correlation_std": 0.02685703966057604,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34271707938728674,
+          "correlation_std": 0.030218757725593324,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17258036136095542,
+          "correlation_std": 0.030273354498648087,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -45.0,
+          "correlation": 0.0005044682636390596,
+          "correlation_std": 0.029703903887054153,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 40.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -50.0,
+          "correlation": 0.17221844139714232,
+          "correlation_std": 0.029586036705294555,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 45.0,
+          "correlation": -0.0021764133034357933,
+          "correlation_std": 0.028516145694633333,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17091280279700027,
+          "correlation_std": 0.02904837430129374,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.34464714253532314,
+          "correlation_std": 0.027815086818877448,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.49617735658458156,
+          "correlation_std": 0.028520180605117438,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.640268853392211,
+          "correlation_std": 0.03034567118481171,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7621903866126155,
+          "correlation_std": 0.030916240113487613,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8651737293260247,
+          "correlation_std": 0.028638337528396875,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9364634670253311,
+          "correlation_std": 0.028483012452879507,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9869076152945739,
+          "correlation_std": 0.028632256208516893,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0007350992073132,
+          "correlation_std": 0.025533711218471578,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9876119661824903,
+          "correlation_std": 0.029514106931046447,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9405085391612963,
+          "correlation_std": 0.03027771138934613,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8670666630232572,
+          "correlation_std": 0.02928531487982294,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7641960063569445,
+          "correlation_std": 0.027617230445422872,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6459577005342623,
+          "correlation_std": 0.029984230779256153,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5011890071731442,
+          "correlation_std": 0.028069485322526826,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34213286715698443,
+          "correlation_std": 0.029103396757460383,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17266543311961832,
+          "correlation_std": 0.029438510609163915,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 45.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -45.0,
+          "correlation": 0.0008981145354820451,
+          "correlation_std": 0.027274759995161477,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.1813587347517151,
+          "correlation_std": 0.027803306047360362,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 45.0,
+          "correlation": 0.003938984789006423,
+          "correlation_std": 0.02849201484371936,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17551529905280852,
+          "correlation_std": 0.026992497339776204,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3431065282304363,
+          "correlation_std": 0.026267392809574498,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.4974080393548579,
+          "correlation_std": 0.030309018545000142,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6355981326585105,
+          "correlation_std": 0.030113953713897752,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7668853127988398,
+          "correlation_std": 0.02678047734719369,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8676247360948426,
+          "correlation_std": 0.028294043686449496,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9412836339574695,
+          "correlation_std": 0.02824202661378156,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9789355807805827,
+          "correlation_std": 0.026883740607926015,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9978406191848876,
+          "correlation_std": 0.02720991541185927,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9829676904709808,
+          "correlation_std": 0.028640450143443786,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9474499827238496,
+          "correlation_std": 0.027959987881725625,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8678335967998035,
+          "correlation_std": 0.02981453870578986,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7678443805599952,
+          "correlation_std": 0.030066519171104075,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6418423085061647,
+          "correlation_std": 0.030268149931916444,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5045506257191729,
+          "correlation_std": 0.03055335012754763,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.34070802279928,
+          "correlation_std": 0.027662531258828105,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 50.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -40.0,
+          "correlation": -0.17445513140421956,
+          "correlation_std": 0.026519443818819263,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.33961484320256585,
+          "correlation_std": 0.02683182280903594,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17202213754182835,
+          "correlation_std": 0.0298613057656139,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 45.0,
+          "correlation": 0.0016411238756817148,
+          "correlation_std": 0.029553858933741867,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17472057183832174,
+          "correlation_std": 0.028283123872006048,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.33683984448790405,
+          "correlation_std": 0.026712419476312043,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5038417333972187,
+          "correlation_std": 0.02894557240330624,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.640175081732781,
+          "correlation_std": 0.029743081072521767,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7704351550382472,
+          "correlation_std": 0.027539519923762638,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8649188644512131,
+          "correlation_std": 0.02884947834653399,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9349928847145688,
+          "correlation_std": 0.0267004879995409,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9888755104798215,
+          "correlation_std": 0.028285300186813953,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9987242900833295,
+          "correlation_std": 0.028132668374611966,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9828238255774892,
+          "correlation_std": 0.027831060656288594,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9402842862867133,
+          "correlation_std": 0.028499876089444463,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8701077279810582,
+          "correlation_std": 0.027626556021166884,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7652163324120624,
+          "correlation_std": 0.02777404859070904,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.643693718838784,
+          "correlation_std": 0.027214578941096138,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5030465031940046,
+          "correlation_std": 0.029447243292378644,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 55.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -35.0,
+          "correlation": -0.33878897211261966,
+          "correlation_std": 0.027015878964124867,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.4995148838413293,
+          "correlation_std": 0.028657893567303184,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.34208200405832456,
+          "correlation_std": 0.028512611674717917,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.1731906413475151,
+          "correlation_std": 0.02994436295550786,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 45.0,
+          "correlation": -0.0014643144110714737,
+          "correlation_std": 0.02782728403195125,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.1701465844093961,
+          "correlation_std": 0.028496637888190637,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3384092449821828,
+          "correlation_std": 0.02955927741485432,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5005075441913988,
+          "correlation_std": 0.030567415444060053,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6459451587910019,
+          "correlation_std": 0.03155541004276908,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7662164633773021,
+          "correlation_std": 0.030609281109682494,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8644632373029502,
+          "correlation_std": 0.028615864554896685,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9416480425181943,
+          "correlation_std": 0.029858380627018923,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9832489318922641,
+          "correlation_std": 0.028358585466572047,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.998124020131136,
+          "correlation_std": 0.028114369555803213,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9842883352389201,
+          "correlation_std": 0.028837238458292863,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.941589957711265,
+          "correlation_std": 0.029226937420489176,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8677753040244339,
+          "correlation_std": 0.02836693105280181,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7636916048047331,
+          "correlation_std": 0.02989635533387534,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6442899962590789,
+          "correlation_std": 0.02599913309256001,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 60.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -30.0,
+          "correlation": -0.5044389172429016,
+          "correlation_std": 0.02944589892240987,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6467834833764192,
+          "correlation_std": 0.026611374552854887,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.5015123543240325,
+          "correlation_std": 0.02895868828021433,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.3419586119997096,
+          "correlation_std": 0.028062958875830938,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17548158600948405,
+          "correlation_std": 0.02710126238189365,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 45.0,
+          "correlation": 0.003814510700818504,
+          "correlation_std": 0.02785223035829254,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17633381258533748,
+          "correlation_std": 0.029809226361961545,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3423047441743533,
+          "correlation_std": 0.03032986553397811,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.49115222786628115,
+          "correlation_std": 0.02684814777689204,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6453666831932122,
+          "correlation_std": 0.026617007929210058,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7653470031555352,
+          "correlation_std": 0.028984973830009874,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8650164262325937,
+          "correlation_std": 0.02641143496952678,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9473580880973914,
+          "correlation_std": 0.028355114068926168,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9851918015628379,
+          "correlation_std": 0.02933127835545922,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0059132809416593,
+          "correlation_std": 0.03041215613019384,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9845916254678777,
+          "correlation_std": 0.028687608441636897,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9456530513139729,
+          "correlation_std": 0.029493437463022208,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8646681458876282,
+          "correlation_std": 0.029496189613051244,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7610014151544717,
+          "correlation_std": 0.028216459351159656,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 65.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -25.0,
+          "correlation": -0.6408344871784603,
+          "correlation_std": 0.027250851205887317,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 70.0,
+          "correlation": 0.76770567170888,
+          "correlation_std": 0.0273791767248251,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6391996825142526,
+          "correlation_std": 0.02671888919372221,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.5022721907084918,
+          "correlation_std": 0.030295448652216235,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.33765578575492283,
+          "correlation_std": 0.029778836958716186,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17437556727468112,
+          "correlation_std": 0.029874190367849583,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 45.0,
+          "correlation": -0.006424313550615797,
+          "correlation_std": 0.03041981863547975,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17402976858207705,
+          "correlation_std": 0.02821351658481207,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3352507037487257,
+          "correlation_std": 0.028673467075427797,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5017581596519183,
+          "correlation_std": 0.029022606630812936,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6380421624965034,
+          "correlation_std": 0.02992533486491537,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7662781647852064,
+          "correlation_std": 0.027886205059551052,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.868456330564459,
+          "correlation_std": 0.029166524745627496,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.938460546227159,
+          "correlation_std": 0.028332052711972183,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9822466220489854,
+          "correlation_std": 0.028367615490180055,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0050565397821736,
+          "correlation_std": 0.028704215448280185,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9875447951195586,
+          "correlation_std": 0.028326860745099075,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.9374794258769577,
+          "correlation_std": 0.028295771928512882,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8662618700951501,
+          "correlation_std": 0.029653047519438095,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 70.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -20.0,
+          "correlation": -0.7647390244272504,
+          "correlation_std": 0.02990116602139244,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 75.0,
+          "correlation": 0.8676377991921044,
+          "correlation_std": 0.028653406198323586,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 70.0,
+          "correlation": 0.7663563345488863,
+          "correlation_std": 0.0289923321493138,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6447845302607473,
+          "correlation_std": 0.029005996293957774,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.5013601661434499,
+          "correlation_std": 0.02939285133204679,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.34154113065791636,
+          "correlation_std": 0.03035068537251038,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17534402397102342,
+          "correlation_std": 0.029712308821926842,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 45.0,
+          "correlation": -0.004219386573882523,
+          "correlation_std": 0.02905316481963993,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17185380404914688,
+          "correlation_std": 0.029535716945298888,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3409940376978085,
+          "correlation_std": 0.029967295955624487,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.4990544527990773,
+          "correlation_std": 0.02831500915250853,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6468923470737569,
+          "correlation_std": 0.029668748810997337,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7660787904935676,
+          "correlation_std": 0.02820327499132621,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8707184960968298,
+          "correlation_std": 0.028010552597438274,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9371814736784444,
+          "correlation_std": 0.030923659457023918,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9833756463912686,
+          "correlation_std": 0.027701168658517624,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0012477422643642,
+          "correlation_std": 0.029094007328011658,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9887148231241314,
+          "correlation_std": 0.026549175402460372,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.941725323859023,
+          "correlation_std": 0.028914753579329495,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 75.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -15.0,
+          "correlation": -0.8677065742531278,
+          "correlation_std": 0.02928507793098184,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 80.0,
+          "correlation": 0.9408019442352824,
+          "correlation_std": 0.028156308922099152,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 75.0,
+          "correlation": 0.8677984428623275,
+          "correlation_std": 0.029388020189625687,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 70.0,
+          "correlation": 0.7622176198286045,
+          "correlation_std": 0.027807051120657435,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6433571542373155,
+          "correlation_std": 0.030935263780961744,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.5055190382228837,
+          "correlation_std": 0.026178905957737707,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.343669589850961,
+          "correlation_std": 0.027491664365776568,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17319537401484827,
+          "correlation_std": 0.02775383289428814,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 45.0,
+          "correlation": 0.0003615725604848056,
+          "correlation_std": 0.025290123665386105,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17363663156284673,
+          "correlation_std": 0.03131218648515694,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.34235956240761667,
+          "correlation_std": 0.03000073673973126,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5019323861212213,
+          "correlation_std": 0.027939064362860803,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6433194204399885,
+          "correlation_std": 0.02978975213794846,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7690674180508421,
+          "correlation_std": 0.028925482935023256,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8678117711150237,
+          "correlation_std": 0.02840563435343861,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.941216266467038,
+          "correlation_std": 0.031559266687442085,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9832315933758912,
+          "correlation_std": 0.027279803344747014,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -0.9968226917982925,
+          "correlation_std": 0.029262111073393108,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.9805455822114404,
+          "correlation_std": 0.027473457469850797,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 80.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -10.0,
+          "correlation": -0.945690719454541,
+          "correlation_std": 0.03074182461484972,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 85.0,
+          "correlation": 0.9849171778050273,
+          "correlation_std": 0.02897555628510923,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 80.0,
+          "correlation": 0.9368437349079476,
+          "correlation_std": 0.028456305368644113,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 75.0,
+          "correlation": 0.8691301209482135,
+          "correlation_std": 0.030404347120070542,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 70.0,
+          "correlation": 0.7646372459995466,
+          "correlation_std": 0.031075439758766067,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6433955926619492,
+          "correlation_std": 0.02929732341462162,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.49885204622856394,
+          "correlation_std": 0.02963745468216539,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.34119362880890747,
+          "correlation_std": 0.031092666287652625,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17580322236286036,
+          "correlation_std": 0.028613862118914014,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 45.0,
+          "correlation": 0.00220295465403865,
+          "correlation_std": 0.02745586009563946,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.1740491693510074,
+          "correlation_std": 0.028096984501400125,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.34272258820280527,
+          "correlation_std": 0.029750961832800755,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5019393677008005,
+          "correlation_std": 0.02934921483744288,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6462034739542368,
+          "correlation_std": 0.030023411704258554,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7638665889811896,
+          "correlation_std": 0.030728612140287184,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8632437610155254,
+          "correlation_std": 0.0293189752081194,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.941572774068115,
+          "correlation_std": 0.028900794976540065,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.9828171203339998,
+          "correlation_std": 0.03024401505281791,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.000059652847044,
+          "correlation_std": 0.02727947890291618,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 85.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": -5.0,
+          "correlation": -0.982697926380331,
+          "correlation_std": 0.029535815839101268,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 0.0,
+          "theta_diff_deg": 90.0,
+          "correlation": 0.9959234657481595,
+          "correlation_std": 0.027364502222044725,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 5.0,
+          "theta_diff_deg": 85.0,
+          "correlation": 0.9837466007061738,
+          "correlation_std": 0.028752561807818395,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 10.0,
+          "theta_diff_deg": 80.0,
+          "correlation": 0.9421186505412134,
+          "correlation_std": 0.029648726402897254,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 15.0,
+          "theta_diff_deg": 75.0,
+          "correlation": 0.8625459155821379,
+          "correlation_std": 0.029161013673353758,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 20.0,
+          "theta_diff_deg": 70.0,
+          "correlation": 0.7655159440486996,
+          "correlation_std": 0.031032129757292165,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 25.0,
+          "theta_diff_deg": 65.0,
+          "correlation": 0.6445424115446907,
+          "correlation_std": 0.027158867488132146,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 30.0,
+          "theta_diff_deg": 60.0,
+          "correlation": 0.49903275992936824,
+          "correlation_std": 0.03014662215988115,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 35.0,
+          "theta_diff_deg": 55.0,
+          "correlation": 0.34319308472456383,
+          "correlation_std": 0.027813829638797645,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 40.0,
+          "theta_diff_deg": 50.0,
+          "correlation": 0.17130390988074626,
+          "correlation_std": 0.025821565163718318,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 45.0,
+          "theta_diff_deg": 45.0,
+          "correlation": -0.003729622085828538,
+          "correlation_std": 0.031023060919025076,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 50.0,
+          "theta_diff_deg": 40.0,
+          "correlation": -0.17257604350449543,
+          "correlation_std": 0.0295748606577991,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 55.0,
+          "theta_diff_deg": 35.0,
+          "correlation": -0.3377221567683774,
+          "correlation_std": 0.029483182975041843,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 60.0,
+          "theta_diff_deg": 30.0,
+          "correlation": -0.5018697656901061,
+          "correlation_std": 0.028066292692480566,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 65.0,
+          "theta_diff_deg": 25.0,
+          "correlation": -0.6444143265194248,
+          "correlation_std": 0.026473598258468487,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 70.0,
+          "theta_diff_deg": 20.0,
+          "correlation": -0.7632203783790777,
+          "correlation_std": 0.02903901977259066,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 75.0,
+          "theta_diff_deg": 15.0,
+          "correlation": -0.8673435151526517,
+          "correlation_std": 0.029858896806638602,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 80.0,
+          "theta_diff_deg": 10.0,
+          "correlation": -0.9418994702035769,
+          "correlation_std": 0.027581719711091676,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 85.0,
+          "theta_diff_deg": 5.0,
+          "correlation": -0.988719529390452,
+          "correlation_std": 0.031639895436493676,
+          "n_trials": 100
+        },
+        {
+          "theta_a_deg": 90.0,
+          "theta_b_deg": 90.0,
+          "theta_diff_deg": 0.0,
+          "correlation": -1.0005758942612895,
+          "correlation_std": 0.028733649005756593,
+          "n_trials": 100
+        }
+      ],
+      "correlation_matrix": [
+        [
+          -0.9955794851843018,
+          -0.9861632941827568,
+          -0.940487620490636,
+          -0.8627300551568328,
+          -0.7658776379456924,
+          -0.641016174574283,
+          -0.4993049871567101,
+          -0.34723323035513715,
+          -0.16868757929688594,
+          -0.0013008440589790968,
+          0.1749232769473058,
+          0.3427311178678788,
+          0.5038654838460139,
+          0.6442087374504106,
+          0.768627132665075,
+          0.8596581344512504,
+          0.9371619615119066,
+          0.9816933976937031,
+          0.9972382083094256
+        ],
+        [
+          -0.9791208903619879,
+          -0.9963934420399968,
+          -0.9876327827109683,
+          -0.9421208469795646,
+          -0.8618160098058694,
+          -0.7695729205285311,
+          -0.6467852649542597,
+          -0.4943607246244464,
+          -0.3421317603395683,
+          -0.17170692453234246,
+          -0.0038868720126522954,
+          0.1740712260256878,
+          0.33999617299809615,
+          0.5042015900234152,
+          0.6421249731716678,
+          0.7595704480723312,
+          0.8694238420945544,
+          0.9348591106443442,
+          0.983534936395463
+        ],
+        [
+          -0.9446625308013012,
+          -0.9840195785615269,
+          -1.0015666478737983,
+          -0.9863628520853838,
+          -0.9439126133290743,
+          -0.8677300451503173,
+          -0.7688485659522677,
+          -0.6425610336184997,
+          -0.49757506293017906,
+          -0.3399819140082776,
+          -0.17348565182639394,
+          -0.001846530795284813,
+          0.17366104787234146,
+          0.3412449440527245,
+          0.5029520845789552,
+          0.6426183298494204,
+          0.7657050610916412,
+          0.861332974550299,
+          0.9416512257272006
+        ],
+        [
+          -0.8675717180973369,
+          -0.9435897395556085,
+          -0.9865253396938064,
+          -0.9969534697588648,
+          -0.9791725096130997,
+          -0.9389687622402683,
+          -0.8579878497137895,
+          -0.7649776657383817,
+          -0.6482795378228435,
+          -0.49821296292095285,
+          -0.3417863175722916,
+          -0.174630578055789,
+          0.002437297862105378,
+          0.17320588205293624,
+          0.34601038895238545,
+          0.4961627499988389,
+          0.6437816291849476,
+          0.766411406292062,
+          0.8636917324962029
+        ],
+        [
+          -0.765783712509104,
+          -0.8625962478364364,
+          -0.9401781691096204,
+          -0.9801332642496111,
+          -0.9936529346961261,
+          -0.9859604591118388,
+          -0.9412282529760663,
+          -0.867185472111688,
+          -0.7632147703381598,
+          -0.6461110039306902,
+          -0.49998784814285707,
+          -0.34119609610028767,
+          -0.17519217500791157,
+          0.0017629757546420476,
+          0.1688296474698332,
+          0.3355297540883258,
+          0.502658580589941,
+          0.6434003237808247,
+          0.7653254595524327
+        ],
+        [
+          -0.6446896291389248,
+          -0.7657366038271245,
+          -0.8671096835626547,
+          -0.934076200518665,
+          -0.9826882806264916,
+          -0.9961557754961748,
+          -0.9857829109712651,
+          -0.9374731128366405,
+          -0.8640655349564693,
+          -0.7682117663581443,
+          -0.6434544938937595,
+          -0.5007498032320938,
+          -0.34130419508383125,
+          -0.17190889899887263,
+          -0.000739592103257884,
+          0.16817650878888057,
+          0.34520667975251734,
+          0.5000440146517656,
+          0.6425083748415144
+        ],
+        [
+          -0.5029333131946759,
+          -0.6430406701130389,
+          -0.7678051536058775,
+          -0.8621568471272392,
+          -0.9372100321182486,
+          -0.9844383483917993,
+          -1.0014696751495025,
+          -0.9872020424767262,
+          -0.9408432094429792,
+          -0.8674717886069339,
+          -0.7686763794537237,
+          -0.6435359075112597,
+          -0.49527123922343214,
+          -0.34448179288539676,
+          -0.1725076259625829,
+          -0.004415289240163302,
+          0.17405250571253705,
+          0.3433586755792394,
+          0.5023252319432392
+        ],
+        [
+          -0.3425027159019832,
+          -0.5039549094409168,
+          -0.6394947337460455,
+          -0.7734517425298685,
+          -0.8608600549762923,
+          -0.9379362094978181,
+          -0.9897068476172514,
+          -0.9971883508272232,
+          -0.9851997450305369,
+          -0.9371045578838022,
+          -0.8623230561580877,
+          -0.7619460021143594,
+          -0.6430773905040996,
+          -0.5010227351084848,
+          -0.3413104825522824,
+          -0.17015210741241707,
+          -0.0024572447196394695,
+          0.1705755007320257,
+          0.3447210717906381
+        ],
+        [
+          -0.17204089307718,
+          -0.3449791868666639,
+          -0.5019754865503174,
+          -0.6405832060572506,
+          -0.769121830416999,
+          -0.8730020930016891,
+          -0.9394842742931426,
+          -0.9835992060387013,
+          -1.0022607480635584,
+          -0.9791484258436026,
+          -0.9372630393179995,
+          -0.8694824147495198,
+          -0.7734869318784058,
+          -0.6445388375507412,
+          -0.49820416120104416,
+          -0.34271707938728674,
+          -0.17258036136095542,
+          0.0005044682636390596,
+          0.17221844139714232
+        ],
+        [
+          -0.0021764133034357933,
+          -0.17091280279700027,
+          -0.34464714253532314,
+          -0.49617735658458156,
+          -0.640268853392211,
+          -0.7621903866126155,
+          -0.8651737293260247,
+          -0.9364634670253311,
+          -0.9869076152945739,
+          -1.0007350992073132,
+          -0.9876119661824903,
+          -0.9405085391612963,
+          -0.8670666630232572,
+          -0.7641960063569445,
+          -0.6459577005342623,
+          -0.5011890071731442,
+          -0.34213286715698443,
+          -0.17266543311961832,
+          0.0008981145354820451
+        ],
+        [
+          0.1813587347517151,
+          0.003938984789006423,
+          -0.17551529905280852,
+          -0.3431065282304363,
+          -0.4974080393548579,
+          -0.6355981326585105,
+          -0.7668853127988398,
+          -0.8676247360948426,
+          -0.9412836339574695,
+          -0.9789355807805827,
+          -0.9978406191848876,
+          -0.9829676904709808,
+          -0.9474499827238496,
+          -0.8678335967998035,
+          -0.7678443805599952,
+          -0.6418423085061647,
+          -0.5045506257191729,
+          -0.34070802279928,
+          -0.17445513140421956
+        ],
+        [
+          0.33961484320256585,
+          0.17202213754182835,
+          0.0016411238756817148,
+          -0.17472057183832174,
+          -0.33683984448790405,
+          -0.5038417333972187,
+          -0.640175081732781,
+          -0.7704351550382472,
+          -0.8649188644512131,
+          -0.9349928847145688,
+          -0.9888755104798215,
+          -0.9987242900833295,
+          -0.9828238255774892,
+          -0.9402842862867133,
+          -0.8701077279810582,
+          -0.7652163324120624,
+          -0.643693718838784,
+          -0.5030465031940046,
+          -0.33878897211261966
+        ],
+        [
+          0.4995148838413293,
+          0.34208200405832456,
+          0.1731906413475151,
+          -0.0014643144110714737,
+          -0.1701465844093961,
+          -0.3384092449821828,
+          -0.5005075441913988,
+          -0.6459451587910019,
+          -0.7662164633773021,
+          -0.8644632373029502,
+          -0.9416480425181943,
+          -0.9832489318922641,
+          -0.998124020131136,
+          -0.9842883352389201,
+          -0.941589957711265,
+          -0.8677753040244339,
+          -0.7636916048047331,
+          -0.6442899962590789,
+          -0.5044389172429016
+        ],
+        [
+          0.6467834833764192,
+          0.5015123543240325,
+          0.3419586119997096,
+          0.17548158600948405,
+          0.003814510700818504,
+          -0.17633381258533748,
+          -0.3423047441743533,
+          -0.49115222786628115,
+          -0.6453666831932122,
+          -0.7653470031555352,
+          -0.8650164262325937,
+          -0.9473580880973914,
+          -0.9851918015628379,
+          -1.0059132809416593,
+          -0.9845916254678777,
+          -0.9456530513139729,
+          -0.8646681458876282,
+          -0.7610014151544717,
+          -0.6408344871784603
+        ],
+        [
+          0.76770567170888,
+          0.6391996825142526,
+          0.5022721907084918,
+          0.33765578575492283,
+          0.17437556727468112,
+          -0.006424313550615797,
+          -0.17402976858207705,
+          -0.3352507037487257,
+          -0.5017581596519183,
+          -0.6380421624965034,
+          -0.7662781647852064,
+          -0.868456330564459,
+          -0.938460546227159,
+          -0.9822466220489854,
+          -1.0050565397821736,
+          -0.9875447951195586,
+          -0.9374794258769577,
+          -0.8662618700951501,
+          -0.7647390244272504
+        ],
+        [
+          0.8676377991921044,
+          0.7663563345488863,
+          0.6447845302607473,
+          0.5013601661434499,
+          0.34154113065791636,
+          0.17534402397102342,
+          -0.004219386573882523,
+          -0.17185380404914688,
+          -0.3409940376978085,
+          -0.4990544527990773,
+          -0.6468923470737569,
+          -0.7660787904935676,
+          -0.8707184960968298,
+          -0.9371814736784444,
+          -0.9833756463912686,
+          -1.0012477422643642,
+          -0.9887148231241314,
+          -0.941725323859023,
+          -0.8677065742531278
+        ],
+        [
+          0.9408019442352824,
+          0.8677984428623275,
+          0.7622176198286045,
+          0.6433571542373155,
+          0.5055190382228837,
+          0.343669589850961,
+          0.17319537401484827,
+          0.0003615725604848056,
+          -0.17363663156284673,
+          -0.34235956240761667,
+          -0.5019323861212213,
+          -0.6433194204399885,
+          -0.7690674180508421,
+          -0.8678117711150237,
+          -0.941216266467038,
+          -0.9832315933758912,
+          -0.9968226917982925,
+          -0.9805455822114404,
+          -0.945690719454541
+        ],
+        [
+          0.9849171778050273,
+          0.9368437349079476,
+          0.8691301209482135,
+          0.7646372459995466,
+          0.6433955926619492,
+          0.49885204622856394,
+          0.34119362880890747,
+          0.17580322236286036,
+          0.00220295465403865,
+          -0.1740491693510074,
+          -0.34272258820280527,
+          -0.5019393677008005,
+          -0.6462034739542368,
+          -0.7638665889811896,
+          -0.8632437610155254,
+          -0.941572774068115,
+          -0.9828171203339998,
+          -1.000059652847044,
+          -0.982697926380331
+        ],
+        [
+          0.9959234657481595,
+          0.9837466007061738,
+          0.9421186505412134,
+          0.8625459155821379,
+          0.7655159440486996,
+          0.6445424115446907,
+          0.49903275992936824,
+          0.34319308472456383,
+          0.17130390988074626,
+          -0.003729622085828538,
+          -0.17257604350449543,
+          -0.3377221567683774,
+          -0.5018697656901061,
+          -0.6444143265194248,
+          -0.7632203783790777,
+          -0.8673435151526517,
+          -0.9418994702035769,
+          -0.988719529390452,
+          -1.0005758942612895
+        ]
+      ],
+      "bell_correlations": {
+        "E_0_45": -0.0013008440589790968,
+        "E_0_90": 0.9972382083094256,
+        "E_45_90": 0.0008981145354820451,
+        "E_45_45": -1.0007350992073132
+      },
+      "s_parameter": 1.9975705779932418,
+      "classical_limit": 2.0,
+      "quantum_limit": 2.8284271247461903,
+      "violates_classical_bound": false,
+      "within_quantum_bound": true,
+      "bell_violation_ratio": 0.9987852889966209,
+      "correlation_range": 2.003151489251085,
+      "mean_correlation_magnitude": 0.6361082709806983,
+      "pass_entanglement_test": false,
+      "pass_bell_inequality": false,
+      "entanglement_quality": 0.7058553279128063
+    },
+    "raw_data_count": 361,
+    "has_plots": true,
+    "has_summary": true,
+    "has_raw_data": true
+  },
+  "quantum_bonus": 0.8999999999999999,
+  "passes_guardian_threshold": true,
+  "passes_truthlens_threshold": true,
+  "passes_meaningforge_threshold": true
+}

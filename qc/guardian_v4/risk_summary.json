@@ -1,23 +1,23 @@
 {
-  "file": "validation_results_20251007_160339/requirements.txt",
-  "guardian_alignment_score": 60.00000000000001,
+  "file": "site/Light_Speed_Series_Summary.md",
+  "guardian_alignment_score": 65.25000000000001,
   "risk_assessment": {
     "risk_level": "high",
     "color": "orange",
     "action": "Mandatory review + revision",
-    "score": 60.00000000000001
+    "score": 65.25000000000001
   },
   "metrics": {
     "objectivity_score": 0.6,
     "language_safety_score": 1.0,
-    "transparency_index_v2": 0.0,
+    "transparency_index_v2": 0.175,
     "sentiment_neutrality": 0.0,
     "objectivity_details": {
       "objectivity_score": 0.6,
       "hedge_density": 0.0,
       "overclaim_density": 0.0,
       "citation_density": 0.0,
-      "word_count": 61,
+      "word_count": 419,
       "components": {
         "hedge_bonus": 0.0,
         "overclaim_penalty": 0.0,
@@ -42,20 +42,20 @@
       "optimal_for_science": true
     },
     "transparency_details": {
-      "transparency_index_v2": 0.0,
+      "transparency_index_v2": 0.175,
       "citation_density": 0.0,
-      "metadata_completeness": 0.0,
-      "data_availability": 0.0,
+      "metadata_completeness": 0.25,
+      "data_availability": 0.3333333333333333,
       "components": {
         "citations_found": [],
-        "metadata_fields_found": 0.0,
-        "data_availability_indicators": 0.0
+        "metadata_fields_found": 1.0,
+        "data_availability_indicators": 1.0
       }
     }
   },
   "recommendations": [
     "\u26a0\ufe0f  Objectivity (0.60) below target (0.80): Add more hedging terms (suggests, indicates, may) and reduce overclaiming language (proves, definitively)",
-    "\u26a0\ufe0f  Transparency (0.00) below target (0.90): Add citations, metadata (study_id, seeds), and data availability statements"
+    "\u26a0\ufe0f  Transparency (0.17) below target (0.90): Add citations, metadata (study_id, seeds), and data availability statements"
   ],
-  "timestamp": "2025-10-16T20:07:59.369349"
+  "timestamp": "2025-10-20T19:48:30.623235"
 }
