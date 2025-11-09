@@ -31,3 +31,5 @@ Entries appended by lab_techs_runner.py
 [2025-10-17T04:03:48Z] CREATE HYMetaLab_AutoStop launcher - graceful shutdown for autonomous runs
 [2025-10-17T04:20:32Z] CREATE HYMetaLab_AutoLoop_Start - continuous autonomous learning launcher
 [2025-10-17T04:22:21Z] CREATE HYMetaLab_AutoLoop_Stop - dedicated stop for continuous AutoLoop
+[2025-11-09T01:03:07Z] CREATE SOP enforcement bundle: PII scan, anonymity check, DP postprocess, publication blocker
+[2025-11-09T03:52:31Z] CREATE AutoLab ↔ CMV ↔ Guardian feedback loop: dynamic η adjustment based on GFI

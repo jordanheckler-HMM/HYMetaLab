@@ -19,6 +19,15 @@ from pathlib import Path
 from datetime import datetime
 from tools.guardian_client import validate
 
+# Import feedback loop for Guardian Field Index integration
+try:
+    from autolab.feedback_loop import apply_feedback, get_current_eta
+    FEEDBACK_AVAILABLE = True
+except ImportError:
+    FEEDBACK_AVAILABLE = False
+    def apply_feedback(): pass
+    def get_current_eta(): return 0.2
+
 RNG = random.Random(42)
 STATE_DIR = Path("autolab")
 STATE_DIR.mkdir(exist_ok=True)
@@ -64,16 +73,23 @@ def propose(kb, k=3):
     return cands[:k]
 
 
-def utility(kb, name):
-    """Simple UCB-like utility: score + exploration bonus."""
+def utility(kb, name, eta=0.2):
+    """Simple UCB-like utility: score + exploration bonus.
+    
+    Args:
+        kb: Knowledge base
+        name: Hypothesis name
+        eta: Exploration rate (η) from feedback loop
+    """
     h = kb["hypotheses"].get(name, {"score": 0.5, "n": 0})
     total = 1 + sum(v.get("n", 0) for v in kb["hypotheses"].values())
     bonus = math.sqrt(math.log(total + 1) / (h["n"] + 1))
-    return h.get("score", 0.5) + 0.2 * bonus
+    return h.get("score", 0.5) + eta * bonus
 
 
-def choose(kb, candidates):
-    return max(candidates, key=lambda c: utility(kb, c))
+def choose(kb, candidates, eta=0.2):
+    """Choose best candidate using UCB with dynamic exploration rate."""
+    return max(candidates, key=lambda c: utility(kb, c, eta))
 
 
 def guardian_precheck(hypo_text):
@@ -121,10 +137,24 @@ def update_kb(kb, hypo_text, success):
 def main(cycles=1):
     kb = load_kb()
     print(f"🔁 Autopilot cycles: {cycles}")
+    
+    # Apply Guardian Field Index feedback loop at start
+    if FEEDBACK_AVAILABLE:
+        print("\n🔄 Applying Guardian Field Index feedback...")
+        try:
+            apply_feedback()
+        except Exception as e:
+            print(f"⚠️  Feedback loop error (continuing with default η): {e}")
+    
     for i in range(cycles):
         print(f"\n— Cycle {i+1}/{cycles} —")
+        
+        # Get current exploration rate from feedback loop
+        eta = get_current_eta()
+        print(f"   η (exploration rate) = {eta:.3f}")
+        
         cands = propose(kb)
-        choice = choose(kb, cands)
+        choice = choose(kb, cands, eta)
 
         ok, pre = guardian_precheck(choice)
         if not ok:
