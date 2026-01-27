@@ -533,7 +533,7 @@ If you use HYMetaLab in your research, please cite:
 
 **Jordan Heckler**  
 Email: hymetalab@gmail.com 
-GitHub: [@yourusername](https://github.com/jordanheckler-HMM)
+GitHub: (https://github.com/jordanheckler-HMM)
 
 ---
 
