@@ -1,10 +1,16 @@
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 from typing import Any
 
 import streamlit as st
+
+# Ensure repo root is importable even when launched from a desktop bundle.
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from apps.autolab_ui_core import (
     agent_insight_summary,

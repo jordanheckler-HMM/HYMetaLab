@@ -11784,12 +11784,27 @@
       "ts": "2025-10-20T21:26:27.395373Z",
       "hypothesis": "noise stress test at \u03b7=0.18, n=50",
       "success": false
+    },
+    {
+      "ts": "2026-02-15T05:57:27.000309Z",
+      "hypothesis": "baseline: demo-run",
+      "success": true
+    },
+    {
+      "ts": "2026-02-15T05:57:27.005119Z",
+      "hypothesis": "baseline: demo-run | tweak31",
+      "success": false
+    },
+    {
+      "ts": "2026-02-15T05:57:27.009936Z",
+      "hypothesis": "baseline: demo-run | tweak94",
+      "success": false
     }
   ],
   "hypotheses": {
     "baseline: demo-run": {
       "score": 0.999,
-      "n": 469
+      "n": 470
     },
     "\u03b7 sweep 0.10\u20130.20, n=40": {
       "score": 0.001,
@@ -11801,7 +11816,7 @@
     },
     "baseline: demo-run | tweak94": {
       "score": 0.001,
-      "n": 124
+      "n": 125
     },
     "coherence calibration: small batch n=10": {
       "score": 0.001,
@@ -11813,7 +11828,7 @@
     },
     "baseline: demo-run | tweak31": {
       "score": 0.001,
-      "n": 124
+      "n": 125
     },
     "\u03b7 sweep 0.10\u20130.20, n=40 | tweak13": {
       "score": 0.35,
