@@ -1,0 +1,15 @@
+{
+  "name": "autolab-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tauri desktop wrapper for HYMetaLab AutoLab Studio",
+  "scripts": {
+    "smoke:check": "bash scripts/smoke_build.sh",
+    "smoke:build": "bash scripts/smoke_build.sh --build",
+    "tauri:dev": "tauri dev --config src-tauri/tauri.conf.json",
+    "tauri:build": "tauri build --config src-tauri/tauri.conf.json"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.6.3"
+  }
+}

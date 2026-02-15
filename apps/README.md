@@ -50,6 +50,48 @@ Guardian Tools may be described as a suite of interactive applications for real-
 1. **Guardian Check** – Single-document validation
 2. **Reality Loop Lite** – Universal Resilience Law simulator (see project documentation)  
 3. **Guardian Compare** – Side-by-side document comparison
+4. **AutoLab Studio** – Local experiment runner with agents, run history, and review chat
+
+### AutoLab Studio (Local MVP)
+
+```bash
+streamlit run apps/autolab_studio.py
+```
+
+What it includes:
+- First-run wizard with setup gating
+- One-click starter project presets (agents + templates)
+- Output-folder workspace setup (manual path or native folder picker)
+- One-click open workspace/runs folders
+- Ollama model discovery
+- Agent templates (name/role/model/prompt)
+- Experiment templates (guided or autopilot mode)
+- Per-agent Ollama planning stage before execution
+- Live run lifecycle (start/poll/stop/finalize)
+- One-click execution with run artifact persistence
+- Run history + local review chat
+
+### AutoLab Desktop (Tauri Wrapper)
+
+```bash
+cd apps/autolab_desktop
+npm install
+npm run tauri:dev
+```
+
+This launches a native desktop shell that starts AutoLab Studio automatically.
+
+Menu actions in desktop app:
+- Open Workspace Folder
+- Open Runs Folder
+- Reload UI
+- Restart Backend
+
+Smoke checks:
+```bash
+cd apps/autolab_desktop
+npm run smoke:check
+```
 
 ---
 
